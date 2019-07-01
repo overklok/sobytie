@@ -1,0 +1,51 @@
+/**
+  Блок "Карточка"
+ */
+
+.card {
+  background: @grad_card_neutral;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin: 15px 0 15px 0;
+
+  border: none;
+  border-radius: @roundness;
+
+  .card__content {
+    padding: 22px;
+  }
+
+  h3.card__heading {
+    padding-bottom: 15px;
+  }
+
+  p.card__description {
+    font-size: 18px;
+    line-height: 21px;
+
+    margin-bottom: 0;
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    height: 140px;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    height: 320px;
+  }
+
+  &.card_bottomed {
+    .card__content {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}

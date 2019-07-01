@@ -1,0 +1,128 @@
+/**
+  Цветовой набор
+ */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Extrabold.otf');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Bold.otf');
+  font-weight: bold;
+  /* 700 */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Light.otf');
+  font-weight: normal;
+  /* 400 */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Light.otf');
+  font-weight: 300;
+  font-style: normal;
+}
+/**
+  Установки текста
+ */
+body {
+  font-family: 'Gilroy', sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  color: #232323;
+}
+h1.light,
+h2.light,
+h3.light,
+h4.light,
+p.light {
+  color: #FFFFFF;
+}
+/* Заголовки */
+h1,
+h2 {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 40px;
+  line-height: 47px;
+}
+/* Заголовки мелких блоков */
+h3 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+}
+/* Стандартный текст */
+p {
+  font-size: 25px;
+  line-height: 30px;
+  /* Уменьшенный */
+}
+p.text-small {
+  font-size: 20px;
+  line-height: 25px;
+}
+span {
+  color: #232323;
+}
+span.signature {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+}
+span.comment {
+  font-size: 20px;
+  line-height: 23px;
+  opacity: 0.5;
+}
+/**
+  Блок "Карточка"
+ */
+.card {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(35, 35, 35, 0.7) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 15px 0 15px 0;
+  border: none;
+  border-radius: 10px;
+}
+.card .card__content {
+  padding: 22px;
+}
+.card h3.card__heading {
+  padding-bottom: 15px;
+}
+.card p.card__description {
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 0;
+}
+@media (min-width: 576px) {
+  .card {
+    height: 140px;
+  }
+}
+@media (min-width: 992px) {
+  .card {
+    height: 320px;
+  }
+}
+.card.card_bottomed .card__content {
+  position: absolute;
+  bottom: 0;
+}

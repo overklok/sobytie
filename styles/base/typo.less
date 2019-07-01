@@ -1,0 +1,65 @@
+@import "font";
+
+/**
+  Установки текста
+ */
+
+body {
+  font-family: 'Gilroy', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  width: 100%;
+}
+
+h1, h2, h3, h4, p {
+  color: @color_text_dark;
+
+  &.light {
+    color: @color_text_light;
+  }
+}
+
+/* Заголовки */
+h1, h2 {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 40px;
+  line-height: 47px;
+}
+
+/* Заголовки мелких блоков */
+h3 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+/* Стандартный текст */
+p {
+  font-size: 25px;
+  line-height: 30px;
+
+  /* Уменьшенный */
+  &.text-small {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+span {
+  color: @color_text_dark;
+
+  &.signature {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  &.comment {
+    font-size: 20px;
+    line-height: 23px;
+
+    opacity: .5;
+  }
+}
