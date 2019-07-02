@@ -1,0 +1,29 @@
+.cal {
+  .cal__event {
+    width: 100%;
+    height: 180px;
+
+    border: solid 1px black;
+
+    margin: 0 0 10px 0;
+  }
+
+  /* medium */
+  //@media (min-width: 992px) {
+  //  .cal__event {
+  //    width: 100%;
+  //  }
+  //}
+
+  /* smaller */
+  @media (max-width: 991.98px) {
+    .cal__event {
+      width: 170px;
+      height: @cal__col_item_height;
+
+      margin: 0 5px;
+
+      display: inline-block;
+    }
+  }
+}

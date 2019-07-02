@@ -77,6 +77,8 @@ h3 {
 p {
   font-size: 25px;
   line-height: 30px;
+  font-weight: 500;
+  /* по perfect pixel этой строчки быть не должно*/
   /* Уменьшенный */
 }
 p.text-small {
@@ -95,6 +97,33 @@ span.comment {
   font-size: 20px;
   line-height: 23px;
   opacity: 0.5;
+}
+/**
+  width = 100% / 7 column-number = 14.285714285714285714285714285714%
+ */
+@media (min-width: 576px) {
+  .seven-cols .col-sm-1 {
+    max-width: 14.28571429%;
+    *max-width: 14.28571429%;
+    flex: 0 0 14.28571429%;
+  }
+}
+@media (min-width: 768px) {
+  .seven-cols .col-sm-1,
+  .seven-cols .col-md-1 {
+    max-width: 14.28571429%;
+    *max-width: 14.28571429%;
+    flex: 0 0 14.28571429%;
+  }
+}
+@media (min-width: 992px) {
+  .seven-cols .col-sm-1,
+  .seven-cols .col-md-1,
+  .seven-cols .col-lg-1 {
+    max-width: 14.28571429%;
+    *max-width: 14.28571429%;
+    flex: 0 0 14.28571429%;
+  }
 }
 /**
   Блок "Карточка"
@@ -136,6 +165,9 @@ span.comment {
   font-size: 50px;
   vertical-align: bottom;
 }
+.card a.card__action.symbol:hover {
+  text-decoration: none;
+}
 @media (min-width: 576px) {
   .card {
     height: 140px;
@@ -153,4 +185,56 @@ span.comment {
 .card.card_bottomed .card__actions {
   position: absolute;
   top: 0;
+}
+.cal {
+  /* medium */
+  /* smaller */
+}
+.cal .cal__event {
+  width: 100%;
+  height: 180px;
+  border: solid 1px black;
+  margin: 0 0 10px 0;
+}
+@media (max-width: 991.98px) {
+  .cal .cal__event {
+    width: 170px;
+    height: 80px;
+    margin: 0 5px;
+    display: inline-block;
+  }
+}
+.cal {
+  /* smaller */
+}
+.cal .cal__day {
+  width: 100%;
+  height: 60px;
+  border: solid 1px black;
+  margin: 5px 0;
+}
+@media (max-width: 991.98px) {
+  .cal .cal__day {
+    width: 100%;
+    height: 80px;
+    margin: 0 5px;
+    display: inline-block;
+  }
+}
+.cal .cal__details_wrap {
+  padding: 5px;
+}
+/**
+  Блок "Календарь"
+ */
+.cal .cal__col {
+  padding: 5px;
+}
+.cal .cal__col.cal__col_of {
+  padding: 5px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.eventcard {
+  border: solid 1px black;
 }

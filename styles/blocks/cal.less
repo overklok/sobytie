@@ -1,6 +1,20 @@
+@import "cal/__event";
+@import "cal/__day";
+@import "cal/__details";
+
+@cal__col_item_height: 80px;
+
 /**
   Блок "Календарь"
  */
 .cal {
+  .cal__col {
+    padding: 5px;
 
+    &.cal__col_of {
+      padding: 5px;
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+  }
 }
