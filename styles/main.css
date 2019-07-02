@@ -16,6 +16,12 @@
 }
 @font-face {
   font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Medium.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
   src: url('../assets/fonts/Gilroy-Light.otf');
   font-weight: normal;
   /* 400 */
@@ -100,8 +106,15 @@ span.comment {
   margin: 15px 0 15px 0;
   border: none;
   border-radius: 10px;
+  /** Элементы-контейнеры **/
+  /** Конечные элементы **/
 }
 .card .card__content {
+  padding: 22px;
+}
+.card .card__actions {
+  position: absolute;
+  bottom: 0;
   padding: 22px;
 }
 .card h3.card__heading {
@@ -111,6 +124,17 @@ span.comment {
   font-size: 18px;
   line-height: 21px;
   margin-bottom: 0;
+}
+.card a.card__action {
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+.card a.card__action.symbol {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 50px;
+  vertical-align: bottom;
 }
 @media (min-width: 576px) {
   .card {
@@ -125,4 +149,8 @@ span.comment {
 .card.card_bottomed .card__content {
   position: absolute;
   bottom: 0;
+}
+.card.card_bottomed .card__actions {
+  position: absolute;
+  top: 0;
 }

@@ -12,10 +12,19 @@
   border: none;
   border-radius: @roundness;
 
+  /** Элементы-контейнеры **/
   .card__content {
     padding: 22px;
   }
 
+  .card__actions {
+    position: absolute;
+    bottom: 0;
+
+    padding: 22px;
+  }
+
+  /** Конечные элементы **/
   h3.card__heading {
     padding-bottom: 15px;
   }
@@ -25,6 +34,21 @@
     line-height: 21px;
 
     margin-bottom: 0;
+  }
+
+  a.card__action {
+    font-size: 20px;
+    line-height: 23px;
+
+    color: @color_text_light;
+
+    &.symbol {
+      color: @color_text_light;
+
+      font-weight: 500;
+      font-size: 50px;
+      vertical-align: bottom;
+    }
   }
 
   // Small devices (landscape phones, 576px and up)
@@ -46,6 +70,11 @@
     .card__content {
       position: absolute;
       bottom: 0;
+    }
+
+    .card__actions {
+      position: absolute;
+      top: 0;
     }
   }
 }
