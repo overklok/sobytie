@@ -283,6 +283,7 @@ span.comment {
   line-height: 26px;
   font-weight: 600;
   opacity: 0.5;
+  color: #003737;
   width: 55%;
   display: table-cell;
   vertical-align: middle;
@@ -292,6 +293,7 @@ span.comment {
   line-height: 40px;
   font-weight: 600;
   opacity: 0.7;
+  color: #003737;
   display: table-cell;
   vertical-align: middle;
 }
