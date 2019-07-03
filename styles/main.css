@@ -16,6 +16,12 @@
 }
 @font-face {
   font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Semibold.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
   src: url('../assets/fonts/Gilroy-Medium.otf');
   font-weight: 500;
   font-style: normal;
@@ -210,8 +216,47 @@ span.comment {
 .cal .cal__event {
   width: 100%;
   height: 180px;
-  border: solid 1px black;
+  position: relative;
   margin: 0 0 10px 0;
+  background-color: #ecf1f1;
+  color: #003737;
+  border-radius: 10px;
+}
+.cal .cal__event .cal__event__title {
+  float: right;
+  padding: 10px;
+  text-align: right;
+  white-space: normal;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.cal .cal__event.cal__event_closed {
+  background-color: #f7f0fa;
+  color: #8c00b0;
+  border-left: solid #8c00b0 10px;
+}
+.cal .cal__event.cal__event_cancelled {
+  background-color: #fff7f2;
+  color: #eb8d52;
+  border-left: solid #eb8d52 10px;
+}
+.cal .cal__event .cal__event__details {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.cal .cal__event .cal__event__details .cal__event_detail {
+  padding: 3px 0;
+  text-align: right;
+  /* Ellipsis */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 @media (max-width: 991.98px) {
   .cal .cal__event {
@@ -226,9 +271,29 @@ span.comment {
 }
 .cal .cal__day {
   width: 100%;
-  height: 60px;
-  border: solid 1px black;
-  margin: 5px 0;
+  height: 40px;
+  text-align: right;
+  margin: 12px 0 0 0;
+  color: #003737;
+  display: table;
+  padding: 0 10px;
+}
+.cal .cal__wd {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 600;
+  opacity: 0.5;
+  width: 55%;
+  display: table-cell;
+  vertical-align: middle;
+}
+.cal .cal__dn {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 600;
+  opacity: 0.7;
+  display: table-cell;
+  vertical-align: middle;
 }
 @media (max-width: 991.98px) {
   .cal .cal__day {
@@ -236,6 +301,12 @@ span.comment {
     height: 80px;
     margin: 0 5px;
     display: inline-block;
+  }
+  .cal .cal__wd {
+    width: 25%;
+  }
+  .cal .cal__dn {
+    width: 25%;
   }
 }
 .cal .cal__details_wrap {
@@ -251,6 +322,18 @@ span.comment {
   padding: 5px;
   overflow-x: scroll;
   white-space: nowrap;
+}
+.cal .cal__col.cal__col_delim {
+  padding: 0;
+}
+.cal .cal__col.cal__col_delim:not(:first-of-type) {
+  border-left: solid 1px rgba(0, 55, 55, 0.3);
+  /* smaller */
+}
+@media (max-width: 991.98px) {
+  .cal .cal__col.cal__col_delim:not(:first-of-type) {
+    border-left: none;
+  }
 }
 .eventcard {
   border: solid 1px black;

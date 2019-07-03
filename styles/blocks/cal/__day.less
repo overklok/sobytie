@@ -1,11 +1,39 @@
 .cal {
   .cal__day {
     width: 100%;
-    height: 60px;
+    height: 40px;
 
-    border: solid 1px black;
+    text-align: right;
 
-    margin: 5px 0;
+    //border: solid 1px black;
+
+    margin: 12px 0 0 0;
+
+    color: #003737;
+
+    display: table;
+    padding: 0 10px;
+  }
+
+  .cal__wd {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 600;
+    opacity: .5;
+
+    width: 55%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .cal__dn {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 600;
+    opacity: .7;
+
+    display: table-cell;
+    vertical-align: middle;
   }
 
   /* smaller */
@@ -17,6 +45,14 @@
       margin: 0 5px;
 
       display: inline-block;
+    }
+
+    .cal__wd {
+      width: 25%;
+    }
+
+    .cal__dn {
+      width: 25%;
     }
   }
 }
