@@ -2,7 +2,7 @@
   Блок "Карточка"
  */
 
-.card {
+.mcard {
   background: @grad_card_neutral;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,31 +12,58 @@
   border: none;
   border-radius: @roundness;
 
+  height: 200px;
+
   /** Элементы-контейнеры **/
-  .card__content {
+  .mcard__content {
     padding: 22px;
   }
 
-  .card__actions {
+  .mcard__actions {
     position: absolute;
-    bottom: 0;
+    bottom: 22px;
 
     padding: 22px;
   }
 
   /** Конечные элементы **/
-  h3.card__heading {
+  h3.mcard__heading {
     padding-bottom: 15px;
   }
 
-  p.card__description {
+  p.mcard__description {
     font-size: 18px;
-    line-height: 21px;
 
     margin-bottom: 0;
+
+    word-break: break-word;
+
+    height: 50px;
+
+    /* hide text if it more than N lines  */
+    overflow: hidden;
+    /* for set '...' in absolute position */
+    position: relative;
+    /* use this value to count block height */
+    line-height: 1em;
+    /* max-height = line-height (1.2) * lines max number (3) */
+    max-height: 1.9em;
+    /* place for '...' */
+    //margin-right: -1em;
+    //padding-right: 1em;
+
+    &.overflown {
+      /* create the ... */
+      &:after {
+        content: '...';
+      }
+
+      // TODO: Use jQuery to add the ellipsis:
+      // $.fn.overflown=function(){var e=this[0];return e.scrollHeight>e.clientHeight||e.scrollWidth>e.clientWidth;}
+    }
   }
 
-  a.card__action {
+  a.mcard__action {
     font-size: 20px;
     line-height: 23px;
 
@@ -55,28 +82,25 @@
     }
   }
 
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {
-    height: 140px;
-  }
-
-  // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
-
-  }
-
   // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     height: 320px;
+
+    p.mcard__description {
+      height: initial;
+      max-height: none;
+    }
   }
 
-  &.card_bottomed {
-    .card__content {
+  &.mcard_bottomed {
+    .mcard__content {
       position: absolute;
-      bottom: 0;
+      bottom: 22px;
+
+      width: calc(100% - 30px);
     }
 
-    .card__actions {
+    .mcard__actions {
       position: absolute;
       top: 0;
     }

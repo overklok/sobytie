@@ -128,61 +128,78 @@ span.comment {
 /**
   Блок "Карточка"
  */
-.card {
+.mcard {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(35, 35, 35, 0.7) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 15px 0 15px 0;
   border: none;
   border-radius: 10px;
+  height: 200px;
   /** Элементы-контейнеры **/
   /** Конечные элементы **/
 }
-.card .card__content {
+.mcard .mcard__content {
   padding: 22px;
 }
-.card .card__actions {
+.mcard .mcard__actions {
   position: absolute;
-  bottom: 0;
+  bottom: 22px;
   padding: 22px;
 }
-.card h3.card__heading {
+.mcard h3.mcard__heading {
   padding-bottom: 15px;
 }
-.card p.card__description {
+.mcard p.mcard__description {
   font-size: 18px;
-  line-height: 21px;
   margin-bottom: 0;
+  word-break: break-word;
+  height: 50px;
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative;
+  /* use this value to count block height */
+  line-height: 1em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 1.9em;
+  /* place for '...' */
 }
-.card a.card__action {
+.mcard p.mcard__description.overflown {
+  /* create the ... */
+}
+.mcard p.mcard__description.overflown:after {
+  content: '...';
+}
+.mcard a.mcard__action {
   font-size: 20px;
   line-height: 23px;
   color: #FFFFFF;
 }
-.card a.card__action.symbol {
+.mcard a.mcard__action.symbol {
   color: #FFFFFF;
   font-weight: 500;
   font-size: 50px;
   vertical-align: bottom;
 }
-.card a.card__action.symbol:hover {
+.mcard a.mcard__action.symbol:hover {
   text-decoration: none;
 }
-@media (min-width: 576px) {
-  .card {
-    height: 140px;
-  }
-}
-@media (min-width: 992px) {
-  .card {
+@media (min-width: 768px) {
+  .mcard {
     height: 320px;
   }
+  .mcard p.mcard__description {
+    height: initial;
+    max-height: none;
+  }
 }
-.card.card_bottomed .card__content {
+.mcard.mcard_bottomed .mcard__content {
   position: absolute;
-  bottom: 0;
+  bottom: 22px;
+  width: calc(100% - 30px);
 }
-.card.card_bottomed .card__actions {
+.mcard.mcard_bottomed .mcard__actions {
   position: absolute;
   top: 0;
 }
