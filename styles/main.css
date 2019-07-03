@@ -218,8 +218,8 @@ span.comment {
   height: 180px;
   position: relative;
   margin: 0 0 10px 0;
-  background-color: #ecf1f1;
   color: #003737;
+  background-color: #E5EBEB;
   border-radius: 10px;
 }
 .cal .cal__event .cal__event__title {
@@ -232,13 +232,13 @@ span.comment {
   line-height: 20px;
 }
 .cal .cal__event.cal__event_closed {
-  background-color: #f7f0fa;
-  color: #8c00b0;
+  color: #7F33AB;
+  background-color: #F6F1FA;
   border-left: solid #8c00b0 10px;
 }
-.cal .cal__event.cal__event_cancelled {
-  background-color: #fff7f2;
-  color: #eb8d52;
+.cal .cal__event.cal__event_cancel {
+  color: #EB8D52;
+  background-color: #FEF7F3;
   border-left: solid #eb8d52 10px;
 }
 .cal .cal__event .cal__event__details {
@@ -248,6 +248,7 @@ span.comment {
   bottom: 0;
   padding: 10px;
   font-size: 12px;
+  font-weight: 500;
   line-height: 14px;
 }
 .cal .cal__event .cal__event__details .cal__event_detail {
