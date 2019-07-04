@@ -328,17 +328,40 @@ span.comment {
   Блок "Календарь"
  */
 .cal .cal__col {
-  padding: 5px;
+  padding: 10px 5px 5px 5px;
 }
 .cal .cal__col.cal__col_of {
   padding: 5px;
-  overflow-x: scroll;
   white-space: nowrap;
 }
-.cal .cal__col_day {
-  padding-bottom: 20px;
-  background-color: aliceblue;
+.cal .cal__table-head {
+  padding-bottom: 15px;
+}
+.cal .cal__bg {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: calc(100% - 6px);
+  height: 100%;
+  background-color: red;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.cal .cal__bg::after {
+  content: '';
+  width: calc(100% + 18px);
+  height: 10px;
+  position: absolute;
+  bottom: -7px;
+  background-color: aquamarine;
+  z-index: 1;
+  left: -9px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: radial-gradient(100% 100% at 50% 50%, #ffffff 50%, rgba(255, 255, 255, 0) 50.25%) -10px -10px / 20px 20px, radial-gradient(100% 100% at 50% 50%, #ffffff 50%, rgba(255, 255, 255, 0) 50.25%) calc(100% + 10px) -10px / 20px 20px, linear-gradient(#ff2828, #ff2828) 50% 50% / 100% 100%;
+  background-repeat: no-repeat;
 }
 .eventcard {
-  border: solid 1px black;
+  background: red;
+  border-radius: 10px;
 }
