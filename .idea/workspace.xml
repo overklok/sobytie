@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17e2839b-1d4a-4129-a6d6-602fedfb618a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/cal/__bg.less" afterPath="$PROJECT_DIR$/styles/blocks/cal/__bg.less" />
-      <change beforePath="$PROJECT_DIR$/styles/main.css" afterPath="$PROJECT_DIR$/styles/main.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,10 +47,10 @@
         <entry file="file://$PROJECT_DIR$/styles/blocks/cal/__bg.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
-              <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+              <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
               <folding>
-                <element signature="e#961#1147#2" expanded="true" />
-                <element signature="e#1214#1392#2" expanded="true" />
+                <element signature="e#444#630#2" expanded="true" />
+                <element signature="e#697#875#2" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -767,10 +765,10 @@
     <entry file="file://$PROJECT_DIR$/styles/blocks/cal/__bg.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
-          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
-            <element signature="e#961#1147#2" expanded="true" />
-            <element signature="e#1214#1392#2" expanded="true" />
+            <element signature="e#444#630#2" expanded="true" />
+            <element signature="e#697#875#2" expanded="true" />
           </folding>
         </state>
       </provider>
