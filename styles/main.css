@@ -288,6 +288,9 @@ span.comment {
     border-left: none;
   }
 }
+.cal .cal__col_day:last-child .cal__day {
+  border: none;
+}
 .cal .cal__wd {
   font-size: 22px;
   line-height: 26px;
@@ -322,7 +325,48 @@ span.comment {
   }
 }
 .cal .cal__details_wrap {
-  padding: 5px;
+  padding: 5px 2px;
+}
+.cal__bg {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: calc(100% - 6px);
+  height: 100%;
+  background-color: #E5EBEB;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.cal__bg::after {
+  content: '';
+  width: calc(100% + 20px);
+  height: 10px;
+  position: absolute;
+  bottom: -7px;
+  z-index: 1;
+  left: -10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: radial-gradient(100% 100% at 50% 50%, #ffffff 50%, rgba(255, 255, 255, 0) 50.25%) -10px -10px / 20px 20px, radial-gradient(100% 100% at 50% 50%, #ffffff 50%, rgba(255, 255, 255, 0) 50.25%) calc(100% + 10px) -10px / 20px 20px, linear-gradient(#E5EBEB, #E5EBEB) 50% 50% / 100% 100%;
+  background-repeat: no-repeat;
+}
+.cal__col:first-child .cal__bg::before,
+.cal__col:last-child .cal__bg::before {
+  content: '';
+  width: 100%;
+  height: 15px;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  background-color: #E5EBEB;
+}
+.cal__col:first-child .cal__bg::after {
+  background: radial-gradient(200% 200% at 100% 100%, #ffffff 50%, rgba(255, 255, 255, 0) 50.25%) -9px -9px / 20px 20px, radial-gradient(100% 100% at 50% 50%, #ffffff 50%, rgba(255, 255, 255, 0) 50.25%) calc(100% + 10px) -10px / 20px 20px, linear-gradient(#E5EBEB, #E5EBEB) 50% 50% / 100% 100%;
+  background-repeat: no-repeat;
+}
+.cal__col:last-child .cal__bg::after {
+  background: radial-gradient(100% 100% at 50% 50%, #ffffff 50%, rgba(255, 255, 255, 0) 50.25%) -10px -10px / 20px 20px, radial-gradient(200% 200% at 100% 100%, #E5EBEB 50%, #E5EBEB 50.25%) calc(100% + 9px) -9px / 20px 20px, linear-gradient(#E5EBEB, #E5EBEB) 50% 50% / 100% 100%;
+  background-repeat: no-repeat;
 }
 /**
   Блок "Календарь"
@@ -337,31 +381,8 @@ span.comment {
 .cal .cal__table-head {
   padding-bottom: 15px;
 }
-.cal .cal__bg {
-  position: absolute;
-  top: 0;
-  left: 2px;
-  width: calc(100% - 6px);
-  height: 100%;
-  background-color: red;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-.cal .cal__bg::after {
-  content: '';
-  width: calc(100% + 18px);
-  height: 10px;
-  position: absolute;
-  bottom: -7px;
-  background-color: aquamarine;
-  z-index: 1;
-  left: -9px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  background: radial-gradient(100% 100% at 50% 50%, #ffffff 50%, rgba(255, 255, 255, 0) 50.25%) -10px -10px / 20px 20px, radial-gradient(100% 100% at 50% 50%, #ffffff 50%, rgba(255, 255, 255, 0) 50.25%) calc(100% + 10px) -10px / 20px 20px, linear-gradient(#ff2828, #ff2828) 50% 50% / 100% 100%;
-  background-repeat: no-repeat;
-}
 .eventcard {
-  background: red;
+  background: #E5EBEB;
   border-radius: 10px;
+  padding: 15px;
 }

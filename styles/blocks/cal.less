@@ -1,11 +1,12 @@
 @import "cal/__event";
 @import "cal/__day";
 @import "cal/__details";
+@import "cal/__bg";
 
 @cal__col_item_height: 80px;
 
-@r: rgb(255,40,40);
-@rT: rgba(255,40,40,0);
+// TODO: For IE11 - RGB!
+@d: @color_acct_default_bg;
 
 @w: rgb(255,255,255);
 @wT: rgba(255,255,255,0);
@@ -27,39 +28,6 @@
 
   .cal__table-head {
     padding-bottom: 15px;
-  }
-
-  .cal__bg {
-    position: absolute;
-    top: 0;
-    left: 2px;
-    width: calc(100% - 6px);
-    height: 100%;
-
-    background-color: red;
-    border-top-left-radius: @roundness;
-    border-top-right-radius: @roundness;
-
-    &::after {
-      content: '';
-      width: calc(100% + 18px);
-      height: 10px;
-      position: absolute;
-      bottom: -8px;
-      background-color: aquamarine;
-      z-index: 1;
-      left: -9px;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-
-      background:
-        radial-gradient(100% 100% at 50% 50%, @w 50%, @wT 50.25%) -10px -10px e('/') 20px 20px,
-        radial-gradient(100% 100% at 50% 50%, @w 50%, @wT 50.25%) calc(100% + 10px) -10px e('/') 20px 20px,
-
-        linear-gradient(@r, @r) 50% 50% e('/') 100% 100%;
-
-      background-repeat: no-repeat;
-    }
   }
 
   .cal__col_day {
