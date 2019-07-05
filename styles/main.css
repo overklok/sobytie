@@ -297,9 +297,10 @@ span.comment {
   font-weight: 600;
   opacity: 0.5;
   color: #003737;
-  width: 55%;
+  width: 60%;
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: bottom;
+  padding-bottom: 8px;
 }
 .cal .cal__dn {
   font-size: 40px;
@@ -325,7 +326,13 @@ span.comment {
   }
 }
 .cal .cal__details_wrap {
-  padding: 5px 2px;
+  padding: 5px 3px;
+}
+.cal .cal__details_cancel {
+  background-color: #FEF7F3;
+  border-left-width: 10px;
+  border-left-style: solid;
+  border-left-color: #EB8D52;
 }
 .cal__bg {
   position: absolute;
@@ -358,7 +365,7 @@ span.comment {
   width: calc(100% - 7px);
 }
 .cal__col:first-child .cal__bg::before {
-  left: 0;
+  left: -10px;
   bottom: -10px;
   background-color: #E5EBEB;
 }
@@ -370,6 +377,17 @@ span.comment {
   bottom: -10px;
   background-color: #E5EBEB;
 }
+.cal__col_cancel .cal__bg {
+  background-color: #FEF7F3;
+}
+.cal__col_cancel:first-child .cal__bg {
+  border-left-width: 10px;
+  border-left-style: solid;
+  border-left-color: #EB8D52;
+}
+.cal__col_cancel:first-child .cal__bg::before {
+  background-color: #EB8D52;
+}
 /**
   Блок "Календарь"
  */
@@ -379,9 +397,6 @@ span.comment {
 .cal .cal__col.cal__col_of {
   padding: 5px;
   white-space: nowrap;
-}
-.cal .cal__table-head {
-  padding-bottom: 15px;
 }
 .eventcard {
   background: #E5EBEB;

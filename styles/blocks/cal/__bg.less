@@ -40,7 +40,8 @@
   }
 
   .cal__bg::before {
-    left: 0;
+    //left: 0;
+    left: -10px;
     bottom: -10px;
     background-color: @color_acct_default_bg;
   }
@@ -55,5 +56,23 @@
     right: 0;
     bottom: -10px;
     background-color: @color_acct_default_bg;
+  }
+}
+
+.cal__col_cancel {
+  .cal__bg {
+    background-color: @color_acct_cancel_bg;
+  }
+
+  &:first-child {
+    .cal__bg {
+      border-left-width: 10px;
+      border-left-style: solid;
+      border-left-color: @color_acct_cancel_fg;
+
+      &::before {
+        background-color: @color_acct_cancel_fg;
+      }
+    }
   }
 }
