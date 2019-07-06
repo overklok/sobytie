@@ -1,5 +1,7 @@
 @import "font";
 
+@p_line-height: 30px;
+
 /**
   Установки текста
  */
@@ -38,7 +40,7 @@ h3 {
 /* Стандартный текст */
 p {
   font-size: 25px;
-  line-height: 30px;
+  line-height: @p_line-height;
   font-weight: 500;  /* по perfect pixel этой строчки быть не должно*/
 
   /* Уменьшенный */

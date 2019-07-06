@@ -1,0 +1,44 @@
+.button {
+  border-radius: @roundness;
+
+  font-size: 20px;
+  line-height: 50px;
+  padding: 0 55px;
+
+  color: black;
+
+  /* For raw usage */
+  display: block;
+  width: max-content;
+  float: left;
+
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+
+  &.button_primary {
+    background-color: @color_primary;
+    color: white;
+
+    &:hover {color: white;}
+  }
+
+  &.button_secondary {
+    background-color: @color_secondary;
+    color: @color_background;
+
+    &:hover {color: @color_background;}
+  }
+
+  &.button_inactive {
+    background-color: @color_secondary;
+    color: white;
+
+    &:hover {color: white;}
+  }
+
+  &.button_wide {
+    padding: 0 75px;
+  }
+}

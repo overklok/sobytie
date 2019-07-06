@@ -131,11 +131,51 @@ span.comment {
     flex: 0 0 14.28571429%;
   }
 }
+.button {
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 50px;
+  padding: 0 55px;
+  color: black;
+  /* For raw usage */
+  display: block;
+  width: max-content;
+  float: left;
+}
+.button:hover {
+  color: black;
+  text-decoration: none;
+}
+.button.button_primary {
+  background-color: #DFB05A;
+  color: white;
+}
+.button.button_primary:hover {
+  color: white;
+}
+.button.button_secondary {
+  background-color: #CCD7D7;
+  color: #003737;
+}
+.button.button_secondary:hover {
+  color: #003737;
+}
+.button.button_inactive {
+  background-color: #CCD7D7;
+  color: white;
+}
+.button.button_inactive:hover {
+  color: white;
+}
+.button.button_wide {
+  padding: 0 75px;
+}
 /**
   Блок "Карточка"
  */
 .mcard {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(35, 35, 35, 0.7) 100%);
+  background-color: #DFB05A;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.0001) 0%, rgba(35, 35, 35, 0.7) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 15px 0 15px 0;
@@ -177,19 +217,36 @@ span.comment {
 .mcard p.mcard__description.overflown:after {
   content: '...';
 }
-.mcard a.mcard__action {
+.mcard .mcard__action {
   font-size: 20px;
   line-height: 23px;
   color: #FFFFFF;
 }
-.mcard a.mcard__action.symbol {
+.mcard .mcard__action:hover {
+  text-decoration: none;
+}
+.mcard .mcard__action:hover.symbol {
+  background-color: #DFB05A;
+}
+.mcard .mcard__action.symbol {
+  border-radius: 10px;
+  padding: 4px;
+  padding-right: 6px;
+  margin-left: -4px;
+  /* compensation of padding-left */
+}
+.mcard .mcard__action.symbol:before {
+  content: '+';
   color: #FFFFFF;
+  margin-right: 4px;
   font-weight: 500;
-  font-size: 50px;
+  font-size: 40px;
   vertical-align: bottom;
 }
-.mcard a.mcard__action.symbol:hover {
-  text-decoration: none;
+.mcard .mcard__action .mcard__action__help-text {
+  color: #FFFFFF;
+  font-size: 22px;
+  line-height: 26px;
 }
 @media (min-width: 768px) {
   .mcard {
@@ -208,6 +265,9 @@ span.comment {
 .mcard.mcard_bottomed .mcard__actions {
   position: absolute;
   top: 0;
+}
+.mcard.mcard_alt {
+  height: 150px;
 }
 .cal {
   /* medium */
@@ -238,7 +298,7 @@ span.comment {
   background-color: #F6F1FA;
   border-left: solid #8c00b0 10px;
 }
-.cal .cal__event.cal__event_cancel {
+.cal .cal__event.cal__event_cancelled {
   color: #EB8D52;
   background-color: #FEF7F3;
   border-left: solid #eb8d52 10px;
@@ -328,12 +388,6 @@ span.comment {
 .cal .cal__details_wrap {
   padding: 5px 3px;
 }
-.cal .cal__details_cancel {
-  background-color: #FEF7F3;
-  border-left-width: 10px;
-  border-left-style: solid;
-  border-left-color: #EB8D52;
-}
 .cal__bg {
   position: absolute;
   top: 0;
@@ -352,41 +406,70 @@ span.comment {
   position: absolute;
   bottom: 0;
   background-size: cover;
+  image-rendering: optimizeSpeed;
+  /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;
+  /* Firefox                        */
+  image-rendering: -o-crisp-edges;
+  /* Opera                          */
+  image-rendering: -webkit-optimize-contrast;
+  /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;
+  /* Chrome */
+  image-rendering: optimize-contrast;
+  /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;
 }
 .cal__bg::after {
   right: -10px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><path d='M 0 0 C 0 100 100 100 100 100 L 100 100 L 0 100 Z' fill='%23E5EBEB'></path></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><path d='M 0 0 C 0 10 10 10 10 10 L 10 100 L 0 10 Z' fill='%23E5EBEB'></path></svg>");
 }
 .cal__bg::before {
   left: -10px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><path d='M 100 0 C 100 100 0 100 0 100 L 100 100 Z' fill='%23E5EBEB'></path></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><path d='M 10 0 C 10 10 0 10 0 10 L 10 100 Z' fill='%23E5EBEB'></path></svg>");
 }
 .cal__col:first-child .cal__bg {
   width: calc(100% - 7px);
 }
 .cal__col:first-child .cal__bg::before {
-  left: -10px;
+  left: 0;
   bottom: -10px;
   background-color: #E5EBEB;
-}
-.cal__col:last-child .cal__bg {
-  left: 5px;
 }
 .cal__col:last-child .cal__bg::after {
   right: 0;
   bottom: -10px;
   background-color: #E5EBEB;
 }
-.cal__col_cancel .cal__bg {
+.cal__col_cancelled .cal__bg {
   background-color: #FEF7F3;
 }
-.cal__col_cancel:first-child .cal__bg {
+.cal__col_cancelled .cal__bg::after {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><path d='M 0 0 C 0 10 10 10 10 10 L 10 100 L 0 10 Z' fill='%23FEF7F3'></path></svg>");
+}
+.cal__col_cancelled:first-child .cal__bg {
   border-left-width: 10px;
   border-left-style: solid;
   border-left-color: #EB8D52;
 }
-.cal__col_cancel:first-child .cal__bg::before {
+.cal__col_cancelled:first-child .cal__bg::before {
+  left: -10px;
   background-color: #EB8D52;
+}
+.cal__col_closed .cal__bg {
+  background-color: #F6F1FA;
+}
+.cal__col_closed .cal__bg::after {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><path d='M 0 0 C 0 10 10 10 10 10 L 10 100 L 0 10 Z' fill='%23F6F1FA'></path></svg>");
+}
+.cal__col_closed:first-child .cal__bg {
+  border-left-width: 10px;
+  border-left-style: solid;
+  border-left-color: #7F33AB;
+}
+.cal__col_closed:first-child .cal__bg::before {
+  left: -10px;
+  background-color: #7F33AB;
 }
 /**
   Блок "Календарь"
@@ -401,5 +484,60 @@ span.comment {
 .eventcard {
   background: #E5EBEB;
   border-radius: 10px;
-  padding: 15px;
+  padding: 50px 40px;
+  margin: 0;
+  /* Textbox items */
+  /* Mediabox items */
+}
+.eventcard h1,
+.eventcard h2,
+.eventcard h3,
+.eventcard h4,
+.eventcard p {
+  color: #003737;
+}
+.eventcard.eventcard_cancelled {
+  background-color: #FEF7F3;
+  border-left-width: 10px;
+  border-left-style: solid;
+  border-left-color: #EB8D52;
+}
+.eventcard.eventcard_closed {
+  background-color: #F6F1FA;
+  border-left-width: 10px;
+  border-left-style: solid;
+  border-left-color: #7F33AB;
+}
+.eventcard .eventcard__textbox,
+.eventcard .eventcard__mediabox {
+  padding-right: 0;
+  padding-left: 0;
+}
+.eventcard .eventcard__mediabox div {
+  float: right;
+}
+.eventcard .eventcard__text {
+  margin-bottom: 150px;
+}
+.eventcard .eventcard__props {
+  position: absolute;
+  bottom: 0;
+  max-height: 130px;
+}
+.eventcard .eventcard__prop {
+  margin: 0;
+  margin-top: 20px;
+}
+.eventcard .eventcard__prop:first-child {
+  margin-top: 0;
+}
+.eventcard .eventcard__pic {
+  width: 460px;
+  height: 368px;
+  border-radius: 10px;
+}
+.eventcard .eventcard__button-bar {
+  width: 460px;
+  justify-content: space-between;
+  padding-top: 40px;
 }

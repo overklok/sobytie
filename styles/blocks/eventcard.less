@@ -1,7 +1,80 @@
-.eventcard {
-  background: @color_acct_default_bg;
-  border-radius: @roundness;
-  //border: solid 1px black;
+@eventcard_props_max_items: 3;
+@eventcard_prop_mt: 20px;
 
-  padding: 15px;
+.eventcard {
+  background: @color_default_bg;
+  border-radius: @roundness;
+
+  padding: 50px 40px;
+  margin: 0;
+
+  h1, h2, h3, h4, p {
+    color: @color_default_fg;
+  }
+
+  &.eventcard_cancelled {
+    background-color: @color_cancelled_bg;
+
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: @color_cancelled_fg;
+  }
+
+  &.eventcard_closed {
+    background-color: @color_closed_bg;
+
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: @color_closed_fg;
+  }
+
+  .eventcard__textbox, .eventcard__mediabox {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .eventcard__mediabox {
+    div {
+      float: right;
+    }
+  }
+
+  /* Textbox items */
+  .eventcard__text {
+    margin-bottom:
+      @p_line-height * @eventcard_props_max_items + @eventcard_prop_mt * (@eventcard_props_max_items - 1) + 20;
+  }
+
+  .eventcard__props {
+    position: absolute;
+    bottom: 0;
+
+    max-height:
+      @p_line-height * @eventcard_props_max_items + @eventcard_prop_mt * (@eventcard_props_max_items - 1);
+  }
+
+  .eventcard__prop {
+    margin: 0;
+
+    margin-top: @eventcard_prop_mt;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  /* Mediabox items */
+  .eventcard__pic {
+    width: 460px;
+    height: 368px;
+
+    border-radius: @roundness;
+  }
+
+  .eventcard__button-bar {
+    width: 460px;
+    justify-content: space-between;
+
+    padding-top: 40px;
+  }
 }

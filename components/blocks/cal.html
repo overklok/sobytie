@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="cal__col cal__col_of col-lg-1">
-                        <div class="cal__event cal__event_cancel">
+                        <div class="cal__event cal__event_cancelled">
                             <div class="cal__event__title">
                                 Мастер класс «Стань успешнее»
                             </div>
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                     <div class="cal__col cal__col_of col-lg-1">
-                        <div class="cal__event cal__event_cancel">
+                        <div class="cal__event cal__event_cancelled">
                             <div class="cal__event__title">
                                 Личностный рост и креативность
                             </div>
@@ -136,20 +136,20 @@
     </div>
 
     <div class="container">
-        <h2 class="text-center">Выбранное событие</h2>
+        <h2 class="text-center">Выбранное событие: default</h2>
 
         <div class="cal row">
             <div class="cal__table col-2 col-lg-12">
                 <div class="seven-cols row">
-                    <div class="cal__col cal__col_day cal__col_cancel col-lg-1">
+                    <div class="cal__col cal__col_day col-lg-1">
                         <div class="cal__day">
+                            <div class="cal__bg"></div>
                             <span class="cal__wd">пн</span>
                             <span class="cal__dn">24</span>
                         </div>
                     </div>
                     <div class="cal__col cal__col_day col-lg-1">
                         <div class="cal__day">
-                            <div class="cal__bg"></div>
                             <span class="cal__wd">вт</span>
                             <span class="cal__dn">25</span>
                         </div>
@@ -190,7 +190,158 @@
             </div>
 
             <div class="cal__details_wrap col-10 col-lg-12">
-                <div class="cal__details cal__details_cancel eventcard">
+                <div class="cal__details eventcard row">
+                    <div class="eventcard__textbox col-lg-6">
+                        <h2>Групповой тренинг личности</h2>
+
+                        <p class="eventcard__text">
+                            Небольшой текст, который расскажет о мероприятии, его целях, методах и форме прохождения.
+                        </p>
+
+                        <div class="eventcard__props">
+                            <p class="eventcard__prop">Lorem ipsum dolor sit amet</p>
+                            <p class="eventcard__prop">Lorem ipsum dolor sit amet</p>
+                            <p class="eventcard__prop">Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                    <div class="eventcard__mediabox col-lg-6">
+                        <div class="row float-right m-0">
+                            <img class="eventcard__pic" src="http://lorempixel.com/460/368/" />
+                        </div>
+                        <div class="eventcard__button-bar row m-0">
+                            <a href="#" class="button button_primary button_wide">Записаться</a>
+                            <a href="#" class="button button_secondary">Закрыть</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="text-center">Выбранное событие: cancelled</h2>
+
+        <div class="cal row">
+            <div class="cal__table col-2 col-lg-12">
+                <div class="seven-cols row">
+                    <div class="cal__col cal__col_day cal__col_cancelled col-lg-1">
+                        <div class="cal__day">
+                            <div class="cal__bg"></div>
+                            <span class="cal__wd">пн</span>
+                            <span class="cal__dn">24</span>
+                        </div>
+                    </div>
+                    <div class="cal__col cal__col_day col-lg-1">
+                        <div class="cal__day">
+                            <span class="cal__wd">вт</span>
+                            <span class="cal__dn">25</span>
+                        </div>
+                    </div>
+                    <div class="cal__col cal__col_day col-lg-1">
+                        <div class="cal__day">
+                            <span class="cal__wd">ср</span>
+                            <span class="cal__dn">26</span>
+                        </div>
+                    </div>
+                    <div class="cal__col cal__col_day cal__col_cancelled col-lg-1">
+                        <div class="cal__bg"></div>
+                        <div class="cal__day">
+                            <span class="cal__wd">чт</span>
+                            <span class="cal__dn">27</span>
+                        </div>
+                    </div>
+                    <div class="cal__col cal__col_day col-lg-1">
+                        <div class="cal__day">
+                            <span class="cal__wd">пт</span>
+                            <span class="cal__dn">28</span>
+                        </div>
+                    </div>
+                    <div class="cal__col cal__col_day col-lg-1">
+                        <div class="cal__day">
+                            <span class="cal__wd">сб</span>
+                            <span class="cal__dn">29</span>
+                        </div>
+                    </div>
+                    <div class="cal__col cal__col_day cal__col_cancelled col-lg-1">
+                        <div class="cal__day">
+                            <div class="cal__bg"></div>
+                            <span class="cal__wd">вс</span>
+                            <span class="cal__dn">30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cal__details_wrap col-10 col-lg-12">
+                <div class="cal__details eventcard eventcard_cancelled">
+                    <h2>Групповой тренинг личности</h2>
+
+                    <p>Небольшой текст, который расскажет о мероприятии, его целях, методах и форме прохождения.</p>
+
+                    <!-- TODO: Items-->
+                    <!-- TODO: Image-->
+                    <!-- TODO: Buttons-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="text-center">Выбранное событие: closed</h2>
+
+        <div class="cal row">
+            <div class="cal__table col-2 col-lg-12">
+                <div class="seven-cols row">
+                    <div class="cal__col cal__col_day cal__col_closed col-lg-1">
+                        <div class="cal__day">
+                            <div class="cal__bg"></div>
+                            <span class="cal__wd">пн</span>
+                            <span class="cal__dn">24</span>
+                        </div>
+                    </div>
+                    <div class="cal__col cal__col_day col-lg-1">
+                        <div class="cal__day">
+                            <span class="cal__wd">вт</span>
+                            <span class="cal__dn">25</span>
+                        </div>
+                    </div>
+                    <div class="cal__col cal__col_day col-lg-1">
+                        <div class="cal__day">
+                            <span class="cal__wd">ср</span>
+                            <span class="cal__dn">26</span>
+                        </div>
+                    </div>
+                    <div class="cal__col cal__col_day cal__col_closed col-lg-1">
+                        <div class="cal__bg"></div>
+                        <div class="cal__day">
+                            <span class="cal__wd">чт</span>
+                            <span class="cal__dn">27</span>
+                        </div>
+                    </div>
+                    <div class="cal__col cal__col_day col-lg-1">
+                        <div class="cal__day">
+                            <span class="cal__wd">пт</span>
+                            <span class="cal__dn">28</span>
+                        </div>
+                    </div>
+                    <div class="cal__col cal__col_day col-lg-1">
+                        <div class="cal__day">
+                            <span class="cal__wd">сб</span>
+                            <span class="cal__dn">29</span>
+                        </div>
+                    </div>
+                    <div class="cal__col cal__col_day cal__col_closed col-lg-1">
+                        <div class="cal__day">
+                            <div class="cal__bg"></div>
+                            <span class="cal__wd">вс</span>
+                            <span class="cal__dn">30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cal__details_wrap col-10 col-lg-12">
+                <div class="cal__details eventcard eventcard_closed">
                     <h2>Групповой тренинг личности</h2>
 
                     <p>Небольшой текст, который расскажет о мероприятии, его целях, методах и форме прохождения.</p>

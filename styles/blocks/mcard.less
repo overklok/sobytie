@@ -3,7 +3,8 @@
  */
 
 .mcard {
-  background: @grad_card_neutral;
+  background-color: @color_primary;
+  background-image: @grad_card_neutral;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -63,22 +64,45 @@
     }
   }
 
-  a.mcard__action {
+  .mcard__action {
     font-size: 20px;
     line-height: 23px;
 
     color: @color_text_light;
 
+    &:hover {
+      text-decoration: none;
+
+      &.symbol {
+        background-color: #DFB05A;
+      }
+    }
+
     &.symbol {
+      border-radius: @roundness;
+
+      padding: 4px;
+      padding-right: 6px;
+
+      margin-left: -4px; /* compensation of padding-left */
+
+      &:before {
+        content: '+';
+        color: @color_text_light;
+
+        margin-right: 4px;
+
+        font-weight: 500;
+        font-size: 40px;
+        vertical-align: bottom;
+      }
+    }
+
+    .mcard__action__help-text {
       color: @color_text_light;
 
-      font-weight: 500;
-      font-size: 50px;
-      vertical-align: bottom;
-
-      &:hover {
-        text-decoration: none;
-      }
+      font-size: 22px;
+      line-height: 26px;
     }
   }
 
@@ -104,5 +128,9 @@
       position: absolute;
       top: 0;
     }
+  }
+
+  &.mcard_alt {
+    height: 150px;
   }
 }

@@ -1,3 +1,13 @@
+@svg_begin: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'>";
+@svg_end: "</svg>";
+
+@path_scoop_before: "M 10 0 C 10 10 0 10 0 10 L 10 100 Z";
+@path_scoop_after: "M 0 0 C 0 10 10 10 10 10 L 10 100 L 0 10 Z";
+
+@scoop_fill_default:      escape(@color_default_bg);
+@scoop_fill_cancelled:    escape(@color_cancelled_bg);
+@scoop_fill_closed:       escape(@color_closed_bg);
+
 .cal__bg {
   position: absolute;
   top: 0;
@@ -5,7 +15,7 @@
   width: calc(100% - 6px);
   height: calc(100% + 5px);
 
-  background-color: @color_acct_default_bg;
+  background-color: @color_default_bg;
   border-top-left-radius: @roundness;
   border-top-right-radius: @roundness;
 
@@ -17,20 +27,26 @@
     bottom: 0;
 
     background-size: cover;
+
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated; /* Chrome */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;
    }
 
   &::after {
     right: -10px;
 
-    background-image:
-      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><path d='M 0 0 C 0 100 100 100 100 100 L 100 100 L 0 100 Z' fill='%23E5EBEB'></path></svg>");
+    background-image: url("@{svg_begin}<path d='@{path_scoop_after}' fill='@{scoop_fill_default}'></path>@{svg_end}");
   }
 
   &::before {
     left: -10px;
 
-    background-image:
-      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><path d='M 100 0 C 100 100 0 100 0 100 L 100 100 Z' fill='%23E5EBEB'></path></svg>");
+    background-image: url("@{svg_begin}<path d='@{path_scoop_before}' fill='@{scoop_fill_default}'></path>@{svg_end}");
   }
 }
 
@@ -40,38 +56,65 @@
   }
 
   .cal__bg::before {
-    //left: 0;
-    left: -10px;
+    left: 0;
     bottom: -10px;
-    background-color: @color_acct_default_bg;
+    background-color: @color_default_bg;
   }
 }
 
 .cal__col:last-child {
   .cal__bg {
-    left: 5px;
+    //left: 3px;
   }
 
   .cal__bg::after {
     right: 0;
     bottom: -10px;
-    background-color: @color_acct_default_bg;
+    background-color: @color_default_bg;
   }
 }
 
-.cal__col_cancel {
+.cal__col_cancelled {
   .cal__bg {
-    background-color: @color_acct_cancel_bg;
+    background-color: @color_cancelled_bg;
+
+    &::after {
+      background-image: url("@{svg_begin}<path d='@{path_scoop_after}' fill='@{scoop_fill_cancelled}'></path>@{svg_end}");
+    }
   }
 
   &:first-child {
     .cal__bg {
       border-left-width: 10px;
       border-left-style: solid;
-      border-left-color: @color_acct_cancel_fg;
+      border-left-color: @color_cancelled_fg;
 
       &::before {
-        background-color: @color_acct_cancel_fg;
+        left: -10px;
+        background-color: @color_cancelled_fg;
+      }
+    }
+  }
+}
+
+.cal__col_closed {
+  .cal__bg {
+    background-color: @color_closed_bg;
+
+    &::after {
+      background-image: url("@{svg_begin}<path d='@{path_scoop_after}' fill='@{scoop_fill_closed}'></path>@{svg_end}");
+    }
+  }
+
+  &:first-child {
+    .cal__bg {
+      border-left-width: 10px;
+      border-left-style: solid;
+      border-left-color: @color_closed_fg;
+
+      &::before {
+        left: -10px;
+        background-color: @color_closed_fg;
       }
     }
   }
