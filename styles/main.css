@@ -490,10 +490,12 @@ span.comment {
 }
 .btn.btn-secondary:hover {
   color: #004645;
+  border-color: transparent !important;
 }
 .btn.btn-secondary:active {
   color: #004645 !important;
   background-color: #CCD7D7 !important;
+  border-color: transparent !important;
 }
 .btn.btn-inactive {
   background-color: #CCD7D7;
@@ -507,7 +509,7 @@ span.comment {
   background-color: #CCD7D7 !important;
 }
 .btn.btn-wide {
-  padding: 0 75px;
+  padding: 0 70px;
 }
 .headerlogo img.headerlogo__img {
   width: 140px;
