@@ -4,7 +4,7 @@ body.main-bg {
 
 section.container, footer.container {
   margin-bottom: 50px;
-  padding: 0 40px;
+  padding: 0;
 }
 
 section.container {
@@ -23,8 +23,12 @@ header.container {
   align-items: center;
 }
 
+footer.container {
+  padding: 0 40px;
+}
+
 @media (min-width: 1400px) {
-  section.container, footer.container {
+  section.container, header.container, footer.container {
     max-width: 1240px;
   }
 }

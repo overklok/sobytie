@@ -7,7 +7,7 @@ body.main-bg {
 section.container,
 footer.container {
   margin-bottom: 50px;
-  padding: 0 40px;
+  padding: 0;
 }
 section.container {
   background-color: #FFFFFF;
@@ -22,8 +22,12 @@ header.container {
   justify-content: space-between;
   align-items: center;
 }
+footer.container {
+  padding: 0 40px;
+}
 @media (min-width: 1400px) {
   section.container,
+  header.container,
   footer.container {
     max-width: 1240px;
   }
@@ -273,6 +277,70 @@ span.comment {
   flex-direction: column;
   justify-content: space-between;
 }
+.loadable-list {
+  position: relative;
+}
+.loadable-list .loadable-list__overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.0001) -11.1%, #FFFFFF 83.78%);
+  display: none;
+}
+.loadable-list.not-loaded .loadable-list__overlay {
+  display: block;
+}
+.blk {
+  padding: 50px 40px;
+  /* "Intro" block */
+  /* "Services" block */
+}
+.blk.blk-intro p.blk-intro__text-desc {
+  margin-top: 22px;
+  margin-right: 125px;
+}
+.blk.blk-intro p.blk-intro__text-lower {
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+.blk.blk-intro .blk-intro__text-comm {
+  margin-left: 20px;
+}
+.blk.blk-intro .blk-intro__img-director {
+  bottom: -20px;
+  right: -40px;
+}
+.blk.blk-intro .blk-intro__img-director img {
+  width: 483px;
+  position: absolute;
+  bottom: -50px;
+  right: -41px;
+}
+.blk.blk-services {
+  padding-bottom: 0;
+}
+.blk.blk-events {
+  padding-bottom: 8px;
+}
+.blk.blk-events .blk-events__text-main {
+  padding-right: 40px;
+}
+.blk.blk-events .blk-events__slider_wrap {
+  padding-left: 0;
+  padding-right: 15px;
+}
+.blk.blk-stories {
+  padding-bottom: 0;
+}
+.blk.blk-stories .blk-stories__overlay {
+  height: 220px;
+}
+@media (min-width: 768px) {
+  .blk.blk-stories .blk-stories__overlay {
+    height: 340px;
+  }
+}
 .btn {
   border: none;
   border-radius: 10px;
@@ -280,10 +348,7 @@ span.comment {
   line-height: 50px;
   padding: 0 55px;
   color: black;
-  /* For raw usage */
-  display: block;
-  width: max-content;
-  float: left;
+  /* For raw usage (not needed) */
   /* Suppress default Bootstrap behavior */
   transition: none;
   border-color: transparent !important;
@@ -335,18 +400,20 @@ span.comment {
   margin: 0 15px;
   color: #FFFFFF;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 24px;
   letter-spacing: 1.2px;
   text-align: center;
 }
+.headernav a.headernav__item.headernav__item_selected,
 .headernav a.headernav__item:hover {
   color: #F2C75C;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 .footernav {
   padding: 50px 0;
+  padding-top: 0;
 }
 .footernav ul.footernav-menu {
   margin: 0;
@@ -425,7 +492,7 @@ span.comment {
   /** Конечные элементы **/
 }
 .mcard .mcard__content {
-  padding: 22px;
+  padding: 25px;
 }
 .mcard .mcard__actions {
   position: absolute;
@@ -433,7 +500,7 @@ span.comment {
   padding: 22px;
 }
 .mcard h3.mcard__heading {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 .mcard p.mcard__description {
   font-size: 18px;
@@ -507,6 +574,12 @@ span.comment {
 }
 .mcard.mcard_alt {
   height: 150px;
+}
+.mcard.mcard_alt h3.mcard__heading {
+  margin-bottom: 10px;
+}
+.mcard.mcard_alt .mcard__content {
+  padding-left: 30px;
 }
 .cal {
   /* medium */
@@ -811,4 +884,12 @@ span.comment {
 }
 .form.form_footer .btn-primary {
   padding: 0 38px;
+}
+.slider {
+  height: 100%;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
