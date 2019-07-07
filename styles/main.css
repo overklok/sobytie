@@ -242,9 +242,6 @@ span.comment {
   font-size: 22px;
   margin: 0 5px;
 }
-.icon.icon_menu:hover {
-  color: #F2C75C;
-}
 /**
   width = 100% / 7 column-number = 14.285714285714285714285714285714%
  */
@@ -312,6 +309,7 @@ span.comment {
   right: -40px;
 }
 .blk.blk-intro .blk-intro__img-director img {
+  pointer-events: none;
   width: 483px;
   position: absolute;
   bottom: -50px;
@@ -403,7 +401,7 @@ span.comment {
 .btn.btn-wide {
   padding: 0 75px;
 }
-.headerlogo {
+.headerlogo img.headerlogo__img {
   width: 140px;
 }
 .headernav a.headernav__item {
@@ -420,6 +418,9 @@ span.comment {
   color: #F2C75C;
   text-decoration: none;
   font-weight: 500;
+}
+.headersocial a.headersocial__item .icon:hover {
+  color: #F2C75C;
 }
 .footernav {
   padding: 50px 0;
@@ -501,6 +502,15 @@ span.comment {
   /** Элементы-контейнеры **/
   /** Конечные элементы **/
 }
+.mcard:hover {
+  cursor: pointer;
+}
+.mcard:hover .mcard__action {
+  text-decoration: none;
+}
+.mcard:hover .mcard__action.symbol {
+  background-color: #DFB05A;
+}
 .mcard .mcard__content {
   padding: 25px;
 }
@@ -537,12 +547,6 @@ span.comment {
   font-size: 20px;
   line-height: 23px;
   color: #FFFFFF;
-}
-.mcard .mcard__action:hover {
-  text-decoration: none;
-}
-.mcard .mcard__action:hover.symbol {
-  background-color: #DFB05A;
 }
 .mcard .mcard__action.symbol {
   border-radius: 10px;

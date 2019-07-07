@@ -15,6 +15,18 @@
 
   height: 200px;
 
+  &:hover {
+    cursor: pointer;
+
+    .mcard__action {
+      text-decoration: none;
+
+      &.symbol {
+        background-color: #DFB05A;
+      }
+    }
+  }
+
   /** Элементы-контейнеры **/
   .mcard__content {
     padding: 25px;
@@ -69,14 +81,6 @@
     line-height: 23px;
 
     color: @color_text_light;
-
-    &:hover {
-      text-decoration: none;
-
-      &.symbol {
-        background-color: #DFB05A;
-      }
-    }
 
     &.symbol {
       border-radius: @roundness;
