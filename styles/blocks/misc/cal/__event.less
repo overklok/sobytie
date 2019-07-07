@@ -12,19 +12,25 @@
 
     border-radius: @roundness;
 
+    overflow: hidden;
+
     .cal__event__title {
       float: right;
-      padding: 10px;
+      padding: 10px; // !used
 
       text-align: right;
       white-space: normal;
 
       font-size: 18px;
       font-weight: 600;
-      line-height: 20px;
+      line-height: 20px; // !used
 
       width: 100%;
+      max-height: 20px * 5 - 10px; // line-height * 5 - padding;
+                                   // 5 = max line count - 1
+
       word-break: break-word;
+      overflow: hidden;
     }
 
     &.cal__event_closed {
@@ -52,17 +58,20 @@
 
       font-size: 12px;
       font-weight: 500;
-      line-height: 14px;
+      line-height: 14px;;
 
       .cal__event_detail {
         padding: 3px 0;
 
         text-align: right;
 
+        width: 100%;
+
+        white-space: normal;
         /* Ellipsis */
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
+        //text-overflow: ellipsis;
+        //white-space: nowrap;
+        //overflow: hidden;
       }
     }
   }
