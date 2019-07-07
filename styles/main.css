@@ -644,7 +644,7 @@ span.comment {
   /* use this value to count block height */
   line-height: 1em;
   /* max-height = line-height (1.2) * lines max number (3) */
-  max-height: 1.9em;
+  max-height: 3em;
   /* place for '...' */
 }
 .mcard p.mcard__description.overflown {
@@ -684,7 +684,7 @@ span.comment {
   }
   .mcard p.mcard__description {
     height: initial;
-    max-height: none;
+    max-height: 8em;
   }
 }
 .mcard.mcard_bottomed .mcard__content {
