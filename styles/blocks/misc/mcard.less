@@ -150,5 +150,14 @@
       background-image: none !important;
       background-color: @color_primary;
     }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 768px) {
+      p.mcard__description {
+        height: auto; /* ie 11 */
+        height: initial;
+        max-height: 4em;
+      }
+    }
   }
 }

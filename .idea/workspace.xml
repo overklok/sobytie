@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17e2839b-1d4a-4129-a6d6-602fedfb618a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/components/blocks/cal.html" afterPath="$PROJECT_DIR$/components/blocks/cal.html" />
-      <change beforePath="$PROJECT_DIR$/pages/event_closed.html" afterPath="$PROJECT_DIR$/pages/event_closed.html" />
-      <change beforePath="$PROJECT_DIR$/pages/event_opened.html" afterPath="$PROJECT_DIR$/pages/event_opened.html" />
-      <change beforePath="$PROJECT_DIR$/pages/events.html" afterPath="$PROJECT_DIR$/pages/events.html" />
-      <change beforePath="$PROJECT_DIR$/styles/base/icon.less" afterPath="$PROJECT_DIR$/styles/base/icon.less" />
-      <change beforePath="$PROJECT_DIR$/styles/blocks/misc/cal/__event.less" afterPath="$PROJECT_DIR$/styles/blocks/misc/cal/__event.less" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/misc/mcard.less" afterPath="$PROJECT_DIR$/styles/blocks/misc/mcard.less" />
       <change beforePath="$PROJECT_DIR$/styles/main.css" afterPath="$PROJECT_DIR$/styles/main.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,16 +25,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eventcard.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/blocks/misc/eventcard.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="81" column="1" lean-forward="true" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="__event.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/blocks/misc/cal/__event.less">
           <provider selected="true" editor-type-id="text-editor">
@@ -49,11 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mcard.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/styles/blocks/misc/mcard.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="70" column="23" lean-forward="true" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+            <state relative-caret-position="188">
+              <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -109,9 +105,9 @@
         <entry file="file://$PROJECT_DIR$/styles/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="763" column="39" lean-forward="false" selection-start-line="763" selection-start-column="39" selection-end-line="763" selection-end-column="39" />
+              <caret line="773" column="39" lean-forward="false" selection-start-line="773" selection-start-column="39" selection-end-line="773" selection-end-column="39" />
               <folding>
-                <marker date="1562529010659" expanded="true" signature="20455:20493" ph="{...}" />
+                <marker date="1562529621820" expanded="true" signature="20499:20537" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -183,10 +179,10 @@
       <find>wide</find>
       <find>1.9</find>
       <find>: initial</find>
-      <find>stories</find>
       <find>initial</find>
       <find>cal__event__details</find>
       <find>на ул. Пушкина, д. 7</find>
+      <find>stories</find>
     </findStrings>
     <replaceStrings>
       <replace>cal__col_of</replace>
@@ -248,13 +244,13 @@
         <option value="$PROJECT_DIR$/styles/blocks/blk.less" />
         <option value="$PROJECT_DIR$/styles/base/font.less" />
         <option value="$PROJECT_DIR$/styles/blocks/misc/btn.less" />
-        <option value="$PROJECT_DIR$/styles/blocks/misc/mcard.less" />
         <option value="$PROJECT_DIR$/styles/blocks/misc/cal/__event.less" />
         <option value="$PROJECT_DIR$/pages/events.html" />
         <option value="$PROJECT_DIR$/styles/base/icon.less" />
         <option value="$PROJECT_DIR$/components/blocks/cal.html" />
         <option value="$PROJECT_DIR$/pages/event_opened.html" />
         <option value="$PROJECT_DIR$/pages/event_closed.html" />
+        <option value="$PROJECT_DIR$/styles/blocks/misc/mcard.less" />
       </list>
     </option>
   </component>
@@ -431,7 +427,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.event_closed.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="cal.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sobytie/components/blocks/cal.html" />
     <configuration name="event_closed.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sobytie/pages/event_closed.html" />
     <configuration name="event_opened.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sobytie/pages/event_opened.html" />
@@ -446,11 +442,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.event_closed.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.event_opened.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.cal.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.events.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.event_closed.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.event_opened.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.cal.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.events.html" />
       </list>
     </recent_temporary>
   </component>
@@ -479,7 +475,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1695279" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -825,14 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/blocks/misc/mcard.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="118" column="21" lean-forward="false" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/blocks/misc/eventcard.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
@@ -860,9 +848,9 @@
     <entry file="file://$PROJECT_DIR$/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="763" column="39" lean-forward="false" selection-start-line="763" selection-start-column="39" selection-end-line="763" selection-end-column="39" />
+          <caret line="773" column="39" lean-forward="false" selection-start-line="773" selection-start-column="39" selection-end-line="773" selection-end-column="39" />
           <folding>
-            <marker date="1562529010659" expanded="true" signature="20455:20493" ph="{...}" />
+            <marker date="1562529621820" expanded="true" signature="20499:20537" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -924,8 +912,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+        <state relative-caret-position="188">
+          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -934,6 +922,14 @@
             <element signature="e#12141#12148#0" expanded="true" />
             <element signature="e#12155#12162#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/blocks/misc/mcard.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="70" column="23" lean-forward="true" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

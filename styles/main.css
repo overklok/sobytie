@@ -714,6 +714,14 @@ span.comment {
   background-image: none !important;
   background-color: #F2C75C;
 }
+@media (min-width: 768px) {
+  .mcard.mcard_alt p.mcard__description {
+    height: auto;
+    /* ie 11 */
+    height: initial;
+    max-height: 4em;
+  }
+}
 .cal {
   /* medium */
   /* smaller */
