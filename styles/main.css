@@ -332,6 +332,7 @@ span.comment {
   padding-bottom: 0;
 }
 .blk.blk-gallery .blk-gallery__overlay {
+  left: 0;
   height: 220px;
 }
 @media (min-width: 768px) {
@@ -342,6 +343,7 @@ span.comment {
 .blk.blk-gallery .blk-gallery__btn-wrap {
   position: absolute;
   bottom: 145.45454545px;
+  left: 0;
   text-align: center;
   width: 100%;
 }
