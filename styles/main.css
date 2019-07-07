@@ -350,16 +350,17 @@ span.comment {
   font-weight: 500;
 }
 .btn {
-  border: none;
   border-radius: 10px;
   font-size: 20px;
-  line-height: 50px;
+  line-height: 45px;
   padding: 0 55px;
   color: black;
   /* For raw usage (not needed) */
   /* Suppress default Bootstrap behavior */
   transition: none;
-  border-color: transparent !important;
+  border-color: transparent;
+  border-width: 3px;
+  border-style: solid;
 }
 .btn:hover {
   color: black;
@@ -368,9 +369,12 @@ span.comment {
 .btn.btn-primary {
   background-color: #F2C75C;
   color: white;
+  border-color: #F2C75C;
 }
 .btn.btn-primary:hover {
-  color: white;
+  color: #F2C75C;
+  background-color: #FFFFFF;
+  border-width: 3px;
 }
 .btn.btn-primary:active {
   color: white !important;
@@ -594,6 +598,10 @@ span.comment {
 }
 .mcard.mcard_alt .mcard__content {
   padding-left: 30px;
+}
+.mcard.mcard_alt:hover {
+  background-image: none !important;
+  background-color: #F2C75C;
 }
 .cal {
   /* medium */

@@ -1,9 +1,8 @@
 .btn {
-  border: none;
   border-radius: @roundness;
 
   font-size: 20px;
-  line-height: 50px;
+  line-height: 45px;
   padding: 0 55px;
 
   color: black;
@@ -15,9 +14,10 @@
 
   /* Suppress default Bootstrap behavior */
   transition: none;
-  border-color: transparent !important;
+  border-color: transparent;
+  border-width: 3px;
+  border-style: solid;
   //box-shadow: none !important;
-
 
   &:hover {
     color: black;
@@ -28,7 +28,9 @@
     background-color: @color_primary;
     color: white;
 
-    &:hover {color: white;}
+    border-color: @color_primary;
+
+    &:hover {color: @color_primary; background-color: @color_text_light; border-width: 3px;}
     &:active {
       color: white !important;
       background-color: @color_primary !important;
