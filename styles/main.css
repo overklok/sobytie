@@ -341,6 +341,17 @@ span.comment {
     height: 340px;
   }
 }
+.blk.blk-gallery {
+  padding-bottom: 0;
+}
+.blk.blk-gallery .blk-gallery__overlay {
+  height: 220px;
+}
+@media (min-width: 768px) {
+  .blk.blk-gallery .blk-gallery__overlay {
+    height: 340px;
+  }
+}
 .btn {
   border: none;
   border-radius: 10px;

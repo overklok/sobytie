@@ -52,8 +52,19 @@
   &.blk-stories {
     padding-bottom: 0;
 
-    // TODO: responsive
     .blk-stories__overlay {
+      height: 200px + 20px; // height of mcard
+
+      @media (min-width: 768px) {
+        height: 320px + 20px;
+      }
+    }
+  }
+
+  &.blk-gallery {
+    padding-bottom: 0;
+
+    .blk-gallery__overlay {
       height: 200px + 20px; // height of mcard
 
       @media (min-width: 768px) {

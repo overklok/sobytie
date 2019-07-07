@@ -7,15 +7,15 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/main.css">
 
-    <title>Главная</title>
+    <title>Услуги</title>
 </head>
 <body class="main-bg">
     <header class="container">
         <img class="headerlogo" src="../assets/images/logo.svg" alt="СоБытие">
         <nav class="headernav">
-            <a href="/pages/index.html" class="headernav__item headernav__item_selected">Главная</a>
+            <a href="/pages/index.html" class="headernav__item">Мероприятия</a>
             <a href="" class="headernav__item">Услуги</a>
-            <a href="/pages/events.html" class="headernav__item">Мероприятия</a>
+            <a href="/pages/events.html" class="headernav__item headernav__item_selected">Мероприятия</a>
             <a href="" class="headernav__item">Истории</a>
             <a href="" class="headernav__item">О нас</a>
         </nav>
@@ -27,86 +27,141 @@
     </header>
 
     <section id="intro" class="container">
-        <div class="blk blk-intro">
-            <div class="row m-0 p-0">
-                <div class="col-md-8 p-0">
-                    <h1>Мастерская Отношений &laquo;СоБытие&raquo;</h1>
-
-                    <p class="blk-intro__text-desc">
-                        Небольшой текст, который должен цеплять читателя и кратко объяснять ему формат мастерской отношений.
-                        В этом же тексте должна быть вдохновляющая цитата Коли о создании компании, ее миссии и ценностей
-                    </p>
-
-                    <p class="blk-intro__text-lower">
-                        <span class="signature">Николай Черкасов</span>
-                        <span class="blk-intro__text-comm comment">Директор мастерской</span>
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <div class="blk-intro__img-director">
-                        <img src="../assets/images/people/director.png" alt="Директор мастерской">
-                    </div>
-                </div>
-            </div>
+        <div class="blk blk-slider">
+            Slider
         </div>
     </section>
 
     <section id="main" class="container">
-        <div class="blk blk-services">
-            <h2 class="text-center">Услуги</h2>
+        <div class="blk blk-schedule">
+            <h2 class="text-center">24 - 30 Июня</h2>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="mcard mcard_alt" style="background-image: url('http://lorempixel.com/320/180/')">
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Заголовок h3</h3>
-                            <p class="mcard__description light">Текст p</p>
+            <div class="cal row">
+                <div class="col-2 col-lg-12">
+                    <div class="cal__table-head seven-cols row">
+                        <div class="cal__col cal__col_day col-lg-1">
+                            <div class="cal__day">
+                                <span class="cal__wd">пн</span>
+                                <span class="cal__dn">24</span>
+                            </div>
+                        </div>
+                        <div class="cal__col cal__col_day col-lg-1">
+                            <div class="cal__day">
+                                <span class="cal__wd">вт</span>
+                                <span class="cal__dn">25</span>
+                            </div>
+                        </div>
+                        <div class="cal__col cal__col_day col-lg-1">
+                            <div class="cal__day">
+                                <span class="cal__wd">ср</span>
+                                <span class="cal__dn">26</span>
+                            </div>
+                        </div>
+                        <div class="cal__col cal__col_day col-lg-1">
+                            <div class="cal__day">
+                                <span class="cal__wd">чт</span>
+                                <span class="cal__dn">27</span>
+                            </div>
+                        </div>
+                        <div class="cal__col cal__col_day col-lg-1">
+                            <div class="cal__day">
+                                <span class="cal__wd">пт</span>
+                                <span class="cal__dn">28</span>
+                            </div>
+                        </div>
+                        <div class="cal__col cal__col_day col-lg-1">
+                            <div class="cal__day">
+                                <span class="cal__wd">сб</span>
+                                <span class="cal__dn">29</span>
+                            </div>
+                        </div>
+                        <div class="cal__col cal__col_day col-lg-1">
+                            <div class="cal__day">
+                                <span class="cal__wd">вс</span>
+                                <span class="cal__dn">30</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="mcard mcard_alt" style="background-image: url('http://lorempixel.com/320/180/')">
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Заголовок h3</h3>
-                            <p class="mcard__description light">Текст p</p>
+
+                <div class="col-10 col-lg-12">
+                    <div class="cal__table seven-cols row">
+                        <div class="cal__col cal__col_of col-lg-1">
+                            <div class="cal__event cal__event_closed">
+                                <div class="cal__event__title">
+                                    Арт-терапия
+                                </div>
+                                <div class="cal__event__details">
+                                    <div class="cal__event_detail">12:00</div>
+                                    <div class="cal__event_detail">Главный офис</div>
+                                </div>
+                            </div>
+                            <div class="cal__event">
+                                <div class="cal__event__title">
+                                    Личностный рост и креативность
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mcard mcard_alt" style="background-image: url('http://lorempixel.com/320/180/')">
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Заголовок h3</h3>
-                            <p class="mcard__description light">Текст p</p>
+                        <div class="cal__col cal__col_of col-lg-1">
+                            <div class="cal__event cal__event_cancelled">
+                                <div class="cal__event__title">
+                                    Мастер класс «Стань успешнее»
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cal__col cal__col_of col-lg-1">
+                            <div class="cal__event">
+                                <div class="cal__event__title">
+                                    Групповой тренинг личности
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cal__col cal__col_of col-lg-1">
+                            <div class="cal__event">
+                                <div class="cal__event__title">
+                                    Групповой тренинг личности
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cal__col cal__col_of col-lg-1">
+                        </div>
+                        <div class="cal__col cal__col_of col-lg-1">
+                            <div class="cal__event">
+                                <div class="cal__event__title">
+                                    Арт-терапия
+                                </div>
+                            </div>
+                            <div class="cal__event">
+                                <div class="cal__event__title">
+                                    Мастер-класс «Стань успешнее»
+                                </div>
+                            </div>
+                            <div class="cal__event">
+                                <div class="cal__event__title">
+                                    Арт-терапия
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cal__col cal__col_of col-lg-1">
+                            <div class="cal__event cal__event_cancelled">
+                                <div class="cal__event__title">
+                                    Личностный рост и креативность
+                                </div>
+                            </div>
+                            <div class="cal__event">
+                                <div class="cal__event__title">
+                                    Арт-терапия
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="blk blk-events">
-            <h2 class="text-center">Мероприятия</h2>
+        <div class="blk blk-gallery">
+            <h2 class="text-center">Фотоотчеты</h2>
 
-            <div class="row">
-                <div class="blk-events__text-main col-md-5">
-                    <p class="text-justify text-small">
-                        Текст, рассказывающий о мероприятиях, которые проводятся силами СоБытия и партнеров.
-                        Справа можно увидеть небольшую выборку фотографий с последних мероприятий.
-                        В самом тексте должно быть кратко рассказано о целях этих мероприятий,
-                        а так же что от них можно получить.
-                    </p>
-
-                    <a href="" class="btn btn-primary btn-block">Узнать подробнее</a>
-                </div>
-
-                <div class="blk-events__slider_wrap col-md-7">
-                    <div class="slider">
-                        <img src="http://lorempixel.com/1800/600/" alt="Slider image (event)">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="blk blk-stories">
-            <h2 class="text-center">Истории</h2>
             <div class="loadable-list not-loaded row">
                 <div class="col-md-6 col-lg-3">
                     <div class="mcard" style="background-image: url('http://lorempixel.com/320/180/')">
@@ -190,7 +245,7 @@
                     </div>
                 </div>
 
-                <div class="blk-stories__overlay loadable-list__overlay"></div>
+                <div class="blk-gallery__overlay loadable-list__overlay"></div>
             </div>
         </div>
     </section>
