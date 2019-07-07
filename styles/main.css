@@ -1,6 +1,24 @@
 /**
   Цветовой набор
  */
+body.main-bg {
+  background-color: #003737;
+}
+section.container,
+footer.container {
+  margin-bottom: 50px;
+  padding: 50px 40px;
+}
+section.container {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+@media (min-width: 1400px) {
+  section.container,
+  footer.container {
+    max-width: 1240px;
+  }
+}
 @font-face {
   font-family: 'Gilroy';
   src: url('../assets/fonts/Gilroy-Extrabold.otf');
@@ -131,7 +149,13 @@ span.comment {
     flex: 0 0 14.28571429%;
   }
 }
-.button {
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.btn {
+  border: none;
   border-radius: 10px;
   font-size: 20px;
   line-height: 50px;
@@ -141,34 +165,74 @@ span.comment {
   display: block;
   width: max-content;
   float: left;
+  /* Suppress default Bootstrap behavior */
+  transition: none;
+  border-color: transparent !important;
 }
-.button:hover {
+.btn:hover {
   color: black;
   text-decoration: none;
 }
-.button.button_primary {
+.btn.btn-primary {
   background-color: #DFB05A;
   color: white;
 }
-.button.button_primary:hover {
+.btn.btn-primary:hover {
   color: white;
 }
-.button.button_secondary {
+.btn.btn-primary:active {
+  color: white !important;
+  background-color: #DFB05A !important;
+}
+.btn.btn-secondary {
   background-color: #CCD7D7;
   color: #003737;
 }
-.button.button_secondary:hover {
+.btn.btn-secondary:hover {
   color: #003737;
 }
-.button.button_inactive {
+.btn.btn-secondary:active {
+  color: #003737 !important;
+  background-color: #CCD7D7 !important;
+}
+.btn.btn-inactive {
   background-color: #CCD7D7;
   color: white;
 }
-.button.button_inactive:hover {
+.btn.btn-inactive:hover {
   color: white;
 }
-.button.button_wide {
+.btn.btn-inactive:active {
+  color: white !important;
+  background-color: #CCD7D7 !important;
+}
+.btn.btn-wide {
   padding: 0 75px;
+}
+ul.footer-menu {
+  margin: 0;
+  padding: 0;
+  /* Elements */
+}
+ul.footer-menu li {
+  list-style-type: none;
+}
+ul.footer-menu .footer-menu__heading {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+ul.footer-menu .footer-menu__item {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+ul.footer-menu .footer-menu__item a {
+  color: #FFFFFF;
 }
 /**
   Блок "Карточка"
@@ -474,6 +538,9 @@ span.comment {
 /**
   Блок "Календарь"
  */
+.cal {
+  /* Elements */
+}
 .cal .cal__col {
   padding: 10px 5px 5px 5px;
 }
@@ -486,8 +553,10 @@ span.comment {
   border-radius: 10px;
   padding: 50px 40px;
   margin: 0;
-  /* Textbox items */
-  /* Mediabox items */
+  /* Elements */
+  /* Textbox elements */
+  /* Mediabox elements */
+  /* Modifiers */
 }
 .eventcard h1,
 .eventcard h2,
@@ -495,18 +564,6 @@ span.comment {
 .eventcard h4,
 .eventcard p {
   color: #003737;
-}
-.eventcard.eventcard_cancelled {
-  background-color: #FEF7F3;
-  border-left-width: 10px;
-  border-left-style: solid;
-  border-left-color: #EB8D52;
-}
-.eventcard.eventcard_closed {
-  background-color: #F6F1FA;
-  border-left-width: 10px;
-  border-left-style: solid;
-  border-left-color: #7F33AB;
 }
 .eventcard .eventcard__textbox,
 .eventcard .eventcard__mediabox {
@@ -540,4 +597,39 @@ span.comment {
   width: 460px;
   justify-content: space-between;
   padding-top: 40px;
+}
+.eventcard.eventcard_cancelled {
+  background-color: #FEF7F3;
+  border-left-width: 10px;
+  border-left-style: solid;
+  border-left-color: #EB8D52;
+}
+.eventcard.eventcard_closed {
+  background-color: #F6F1FA;
+  border-left-width: 10px;
+  border-left-style: solid;
+  border-left-color: #7F33AB;
+}
+.form {
+  /* Elements */
+  /* Modifiers */
+}
+.form .form__input {
+  font-size: 20px;
+  line-height: 30px;
+  height: 50px;
+  border-radius: 10px;
+}
+.form.form_footer {
+  align-items: stretch;
+}
+.form.form_footer .form__input {
+  flex: 1;
+  color: #FFFFFF;
+  border-width: 3px;
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: #003737;
+}
+.form.form_footer .btn-primary {
+  padding: 0 40px;
 }

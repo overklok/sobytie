@@ -12,22 +12,7 @@
     color: @color_default_fg;
   }
 
-  &.eventcard_cancelled {
-    background-color: @color_cancelled_bg;
-
-    border-left-width: 10px;
-    border-left-style: solid;
-    border-left-color: @color_cancelled_fg;
-  }
-
-  &.eventcard_closed {
-    background-color: @color_closed_bg;
-
-    border-left-width: 10px;
-    border-left-style: solid;
-    border-left-color: @color_closed_fg;
-  }
-
+  /* Elements */
   .eventcard__textbox, .eventcard__mediabox {
     padding-right: 0;
     padding-left: 0;
@@ -39,7 +24,7 @@
     }
   }
 
-  /* Textbox items */
+  /* Textbox elements */
   .eventcard__text {
     margin-bottom:
       @p_line-height * @eventcard_props_max_items + @eventcard_prop_mt * (@eventcard_props_max_items - 1) + 20;
@@ -63,7 +48,7 @@
     }
   }
 
-  /* Mediabox items */
+  /* Mediabox elements */
   .eventcard__pic {
     width: 460px;
     height: 368px;
@@ -76,5 +61,22 @@
     justify-content: space-between;
 
     padding-top: 40px;
+  }
+
+  /* Modifiers */
+  &.eventcard_cancelled {
+    background-color: @color_cancelled_bg;
+
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: @color_cancelled_fg;
+  }
+
+  &.eventcard_closed {
+    background-color: @color_closed_bg;
+
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: @color_closed_fg;
   }
 }
