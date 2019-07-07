@@ -2,7 +2,7 @@
   Цветовой набор
  */
 body.main-bg {
-  background-color: #003737;
+  background-color: #004645;
 }
 section.container,
 footer.container {
@@ -186,13 +186,13 @@ span.comment {
 }
 .btn.btn-secondary {
   background-color: #CCD7D7;
-  color: #003737;
+  color: #004645;
 }
 .btn.btn-secondary:hover {
-  color: #003737;
+  color: #004645;
 }
 .btn.btn-secondary:active {
-  color: #003737 !important;
+  color: #004645 !important;
   background-color: #CCD7D7 !important;
 }
 .btn.btn-inactive {
@@ -245,6 +245,12 @@ span.comment {
   padding-bottom: 30px;
   border-top: 1px solid;
   border-color: rgba(255, 255, 255, 0.5);
+}
+.footercopy .footercopy__left {
+  border-right: 1px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  padding-right: 20px;
+  padding-left: 0;
 }
 .footercopy span.footercopy__copyright {
   font-size: 20px;
@@ -661,7 +667,7 @@ span.comment {
   color: #FFFFFF;
   border-width: 3px;
   border-color: rgba(255, 255, 255, 0.5);
-  background-color: #003737;
+  background-color: #004645;
 }
 .form.form_footer .form__input::placeholder {
   color: #FFFFFF;
