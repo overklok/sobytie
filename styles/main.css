@@ -600,6 +600,45 @@ span.comment {
 .footercopy span.footercopy__tel a {
   color: rgba(255, 255, 255, 0.5);
 }
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  /* Elements */
+}
+.slider .slider__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slider .slider__bulletwrap {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px 20px;
+}
+.slider .slider__bulletwrap:hover {
+  cursor: default;
+}
+.slider .slider__bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 2.5px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+.slider .slider__bullet:hover,
+.slider .slider__bullet.slider__bullet_active {
+  background-color: #F2C75C;
+}
+.slider .slider__bullet:hover {
+  cursor: pointer;
+}
 /**
   Блок "Карточка"
  */
@@ -1059,10 +1098,5 @@ span.comment {
   padding: 0 38px;
 }
 .slider {
-  height: 100%;
-}
-.slider img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  height: 400px;
 }
