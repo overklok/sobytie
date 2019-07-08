@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17e2839b-1d4a-4129-a6d6-602fedfb618a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/components/blocks/slider.html" afterPath="$PROJECT_DIR$/components/blocks/slider.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/pages/events.html" afterPath="$PROJECT_DIR$/pages/events.html" />
-      <change beforePath="$PROJECT_DIR$/pages/index.html" afterPath="$PROJECT_DIR$/pages/index.html" />
       <change beforePath="$PROJECT_DIR$/scripts/slider.js" afterPath="$PROJECT_DIR$/scripts/slider.js" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/blk.less" afterPath="$PROJECT_DIR$/styles/blocks/blk.less" />
-      <change beforePath="$PROJECT_DIR$/styles/blocks/misc/mcard.less" afterPath="$PROJECT_DIR$/styles/blocks/misc/mcard.less" />
       <change beforePath="$PROJECT_DIR$/styles/blocks/misc/slider.less" afterPath="$PROJECT_DIR$/styles/blocks/misc/slider.less" />
-      <change beforePath="$PROJECT_DIR$/styles/blocks/tmp.less" afterPath="$PROJECT_DIR$/styles/blocks/tmp.less" />
       <change beforePath="$PROJECT_DIR$/styles/main.css" afterPath="$PROJECT_DIR$/styles/main.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +21,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="120" column="26" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="120" selection-end-column="26" />
+            <state relative-caret-position="-167">
+              <caret line="15" column="48" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="15" selection-end-column="48" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -41,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blk.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="blk.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/blocks/blk.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="67" column="25" lean-forward="true" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+            <state relative-caret-position="402">
+              <caret line="102" column="5" lean-forward="true" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="typo.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/base/typo.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -64,8 +71,8 @@
       <file leaf-file-name="slider.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/blocks/slider.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+            <state relative-caret-position="435">
+              <caret line="29" column="14" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="29" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -80,8 +87,8 @@
       <file leaf-file-name="events.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/events.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="31" column="42" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+            <state relative-caret-position="110">
+              <caret line="40" column="60" lean-forward="false" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -95,8 +102,8 @@
       <file leaf-file-name="main.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/main.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="390">
+              <caret line="26" column="67" lean-forward="true" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -105,38 +112,30 @@
       <file leaf-file-name="slider.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/blocks/misc/slider.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="-2">
+              <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slider.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="474" column="20" lean-forward="false" selection-start-line="474" selection-start-column="20" selection-end-line="474" selection-end-column="20" />
+              <folding>
+                <marker date="1562607269659" expanded="true" signature="22097:22135" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slider.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/slider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-44">
-              <caret line="147" column="31" lean-forward="true" selection-start-line="147" selection-start-column="31" selection-end-line="147" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tmp.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/blocks/tmp.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="card.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/blocks/card.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="43" />
+            <state relative-caret-position="284">
+              <caret line="157" column="33" lean-forward="false" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -156,7 +155,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mb-2</find>
       <find>cancelled</find>
       <find>mb-3</find>
       <find>cal__col_delim</find>
@@ -184,8 +182,9 @@
       <find>stories</find>
       <find>sliders</find>
       <find>console.log</find>
-      <find>forEach</find>
       <find>lorempixel</find>
+      <find>forEach</find>
+      <find>blk-slidertop__slide</find>
     </findStrings>
     <replaceStrings>
       <replace>cal__col_of</replace>
@@ -247,13 +246,13 @@
         <option value="$PROJECT_DIR$/styles/blocks/misc/cal/__legend.less" />
         <option value="$PROJECT_DIR$/styles/main.less" />
         <option value="$PROJECT_DIR$/styles/blocks/tmp.less" />
-        <option value="$PROJECT_DIR$/scripts/slider.js" />
         <option value="$PROJECT_DIR$/components/blocks/slider.html" />
         <option value="$PROJECT_DIR$/styles/blocks/misc/mcard.less" />
         <option value="$PROJECT_DIR$/pages/index.html" />
         <option value="$PROJECT_DIR$/styles/blocks/misc/slider.less" />
-        <option value="$PROJECT_DIR$/pages/events.html" />
         <option value="$PROJECT_DIR$/styles/blocks/blk.less" />
+        <option value="$PROJECT_DIR$/pages/events.html" />
+        <option value="$PROJECT_DIR$/scripts/slider.js" />
       </list>
     </option>
   </component>
@@ -266,9 +265,8 @@
   <component name="NamedScopeManager">
     <scope name="Main" pattern="file:styles/main.less||file[sobytie]:styles/*||file[sobytie]:styles//*" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1366" />
-    <option name="y" value="-299" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="155" />
     <option name="width" value="977" />
     <option name="height" value="745" />
   </component>
@@ -364,6 +362,12 @@
               <item name="sobytie" type="b2602c69:ProjectViewProjectNode" />
               <item name="sobytie" type="462c0819:PsiDirectoryNode" />
               <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sobytie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sobytie" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
               <item name="blocks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -416,7 +420,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.events.html">
+  <component name="RunManager" selected="JavaScript Debug.slider.html">
     <configuration name="cal.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sobytie/components/blocks/cal.html" />
     <configuration name="event_closed.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sobytie/pages/event_closed.html" />
     <configuration name="events.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sobytie/pages/events.html" />
@@ -431,9 +435,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.events.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.slider.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.slider.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.events.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
         <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.cal.html" />
         <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.event_closed.html" />
       </list>
@@ -456,16 +460,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1366" y="-299" width="977" height="745" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32736573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20320855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27109975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23962805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -561,14 +565,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/blocks/misc/block.js" />
     <entry file="file://$PROJECT_DIR$/styles/blocks/misc/block.ts" />
-    <entry file="file://$PROJECT_DIR$/styles/base/typo.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="65" column="16" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="65" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/blocks/header/headernav.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -684,16 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11565">
-          <caret line="771" column="39" lean-forward="false" selection-start-line="771" selection-start-column="39" selection-end-line="771" selection-end-column="39" />
-          <folding>
-            <marker date="1562598679881" expanded="true" signature="21448:21486" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/base/icon.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -787,7 +773,7 @@
         <state relative-caret-position="310">
           <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
-            <element signature="e#478#485#0" expanded="true" />
+            <element signature="e#478#485#0" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -821,10 +807,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/styles/blocks/misc/mcard.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="116" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="67" lean-forward="true" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/components/blocks/slider.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        <state relative-caret-position="435">
+          <caret line="29" column="14" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="29" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -835,34 +837,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="147" column="31" lean-forward="true" selection-start-line="147" selection-start-column="31" selection-end-line="147" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/main.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/blocks/misc/mcard.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="116" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="120" column="26" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="120" selection-end-column="26" />
+        <state relative-caret-position="-167">
+          <caret line="15" column="48" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="15" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -879,16 +857,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/blocks/misc/slider.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state relative-caret-position="-2">
+          <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/base/typo.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="474" column="20" lean-forward="false" selection-start-line="474" selection-start-column="20" selection-end-line="474" selection-end-column="20" />
+          <folding>
+            <marker date="1562607269659" expanded="true" signature="22097:22135" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/blocks/blk.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="102" column="5" lean-forward="true" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/events.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="31" column="42" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        <state relative-caret-position="110">
+          <caret line="40" column="60" lean-forward="false" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -898,10 +902,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/blocks/blk.less">
+    <entry file="file://$PROJECT_DIR$/scripts/slider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="67" column="25" lean-forward="true" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+        <state relative-caret-position="284">
+          <caret line="157" column="33" lean-forward="false" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
           <folding />
         </state>
       </provider>
