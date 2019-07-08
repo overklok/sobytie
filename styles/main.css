@@ -926,6 +926,36 @@ span.comment {
   left: -10px;
   background-color: #7F33AB;
 }
+.cal .cal__legend .cal__legend-marker {
+  font-size: 20px;
+  line-height: 23px;
+  display: inline;
+  margin-right: 20px;
+}
+.cal .cal__legend .cal__legend-marker::before {
+  content: '\25CF';
+  vertical-align: -2px;
+  margin-right: 10px;
+  font-size: 28px;
+}
+.cal .cal__legend .cal__legend-marker.cal__legend-marker_closed {
+  color: rgba(127, 51, 171, 0.7);
+}
+.cal .cal__legend .cal__legend-marker.cal__legend-marker_closed::before {
+  color: #7F33AB;
+}
+.cal .cal__legend .cal__legend-marker.cal__legend-marker_cancelled {
+  color: rgba(235, 141, 82, 0.7);
+}
+.cal .cal__legend .cal__legend-marker.cal__legend-marker_cancelled::before {
+  color: #EB8D52;
+}
+.cal .cal__legend a.cal__legend-next {
+  font-size: 20px;
+  line-height: 23px;
+  color: #003737;
+  float: right;
+}
 /**
   Блок "Календарь"
  */

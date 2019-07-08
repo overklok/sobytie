@@ -1,0 +1,40 @@
+.cal {
+  .cal__legend {
+    .cal__legend-marker {
+      font-size: 20px;
+      line-height: 23px;
+
+      display: inline;
+      margin-right: 20px;
+
+      &::before {
+        content: '\25CF';
+        vertical-align: -2px;
+        margin-right: 10px;
+        font-size: 28px;
+      }
+
+      &.cal__legend-marker_closed {
+        color: fade(@color_closed_fg, 70);
+
+        &::before {color: @color_closed_fg;}
+      }
+
+      &.cal__legend-marker_cancelled {
+        color: fade(@color_cancelled_fg, 70);
+
+        &::before {color: @color_cancelled_fg;}
+      }
+    }
+
+    a.cal__legend-next {
+      font-size: 20px;
+      line-height: 23px;
+
+      color: @color_default_fg;
+
+
+      float: right;
+    }
+  }
+}
