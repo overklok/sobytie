@@ -237,6 +237,9 @@ span.comment {
   line-height: 23px;
   opacity: 0.5;
 }
+span.comment.comment_bold {
+  font-weight: bold;
+}
 @font-face {
   font-family: 'sobytie-icons';
   src: url('../assets/fonts/sobytie-icons/sobytie-icons.eot?5803638');
@@ -405,6 +408,37 @@ span.comment {
 .blk.blk-intro p.blk-intro__text-lower {
   margin-top: 80px;
   margin-bottom: 0;
+}
+.blk.blk-intro p.blk-intro__citation {
+  position: relative;
+  font-size: 30px;
+  line-height: 35px;
+  font-style: italic;
+  font-weight: 600;
+  width: 531px;
+  z-index: 1;
+}
+.blk.blk-intro p.blk-intro__citation::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 80px;
+  font-style: normal;
+  content: '\e812';
+  font-family: 'sobytie-icons';
+  color: #CCD7D7;
+  z-index: -10;
+}
+.blk.blk-intro p.blk-intro__citation::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 80px;
+  font-style: normal;
+  content: '\e811';
+  font-family: 'sobytie-icons';
+  color: #CCD7D7;
+  z-index: -10;
 }
 .blk.blk-intro .blk-intro__text-comm {
   margin-left: 20px;
@@ -1007,6 +1041,9 @@ span.comment {
   left: -10px;
   background-color: #7F33AB;
 }
+.cal .cal__legend {
+  padding: 10px 0;
+}
 .cal .cal__legend .cal__legend-marker {
   font-size: 20px;
   line-height: 23px;
@@ -1015,9 +1052,9 @@ span.comment {
 }
 .cal .cal__legend .cal__legend-marker::before {
   content: '\25CF';
-  vertical-align: -2px;
+  vertical-align: -5px;
   margin-right: 10px;
-  font-size: 28px;
+  font-size: 40px;
 }
 .cal .cal__legend .cal__legend-marker.cal__legend-marker_closed {
   color: rgba(127, 51, 171, 0.7);

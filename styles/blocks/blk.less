@@ -13,6 +13,49 @@
       margin-bottom: 0;
     }
 
+    p.blk-intro__citation {
+      position: relative;
+
+      font-size: 30px;
+      line-height: 35px;
+      font-style: italic;
+      font-weight: 600;
+
+      width: 531px;
+
+      z-index: 1;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        font-size: 80px;
+        font-style: normal;
+
+        content: '\e812';
+        font-family: 'sobytie-icons';
+        color: #CCD7D7;
+
+        z-index: -10;
+      }
+
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        font-size: 80px;
+        font-style: normal;
+
+        content: '\e811';
+        font-family: 'sobytie-icons';
+        color: #CCD7D7;
+
+        z-index: -10;
+      }
+    }
+
     .blk-intro__text-comm {
       margin-left: 20px;
     }
