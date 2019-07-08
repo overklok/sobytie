@@ -7,6 +7,14 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/main.css">
 
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous">
+    </script>
+
+    <script src="../scripts/slider.js"></script>
+
     <title>Главная</title>
 </head>
 <body class="main-bg">
@@ -59,7 +67,7 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    <div class="mcard mcard_alt" style="background-image: url('http://lorempixel.com/320/180/')">
+                    <div class="mcard mcard_alt" style="background-image: url('http://loremflickr.com/320/180/')">
                         <div class="mcard__content">
                             <h3 class="mcard__heading light">Заголовок h3</h3>
                             <p class="mcard__description light">Текст p</p>
@@ -67,7 +75,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="mcard mcard_alt" style="background-image: url('http://lorempixel.com/320/180/')">
+                    <div class="mcard mcard_alt" style="background-image: url('http://loremflickr.com/320/180/')">
                         <div class="mcard__content">
                             <h3 class="mcard__heading light">Заголовок h3</h3>
                             <p class="mcard__description light">Текст p</p>
@@ -75,7 +83,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="mcard mcard_alt" style="background-image: url('http://lorempixel.com/320/180/')">
+                    <div class="mcard mcard_alt" style="background-image: url('http://loremflickr.com/320/180/')">
                         <div class="mcard__content">
                             <h3 class="mcard__heading light">Заголовок h3</h3>
                             <p class="mcard__description light">Текст p</p>
@@ -101,8 +109,15 @@
                 </div>
 
                 <div class="blk-events__slider_wrap col-md-7">
-                    <div class="slider">
-                        <img src="http://lorempixel.com/1800/600/" alt="Slider image (event)">
+                    <div class="slider" data-dur="500" data-delay="3000" data-fn="slide">
+                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=1')">
+                        </div>
+                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=2')">
+                        </div>
+                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=3')">
+                        </div>
+                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=4')">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,7 +126,7 @@
             <h2 class="text-center">Истории</h2>
             <div class="loadable-list not-loaded row">
                 <div class="col-md-6 col-lg-3">
-                    <div class="mcard" style="background-image: url('http://lorempixel.com/320/180/')">
+                    <div class="mcard" style="background-image: url('http://loremflickr.com/320/180/')">
                         <div class="mcard__content">
                             <h3 class="mcard__heading light">Индивидуальные</h3>
                             <p class="mcard__description light">Личный коучинг и психотерапия</p>
@@ -123,7 +138,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="mcard" style="background-image: url('http://lorempixel.com/180/320/')">
+                    <div class="mcard" style="background-image: url('http://loremflickr.com/180/320/')">
                         <div class="mcard__content">
                             <h3 class="mcard__heading light">Корпоративные</h3>
                             <p class="mcard__description light">
