@@ -1,3 +1,6 @@
+@cal_event_hov_brd_w: 3px;
+@cal_event_details_padding: 10px;
+
 .cal {
   .cal__event {
     width: 100%;
@@ -54,7 +57,7 @@
       right: 0;
       bottom: 0;
 
-      padding: 10px;
+      padding: @cal_event_details_padding;
 
       font-size: 12px;
       font-weight: 500;
@@ -72,6 +75,33 @@
         //text-overflow: ellipsis;
         //white-space: nowrap;
         //overflow: hidden;
+      }
+    }
+  }
+
+  /* To hover */
+  .cal__event {
+    padding:  @cal_event_hov_brd_w /* compensation of hover border */
+              @cal_event_hov_brd_w
+              @cal_event_hov_brd_w
+              0;
+
+    &:hover {
+      padding: 0;
+
+      background-color: #FFFFFF;
+
+      border: solid 3px @color_primary;
+
+      cursor: pointer;
+
+      .cal__event__title {
+        color: @color_primary;
+      }
+
+      .cal__event__details {
+        padding-bottom: @cal_event_details_padding - @cal_event_hov_brd_w;
+        padding-right: @cal_event_details_padding - @cal_event_hov_brd_w;
       }
     }
   }

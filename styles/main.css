@@ -13,6 +13,10 @@ section.container {
   background-color: #FFFFFF;
   border-radius: 10px;
 }
+section.container.container_ctrl {
+  background-color: transparent;
+  margin-bottom: 40px;
+}
 header.container {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -52,12 +56,14 @@ footer.container {
   src: url('../assets/fonts/Gilroy/Gilroy-Regular.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/Gilroy/Gilroy-Regular.woff2') format('woff2'), url('../assets/fonts/Gilroy/Gilroy-Regular.woff') format('woff'), url('../assets/fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  /* 400 */
 }
 @font-face {
   font-family: 'Gilroy';
   src: url('../assets/fonts/Gilroy/Gilroy-BoldItalic.eot');
   src: url('../assets/fonts/Gilroy/Gilroy-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/Gilroy/Gilroy-BoldItalic.woff2') format('woff2'), url('../assets/fonts/Gilroy/Gilroy-BoldItalic.woff') format('woff'), url('../assets/fonts/Gilroy/Gilroy-BoldItalic.ttf') format('truetype');
   font-weight: bold;
+  /* 700 */
   font-style: italic;
 }
 @font-face {
@@ -312,6 +318,7 @@ span.comment.comment_bold {
 /* '' */
 .icon-sob-mail:before {
   content: '\e80c';
+  margin-right: 0.5em;
 }
 /* '' */
 .icon-sob-man:before {
@@ -342,10 +349,17 @@ span.comment.comment_bold {
   content: '\e814';
 }
 /* '' */
+.icon.icon_default {
+  color: #004645;
+  font-size: 30px;
+}
 .icon.icon_menu {
   margin: 0 5px;
   color: #FFFFFF;
   font-size: 22px;
+}
+.icon.icon_ctrl {
+  margin: 0 10px 0 0;
 }
 .icon.icon_eventcard {
   margin: 0 5px;
@@ -400,6 +414,19 @@ span.comment.comment_bold {
   padding: 50px 40px;
   /* "Intro" block */
   /* "Services" block */
+  /* Global modifiers */
+}
+.blk.blk-intro {
+  padding: 0;
+}
+.blk.blk-intro .blk-intro__text {
+  padding: 50px 40px;
+  padding-right: 0;
+  overflow: hidden;
+}
+.blk.blk-intro .blk-intro__img {
+  padding: 50px 40px;
+  padding-left: 0;
 }
 .blk.blk-intro p.blk-intro__text-desc {
   margin-top: 22px;
@@ -409,27 +436,29 @@ span.comment.comment_bold {
   margin-top: 80px;
   margin-bottom: 0;
 }
-.blk.blk-intro p.blk-intro__citation {
+.blk.blk-intro p.blk-intro__text-citation {
   position: relative;
   font-size: 30px;
   line-height: 35px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
+  margin: 56px 0;
   width: 531px;
   z-index: 1;
 }
-.blk.blk-intro p.blk-intro__citation::before {
+.blk.blk-intro p.blk-intro__text-citation::before {
   position: absolute;
-  left: 0;
+  left: -50px;
   top: 0;
   font-size: 80px;
   font-style: normal;
-  content: '\e812';
+  content: '\e811';
   font-family: 'sobytie-icons';
   color: #CCD7D7;
-  z-index: -10;
+  z-index: -5;
+  transform: rotate(180deg);
 }
-.blk.blk-intro p.blk-intro__citation::after {
+.blk.blk-intro p.blk-intro__text-citation::after {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -443,16 +472,12 @@ span.comment.comment_bold {
 .blk.blk-intro .blk-intro__text-comm {
   margin-left: 20px;
 }
-.blk.blk-intro .blk-intro__img-director {
-  bottom: -20px;
-  right: -40px;
-}
-.blk.blk-intro .blk-intro__img-director img {
+.blk.blk-intro .blk-intro__img-avatar img {
   pointer-events: none;
-  width: 483px;
   position: absolute;
-  bottom: -50px;
-  right: -41px;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
 }
 .blk.blk-services {
   padding-bottom: 0;
@@ -526,6 +551,11 @@ span.comment.comment_bold {
   left: 50px;
   padding: 0;
 }
+.blk.blk-profile p.blk-profile__text {
+  font-size: 22px;
+  line-height: 27px;
+  width: 531px;
+}
 .btn {
   border-radius: 10px;
   font-size: 20px;
@@ -584,6 +614,9 @@ span.comment.comment_bold {
 .btn.btn-wide {
   padding: 0 70px;
 }
+.social .social-item .icon:hover {
+  color: #F2C75C;
+}
 .headerlogo img.headerlogo__img {
   width: 140px;
 }
@@ -591,7 +624,7 @@ span.comment.comment_bold {
   margin: 0 15px;
   color: #FFFFFF;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 24px;
   letter-spacing: 1.2px;
   text-align: center;
@@ -600,7 +633,7 @@ span.comment.comment_bold {
 .headernav a.headernav__item:hover {
   color: #F2C75C;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
 }
 .headersocial a.headersocial__item .icon:hover {
   color: #F2C75C;
@@ -713,6 +746,11 @@ span.comment.comment_bold {
 }
 .slider .slider__bullet:hover {
   cursor: pointer;
+}
+.pagectrl .pagectrl__back {
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
 }
 /**
   Блок "Карточка"
@@ -838,6 +876,7 @@ span.comment.comment_bold {
   }
 }
 .cal {
+  /* To hover */
   /* medium */
   /* smaller */
 }
@@ -846,7 +885,7 @@ span.comment.comment_bold {
   height: 180px;
   position: relative;
   margin: 0 0 10px 0;
-  color: #003737;
+  color: #004645;
   background-color: #E5EBEB;
   border-radius: 10px;
   overflow: hidden;
@@ -891,6 +930,22 @@ span.comment.comment_bold {
   white-space: normal;
   /* Ellipsis */
 }
+.cal .cal__event {
+  padding: 3px /* compensation of hover border */ 3px 3px 0;
+}
+.cal .cal__event:hover {
+  padding: 0;
+  background-color: #FFFFFF;
+  border: solid 3px #F2C75C;
+  cursor: pointer;
+}
+.cal .cal__event:hover .cal__event__title {
+  color: #F2C75C;
+}
+.cal .cal__event:hover .cal__event__details {
+  padding-bottom: 7px;
+  padding-right: 7px;
+}
 @media (max-width: 991.98px) {
   .cal .cal__event {
     width: 170px;
@@ -908,7 +963,7 @@ span.comment.comment_bold {
   text-align: right;
   padding: 12px 12px 0 0;
   margin: 0 6px;
-  color: #003737;
+  color: #004645;
   display: table;
   border-right: solid 1px rgba(0, 55, 55, 0.3);
   /* smaller */
@@ -926,7 +981,7 @@ span.comment.comment_bold {
   line-height: 26px;
   font-weight: 600;
   opacity: 0.5;
-  color: #003737;
+  color: #004645;
   width: 60%;
   display: table-cell;
   vertical-align: bottom;
@@ -937,7 +992,7 @@ span.comment.comment_bold {
   line-height: 40px;
   font-weight: 600;
   opacity: 0.7;
-  color: #003737;
+  color: #004645;
   display: table-cell;
   vertical-align: middle;
 }
@@ -1071,8 +1126,14 @@ span.comment.comment_bold {
 .cal .cal__legend a.cal__legend-next {
   font-size: 20px;
   line-height: 23px;
-  color: #003737;
+  color: #004645;
   float: right;
+}
+.cal .cal__legend a.cal__legend-next:hover {
+  text-decoration: none;
+}
+.cal .cal__legend a.cal__legend-next:hover .icon {
+  color: #F2C75C;
 }
 /**
   Блок "Календарь"
@@ -1102,7 +1163,7 @@ span.comment.comment_bold {
 .eventcard h3,
 .eventcard h4,
 .eventcard p {
-  color: #003737;
+  color: #004645;
 }
 .eventcard .eventcard__textbox,
 .eventcard .eventcard__mediabox {

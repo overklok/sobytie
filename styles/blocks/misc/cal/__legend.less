@@ -35,8 +35,15 @@
 
       color: @color_default_fg;
 
-
       float: right;
+
+      &:hover {
+        text-decoration: none;
+
+        .icon {
+          color: @color_primary;
+        }
+      }
     }
   }
 }

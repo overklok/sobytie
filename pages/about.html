@@ -15,7 +15,7 @@
 
     <script src="../scripts/slider.js"></script>
 
-    <title>Персональная страница</title>
+    <title>Главная</title>
 </head>
 <body class="main-bg">
     <header class="container">
@@ -36,268 +36,178 @@
         </div>
     </header>
 
-    <section id="cite" class="container">
-        <div class="blk blk-intro">
-            <div class="row m-0 p-0">
-                <div class="col-md-8 p-0">
-                    <h1>Николай Черкасов</h1>
-                    <span class="comment comment_bold">Директор мастерской</span>
+     <section id="intro" class="container">
 
-                    <p class="blk-intro__citation">
-                        Этот день обмену и возврату не подлежит – действуйте!
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <div class="blk-intro__img-director">
-                        <img src="../assets/images/people/director.png" alt="Директор мастерской">
+         <!-- TODO: Cover -->
+        <div class="blk blk-cover">
+            <div class="slider" data-dur="500" data-delay="3000" data-fn="slide">
+                <div class="blk-slidertop__slide slider__item slider__bg"
+                     style="background-image: url('http://loremflickr.com/700/300?random=1')">
+                    <div class="blk-slidertop__content">
+                        <h1 class="blk-slidertop__heading light">Саморазвитие и рост</h1>
+
+                        <p class="blk-slidertop__text light">
+                            Небольшой текст, который расскажет о том, какие мероприятия проходят в центре,
+                            что на них происходит, цели этих мероприятий, а также описание профита,
+                            который получит адресат
+                        </p>
+
+                        <p class="blk-slidertop__sub light">Доп текст, стоит уточнить</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="profile" class="container">
-        <div class="blk blk-profile">
-            <div class="row m-0 p-0">
-                <div class="col-md-8 p-0">
-                    <h1>Мастерская Отношений &laquo;СоБытие&raquo;</h1>
-
-                    <p class="blk-profile__text">
-                        Меня зовут Николай и в свои 40 лет я состоялся как муж, отец и профессионал в разных областях.
-                    </p>
-
-                    <p class="blk-profile__text">
-                        Моя жизнь не была безоблачной, но именно это позволяет мне ценить все, что у меня есть,
-                        и в первую очередь, крепкие гармоничные отношения с супругой.
-                    </p>
-
-                    <p class="blk-profile__text">
-                        Я и моя команда сделаем все возможное, чтобы вы обрели себя и счастливые отношения!
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <div class="blk-profile__img-director">
-                        <img src="../assets/images/people/director.png" alt="Директор мастерской">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+     </section>
 
     <section id="main" class="container">
-        <div class="blk blk-schedule">
-            <h2 class="text-center">Ближайшие меропиятия</h2>
+        <div class="blk blk-services">
+            <h2 class="text-center">Услуги</h2>
 
-            <div class="cal">
-                <div class="cal__legend row">
-                    <div class="col-lg-6 p-0">
-                        <span class="cal__legend-marker cal__legend-marker_closed">Запись закрыта</span>
-                        <span class="cal__legend-marker cal__legend-marker_cancelled">Мероприятие отменено</span>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mcard mcard_alt" style="background-image: url('http://loremflickr.com/320/180/')">
+                        <div class="mcard__content">
+                            <h3 class="mcard__heading light">Заголовок h3</h3>
+                            <p class="mcard__description light">Текст p</p>
+                        </div>
                     </div>
-                    <div class="col-lg-6 p-0">
-                        <a href="" class="cal__legend-next">
-                            Следующая неделя
-                            <i class="icon icon-sob-triangle-fwd"></i>
-                        </a>
+                </div>
+                <div class="col-md-4">
+                    <div class="mcard mcard_alt" style="background-image: url('http://loremflickr.com/320/180/')">
+                        <div class="mcard__content">
+                            <h3 class="mcard__heading light">Заголовок h3</h3>
+                            <p class="mcard__description light">Текст p</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mcard mcard_alt" style="background-image: url('http://loremflickr.com/320/180/')">
+                        <div class="mcard__content">
+                            <h3 class="mcard__heading light">Заголовок h3</h3>
+                            <p class="mcard__description light">Текст p</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blk blk-events">
+            <h2 class="text-center">Мероприятия</h2>
+
+            <div class="row">
+                <div class="blk-events__text-main col-md-5">
+                    <p class="text-justify text-small">
+                        Текст, рассказывающий о мероприятиях, которые проводятся силами СоБытия и партнеров.
+                        Справа можно увидеть небольшую выборку фотографий с последних мероприятий.
+                        В самом тексте должно быть кратко рассказано о целях этих мероприятий,
+                        а так же что от них можно получить.
+                    </p>
+
+                    <a href="" class="btn btn-primary btn-block">Узнать подробнее</a>
+                </div>
+
+                <div class="blk-events__slider_wrap col-md-7">
+                    <div class="slider" data-dur="500" data-delay="3000" data-fn="slide">
+                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=1')">
+                        </div>
+                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=2')">
+                        </div>
+                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=3')">
+                        </div>
+                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=4')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blk blk-gallery">
+            <h2 class="text-center">Истории</h2>
+            <div class="loadable-list not-loaded row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="mcard" style="background-image: url('http://loremflickr.com/320/180/')">
+                        <div class="mcard__content">
+                            <h3 class="mcard__heading light">Индивидуальные</h3>
+                            <p class="mcard__description light">Личный коучинг и психотерапия</p>
+                        </div>
+                        <div class="mcard__actions">
+                            <span class="mcard__action">Подписаться</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-2 col-lg-12">
-                        <div class="cal__table-head seven-cols row">
-                            <div class="cal__col cal__col_day col-lg-1">
-                                <div class="cal__day">
-                                    <span class="cal__wd">пн</span>
-                                    <span class="cal__dn">24</span>
-                                </div>
-                            </div>
-                            <div class="cal__col cal__col_day col-lg-1">
-                                <div class="cal__day">
-                                    <span class="cal__wd">вт</span>
-                                    <span class="cal__dn">25</span>
-                                </div>
-                            </div>
-                            <div class="cal__col cal__col_day col-lg-1">
-                                <div class="cal__day">
-                                    <span class="cal__wd">ср</span>
-                                    <span class="cal__dn">26</span>
-                                </div>
-                            </div>
-                            <div class="cal__col cal__col_day col-lg-1">
-                                <div class="cal__day">
-                                    <span class="cal__wd">чт</span>
-                                    <span class="cal__dn">27</span>
-                                </div>
-                            </div>
-                            <div class="cal__col cal__col_day col-lg-1">
-                                <div class="cal__day">
-                                    <span class="cal__wd">пт</span>
-                                    <span class="cal__dn">28</span>
-                                </div>
-                            </div>
-                            <div class="cal__col cal__col_day col-lg-1">
-                                <div class="cal__day">
-                                    <span class="cal__wd">сб</span>
-                                    <span class="cal__dn">29</span>
-                                </div>
-                            </div>
-                            <div class="cal__col cal__col_day col-lg-1">
-                                <div class="cal__day">
-                                    <span class="cal__wd">вс</span>
-                                    <span class="cal__dn">30</span>
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="mcard" style="background-image: url('http://loremflickr.com/180/320/')">
+                        <div class="mcard__content">
+                            <h3 class="mcard__heading light">Корпоративные</h3>
+                            <p class="mcard__description light">
+                                Командообразование и менторинг Командообразование и менторинг Командообразование и
+                                менторинг Командообразование и менторинг
+                            </p>
                         </div>
-                    </div>
 
-                    <div class="col-10 col-lg-12">
-                        <div class="cal__table seven-cols row">
-                            <div class="cal__col cal__col_of col-lg-1">
-                                <div class="cal__event cal__event_closed">
-                                    <div class="cal__event__title">
-                                        Арт-терапия
-                                    </div>
-                                    <div class="cal__event__details">
-                                        <div class="cal__event_detail">
-                                            12:00 <i class="icon icon-sob-time"></i>
-                                        </div>
-                                        <div class="cal__event_detail">
-                                            Главный офис <i class="icon icon-sob-geotag"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cal__event">
-                                    <div class="cal__event__title">
-                                        Личностный рост и креативность
-                                    </div>
-                                    <div class="cal__event__details">
-                                        <div class="cal__event_detail">
-                                            13:00 <i class="icon icon-sob-time"></i>
-                                        </div>
-                                        <div class="cal__event_detail">
-                                            Главный офис на ул. Пушкина, д. 7<i class="icon icon-sob-geotag"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cal__col cal__col_of col-lg-1">
-                                <div class="cal__event cal__event_cancelled">
-                                    <div class="cal__event__title">
-                                        Мастер класс «Стань успешнее»
-                                    </div>
-                                    <div class="cal__event__details">
-                                        <div class="cal__event_detail">
-                                            13:00 <i class="icon icon-sob-time"></i>
-                                        </div>
-                                        <div class="cal__event_detail">
-                                            Главный офис<i class="icon icon-sob-geotag"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cal__col cal__col_of col-lg-1">
-                                <div class="cal__event">
-                                    <div class="cal__event__title">
-                                        Групповой тренинг личности
-                                    </div>
-                                    <div class="cal__event__details">
-                                        <div class="cal__event_detail">
-                                            13:00 <i class="icon icon-sob-time"></i>
-                                        </div>
-                                        <div class="cal__event_detail">
-                                            Главный офис<i class="icon icon-sob-geotag"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cal__col cal__col_of col-lg-1">
-                                <div class="cal__event">
-                                    <div class="cal__event__title">
-                                        Групповой тренинг личности
-                                    </div>
-                                    <div class="cal__event__details">
-                                        <div class="cal__event_detail">
-                                            13:00 <i class="icon icon-sob-time"></i>
-                                        </div>
-                                        <div class="cal__event_detail">
-                                            Главный офис<i class="icon icon-sob-geotag"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cal__col cal__col_of col-lg-1">
-                            </div>
-                            <div class="cal__col cal__col_of col-lg-1">
-                                <div class="cal__event">
-                                    <div class="cal__event__title">
-                                        Арт-терапия
-                                    </div>
-                                    <div class="cal__event__details">
-                                        <div class="cal__event_detail">
-                                            13:00 <i class="icon icon-sob-time"></i>
-                                        </div>
-                                        <div class="cal__event_detail">
-                                            Главный офис<i class="icon icon-sob-geotag"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cal__event">
-                                    <div class="cal__event__title">
-                                        Мастер-класс «Стань успешнее»
-                                    </div>
-                                    <div class="cal__event__details">
-                                        <div class="cal__event_detail">
-                                            13:00 <i class="icon icon-sob-time"></i>
-                                        </div>
-                                        <div class="cal__event_detail">
-                                            Главный офис<i class="icon icon-sob-geotag"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cal__event">
-                                    <div class="cal__event__title">
-                                        Арт-терапия
-                                    </div>
-                                    <div class="cal__event__details">
-                                        <div class="cal__event_detail">
-                                            13:00 <i class="icon icon-sob-time"></i>
-                                        </div>
-                                        <div class="cal__event_detail">
-                                            Главный офис<i class="icon icon-sob-geotag"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cal__col cal__col_of col-lg-1">
-                                <div class="cal__event cal__event_cancelled">
-                                    <div class="cal__event__title">
-                                        Личностный рост и креативность
-                                    </div>
-                                    <div class="cal__event__details">
-                                        <div class="cal__event_detail">
-                                            13:00 <i class="icon icon-sob-time"></i>
-                                        </div>
-                                        <div class="cal__event_detail">
-                                            Главный офис<i class="icon icon-sob-geotag"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cal__event">
-                                    <div class="cal__event__title">
-                                        Арт-терапия
-                                    </div>
-                                    <div class="cal__event__details">
-                                        <div class="cal__event_detail">
-                                            13:00 <i class="icon icon-sob-time"></i>
-                                        </div>
-                                        <div class="cal__event_detail">
-                                            Главный офис<i class="icon icon-sob-geotag"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="mcard__actions">
+                            <span class="mcard__action symbol"><span class="mcard__action__help-text">Читать</span></span>
                         </div>
                     </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="mcard mcard_bottomed">
+                        <div class="mcard__content">
+                            <h3 class="mcard__heading light">Групповые длинные очень</h3>
+                            <p class="mcard__description light">Взаимоотношения и арт-терапия</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="mcard">
+                        <div class="mcard__content">
+                            <h3 class="mcard__heading light">Корпоративные</h3>
+                            <p class="mcard__description light">Командообразование и менторинг</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="mcard mcard_bottomed">
+                        <div class="mcard__content">
+                            <h3 class="mcard__heading light">Групповые длинные очень</h3>
+                            <p class="mcard__description light">Взаимоотношения и арт-терапия</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="mcard">
+                        <div class="mcard__content">
+                            <h3 class="mcard__heading light">Корпоративные</h3>
+                            <p class="mcard__description light">Командообразование и менторинг</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="mcard mcard_bottomed">
+                        <div class="mcard__content">
+                            <h3 class="mcard__heading light">Групповые длинные очень</h3>
+                            <p class="mcard__description light">Взаимоотношения и арт-терапия</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="mcard">
+                        <div class="mcard__content">
+                            <h3 class="mcard__heading light">Корпоративные</h3>
+                            <p class="mcard__description light">Командообразование и менторинг</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blk-gallery__overlay loadable-list__overlay"></div>
+                <div class="blk-gallery__btn-wrap">
+                    <a href="" class="blk-gallery__btn btn btn-primary">Загрузить еще парочку</a>
                 </div>
             </div>
         </div>

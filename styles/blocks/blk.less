@@ -1,8 +1,25 @@
+@px: 40px;
+@py: 50px;
+
 .blk {
-  padding: 50px 40px;
+  padding: @py @px;
 
   /* "Intro" block */
   &.blk-intro {
+    padding: 0;
+
+    .blk-intro__text {
+      padding: @py @px;
+      padding-right: 0;
+
+      overflow: hidden;
+    }
+
+    .blk-intro__img {
+      padding: @py @px;
+      padding-left: 0;
+    }
+
     p.blk-intro__text-desc {
       margin-top: 22px;
       margin-right: 125px;
@@ -13,13 +30,15 @@
       margin-bottom: 0;
     }
 
-    p.blk-intro__citation {
+    p.blk-intro__text-citation {
       position: relative;
 
       font-size: 30px;
       line-height: 35px;
       font-style: italic;
-      font-weight: 600;
+      font-weight: 700;
+
+      margin: 56px 0;
 
       width: 531px;
 
@@ -27,17 +46,18 @@
 
       &::before {
         position: absolute;
-        left: 0;
+        left: -50px;
         top: 0;
 
         font-size: 80px;
         font-style: normal;
 
-        content: '\e812';
+        content: '\e811';
         font-family: 'sobytie-icons';
         color: #CCD7D7;
 
-        z-index: -10;
+        z-index: -5;
+        transform: rotate(180deg);
       }
 
       &::after {
@@ -61,18 +81,20 @@
     }
 
     // TODO: reponsive
-    .blk-intro__img-director {
-      bottom: -20px;
-      right: -40px;
-
+    // TODO: rename
+    .blk-intro__img-avatar {
       img {
         pointer-events: none;
 
-        width: 483px;
         position: absolute;
-        bottom: -50px;
-        right: -41px;
+        bottom: 0;
+        right: 0;
+        border-radius: 10px;
       }
+    }
+
+    .blk-intro__social {
+
     }
   }
 
@@ -171,5 +193,22 @@
         padding: 0;
       }
     }
+  }
+
+  &.blk-profile {
+    p.blk-profile__text {
+      font-size: 22px;
+      line-height: 27px;
+      width: 531px;
+    }
+  }
+
+  &.blk-cover {
+
+  }
+
+  /* Global modifiers */
+  &.blk_no-overflow {
+    //overflow: hidden;
   }
 }
