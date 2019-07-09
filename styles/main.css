@@ -194,14 +194,16 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+span {
   color: #232323;
 }
 h1.light,
 h2.light,
 h3.light,
 h4.light,
-p.light {
+p.light,
+span.light {
   color: #FFFFFF;
 }
 /* Заголовки */
@@ -218,6 +220,12 @@ h3 {
   font-size: 22px;
   line-height: 26px;
 }
+h3.text-section {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.75px;
+}
 /* Стандартный текст */
 p {
   font-size: 25px;
@@ -229,6 +237,10 @@ p {
 p.text-small {
   font-size: 20px;
   line-height: 25px;
+}
+p.oneword {
+  word-spacing: 60px;
+  width: 60px;
 }
 span {
   color: #232323;
@@ -410,6 +422,17 @@ span.comment.comment_bold {
 .loadable-list.not-loaded .loadable-list__overlay {
   display: block;
 }
+.gradient-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
+  opacity: 0.6;
+  z-index: 1;
+}
 .blk {
   padding: 50px 40px;
   /* "Intro" block */
@@ -521,23 +544,14 @@ span.comment.comment_bold {
   position: relative;
   overflow: hidden;
 }
-.blk.blk-slidertop .blk-slidertop__slide::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
-  opacity: 0.6;
-}
 .blk.blk-slidertop .blk-slidertop__content {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   padding: 50px 40px;
+  z-index: 2;
 }
 .blk.blk-slidertop .blk-slidertop__content h1.blk-slidertop__heading {
   margin-bottom: 10px;
@@ -555,6 +569,47 @@ span.comment.comment_bold {
   font-size: 22px;
   line-height: 27px;
   width: 531px;
+}
+.blk.blk-cover {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.blk.blk-cover .blk-cover__content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  padding: 50px 40px;
+}
+.blk.blk-cover .blk-cover__heading {
+  margin-bottom: 40px;
+}
+.blk.blk-cover p.blk-cover__text-desc {
+  width: 733px;
+  margin: 0;
+}
+.blk.blk-team .blk-team__item {
+  padding: 20px;
+}
+.blk.blk-team .blk-team__card {
+  margin: 0;
+}
+.blk.blk-contacts .blk-contacts__text {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+}
+.blk.blk-contacts .blk-contacts__text-line {
+  width: 100%;
+  display: block;
 }
 .btn {
   border-radius: 10px;
@@ -613,6 +668,9 @@ span.comment.comment_bold {
 }
 .btn.btn-wide {
   padding: 0 70px;
+}
+.btn.btn-wider {
+  width: 100%;
 }
 .social .social-item .icon:hover {
   color: #F2C75C;
@@ -728,6 +786,7 @@ span.comment.comment_bold {
   bottom: 0;
   right: 0;
   padding: 10px 20px;
+  z-index: 99999;
 }
 .slider .slider__bulletwrap:hover {
   cursor: default;
@@ -756,6 +815,7 @@ span.comment.comment_bold {
   Блок "Карточка"
  */
 .mcard {
+  position: relative;
   background-color: #F2C75C;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.0001) 0%, rgba(35, 35, 35, 0.7) 100%);
   background-repeat: no-repeat;
@@ -766,6 +826,14 @@ span.comment.comment_bold {
   height: 200px;
   /** Элементы-контейнеры **/
   /** Конечные элементы **/
+}
+.mcard .mcard__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
 }
 .mcard:hover {
   cursor: pointer;
@@ -874,6 +942,39 @@ span.comment.comment_bold {
     height: initial;
     max-height: 4em;
   }
+}
+.mcard.mcard_quad {
+  margin: 0;
+  padding-top: 100%;
+  width: 100%;
+  height: 0;
+}
+.mcard.mcard_quad.mcard_colored .mcard__content:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: none !important;
+  background-color: #F2C75C;
+  opacity: 0.8;
+  border-radius: 10px;
+  z-index: 1;
+}
+.mcard.mcard_quad .mcard__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mcard.mcard_quad p.mcard__name {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  z-index: 2;
 }
 .cal {
   /* To hover */

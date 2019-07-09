@@ -4,18 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/_vendor/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/main.css">
 
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous">
-    </script>
-
+    <script src="../scripts/_vendor/jquery-3.4.1.min.js"></script>
     <script src="../scripts/slider.js"></script>
 
-    <title>Главная</title>
+    <title>О нас</title>
 </head>
 <body class="main-bg">
     <header class="container">
@@ -37,177 +32,127 @@
     </header>
 
      <section id="intro" class="container">
+        <div class="blk blk-cover gradient-overlay"
+             style="background-image: url('http://loremflickr.com/700/300?random=1')">
+            <div class="blk-cover__content">
+                <h1 class="blk-cover__heading light">Мастерская Отношений &laquo;СоБытие&raquo;</h1>
 
-         <!-- TODO: Cover -->
-        <div class="blk blk-cover">
-            <div class="slider" data-dur="500" data-delay="3000" data-fn="slide">
-                <div class="blk-slidertop__slide slider__item slider__bg"
-                     style="background-image: url('http://loremflickr.com/700/300?random=1')">
-                    <div class="blk-slidertop__content">
-                        <h1 class="blk-slidertop__heading light">Саморазвитие и рост</h1>
-
-                        <p class="blk-slidertop__text light">
-                            Небольшой текст, который расскажет о том, какие мероприятия проходят в центре,
-                            что на них происходит, цели этих мероприятий, а также описание профита,
-                            который получит адресат
-                        </p>
-
-                        <p class="blk-slidertop__sub light">Доп текст, стоит уточнить</p>
-                    </div>
-                </div>
+                <p class="blk-cover__text-desc light">
+                    Небольшой текст, который должен цеплять читателя и кратко объяснять ему формат мастерской отношений.
+                    В этом же тексте должна быть вдохновляющая цитата Коли о создании компании, ее миссии и ценностей
+                </p>
             </div>
         </div>
      </section>
 
     <section id="main" class="container">
-        <div class="blk blk-services">
-            <h2 class="text-center">Услуги</h2>
+        <div class="blk blk-team">
+            <h2 class="text-center">Команда</h2>
 
             <div class="row">
-                <div class="col-md-4">
-                    <div class="mcard mcard_alt" style="background-image: url('http://loremflickr.com/320/180/')">
+                <div class="blk-team__item col-md-3">
+                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                        <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
-                            <h3 class="mcard__heading light">Заголовок h3</h3>
-                            <p class="mcard__description light">Текст p</p>
+                            <p class="mcard__name oneword"><span class="signature light">Анна Денаева</span></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="mcard mcard_alt" style="background-image: url('http://loremflickr.com/320/180/')">
+                <div class="blk-team__item col-md-3">
+                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                        <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
-                            <h3 class="mcard__heading light">Заголовок h3</h3>
-                            <p class="mcard__description light">Текст p</p>
+                            <p class="mcard__name oneword"><span class="signature light">Булат Альжанов</span></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="mcard mcard_alt" style="background-image: url('http://loremflickr.com/320/180/')">
+                <div class="blk-team__item col-md-3">
+                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                        <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
-                            <h3 class="mcard__heading light">Заголовок h3</h3>
-                            <p class="mcard__description light">Текст p</p>
+                            <p class="mcard__name oneword"><span class="signature light">Диана Матвеева</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blk-team__item col-md-3">
+                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                        <a href="/pages/about/nikolai.html" class="mcard__link"></a>
+                        <div class="mcard__content">
+                            <p class="mcard__name oneword"><span class="signature light">Николай Черкасов</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blk-team__item col-md-3">
+                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                        <a href="" class="mcard__link"></a>
+                        <div class="mcard__content">
+                            <p class="mcard__name oneword"><span class="signature light">Ольга Орлова</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blk-team__item col-md-3">
+                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                        <a href="" class="mcard__link"></a>
+                        <div class="mcard__content">
+                            <p class="mcard__name oneword"><span class="signature light">Юлия Кисличенко</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blk-team__item col-md-3">
+                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                        <a href="" class="mcard__link"></a>
+                        <div class="mcard__content">
+                            <p class="mcard__name oneword"><span class="signature light">Татьяна Стовбер</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blk-team__item col-md-3">
+                    <div class="blk-team__card mcard mcard_quad mcard_colored" style="background-image: url('http://loremflickr.com/320/180/')">
+                        <a href="" class="mcard__link"></a>
+                        <div class="mcard__content">
+                            <p class="mcard__name"><span class="signature light">Стать частью команды</span></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="blk blk-events">
-            <h2 class="text-center">Мероприятия</h2>
-
+    <section id="contacts" class="container">
+        <div class="blk blk-contacts">
             <div class="row">
-                <div class="blk-events__text-main col-md-5">
-                    <p class="text-justify text-small">
-                        Текст, рассказывающий о мероприятиях, которые проводятся силами СоБытия и партнеров.
-                        Справа можно увидеть небольшую выборку фотографий с последних мероприятий.
-                        В самом тексте должно быть кратко рассказано о целях этих мероприятий,
-                        а так же что от них можно получить.
+                <div class="col-lg-6">
+                    <h3 class="blk-contacts__heading text-section">Офис</h3>
+                    <p class="blk-contacts__text">
+                        <span class="blk-contacts__text-line">620075, г. Екатеринбург, ул. Шарташская, д. 23</span>
+                        <span class="blk-contacts__text-line">Пн-Сб: 10.00 — 20:00, Вс: выходной</span>
                     </p>
-
-                    <a href="" class="btn btn-primary btn-block">Узнать подробнее</a>
+                    <p class="blk-contacts__text">
+                        <span class="blk-contacts__text-line">Телефон: +7 (343) 227 84 00</span>
+                        <span class="blk-contacts__text-line">Email: hello@sobytie.ru</span>
+                    </p>
                 </div>
+                <div class="col-lg-6">
+                    <div class="blk-contacts__call">
+                        <h3 class="blk-contacts__heading text-section">Заказать звонок</h3>
+                        <p class="blk-contacts__text">
+                            Оставьте свой номер и мы перезвоним через 10 минут (с 10:00 до 19:00)
+                        </p>
 
-                <div class="blk-events__slider_wrap col-md-7">
-                    <div class="slider" data-dur="500" data-delay="3000" data-fn="slide">
-                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=1')">
-                        </div>
-                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=2')">
-                        </div>
-                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=3')">
-                        </div>
-                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=4')">
-                        </div>
+                        <form class="blk-contacts__form form form-inline">
+                            <input type="email" class="form__input form-control mr-3" placeholder="Ваш Email:">
+                            <button type="submit" class="btn btn-primary">Позвоните мне</button>
+                        </form>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="blk blk-gallery">
-            <h2 class="text-center">Истории</h2>
-            <div class="loadable-list not-loaded row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard" style="background-image: url('http://loremflickr.com/320/180/')">
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Индивидуальные</h3>
-                            <p class="mcard__description light">Личный коучинг и психотерапия</p>
-                        </div>
-                        <div class="mcard__actions">
-                            <span class="mcard__action">Подписаться</span>
-                        </div>
+
+                    <div class="blk-contacts__suggestion">
+                        <h3 class="blk-contacts__heading text-section">Отправить предложение</h3>
+                        <p class="blk-contacts__text">
+                            Есть предложения, вопросы, идеи?  Напишите нам, ответим в течении дня
+                        </p>
+
+                        <a href="" class="btn btn-primary btn-wider">Отправить предложение</a>
                     </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard" style="background-image: url('http://loremflickr.com/180/320/')">
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Корпоративные</h3>
-                            <p class="mcard__description light">
-                                Командообразование и менторинг Командообразование и менторинг Командообразование и
-                                менторинг Командообразование и менторинг
-                            </p>
-                        </div>
-
-                        <div class="mcard__actions">
-                            <span class="mcard__action symbol"><span class="mcard__action__help-text">Читать</span></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard mcard_bottomed">
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Групповые длинные очень</h3>
-                            <p class="mcard__description light">Взаимоотношения и арт-терапия</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard">
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Корпоративные</h3>
-                            <p class="mcard__description light">Командообразование и менторинг</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard mcard_bottomed">
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Групповые длинные очень</h3>
-                            <p class="mcard__description light">Взаимоотношения и арт-терапия</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard">
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Корпоративные</h3>
-                            <p class="mcard__description light">Командообразование и менторинг</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard mcard_bottomed">
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Групповые длинные очень</h3>
-                            <p class="mcard__description light">Взаимоотношения и арт-терапия</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard">
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Корпоративные</h3>
-                            <p class="mcard__description light">Командообразование и менторинг</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blk-gallery__overlay loadable-list__overlay"></div>
-                <div class="blk-gallery__btn-wrap">
-                    <a href="" class="blk-gallery__btn btn btn-primary">Загрузить еще парочку</a>
                 </div>
             </div>
         </div>

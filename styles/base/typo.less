@@ -14,7 +14,7 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, span {
   color: @color_text_dark;
 
   &.light {
@@ -35,6 +35,13 @@ h3 {
   font-weight: bold;
   font-size: 22px;
   line-height: 26px;
+
+  &.text-section {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: .75px;
+  }
 }
 
 /* Стандартный текст */
@@ -47,6 +54,11 @@ p {
   &.text-small {
     font-size: 20px;
     line-height: 25px;
+  }
+
+  &.oneword {
+    word-spacing: 60px;
+    width: 60px;
   }
 }
 
