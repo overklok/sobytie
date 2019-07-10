@@ -32,7 +32,8 @@
       max-height: 20px * 5 - 10px; // line-height * 5 - padding;
                                    // 5 = max line count - 1
 
-      word-break: break-word;
+      word-break: inherit;  /* Experimental! */
+      //word-break: break-word;
       overflow: hidden;
     }
 
@@ -40,14 +41,14 @@
       color: @color_closed_fg;
       background-color: @color_closed_bg;
 
-      border-left: solid #8c00b0 @roundness;
+      border-left: solid @color_closed_fg @roundness;
     }
 
     &.cal__event_cancelled {
       color: @color_cancelled_fg;
       background-color: @color_cancelled_bg;
 
-      border-left: solid #eb8d52 @roundness;
+      border-left: solid @color_cancelled_fg @roundness;
     }
 
     .cal__event__details {
