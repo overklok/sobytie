@@ -1,0 +1,31 @@
+.mcard {
+  /* Большой вариант */
+  &.mcard_hist-big {
+    .mcard__content {
+      width: 100%;
+      padding: 40px;
+    }
+
+    p.mcard__description {
+      font-size: 25px;
+      line-height: 25px;
+
+      font-weight: 500;
+
+      margin-bottom: 15px;
+    }
+
+    &.mcard_bottomed {
+      .mcard__content {
+        bottom: 0;
+      }
+    }
+
+    /* ==== MEDIA QUERIES ==== */
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 768px) {
+      max-height: 300px;
+    }
+  }
+}

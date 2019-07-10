@@ -1,0 +1,39 @@
+.mcard {
+  &.mcard_hist-mid {
+    .mcard__content {
+      width: 100%;
+      padding: 30px;
+    }
+
+    h3.mcard__heading {
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: 1px;
+
+      margin-bottom: 0;
+
+      max-width: 490px;
+    }
+
+    p.mcard__description {
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 500;
+
+      margin-bottom: 5px;
+    }
+
+    &.mcard_bottomed {
+      .mcard__content {
+        bottom: 0;
+      }
+    }
+
+    /* ==== MEDIA QUERIES ==== */
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 768px) {
+      max-height: 290px;
+    }
+  }
+}

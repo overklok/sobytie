@@ -1,0 +1,47 @@
+.mcard {
+  /* Квадратный вариант */
+  &.mcard_quad {
+    margin: 0;
+    padding-top: 100%;
+    width: 100%;
+    height: 0;
+
+    .mcard__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    p.mcard__name {
+      position: absolute;
+
+      bottom: 20px;
+      left: 20px;
+
+      margin: 0;
+
+      z-index: 2;
+    }
+
+    &.mcard_colored {
+      .mcard__content:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-image: none !important;
+        background-color: @color_primary;
+        opacity: .8;
+
+        border-radius: @roundness;
+
+        z-index: 1;
+      }
+    }
+  }
+}
