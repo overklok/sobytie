@@ -44,6 +44,11 @@
     z-index: 1;
   }
 
+  /* все дочерние элементы 1 уровня должны быть расположены поверх оверлея */
+  > * {
+    z-index: 2;
+  }
+
   /* [grey->transparent] to [top->bottom] */
   &.gradient-mcard {
     &::after {
@@ -61,10 +66,22 @@
   }
 
   /* [black->transparent] to [bottom->top] */
-  &.gradient-mcard_hist {
+  &.gradient-mcard_big {
     &::after {
       background-image: @grad_mcard_hist;
       opacity: .8;
+    }
+  }
+
+  &.gradient-mcard_alt {
+    &::after {
+      background-image: linear-gradient(180deg, rgba(35, 35, 35, 0.7) 0%, rgba(0, 0, 0, 0.0001) 100%);
+    }
+
+    &:hover {
+      &::after {
+        background: transparent;
+      }
     }
   }
 

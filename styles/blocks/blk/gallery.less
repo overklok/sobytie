@@ -1,0 +1,33 @@
+.blk {
+  &.blk-gallery {
+    padding-bottom: 0;
+
+    .blk-gallery__overlay {
+      left: 0;
+
+      height: 200px + 20px; // height of mcard
+
+      @media (min-width: 768px) {
+        height: 320px + 20px;
+      }
+
+      z-index: 10;
+    }
+
+    .blk-gallery__btn-wrap {
+      position: absolute;
+      bottom: (320px) / 2.2;
+      left: 0;
+
+      text-align: center;
+      width: 100%;
+
+      z-index: 10;
+    }
+
+    .blk-gallery__btn {
+      padding: 0 25px;
+      font-weight: 500;
+    }
+  }
+}

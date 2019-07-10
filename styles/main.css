@@ -423,6 +423,7 @@ span.comment.comment_bold {
   display: block;
 }
 .gradient-overlay {
+  /* все дочерние элементы 1 уровня должны быть расположены поверх оверлея */
   /* [grey->transparent] to [top->bottom] */
   /* [black->transparent] to [left->right] */
   /* [black->transparent] to [bottom->top] */
@@ -439,6 +440,9 @@ span.comment.comment_bold {
   opacity: 0.6;
   z-index: 1;
 }
+.gradient-overlay > * {
+  z-index: 2;
+}
 .gradient-overlay.gradient-mcard::after {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.0001) 0%, rgba(35, 35, 35, 0.7) 100%);
   opacity: 1;
@@ -447,9 +451,15 @@ span.comment.comment_bold {
   background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
   opacity: 0.6;
 }
-.gradient-overlay.gradient-mcard_hist::after {
+.gradient-overlay.gradient-mcard_big::after {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 19.62%, #000000 68.11%);
   opacity: 0.8;
+}
+.gradient-overlay.gradient-mcard_alt::after {
+  background-image: linear-gradient(180deg, rgba(35, 35, 35, 0.7) 0%, rgba(0, 0, 0, 0.0001) 100%);
+}
+.gradient-overlay.gradient-mcard_alt:hover::after {
+  background: transparent;
 }
 .gradient-overlay.gradient-mcard_quad::after {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 39.38%, rgba(0, 0, 0, 0.6) 87.85%);
@@ -459,11 +469,12 @@ span.comment.comment_bold {
   background-image: linear-gradient(352.77deg, rgba(0, 0, 0, 0.0001) -0.51%, #000000 83.41%);
   opacity: 0.6;
 }
+/**
+  "Прикладные" блоки, используемые для корректировки
+  положения элементов на конечных страницах.
+ */
 .blk {
-  padding: 50px 40px;
   /* "Intro" block */
-  /* "Services" block */
-  /* Global modifiers */
 }
 .blk.blk-intro {
   padding: 0;
@@ -528,6 +539,9 @@ span.comment.comment_bold {
   right: 0;
   border-radius: 10px;
 }
+.blk {
+  /* "Services" block */
+}
 .blk.blk-services {
   padding-bottom: 0;
 }
@@ -547,6 +561,7 @@ span.comment.comment_bold {
 .blk.blk-gallery .blk-gallery__overlay {
   left: 0;
   height: 220px;
+  z-index: 10;
 }
 @media (min-width: 768px) {
   .blk.blk-gallery .blk-gallery__overlay {
@@ -559,6 +574,7 @@ span.comment.comment_bold {
   left: 0;
   text-align: center;
   width: 100%;
+  z-index: 10;
 }
 .blk.blk-gallery .blk-gallery__btn {
   padding: 0 25px;
@@ -649,6 +665,10 @@ span.comment.comment_bold {
 .blk.blk-contacts .blk-contacts__map {
   width: 100%;
   height: 225px;
+}
+.blk {
+  padding: 50px 40px;
+  /* Global modifiers */
 }
 .btn {
   border-radius: 10px;
@@ -859,40 +879,43 @@ span.comment.comment_bold {
 .mcard {
   position: relative;
   background-color: #F2C75C;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.0001) 0%, rgba(35, 35, 35, 0.7) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 15px 0 15px 0;
   border: none;
   border-radius: 10px;
   height: 200px;
-  /** Элементы-контейнеры **/
-  /** Конечные элементы **/
-}
-.mcard .mcard__link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999999;
-}
-.mcard:hover {
-  cursor: pointer;
-}
-.mcard:hover .mcard__action {
-  text-decoration: none;
-}
-.mcard:hover .mcard__action.symbol {
-  background-color: #DFB05A;
+  /* ==== ELEMENTS ==== */
+  /* Глобальный контейнер */
+  /* Список действий (внизу) */
+  /* Ссылка (на весь блок поверх) */
+  /* Заголовок */
+  /* Описание */
+  /* Действие */
+  /* ==== MODIFIERS ==== */
+  /* Контент снизу вверх */
+  /* Альтернативный вариант */
+  /* Квадратный вариант */
+  /* Большой вариант */
+  /* ==== HOVERS ==== */
+  /* ==== MEDIA QUERIES ==== */
 }
 .mcard .mcard__content {
+  position: absolute;
   padding: 25px;
 }
 .mcard .mcard__actions {
   position: absolute;
   bottom: 22px;
   padding: 22px;
+}
+.mcard a.mcard__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
 }
 .mcard h3.mcard__heading {
   margin-bottom: 15px;
@@ -922,6 +945,8 @@ span.comment.comment_bold {
   font-size: 20px;
   line-height: 23px;
   color: #FFFFFF;
+  /* Действие, изображённое символом "плюс" */
+  /* Вспомогательный текст */
 }
 .mcard .mcard__action.symbol {
   border-radius: 10px;
@@ -944,17 +969,6 @@ span.comment.comment_bold {
   font-size: 22px;
   line-height: 26px;
 }
-@media (min-width: 768px) {
-  .mcard {
-    height: 320px;
-  }
-  .mcard p.mcard__description {
-    height: auto;
-    /* ie 11 */
-    height: initial;
-    max-height: 8em;
-  }
-}
 .mcard.mcard_bottomed .mcard__content {
   position: absolute;
   bottom: 22px;
@@ -967,42 +981,22 @@ span.comment.comment_bold {
 .mcard.mcard_alt {
   height: 150px;
 }
-.mcard.mcard_alt h3.mcard__heading {
-  margin-bottom: 10px;
-}
 .mcard.mcard_alt .mcard__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   padding-left: 30px;
 }
-.mcard.mcard_alt:hover {
-  background-image: none !important;
-  background-color: #F2C75C;
-}
-@media (min-width: 768px) {
-  .mcard.mcard_alt p.mcard__description {
-    height: auto;
-    /* ie 11 */
-    height: initial;
-    max-height: 4em;
-  }
+.mcard.mcard_alt h3.mcard__heading {
+  margin-bottom: 10px;
 }
 .mcard.mcard_quad {
   margin: 0;
   padding-top: 100%;
   width: 100%;
   height: 0;
-}
-.mcard.mcard_quad.mcard_colored .mcard__content:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: none !important;
-  background-color: #F2C75C;
-  opacity: 0.8;
-  border-radius: 10px;
-  z-index: 1;
 }
 .mcard.mcard_quad .mcard__content {
   position: absolute;
@@ -1017,6 +1011,56 @@ span.comment.comment_bold {
   left: 20px;
   margin: 0;
   z-index: 2;
+}
+.mcard.mcard_quad.mcard_colored .mcard__content:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: none !important;
+  background-color: #F2C75C;
+  opacity: 0.8;
+  border-radius: 10px;
+  z-index: 1;
+}
+.mcard.mcard_big p.mcard__description {
+  font-size: 25px;
+  line-height: 25px;
+  font-weight: 500;
+}
+.mcard:hover {
+  cursor: pointer;
+}
+.mcard:hover .mcard__action {
+  text-decoration: none;
+}
+.mcard:hover .mcard__action.symbol {
+  background-color: #DFB05A;
+}
+.mcard.mcard_alt:hover {
+  background-image: none !important;
+  background-color: #F2C75C;
+}
+@media (min-width: 768px) {
+  .mcard {
+    height: 320px;
+  }
+  .mcard p.mcard__description {
+    height: auto;
+    /* ie 11 */
+    height: initial;
+    max-height: 8em;
+  }
+}
+@media (min-width: 768px) {
+  .mcard.mcard_alt p.mcard__description {
+    height: auto;
+    /* ie 11 */
+    height: initial;
+    max-height: 4em;
+  }
 }
 .cal {
   /* To hover */

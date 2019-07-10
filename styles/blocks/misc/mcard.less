@@ -6,7 +6,7 @@
   position: relative;
 
   background-color: @color_primary;
-  background-image: @grad_mcard;
+  //background-image: @grad_mcard;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -17,7 +17,29 @@
 
   height: 200px;
 
-  .mcard__link {
+  /* ==== ELEMENTS ==== */
+
+  // Контейнеры
+
+  /* Глобальный контейнер */
+  .mcard__content {
+    position: absolute;
+
+    padding: 25px;
+  }
+
+  /* Список действий (внизу) */
+  .mcard__actions {
+    position: absolute;
+    bottom: 22px;
+
+    padding: 22px;
+  }
+
+  // Конечные элементы
+
+  /* Ссылка (на весь блок поверх) */
+  a.mcard__link {
     position: absolute;
     top: 0;
     left: 0;
@@ -27,35 +49,12 @@
     z-index: 9999999;
   }
 
-  &:hover {
-    cursor: pointer;
-
-    .mcard__action {
-      text-decoration: none;
-
-      &.symbol {
-        background-color: #DFB05A;
-      }
-    }
-  }
-
-  /** Элементы-контейнеры **/
-  .mcard__content {
-    padding: 25px;
-  }
-
-  .mcard__actions {
-    position: absolute;
-    bottom: 22px;
-
-    padding: 22px;
-  }
-
-  /** Конечные элементы **/
+  /* Заголовок */
   h3.mcard__heading {
     margin-bottom: 15px;
   }
 
+  /* Описание */
   p.mcard__description {
     font-size: 18px;
 
@@ -88,12 +87,14 @@
     }
   }
 
+  /* Действие */
   .mcard__action {
     font-size: 20px;
     line-height: 23px;
 
     color: @color_text_light;
 
+    /* Действие, изображённое символом "плюс" */
     &.symbol {
       border-radius: @roundness;
 
@@ -115,6 +116,7 @@
       }
     }
 
+    /* Вспомогательный текст */
     .mcard__action__help-text {
       color: @color_text_light;
 
@@ -123,17 +125,9 @@
     }
   }
 
-  // Large devices (desktops, 992px and up)
-  @media (min-width: 768px) {
-    height: 320px;
+  /* ==== MODIFIERS ==== */
 
-    p.mcard__description {
-      height: auto; /* ie 11 */
-      height: initial;
-      max-height: 8em;
-    }
-  }
-
+  /* Контент снизу вверх */
   &.mcard_bottomed {
     .mcard__content {
       position: absolute;
@@ -148,37 +142,50 @@
     }
   }
 
+  /* Альтернативный вариант */
   &.mcard_alt {
     height: 150px;
+
+    .mcard__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      padding-left: 30px;
+    }
 
     h3.mcard__heading {
       margin-bottom: 10px;
     }
-
-    .mcard__content {
-      padding-left: 30px;
-    }
-
-    &:hover {
-      background-image: none !important;
-      background-color: @color_primary;
-    }
-
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 768px) {
-      p.mcard__description {
-        height: auto; /* ie 11 */
-        height: initial;
-        max-height: 4em;
-      }
-    }
   }
 
+  /* Квадратный вариант */
   &.mcard_quad {
     margin: 0;
     padding-top: 100%;
     width: 100%;
     height: 0;
+
+    .mcard__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    p.mcard__name {
+      position: absolute;
+
+      bottom: 20px;
+      left: 20px;
+
+      margin: 0;
+
+      z-index: 2;
+    }
 
     &.mcard_colored {
       .mcard__content:after {
@@ -198,24 +205,60 @@
         z-index: 1;
       }
     }
+  }
 
-    .mcard__content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+  /* Большой вариант */
+  &.mcard_big {
+    p.mcard__description {
+      font-size: 25px;
+      line-height: 25px;
+
+      font-weight: 500;
     }
+  }
 
-    p.mcard__name {
-      position: absolute;
+  /* ==== HOVERS ==== */
 
-      bottom: 20px;
-      left: 20px;
+  &:hover {
+    cursor: pointer;
 
-      margin: 0;
+    .mcard__action {
+      text-decoration: none;
 
-      z-index: 2;
+      &.symbol {
+        background-color: #DFB05A;
+      }
+    }
+  }
+
+  &.mcard_alt {
+    &:hover {
+      background-image: none !important;
+      background-color: @color_primary;
+    }
+  }
+
+  /* ==== MEDIA QUERIES ==== */
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 768px) {
+    height: 320px;
+
+    p.mcard__description {
+      height: auto; /* ie 11 */
+      height: initial;
+      max-height: 8em;
+    }
+  }
+
+  &.mcard_alt {
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 768px) {
+      p.mcard__description {
+        height: auto; /* ie 11 */
+        height: initial;
+        max-height: 4em;
+      }
     }
   }
 }
