@@ -258,6 +258,16 @@ span.comment {
 span.comment.comment_bold {
   font-weight: bold;
 }
+span.subcomment {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+  opacity: 0.6;
+}
+span.subcomment.subcomment_emph {
+  color: #F2C75C;
+}
 @font-face {
   font-family: 'sobytie-icons';
   src: url('../assets/fonts/sobytie-icons/sobytie-icons.eot?5803638');
@@ -451,7 +461,7 @@ span.comment.comment_bold {
   background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
   opacity: 0.6;
 }
-.gradient-overlay.gradient-mcard_big::after {
+.gradient-overlay.gradient-mcard_hist-big::after {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 19.62%, #000000 68.11%);
   opacity: 0.8;
 }
@@ -885,9 +895,11 @@ span.comment.comment_bold {
   border: none;
   border-radius: 10px;
   height: 200px;
+  overflow: hidden;
   /* ==== ELEMENTS ==== */
   /* Глобальный контейнер */
   /* Список действий (внизу) */
+  /* Изображение (используется только при .mcard_splitted ) */
   /* Ссылка (на весь блок поверх) */
   /* Заголовок */
   /* Описание */
@@ -906,8 +918,17 @@ span.comment.comment_bold {
 }
 .mcard .mcard__actions {
   position: absolute;
-  bottom: 22px;
+  bottom: 0;
   padding: 22px;
+}
+.mcard .mcard__img-split {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .mcard a.mcard__link {
   position: absolute;
@@ -1025,10 +1046,70 @@ span.comment.comment_bold {
   border-radius: 10px;
   z-index: 1;
 }
-.mcard.mcard_big p.mcard__description {
+.mcard.mcard_hist-big .mcard__content {
+  width: 100%;
+  padding: 40px;
+}
+.mcard.mcard_hist-big p.mcard__description {
   font-size: 25px;
   line-height: 25px;
   font-weight: 500;
+  margin-bottom: 15px;
+}
+.mcard.mcard_hist-big.mcard_bottomed .mcard__content {
+  bottom: 0;
+}
+.mcard.mcard_hist-mid .mcard__content {
+  width: 100%;
+  padding: 30px;
+}
+.mcard.mcard_hist-mid h3.mcard__heading {
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  max-width: 490px;
+}
+.mcard.mcard_hist-mid p.mcard__description {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.mcard.mcard_hist-mid.mcard_bottomed .mcard__content {
+  bottom: 0;
+}
+.mcard.mcard_hist-tall {
+  height: 400px;
+}
+.mcard.mcard_hist-tall h3.mcard__heading {
+  font-size: 25px;
+  line-height: 29px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcard.mcard_hist-tall p.mcard__description {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+.mcard.mcard_hist-tall.mcard_splitted {
+  background-color: transparent;
+  background-image: none;
+}
+.mcard.mcard_hist-tall.mcard_splitted .mcard__content {
+  height: 50%;
+  width: 100%;
+  background-color: #F7F7F7;
+}
+.mcard.mcard_hist-tall.mcard_splitted.mcard_bottomed .mcard__content {
+  bottom: 0;
+}
+.mcard.mcard_hist-tall.mcard_splitted.mcard_bottomed .mcard__img-split {
+  background-color: #F2C75C;
+  position: absolute;
+  top: 0;
 }
 .mcard:hover {
   cursor: pointer;
@@ -1060,6 +1141,21 @@ span.comment.comment_bold {
     /* ie 11 */
     height: initial;
     max-height: 4em;
+  }
+}
+@media (min-width: 768px) {
+  .mcard.mcard_hist-big {
+    max-height: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .mcard.mcard_hist-mid {
+    max-height: 290px;
+  }
+}
+@media (min-width: 768px) {
+  .mcard.mcard_hist-tall {
+    height: 400px;
   }
 }
 .cal {
