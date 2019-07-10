@@ -1,6 +1,17 @@
 .mcard {
   &.mcard_hist-tall {
+    margin: 0;
+    padding: 0;
+
+    //padding: 0 12px; // used!
     height: 400px; // TODO: tmp!
+
+    //margin: 0;
+
+    .mcard__content {
+      //width: calc(100% - 24px); // padding-x * 2
+      //left: 12px; // padding-x
+    }
 
     h3.mcard__heading {
       font-size: 25px;
@@ -24,20 +35,30 @@
 
       .mcard__content {
         height: 50%;
-        width: 100%;
 
         background-color: @color_emph_bg;
       }
 
       &.mcard_bottomed {
         .mcard__content {
+          width: 100%;
+          //width: calc(100% - 24px); // padding-x * 2
+          //left: 12px; // padding-x
           bottom: 0;
+
+          border-bottom-right-radius: @roundness;
+          border-bottom-left-radius: @roundness;
         }
 
         .mcard__img-split {
           background-color: @color_primary;
 
-          position: absolute;
+          border-top-right-radius: @roundness;
+          border-top-left-radius: @roundness;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+
+          //position: absolute;
           top: 0;
         }
       }

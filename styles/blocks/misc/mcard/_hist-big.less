@@ -1,6 +1,9 @@
 .mcard {
   /* Большой вариант */
   &.mcard_hist-big {
+    height: 100%;
+    margin: 0;
+
     .mcard__content {
       width: 100%;
       padding: 40px;
@@ -25,7 +28,7 @@
 
     // Large devices (desktops, 992px and up)
     @media (min-width: 768px) {
-      max-height: 300px;
+      min-height: 300px;
     }
   }
 }

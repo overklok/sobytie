@@ -7,6 +7,7 @@
 @import "mcard/_quad";
 @import "mcard/_hist-big";
 @import "mcard/_hist-mid";
+@import "mcard/_hist-small";
 @import "mcard/_hist-tall";
 
 @import "mcard/_bottomed";
@@ -49,9 +50,11 @@
 
   /* Изображение (используется только при .mcard_splitted ) */
   .mcard__img-split {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    //position: absolute;
+    //bottom: 0;
+    //left: 0;
+    border-bottom-right-radius: @roundness;
+    border-bottom-left-radius: @roundness;
 
     width: 100%;
     height: 50%;
