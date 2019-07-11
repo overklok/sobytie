@@ -190,6 +190,12 @@ h3,
 h4 {
   width: 100%;
 }
+h1 span.aux,
+h2 span.aux,
+h3 span.aux,
+h4 span.aux {
+  font-weight: 500;
+}
 h1,
 h2,
 h3,
@@ -234,6 +240,9 @@ p {
   /* по perfect pixel этой строчки быть не должно*/
   /* Уменьшенный */
 }
+p b {
+  font-weight: 600;
+}
 p.text-small {
   font-size: 20px;
   line-height: 25px;
@@ -258,14 +267,14 @@ span.comment {
 span.comment.comment_bold {
   font-weight: bold;
 }
-span.subcomment {
+span.tag {
   color: #FFFFFF;
   font-size: 18px;
   line-height: 30px;
   font-weight: 600;
   opacity: 0.6;
 }
-span.subcomment.subcomment_emph {
+span.tag.tag_emph {
   color: #F2C75C;
 }
 @font-face {
@@ -552,8 +561,84 @@ span.subcomment.subcomment_emph {
 .blk {
   /* "Services" block */
 }
-.blk.blk-services {
+.blk.blk-services:not(:last-child) {
   padding-bottom: 0;
+}
+.blk.blk-services h2.blk-services__heading {
+  margin-bottom: 15px;
+}
+.blk.blk-services .blk-services__col {
+  padding: 0 15px;
+}
+@media (min-width: 992px) {
+  .blk.blk-services .blk-services__col:first-child {
+    padding-left: 0;
+  }
+  .blk.blk-services .blk-services__col:last-child {
+    padding-right: 0;
+  }
+}
+.blk.blk-services .blk-services__item {
+  margin: 10px 0;
+}
+.blk {
+  /* "Service" block */
+}
+.blk.blk-service h1.blk-service__heading {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+.blk.blk-service .blk-service__tag {
+  color: #232323;
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: 0.625px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+.blk.blk-service .blk-service__desc {
+  padding: 25px 0;
+}
+.blk.blk-service .blk-service__desc-col {
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .blk.blk-service .blk-service__desc-col {
+    padding: 0 25px;
+  }
+  .blk.blk-service .blk-service__desc-col:first-child {
+    padding-left: 0;
+  }
+  .blk.blk-service .blk-service__desc-col:last-child {
+    padding-right: 0;
+  }
+}
+.blk.blk-service p.blk-service__text {
+  color: #232323;
+  font-size: 22px;
+  line-height: 27px;
+}
+.blk.blk-service .blk-service__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.blk.blk-service .blk-service__team-heading {
+  margin: 0;
+}
+.blk.blk-service .blk-service__team {
+  padding: 30px 0;
+}
+.blk.blk-service .blk-service__team-item:first-child {
+  padding-left: 0;
+}
+.blk.blk-service .blk-service__team-item:last-child {
+  padding-right: 0;
 }
 .blk.blk-events {
   padding-bottom: 8px;
@@ -670,6 +755,8 @@ span.subcomment.subcomment_emph {
   padding-top: 16px;
 }
 .blk.blk-contacts .blk-contacts__suggestion {
+  position: absolute;
+  bottom: 0;
   padding-top: 30px;
 }
 .blk.blk-contacts .blk-contacts__map {
@@ -1061,7 +1148,7 @@ span.subcomment.subcomment_emph {
   line-height: 21px;
   letter-spacing: 0.45px;
 }
-.mcard.mcard_hist-small span.subcomment {
+.mcard.mcard_hist-small span.tag {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.45px;
@@ -1240,6 +1327,30 @@ span.subcomment.subcomment_emph {
     height: initial;
     max-height: 8em;
   }
+}
+.svclink {
+  display: block;
+  width: 100%;
+  padding: 15px 30px;
+  background-color: #F7F7F7;
+  border: 3px solid transparent;
+  border-radius: 10px;
+}
+.svclink span.svclink__title {
+  color: #232323;
+  font-size: 25px;
+  line-height: 25px;
+  letter-spacing: 0.625px;
+  font-weight: bold;
+}
+.svclink:hover {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border-color: #F2C75C;
+}
+.svclink:hover span.svclink__title {
+  color: #F2C75C;
 }
 .cal {
   /* To hover */
@@ -1587,6 +1698,10 @@ span.subcomment.subcomment_emph {
   height: 50px;
   border-radius: 10px;
 }
+.form .form__input:focus {
+  border-color: #004645;
+  box-shadow: 0 0 0 0.2rem rgba(0, 70, 69, 0.2);
+}
 .form.form-fullwidth {
   justify-content: space-between;
 }
@@ -1602,8 +1717,4 @@ span.subcomment.subcomment_emph {
 }
 .form.form_footer .form__input::placeholder {
   color: #FFFFFF;
-}
-.form .form__input,
-.form .form__submit {
-  margin: 5px 0;
 }

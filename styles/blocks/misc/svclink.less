@@ -1,0 +1,32 @@
+.svclink {
+  display: block;
+  width: 100%;
+
+  padding: 15px 30px;
+
+  background-color: @color_emph_bg;
+  border: 3px solid transparent;
+  border-radius: 10px;
+
+  span.svclink__title {
+    color: @color_text_dark;
+
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: .625px;
+    font-weight: bold;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    cursor: pointer;
+
+    background-color: #FFFFFF;
+    border-color: @color_primary;
+
+    span.svclink__title {
+      color: @color_primary;
+    }
+  }
+}

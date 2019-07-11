@@ -7,6 +7,11 @@
     height: 50px;
 
     border-radius: @roundness;
+
+    &:focus {
+      border-color: @color_default_fg;
+      box-shadow: 0 0 0 0.2rem fade(@color_default_fg, 20);
+    }
   }
 
   /* Modifiers */
@@ -40,6 +45,6 @@
   }
 
   .form__input, .form__submit {
-    margin: 5px 0;
+    //margin: 5px 0;
   }
 }
