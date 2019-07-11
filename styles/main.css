@@ -873,6 +873,7 @@ span.tag.tag_emph {
   line-height: 24px;
   letter-spacing: 1.2px;
   text-align: center;
+  white-space: nowrap;
 }
 .headernav a.headernav__item.headernav__item_selected,
 .headernav a.headernav__item:hover {
@@ -997,6 +998,78 @@ span.tag.tag_emph {
   font-size: 20px;
   line-height: 23px;
   color: #FFFFFF;
+}
+.topbar {
+  padding: 18px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar .topbar__nav a.topbar__nav-item {
+  padding: 0 14px;
+  color: #004645;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.topbar .topbar__nav a.topbar__nav-item.topbar__nav-item_active,
+.topbar .topbar__nav a.topbar__nav-item:hover {
+  color: #F2C75C;
+  font-weight: bold;
+  text-decoration: none;
+}
+.topbar .topbar__search {
+  float: right;
+  color: #004645;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: bold;
+  vertical-align: bottom;
+  min-width: 100px;
+}
+.topbar .topbar__menu-burger {
+  float: left;
+  margin-right: 20px;
+}
+.topbar span.topbar__menu-title {
+  color: #004645;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: bold;
+}
+.burger span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #004645;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+.burger span:first-child {
+  transform-origin: 0% 0%;
+}
+.burger span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+.burger.burger_opened span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+.burger.burger_opened span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.burger.burger_opened span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+.burger:hover {
+  cursor: pointer;
 }
 /**
   Блок "Карточка"
