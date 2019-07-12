@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17e2839b-1d4a-4129-a6d6-602fedfb618a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/scripts/cal.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/pages/events.html" afterPath="$PROJECT_DIR$/pages/events.html" />
-      <change beforePath="$PROJECT_DIR$/styles/blocks/misc/eventcard.less" afterPath="$PROJECT_DIR$/styles/blocks/misc/eventcard.less" />
+      <change beforePath="$PROJECT_DIR$/scripts/cal.js" afterPath="$PROJECT_DIR$/scripts/cal.js" />
+      <change beforePath="$PROJECT_DIR$/scripts/slider.js" afterPath="$PROJECT_DIR$/scripts/slider.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,8 +38,8 @@
       <file leaf-file-name="cal.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/cal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="107" column="49" lean-forward="false" selection-start-line="107" selection-start-column="49" selection-end-line="107" selection-end-column="49" />
+            <state relative-caret-position="184">
+              <caret line="94" column="37" lean-forward="true" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -79,9 +78,12 @@
       <file leaf-file-name="events.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/events.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="336" column="77" lean-forward="false" selection-start-line="336" selection-start-column="77" selection-end-line="336" selection-end-column="77" />
-              <folding />
+            <state relative-caret-position="333">
+              <caret line="375" column="37" lean-forward="false" selection-start-line="375" selection-start-column="37" selection-end-line="375" selection-end-column="37" />
+              <folding>
+                <element signature="e#21659#21666#0" expanded="true" />
+                <element signature="e#21680#21687#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,8 +111,8 @@
       <file leaf-file-name="slider.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/slider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="47" selection-end-column="3" />
+            <state relative-caret-position="165">
+              <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -130,8 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>light&quot;&gt;&lt;span class</find>
-      <find>&lt;p class=&quot;mcard__name</find>
       <find>&lt;div class=&quot;mcard mcard_quad</find>
       <find>&lt;div class=&quot;blk-team__card mcard mcard_quad&quot; style=&quot;background-image: url('http://loremflickr.com/320/180/')&quot;&gt;</find>
       <find>&lt;div class=&quot;mcard mcard_alt&quot;</find>
@@ -160,6 +160,8 @@
       <find>blk-service__description</find>
       <find>blk-service__team-item</find>
       <find>event</find>
+      <find>console</find>
+      <find>Личностный рос</find>
     </findStrings>
     <replaceStrings>
       <replace>cal__col_of</replace>
@@ -177,7 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/styles/blocks/misc/cover.less" />
         <option value="$PROJECT_DIR$/styles/blocks/misc/gradient-overlay.less" />
         <option value="$PROJECT_DIR$/styles/blocks/misc/slider.less" />
         <option value="$PROJECT_DIR$/styles/blocks/misc/cal/__event.less" />
@@ -226,6 +227,7 @@
         <option value="$PROJECT_DIR$/styles/blocks/misc/burger.less" />
         <option value="$PROJECT_DIR$/styles/blocks/misc/eventcard.less" />
         <option value="$PROJECT_DIR$/pages/events/event_closed.html" />
+        <option value="$PROJECT_DIR$/scripts/slider.js" />
         <option value="$PROJECT_DIR$/pages/events.html" />
         <option value="$PROJECT_DIR$/scripts/cal.js" />
       </list>
@@ -398,7 +400,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.event_closed.html">
+  <component name="RunManager" selected="JavaScript Debug.events.html">
     <configuration name="event_closed.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sobytie/pages/events/event_closed.html" />
     <configuration name="events.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sobytie/pages/events.html" />
     <configuration name="nikolai.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sobytie/pages/about/nikolai.html" />
@@ -413,8 +415,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.event_closed.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.events.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.events.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.event_closed.html" />
         <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.services.html" />
         <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.stories.html" />
         <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.nikolai.html" />
@@ -816,22 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="47" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/blocks/misc/cal/__details.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -856,14 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/events.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="336" column="77" lean-forward="false" selection-start-line="336" selection-start-column="77" selection-end-line="336" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/blocks/misc/eventcard.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -872,10 +850,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/events.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="375" column="37" lean-forward="false" selection-start-line="375" selection-start-column="37" selection-end-line="375" selection-end-column="37" />
+          <folding>
+            <element signature="e#21659#21666#0" expanded="true" />
+            <element signature="e#21680#21687#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/cal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="107" column="49" lean-forward="false" selection-start-line="107" selection-start-column="49" selection-end-line="107" selection-end-column="49" />
+        <state relative-caret-position="184">
+          <caret line="94" column="37" lean-forward="true" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
           <folding />
         </state>
       </provider>

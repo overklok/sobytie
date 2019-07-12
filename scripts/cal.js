@@ -1,3 +1,5 @@
+const FADE_TIME = 200;
+
 const EVENTCARD_CLASSES = {
     BLOCK: "eventcard",
     BTN_CLOSE: "eventcard__button-close"
@@ -40,6 +42,11 @@ function initAllCals() {
 
         // ":first" is just to ensure if proper object has been selected
         var $event = $(evt.target);
+
+        if (!$event.hasClass(CAL_CLASSES.EVENT)) {
+            $event = $event.parents("." + CAL_CLASSES.EVENT + ":first");
+        }
+
         var $cal = $event.parents("." + CAL_CLASSES.BLOCK + ":first");
 
         if (!$cal[0]) return;
@@ -48,6 +55,8 @@ function initAllCals() {
 
         var eventcard_id = $event.data("eventcard-id");
         var $eventcard = $cal.find("." + EVENTCARD_CLASSES.BLOCK + "[data-id=" + eventcard_id + "]");
+
+        console.log(eventcard_id, $eventcard, $event);
 
         /// Get Column container for current Event
 
@@ -81,10 +90,14 @@ function initAllCals() {
 
         /// Hide Calendar, show Eventcard, add background to the heading of the column
 
-        $cal.find("." + CAL_CLASSES.TABLE_WRAP).hide();
-        $eventcard.show();
+        $cal.find("." + CAL_CLASSES.TABLE_WRAP).fadeOut(FADE_TIME);
 
-        $col_day.prepend("<div class=" + CAL_CLASSES.BG + "></div>");
+        $eventcard.fadeIn(FADE_TIME);
+
+        $("<div class='" + CAL_CLASSES.BG + "'></div>")
+            .hide().css({top: "110%"})
+            .prependTo($col_day)
+            .fadeIn(FADE_TIME).animate({top: "0"});
     });
 }
 
@@ -100,14 +113,17 @@ function initAllEventcards() {
         var $eventcard = $btn.parents("." + EVENTCARD_CLASSES.BLOCK + ":first");
         var $cal = $btn.parents("." + CAL_CLASSES.BLOCK + ":first");
 
-        // Remove possible status classes for ALL elements which has it
-        $cal.find("." + CAL_CLASSES.COL_CLOSED).removeClass(CAL_CLASSES.COL_CLOSED);
-        $cal.find("." + CAL_CLASSES.COL_CANCELLED).removeClass(CAL_CLASSES.COL_CANCELLED);
+        $eventcard.fadeOut(FADE_TIME);
 
         // Remove all backgrounds of table's heading
-        $cal.find("." + CAL_CLASSES.BG).remove();
+        $cal.find("." + CAL_CLASSES.BG).fadeOut(FADE_TIME, function() {
+            this.remove();
 
-        $eventcard.hide();
-        $cal.find("." + CAL_CLASSES.TABLE_WRAP).show();
+            // Remove possible status classes for ALL elements which has it
+            $cal.find("." + CAL_CLASSES.COL_CLOSED).removeClass(CAL_CLASSES.COL_CLOSED);
+            $cal.find("." + CAL_CLASSES.COL_CANCELLED).removeClass(CAL_CLASSES.COL_CANCELLED);
+        });
+
+        $cal.find("." + CAL_CLASSES.TABLE_WRAP).fadeIn(FADE_TIME);
     });
 }
