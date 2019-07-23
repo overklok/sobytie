@@ -1,0 +1,30 @@
+.blk {
+  &.blk-stories {
+    .blk-stories__col {
+      padding: 8px 20px;
+
+      &:first-child {padding-left: 0;}
+      &:last-child {padding-right: 0;}
+    }
+
+    .blk-story__small {
+      float: left; // overlapping margins fix
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      &:first-child {margin-top: 0;}
+      &:last-child {margin-bottom: 0;}
+    }
+
+    .blk-story__mid {
+      margin: 20px 0;
+
+      width: 100%;
+      float: left;
+    }
+
+    .blk-story__tall {
+      margin: 12px 0;
+    }
+  }
+}

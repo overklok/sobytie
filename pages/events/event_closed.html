@@ -4,29 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../../styles/_vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles/main.css">
 
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous">
-    </script>
+    <script src="../../scripts/_vendor/jquery-3.4.1.min.js"></script>
+    <script src="../../scripts/slider.js"></script>
 
-    <script src="../scripts/slider.js"></script>
-
-    <title>Мероприятия</title>
+    <title>Закрытое мероприятие</title>
 </head>
 <body class="main-bg">
     <header class="container">
         <a href="/pages/index.html" class="headerlogo">
-            <img class="headerlogo__img" src="../assets/images/logo.svg" alt="СоБытие">
+            <img class="headerlogo__img" src="../../assets/images/logo.svg" alt="СоБытие">
         </a>
         <nav class="headernav">
             <a href="/pages/index.html" class="headernav__item">Мероприятия</a>
-            <a href="" class="headernav__item">Услуги</a>
+            <a href="/pages/services.html" class="headernav__item">Услуги</a>
             <a href="/pages/events.html" class="headernav__item headernav__item_selected">Мероприятия</a>
-            <a href="" class="headernav__item">Истории</a>
+            <a href="/pages/stories.html" class="headernav__item">Истории</a>
             <a href="/pages/about.html" class="headernav__item">О нас</a>
         </nav>
         <div class="headersocial">
@@ -39,7 +34,7 @@
     <section id="intro" class="container">
         <div class="blk blk-slidertop">
             <div class="slider" data-dur="500" data-delay="3000" data-fn="slide">
-                <div class="blk-slidertop__slide slider__item slider__bg gradient-overlay"
+                <div class="blk-slidertop__slide slider__item slider__bg gradient-overlay gradient-slide"
                      style="background-image: url('http://loremflickr.com/700/300?random=1')">
                     <div class="blk-slidertop__content">
                         <h1 class="blk-slidertop__heading light">Саморазвитие и рост</h1>
@@ -53,7 +48,7 @@
                         <p class="blk-slidertop__sub light">Доп текст, стоит уточнить</p>
                     </div>
                 </div>
-                <div class="blk-slidertop__slide slider__item slider__bg"
+                <div class="blk-slidertop__slide slider__item slider__bg gradient-overlay gradient-slide"
                      style="background-image: url('http://loremflickr.com/700/300?random=2')">
                     <div class="blk-slidertop__content">
                         <h1 class="blk-slidertop__heading light">Саморазвитие и рост 2</h1>
@@ -67,7 +62,7 @@
                         <p class="blk-slidertop__sub light">Доп текст, стоит уточнить</p>
                     </div>
                 </div>
-                <div class="blk-slidertop__slide slider__item slider__bg"
+                <div class="blk-slidertop__slide slider__item slider__bg gradient-overlay gradient-slide"
                      style="background-image: url('http://loremflickr.com/700/300?random=3')">
                     <div class="blk-slidertop__content">
                         <h1 class="blk-slidertop__heading light">Саморазвитие и рост 3</h1>
@@ -81,7 +76,8 @@
                         <p class="blk-slidertop__sub light">Доп текст, стоит уточнить</p>
                     </div>
                 </div>
-                <div class="blk-slidertop__slide slider__item slider__bg" style="
+                <div class="blk-slidertop__slide slider__item slider__bg gradient-overlay gradient-slide"
+                     style="
                     background-image: url('http://loremflickr.com/700/300?random=4')">
                     <div class="blk-slidertop__content">
                         <h1 class="blk-slidertop__heading light">Саморазвитие и рост 4</h1>
@@ -120,15 +116,15 @@
                 <div class="row">
                     <div class="col-2 col-lg-12">
                         <div class="cal__table-head seven-cols row">
-                            <div class="cal__col cal__col_day col-lg-1">
+                            <div class="cal__col cal__col_day cal__col_closed col-lg-1">
                                 <div class="cal__day">
+                                    <div class="cal__bg"></div>
                                     <span class="cal__wd">пн</span>
                                     <span class="cal__dn">24</span>
                                 </div>
                             </div>
                             <div class="cal__col cal__col_day col-lg-1">
                                 <div class="cal__day">
-                                    <div class="cal__bg"></div>
                                     <span class="cal__wd">вт</span>
                                     <span class="cal__dn">25</span>
                                 </div>
@@ -167,7 +163,7 @@
                     </div>
 
                     <div class="cal__details_wrap col-10 col-lg-12">
-                        <div class="cal__details eventcard row">
+                        <div class="cal__details eventcard eventcard_closed row">
                             <div class="eventcard__textbox col-lg-6">
                                 <h2>Групповой тренинг личности</h2>
 
@@ -175,7 +171,7 @@
                                     Небольшой текст, который расскажет о мероприятии, его целях, методах и форме прохождения.
                                 </p>
 
-                                <div class="eventcard__props">
+                                 <div class="eventcard__props">
                                     <p class="eventcard__prop">
                                         <i class="icon icon_eventcard icon-sob-man"></i> Ольга Иванова
                                     </p>
@@ -207,7 +203,7 @@
 
             <div class="loadable-list not-loaded row">
                 <div class="col-md-6 col-lg-3">
-                    <div class="mcard" style="background-image: url('http://lorempixel.com/320/180/')">
+                    <div class="mcard gradient-overlay gradient-mcard" style="background-image: url('http://lorempixel.com/320/180/')">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <h3 class="mcard__heading light">Индивидуальные</h3>
@@ -220,7 +216,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="mcard" style="background-image: url('http://lorempixel.com/180/320/')">
+                    <div class="mcard gradient-overlay gradient-mcard" style="background-image: url('http://lorempixel.com/180/320/')">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <h3 class="mcard__heading light">Корпоративные</h3>
@@ -237,8 +233,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="mcard mcard_bottomed">
-
+                    <div class="mcard gradient-overlay gradient-mcard">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <h3 class="mcard__heading light">Групповые длинные очень</h3>
@@ -248,7 +243,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="mcard">
+                    <div class="mcard gradient-overlay gradient-mcard">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <h3 class="mcard__heading light">Корпоративные</h3>
@@ -258,7 +253,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="mcard mcard_bottomed">
+                    <div class="mcard gradient-overlay gradient-mcard">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <h3 class="mcard__heading light">Групповые длинные очень</h3>
@@ -268,7 +263,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="mcard">
+                    <div class="mcard gradient-overlay gradient-mcard">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <h3 class="mcard__heading light">Корпоративные</h3>
@@ -278,7 +273,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="mcard mcard_bottomed">
+                    <div class="mcard gradient-overlay gradient-mcard">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <h3 class="mcard__heading light">Групповые длинные очень</h3>
@@ -288,7 +283,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="mcard">
+                    <div class="mcard gradient-overlay gradient-mcard">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <h3 class="mcard__heading light">Корпоративные</h3>
@@ -347,9 +342,9 @@
                     </li>
                 </ul>
 
-                <form class="form form_footer form-inline">
+                <form class="form form_footer form-inline form-fullwidth">
                     <input type="email" class="form__input form-control mr-3" placeholder="Ваш Email:">
-                    <button type="submit" class="btn btn-primary">Подписаться</button>
+                    <button type="submit" class="btn btn-primary btn-short">Подписаться</button>
                 </form>
             </div>
         </nav>

@@ -1,0 +1,57 @@
+.topbar {
+  padding: 18px 30px;
+
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .topbar__nav {
+    a.topbar__nav-item {
+      padding: 0 14px;
+
+      color: @color_default_fg;
+
+      font-size: 20px;
+      line-height: 23px;
+      font-weight: 500;
+
+      &.topbar__nav-item_active, &:hover {
+        color: @color_primary;
+        font-weight: bold;
+
+        text-decoration: none;
+      }
+
+      white-space: nowrap;
+    }
+  }
+
+  .topbar__search {
+    float: right;
+
+    color: @color_default_fg;
+
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: bold;
+
+    vertical-align: bottom;
+
+    min-width: 100px;
+  }
+
+  .topbar__menu-burger {
+    float: left;
+    margin-right : 20px;
+  }
+
+  span.topbar__menu-title {
+    color: @color_default_fg;
+
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: bold;
+  }
+}

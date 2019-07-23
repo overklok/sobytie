@@ -133,8 +133,6 @@ function slideTo($slider, slides, timer, idx_to, fn, dur) {
 
     var idx_from = Number($bullet_active.data("linkto"));
 
-    console.log(idx_from, idx_to);
-
     if (idx_from === idx_to) {
         timer.restart();
         return;

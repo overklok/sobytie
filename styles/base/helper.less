@@ -14,7 +14,7 @@
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.0001) -11.1%, #FFFFFF 83.78%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.0001) 0%, #FFFFFF 100%);
     display: none;
   }
 
@@ -36,9 +36,66 @@
     width: 100%;
     height: 100%;
 
-    background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
+    border-radius: @roundness;
+
+    background-image: @grad_slide;
     opacity: .6;
 
     z-index: 1;
+  }
+
+  /* все дочерние элементы 1 уровня должны быть расположены поверх оверлея */
+  > * {
+    z-index: 2;
+  }
+
+  /* [grey->transparent] to [top->bottom] */
+  &.gradient-mcard {
+    &::after {
+      background-image: @grad_mcard;
+      opacity: 1;
+    }
+  }
+
+  /* [black->transparent] to [left->right] */
+  &.gradient-slide {
+    &::after {
+      background-image: @grad_slide;
+      opacity: .6;
+    }
+  }
+
+  /* [black->transparent] to [bottom->top] */
+  &.gradient-mcard_hist-big {
+    &::after {
+      background-image: @grad_mcard_hist;
+      opacity: .8;
+    }
+  }
+
+  &.gradient-mcard_alt {
+    &::after {
+      background-image: linear-gradient(180deg, rgba(35, 35, 35, 0.7) 0%, rgba(0, 0, 0, 0.0001) 100%);
+    }
+
+    &:hover {
+      &::after {
+        background: transparent;
+      }
+    }
+  }
+
+  &.gradient-mcard_quad {
+    &::after {
+      background-image: @grad_mcard_quad;
+      opacity: 1;
+    }
+  }
+
+  &.gradient-cover {
+    &::after {
+      background-image: @grad_cover;
+      opacity: .6;
+    }
   }
 }

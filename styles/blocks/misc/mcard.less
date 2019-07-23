@@ -2,11 +2,21 @@
   Блок "Карточка"
  */
 
+/* ==== MODIFIERS ==== */
+@import "mcard/_alt";
+@import "mcard/_quad";
+@import "mcard/_hist-big";
+@import "mcard/_hist-mid";
+@import "mcard/_hist-small";
+@import "mcard/_hist-tall";
+
+@import "mcard/_bottomed";
+
 .mcard {
   position: relative;
 
   background-color: @color_primary;
-  background-image: @grad_card_neutral;
+  //background-image: @grad_mcard;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -17,45 +27,61 @@
 
   height: 200px;
 
-  .mcard__link {
+  overflow: hidden;
+
+  /* ==== ELEMENTS ==== */
+
+  // Контейнеры
+
+  /* Глобальный контейнер */
+  .mcard__content {
+    position: absolute;
+
+    padding: 25px;
+  }
+
+  /* Список действий (внизу) */
+  .mcard__actions {
+    position: absolute;
+    bottom: 0;
+
+    padding: 22px;
+  }
+
+  /* Изображение (используется только при .mcard_splitted ) */
+  .mcard__img-split {
+    //position: absolute;
+    //bottom: 0;
+    //left: 0;
+    border-bottom-right-radius: @roundness;
+    border-bottom-left-radius: @roundness;
+
+    width: 100%;
+    height: 50%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  // Конечные элементы
+
+  /* Ссылка (на весь блок поверх) */
+  a.mcard__link {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 
-    z-index: 9999999;
+    z-index: 99999;
   }
 
-  &:hover {
-    cursor: pointer;
-
-    .mcard__action {
-      text-decoration: none;
-
-      &.symbol {
-        background-color: #DFB05A;
-      }
-    }
-  }
-
-  /** Элементы-контейнеры **/
-  .mcard__content {
-    padding: 25px;
-  }
-
-  .mcard__actions {
-    position: absolute;
-    bottom: 22px;
-
-    padding: 22px;
-  }
-
-  /** Конечные элементы **/
+  /* Заголовок */
   h3.mcard__heading {
     margin-bottom: 15px;
   }
 
+  /* Описание */
   p.mcard__description {
     font-size: 18px;
 
@@ -70,9 +96,9 @@
     /* for set '...' in absolute position */
     position: relative;
     /* use this value to count block height */
-    line-height: 1em;
-    /* max-height = line-height (1.2) * lines max number (3) */
-    max-height: 3em;
+    line-height: 21px;
+    /* max-height = line-height (21) * lines max number (3) */
+    max-height: 63px;
     /* place for '...' */
     //margin-right: -1em;
     //padding-right: 1em;
@@ -88,12 +114,14 @@
     }
   }
 
+  /* Действие */
   .mcard__action {
     font-size: 20px;
     line-height: 23px;
 
     color: @color_text_light;
 
+    /* Действие, изображённое символом "плюс" */
     &.symbol {
       border-radius: @roundness;
 
@@ -115,6 +143,7 @@
       }
     }
 
+    /* Вспомогательный текст */
     .mcard__action__help-text {
       color: @color_text_light;
 
@@ -122,6 +151,22 @@
       line-height: 26px;
     }
   }
+
+  /* ==== HOVERS ==== */
+
+  &:hover {
+    cursor: pointer;
+
+    .mcard__action {
+      text-decoration: none;
+
+      &.symbol {
+        background-color: #DFB05A;
+      }
+    }
+  }
+
+  /* ==== MEDIA QUERIES ==== */
 
   // Large devices (desktops, 992px and up)
   @media (min-width: 768px) {
@@ -131,91 +176,6 @@
       height: auto; /* ie 11 */
       height: initial;
       max-height: 8em;
-    }
-  }
-
-  &.mcard_bottomed {
-    .mcard__content {
-      position: absolute;
-      bottom: 22px;
-
-      width: calc(100% - 30px);
-    }
-
-    .mcard__actions {
-      position: absolute;
-      top: 0;
-    }
-  }
-
-  &.mcard_alt {
-    height: 150px;
-
-    h3.mcard__heading {
-      margin-bottom: 10px;
-    }
-
-    .mcard__content {
-      padding-left: 30px;
-    }
-
-    &:hover {
-      background-image: none !important;
-      background-color: @color_primary;
-    }
-
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 768px) {
-      p.mcard__description {
-        height: auto; /* ie 11 */
-        height: initial;
-        max-height: 4em;
-      }
-    }
-  }
-
-  &.mcard_quad {
-    margin: 0;
-    padding-top: 100%;
-    width: 100%;
-    height: 0;
-
-    &.mcard_colored {
-      .mcard__content:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-
-        background-image: none !important;
-        background-color: @color_primary;
-        opacity: .8;
-
-        border-radius: @roundness;
-
-        z-index: 1;
-      }
-    }
-
-    .mcard__content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    p.mcard__name {
-      position: absolute;
-
-      bottom: 20px;
-      left: 20px;
-
-      margin: 0;
-
-      z-index: 2;
     }
   }
 }

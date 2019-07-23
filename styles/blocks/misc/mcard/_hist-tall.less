@@ -1,0 +1,74 @@
+.mcard {
+  &.mcard_hist-tall {
+    margin: 0;
+    padding: 0;
+
+    //padding: 0 12px; // used!
+    height: 400px; // TODO: tmp!
+
+    //margin: 0;
+
+    .mcard__content {
+      //width: calc(100% - 24px); // padding-x * 2
+      //left: 12px; // padding-x
+    }
+
+    h3.mcard__heading {
+      font-size: 25px;
+      line-height: 29px;
+      font-weight: bold;
+
+      margin-bottom: 10px;
+    }
+
+    p.mcard__description {
+      font-size: 20px;
+      line-height: 23px;
+      font-weight: 500;
+
+      margin-bottom: 18px;
+    }
+
+    &.mcard_splitted {
+      background-color: transparent;
+      background-image: none;
+
+      .mcard__content {
+        height: 50%;
+
+        background-color: @color_emph_bg;
+      }
+
+      &.mcard_bottomed {
+        .mcard__content {
+          width: 100%;
+          //width: calc(100% - 24px); // padding-x * 2
+          //left: 12px; // padding-x
+          bottom: 0;
+
+          border-bottom-right-radius: @roundness;
+          border-bottom-left-radius: @roundness;
+        }
+
+        .mcard__img-split {
+          background-color: @color_primary;
+
+          border-top-right-radius: @roundness;
+          border-top-left-radius: @roundness;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+
+          //position: absolute;
+          top: 0;
+        }
+      }
+    }
+
+    /* ==== MEDIA QUERIES ==== */
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 768px) {
+      height: 400px;
+    }
+  }
+}

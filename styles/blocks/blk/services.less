@@ -1,0 +1,25 @@
+.blk {
+  /* "Services" block */
+  &.blk-services {
+    &:not(:last-child) {
+      padding-bottom: 0;
+    }
+
+    h2.blk-services__heading {
+      margin-bottom: 15px;
+    }
+
+    .blk-services__col {
+      padding: 0 15px;
+
+      @media (min-width: 992px) {
+        &:first-child {padding-left: 0;}
+        &:last-child {padding-right: 0;}
+      }
+    }
+
+    .blk-services__item {
+      margin: 10px 0;
+    }
+  }
+}

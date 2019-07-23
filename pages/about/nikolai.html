@@ -4,15 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/_vendor/bootstrap.min.css">
     <link rel="stylesheet" href="../../styles/main.css">
 
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous">
-    </script>
-
+    <script src="../../scripts/_vendor/jquery-3.4.1.min.js"></script>
     <script src="../../scripts/slider.js"></script>
 
     <title>Персональная страница</title>
@@ -26,7 +21,7 @@
             <a href="/pages/index.html" class="headernav__item">Главная</a>
             <a href="" class="headernav__item">Услуги</a>
             <a href="/pages/events.html" class="headernav__item">Мероприятия</a>
-            <a href="" class="headernav__item">Истории</a>
+            <a href="/pages/stories.html" class="headernav__item">Истории</a>
             <a href="/pages/about.html" class="headernav__item headernav__item_selected">О нас</a>
         </nav>
         <div class="headersocial">
@@ -38,7 +33,7 @@
 
     <section id="controls" class="container container_ctrl">
         <nav class="pagectrl">
-            <a href="" class="pagectrl__back"><i class="icon icon_ctrl icon-sob-triangle-bwd"></i>Назад</a>
+            <a href="/pages/about" class="pagectrl__back"><i class="icon icon_ctrl icon-sob-triangle-bwd"></i>Назад</a>
         </nav>
     </section>
 
@@ -362,9 +357,9 @@
                     </li>
                 </ul>
 
-                <form class="form form_footer form-inline">
+                <form class="form form_footer form-inline form-fullwidth">
                     <input type="email" class="form__input form-control mr-3" placeholder="Ваш Email:">
-                    <button type="submit" class="btn btn-primary">Подписаться</button>
+                    <button type="submit" class="btn btn-primary btn-short">Подписаться</button>
                 </form>
             </div>
         </nav>

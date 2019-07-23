@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Y.Maps iOS fix-->
+    <meta name="viewport" content="user-scalable=no, maximum-scale=1" />
 
     <link rel="stylesheet" href="../styles/_vendor/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/main.css">
 
+    <!--jQuery-->
     <script src="../scripts/_vendor/jquery-3.4.1.min.js"></script>
+    <!--Y.Maps scripts-->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=57583197-f71e-4108-9615-b3ff3bb78c04&lang=ru_RU"
+            type="text/javascript"></script>
+
+    <!--Custom scripts-->
     <script src="../scripts/slider.js"></script>
+    <script src="../scripts/map.js"></script>
 
     <title>О нас</title>
 </head>
@@ -19,9 +28,9 @@
         </a>
         <nav class="headernav">
             <a href="/pages/index.html" class="headernav__item">Главная</a>
-            <a href="" class="headernav__item">Услуги</a>
+            <a href="/pages/services.html" class="headernav__item">Услуги</a>
             <a href="/pages/events.html" class="headernav__item">Мероприятия</a>
-            <a href="" class="headernav__item">Истории</a>
+            <a href="/pages/stories.html" class="headernav__item">Истории</a>
             <a href="/pages/about.html" class="headernav__item headernav__item_selected">О нас</a>
         </nav>
         <div class="headersocial">
@@ -32,7 +41,7 @@
     </header>
 
      <section id="intro" class="container">
-        <div class="blk blk-cover gradient-overlay"
+        <div class="blk blk-cover gradient-overlay gradient-cover"
              style="background-image: url('http://loremflickr.com/700/300?random=1')">
             <div class="blk-cover__content">
                 <h1 class="blk-cover__heading light">Мастерская Отношений &laquo;СоБытие&raquo;</h1>
@@ -51,7 +60,8 @@
 
             <div class="row">
                 <div class="blk-team__item col-md-3">
-                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                    <div class="blk-team__card mcard mcard_quad gradient-overlay gradient-mcard_quad"
+                         style="background-image: url('../assets/images/team/t1.png')">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <p class="mcard__name oneword"><span class="signature light">Анна Денаева</span></p>
@@ -59,7 +69,8 @@
                     </div>
                 </div>
                 <div class="blk-team__item col-md-3">
-                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                    <div class="blk-team__card mcard mcard_quad gradient-overlay gradient-mcard_quad"
+                         style="background-image: url('../assets/images/team/t2.png')">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <p class="mcard__name oneword"><span class="signature light">Булат Альжанов</span></p>
@@ -67,7 +78,8 @@
                     </div>
                 </div>
                 <div class="blk-team__item col-md-3">
-                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                    <div class="blk-team__card mcard mcard_quad gradient-overlay gradient-mcard_quad"
+                         style="background-image: url('../assets/images/team/t3.png')">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <p class="mcard__name oneword"><span class="signature light">Диана Матвеева</span></p>
@@ -75,7 +87,8 @@
                     </div>
                 </div>
                 <div class="blk-team__item col-md-3">
-                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                    <div class="blk-team__card mcard mcard_quad gradient-overlay gradient-mcard_quad"
+                         style="background-image: url('../assets/images/team/t4.png')">
                         <a href="/pages/about/nikolai.html" class="mcard__link"></a>
                         <div class="mcard__content">
                             <p class="mcard__name oneword"><span class="signature light">Николай Черкасов</span></p>
@@ -83,7 +96,8 @@
                     </div>
                 </div>
                 <div class="blk-team__item col-md-3">
-                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                    <div class="blk-team__card mcard mcard_quad gradient-overlay gradient-mcard_quad"
+                         style="background-image: url('../assets/images/team/t5.png')">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <p class="mcard__name oneword"><span class="signature light">Ольга Орлова</span></p>
@@ -91,7 +105,8 @@
                     </div>
                 </div>
                 <div class="blk-team__item col-md-3">
-                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                    <div class="blk-team__card mcard mcard_quad gradient-overlay gradient-mcard_quad"
+                         style="background-image: url('../assets/images/team/t6.png')">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <p class="mcard__name oneword"><span class="signature light">Юлия Кисличенко</span></p>
@@ -99,7 +114,8 @@
                     </div>
                 </div>
                 <div class="blk-team__item col-md-3">
-                    <div class="blk-team__card mcard mcard_quad" style="background-image: url('http://loremflickr.com/320/180/')">
+                    <div class="blk-team__card mcard mcard_quad gradient-overlay gradient-mcard_quad"
+                         style="background-image: url('../assets/images/team/t7.png')">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <p class="mcard__name oneword"><span class="signature light">Татьяна Стовбер</span></p>
@@ -107,7 +123,8 @@
                     </div>
                 </div>
                 <div class="blk-team__item col-md-3">
-                    <div class="blk-team__card mcard mcard_quad mcard_colored" style="background-image: url('http://loremflickr.com/320/180/')">
+                    <div class="blk-team__card mcard mcard_quad mcard_colored"
+                         style="background-image: url('http://loremflickr.com/700/300?random=1')">
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
                             <p class="mcard__name"><span class="signature light">Стать частью команды</span></p>
@@ -120,6 +137,7 @@
 
     <section id="contacts" class="container">
         <div class="blk blk-contacts">
+            <h2 class="text-center">Контакты</h2>
             <div class="row">
                 <div class="col-lg-6">
                     <h3 class="blk-contacts__heading text-section">Офис</h3>
@@ -139,12 +157,20 @@
                             Оставьте свой номер и мы перезвоним через 10 минут (с 10:00 до 19:00)
                         </p>
 
-                        <form class="blk-contacts__form form form-inline">
-                            <input type="email" class="form__input form-control mr-3" placeholder="Ваш Email:">
-                            <button type="submit" class="btn btn-primary">Позвоните мне</button>
+                        <form class="blk-contacts__form form form-inline form-fullwidth">
+                            <input type="tel" class="form__input form-control mr-3" placeholder="Телефон:">
+                            <button type="submit" class="form__submit btn btn-primary btn-short">Позвоните мне</button>
                         </form>
                     </div>
+                </div>
+            </div>
+            <div class="blk-contacts__bottom row">
+                <div class="col-lg-6">
+                    <div id="ymap-contacts" class="blk-contacts__map">
 
+                    </div>
+                </div>
+                <div class="col-lg-6">
                     <div class="blk-contacts__suggestion">
                         <h3 class="blk-contacts__heading text-section">Отправить предложение</h3>
                         <p class="blk-contacts__text">
@@ -200,9 +226,9 @@
                     </li>
                 </ul>
 
-                <form class="form form_footer form-inline">
+                <form class="form form_footer form-inline form-fullwidth">
                     <input type="email" class="form__input form-control mr-3" placeholder="Ваш Email:">
-                    <button type="submit" class="btn btn-primary">Подписаться</button>
+                    <button type="submit" class="btn btn-primary btn-short">Подписаться</button>
                 </form>
             </div>
         </nav>

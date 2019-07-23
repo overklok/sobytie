@@ -12,6 +12,10 @@ body {
 
 h1, h2, h3, h4 {
   width: 100%;
+
+  span.aux {
+    font-weight: 500;
+  }
 }
 
 h1, h2, h3, h4, p, span {
@@ -50,6 +54,10 @@ p {
   line-height: @p_line-height;
   font-weight: 500;  /* по perfect pixel этой строчки быть не должно*/
 
+  b {
+    font-weight: 600;
+  }
+
   /* Уменьшенный */
   &.text-small {
     font-size: 20px;
@@ -79,6 +87,19 @@ span {
 
     &.comment_bold {
       font-weight: bold;
+    }
+  }
+
+  &.tag {
+    color: @color_text_light;
+
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+    opacity: .6;
+
+    &.tag_emph {
+      color: @color_primary;
     }
   }
 }
