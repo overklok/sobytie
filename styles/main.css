@@ -461,7 +461,6 @@ span.tag.tag_emph {
   border-radius: 10px;
   background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
   opacity: 0.6;
-  z-index: 1;
 }
 .gradient-overlay > * {
   z-index: 2;
@@ -1086,12 +1085,10 @@ span.tag.tag_emph {
   /* Альтернативный вариант */
 }
 .mcard.mcard_alt {
-  height: 150px;
   /* ==== HOVERS ==== */
   /* ==== MEDIA QUERIES ==== */
 }
 .mcard.mcard_alt .mcard__content {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -1107,10 +1104,7 @@ span.tag.tag_emph {
 }
 @media (min-width: 768px) {
   .mcard.mcard_alt p.mcard__description {
-    height: auto;
-    /* ie 11 */
     height: initial;
-    max-height: 4em;
   }
 }
 .mcard {
@@ -1292,13 +1286,10 @@ span.tag.tag_emph {
 }
 .mcard {
   position: relative;
-  background-color: #F2C75C;
-  background-repeat: no-repeat;
-  background-size: cover;
   margin: 15px 0 15px 0;
   border: none;
   border-radius: 10px;
-  height: 200px;
+  height: 100%;
   overflow: hidden;
   /* ==== ELEMENTS ==== */
   /* Глобальный контейнер */
@@ -1311,8 +1302,17 @@ span.tag.tag_emph {
   /* ==== HOVERS ==== */
   /* ==== MEDIA QUERIES ==== */
 }
-.mcard .mcard__content {
+.mcard .mcard__bg {
+  background-color: #F2C75C;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mcard .mcard__content {
   padding: 25px;
 }
 .mcard .mcard__actions {
@@ -1402,9 +1402,6 @@ span.tag.tag_emph {
   opacity: 1;
 }
 @media (min-width: 768px) {
-  .mcard {
-    height: 320px;
-  }
   .mcard p.mcard__description {
     height: auto;
     /* ie 11 */
