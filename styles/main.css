@@ -36,6 +36,10 @@ footer.container {
     max-width: 1240px;
   }
 }
+/* Global constraints */
+body {
+  min-width: 375px;
+}
 @font-face {
   font-family: 'Gilroy';
   src: url('../assets/fonts/Gilroy/Gilroy-Extrabold.eot');
@@ -640,9 +644,6 @@ span.tag.tag_emph {
 .blk.blk-service .blk-service__team-item:last-child {
   padding-right: 0;
 }
-.blk.blk-events {
-  padding-bottom: 8px;
-}
 .blk.blk-events .blk-events__text-main {
   padding-right: 40px;
 }
@@ -730,8 +731,11 @@ span.tag.tag_emph {
   margin-bottom: 40px;
 }
 .blk.blk-cover p.blk-cover__text-desc {
-  width: 733px;
   margin: 0;
+  width: 733px;
+}
+.blk.blk-cover p.blk-cover__text-desc:not(:last-child) {
+  margin-bottom: 20px;
 }
 .blk.blk-team .blk-team__item {
   padding: 20px;
@@ -819,7 +823,7 @@ span.tag.tag_emph {
 }
 .btn.btn-primary:hover {
   color: #F2C75C;
-  background-color: #FFFFFF;
+  background-color: transparent;
   border-width: 3px;
 }
 .btn.btn-primary:active {
@@ -858,6 +862,9 @@ span.tag.tag_emph {
 }
 .btn.btn-wider {
   width: 100%;
+}
+.btn.btn-hov-bg:hover {
+  background-color: #FFFFFF;
 }
 .social .social-item .icon:hover {
   color: #F2C75C;
@@ -1380,6 +1387,7 @@ span.tag.tag_emph {
   color: #FFFFFF;
   font-size: 22px;
   line-height: 26px;
+  opacity: 0;
 }
 .mcard:hover {
   cursor: pointer;
@@ -1389,6 +1397,9 @@ span.tag.tag_emph {
 }
 .mcard:hover .mcard__action.symbol {
   background-color: #DFB05A;
+}
+.mcard:hover .mcard__action .mcard__action__help-text {
+  opacity: 1;
 }
 @media (min-width: 768px) {
   .mcard {

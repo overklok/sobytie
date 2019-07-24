@@ -30,7 +30,7 @@
 
     border-color: @color_primary;
 
-    &:hover {color: @color_primary; background-color: @color_text_light; border-width: 3px;}
+    &:hover {color: @color_primary; background-color: transparent; border-width: 3px;}
     &:active {
       color: white !important;
       background-color: @color_primary !important;
@@ -70,5 +70,9 @@
 
   &.btn-wider {
     width: 100%;
+  }
+
+  &.btn-hov-bg {
+    &:hover {background-color: #FFFFFF;}
   }
 }

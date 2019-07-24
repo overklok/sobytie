@@ -31,8 +31,13 @@
     }
 
     p.blk-cover__text-desc {
-      width: 733px;
       margin: 0;
+
+      width: 733px;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
     }
   }
 }
