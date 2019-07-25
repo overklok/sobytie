@@ -1049,6 +1049,24 @@ span.text-underlined {
 .footernav ul.footernav-menu .footernav-menu__item a {
   color: #FFFFFF;
 }
+@media (max-width: 991.98px) {
+  .footernav {
+    text-align: center;
+  }
+  .footernav ul.footernav-menu {
+    padding: 0;
+    margin: 15px 50px;
+  }
+  .footernav ul.footernav-menu .footernav-menu__item {
+    display: inline;
+    margin: 0 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .footernav ul.footernav-menu {
+    margin: 15px 0;
+  }
+}
 .footercopy {
   margin-top: 40px;
   padding-top: 15px;
@@ -1495,6 +1513,10 @@ span.text-underlined {
 }
 .mcard .mcard__content {
   padding: 25px;
+}
+.mcard .mcard__content:not(:last-child) {
+  /* место для "actions" */
+  margin-bottom: 40px;
 }
 .mcard .mcard__actions {
   position: absolute;
@@ -2008,4 +2030,9 @@ span.text-underlined {
 }
 .form.form_footer .form__input::placeholder {
   color: #FFFFFF;
+}
+@media (min-width: 992px) {
+  .form.form_footer .form__input {
+    width: 0;
+  }
 }

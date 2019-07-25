@@ -36,4 +36,24 @@
       }
     }
   }
+
+  @media(max-width: @md_to) {
+    text-align: center;
+
+    ul.footernav-menu {
+      padding: 0;
+      margin: 15px 50px;
+
+      .footernav-menu__item {
+        display: inline;
+        margin: 0 20px;
+      }
+    }
+  }
+
+  @media(max-width: @xs_to) {
+    ul.footernav-menu {
+      margin: 15px 0;
+    }
+  }
 }
