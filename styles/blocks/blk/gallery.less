@@ -2,6 +2,10 @@
   &.blk-gallery {
     padding-bottom: 0;
 
+    .blk-gallery__mcard-wrap {
+      margin: 15px 0 15px 0;
+    }
+
     .blk-gallery__overlay {
       left: 0;
 
@@ -28,6 +32,12 @@
     .blk-gallery__btn {
       padding: 0 25px;
       font-weight: 500;
+    }
+
+    @media (max-width: 575.99px) {
+      .blk-gallery__mcard-wrap {
+        margin: 5px 0 5px 0;
+      }
     }
   }
 }

@@ -48,6 +48,9 @@
 
           border-bottom-right-radius: @roundness;
           border-bottom-left-radius: @roundness;
+          @media (max-width: 575.99px) {border-bottom-right-radius: @roundness / 2;}
+          @media (max-width: 575.99px) {border-bottom-left-radius:  @roundness / 2;}
+
         }
 
         .mcard__img-split {
