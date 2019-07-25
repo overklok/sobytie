@@ -59,7 +59,7 @@
         <div class="blk blk-services blk-gallery">
             <h2 class="text-center">Услуги</h2>
 
-            <div class="row">
+            <div class="blk-gallery__mcard-row row">
                 <div class="blk-gallery__mcard-wrap col-12 col-lg-4">
                     <div class="mcard mcard_alt">
                         <div class="mcard__bg gradient-overlay gradient-mcard_alt"
@@ -126,19 +126,20 @@
             <h2 class="text-center">Мероприятия</h2>
 
             <div class="row">
-                <div class="blk-events__text-main col-6 col-lg-5">
-                    <p class="text-justify text-small">
+                <div class="blk-events__text-wrap col-6 col-lg-5">
+                    <p class="blk-events__text text-small">
                         Текст, рассказывающий о мероприятиях, которые проводятся силами СоБытия и партнеров.
                         Справа можно увидеть небольшую выборку фотографий с последних мероприятий.
                         В самом тексте должно быть кратко рассказано о целях этих мероприятий,
                         а так же что от них можно получить.
                     </p>
 
-                    <a href="" class="btn btn-primary btn-block">Узнать подробнее</a>
+                    <!--Warning: this button has a duplicate-->
+                    <a href="" class="blk-events__btn btn btn-primary btn-block d-none d-sm-block">Узнать подробнее</a>
                 </div>
 
                 <div class="blk-events__slider_wrap col-6 col-lg-7">
-                    <div class="slider" data-dur="500" data-delay="3000" data-fn="slide">
+                    <div class="blk-events__slider slider" data-dur="500" data-delay="3000" data-fn="slide">
                         <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=1')">
                         </div>
                         <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=2')">
@@ -148,6 +149,8 @@
                         <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=4')">
                         </div>
                     </div>
+
+                    <a href="" class="blk-events__btn btn btn-primary btn-block d-block d-sm-none">Узнать подробнее</a>
                 </div>
             </div>
         </div>
@@ -178,9 +181,27 @@
         <div class="blk blk-gallery">
             <h2 class="text-center">Отзывы</h2>
 
-            <div class="row">
-                <div class="blk-gallery__mcard-wrap col-md-6 col-lg-3">
-                    <div class="mcard">
+            <div class="blk-gallery__mcard-row row">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
+                        <div class="mcard__bg gradient-overlay gradient-mcard"
+                             style="background-image: url('http://loremflickr.com/320/180/')">
+                        </div>
+
+                        <a href="" class="mcard__link"></a>
+                        <div class="mcard__content">
+                            <h3 class="mcard__heading light">Настоящий коуч!</h3>
+                            <p class="mcard__description light">Как отличить настоящего коуча  от самозванца</p>
+                        </div>
+
+                        <div class="mcard__actions">
+                            <span class="mcard__action text-underlined">Перейти на Flamp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
                         <div class="mcard__bg gradient-overlay gradient-mcard"
                              style="background-image: url('http://loremflickr.com/320/180/')">
                         </div>
@@ -193,8 +214,8 @@
                     </div>
                 </div>
 
-                <div class="blk-gallery__mcard-wrap col-md-6 col-lg-3">
-                    <div class="mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
                         <div class="mcard__bg gradient-overlay gradient-mcard"
                              style="background-image: url('http://loremflickr.com/320/180/')">
                         </div>
@@ -207,22 +228,8 @@
                     </div>
                 </div>
 
-                <div class="blk-gallery__mcard-wrap col-md-6 col-lg-3">
-                    <div class="mcard">
-                        <div class="mcard__bg gradient-overlay gradient-mcard"
-                             style="background-image: url('http://loremflickr.com/320/180/')">
-                        </div>
-
-                        <a href="" class="mcard__link"></a>
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Настоящий коуч!</h3>
-                            <p class="mcard__description light">Как отличить настоящего коуча  от самозванца</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blk-gallery__mcard-wrap col-md-6 col-lg-3">
-                    <div class="mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
                         <div class="mcard__bg gradient-overlay gradient-mcard"
                              style="background-image: url('http://loremflickr.com/320/180/')">
                         </div>
@@ -244,9 +251,9 @@
 
         <div class="blk blk-gallery">
             <h2 class="text-center">Истории</h2>
-            <div class="loadable-list not-loaded row">
-                <div class="blk-gallery__mcard-wrap col-md-6 col-lg-3">
-                    <div class="mcard">
+            <div class="loadable-list not-loaded blk-gallery__mcard-row row">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
                         <div class="mcard__bg gradient-overlay gradient-mcard"
                              style="background-image: url('http://loremflickr.com/320/180/')">
                         </div>
@@ -263,8 +270,8 @@
                     </div>
                 </div>
 
-                <div class="blk-gallery__mcard-wrap col-md-6 col-lg-3">
-                    <div class="mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
                         <div class="mcard__bg gradient-overlay gradient-mcard"></div>
 
                         <a href="" class="mcard__link"></a>
@@ -281,8 +288,8 @@
                     </div>
                 </div>
 
-                <div class="blk-gallery__mcard-wrap col-md-6 col-lg-3">
-                    <div class="mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
                         <div class="mcard__bg gradient-overlay gradient-mcard"
                              style="background-image: url('http://loremflickr.com/320/180/')">
                         </div>
@@ -298,8 +305,8 @@
                     </div>
                 </div>
 
-                <div class="blk-gallery__mcard-wrap col-md-6 col-lg-3">
-                    <div class="mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
                         <div class="mcard__bg gradient-overlay gradient-mcard"
                              style="background-image: url('http://loremflickr.com/320/180/')">
                         </div>
@@ -312,8 +319,8 @@
                     </div>
                 </div>
 
-                <div class="blk-gallery__mcard-wrap col-md-6 col-lg-3">
-                    <div class="mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
                         <div class="mcard__bg gradient-overlay gradient-mcard">
                         </div>
 
@@ -329,8 +336,8 @@
                     </div>
                 </div>
 
-                <div class="blk-gallery__mcard-wrap col-md-6 col-lg-3">
-                    <div class="mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
                         <div class="mcard__bg gradient-overlay gradient-mcard"
                              style="background-image: url('http://loremflickr.com/320/180/')">
                         </div>
@@ -349,8 +356,8 @@
                     </div>
                 </div>
 
-                <div class="blk-gallery__mcard-wrap col-md-6 col-lg-3">
-                    <div class="mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
                         <div class="mcard__bg gradient-overlay gradient-mcard">
                         </div>
 
@@ -365,8 +372,8 @@
                     </div>
                 </div>
 
-                <div class="blk-gallery__mcard-wrap col-md-6 col-lg-3">
-                    <div class="mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
                         <div class="mcard__bg gradient-overlay gradient-mcard">
                         </div>
                         <a href="" class="mcard__link"></a>

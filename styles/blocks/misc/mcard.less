@@ -3,6 +3,7 @@
  */
 
 /* ==== MODIFIERS ==== */
+@import "mcard/_default";
 @import "mcard/_alt";
 @import "mcard/_quad";
 @import "mcard/_hist-big";
@@ -192,7 +193,7 @@
 
   /* ==== MEDIA QUERIES ==== */
 
-  @media (max-width: 575.99px) {
+  @media (max-width: @xs_to) {
     .mcard__content {
       padding: 15px;
     }
@@ -201,10 +202,28 @@
       font-size: 10px;
       line-height: 12px;
     }
-  }
 
-  // Large devices (desktops, 992px and up)
-  @media (min-width: 768px) {
-    min-height: 320px;
+    .mcard__actions {
+      padding: 15px;
+    }
+
+    .mcard__action {
+      font-size: 10px;
+      line-height: 12px;
+
+      &.symbol {
+        &:before {
+          font-size: 20px;
+          vertical-align: middle;
+        }
+      }
+
+      .mcard__action__help-text {
+        font-size: 10px;
+        line-height: 12px;
+
+        vertical-align: 1px;
+      }
+    }
   }
 }

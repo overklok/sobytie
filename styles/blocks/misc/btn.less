@@ -72,6 +72,20 @@
     width: 100%;
   }
 
+  @media (max-width: @xs_to) {
+    font-size: 10px;
+    line-height: 14px;
+
+    padding: 4px 0;
+
+    border-radius: @roundness / 2;
+    border-width: 2px;
+
+    &.btn-primary {
+      &:hover {border-width: 2px;}
+    }
+  }
+
   &.btn-hov-bg {
     &:hover {background-color: #FFFFFF;}
   }
