@@ -87,9 +87,12 @@
 
     border-left-width: @roundness;
     border-left-style: solid;
-    border-left-color: @color_cancelled_fg;
+    border-color: @color_cancelled_fg;
 
-    @media (max-width: @xs_to) {border-left-width: @roundness / 2;}
+    @media (max-width: @md_to) {
+      border-left: 0 none transparent;
+      border-top: solid @roundness @color_cancelled_fg;
+    }
   }
 
   &.eventcard_closed {
@@ -99,7 +102,10 @@
     border-left-style: solid;
     border-left-color: @color_closed_fg;
 
-    @media (max-width: @xs_to) {border-left-width: @roundness / 2;}
+    @media (max-width: @md_to) {
+      border-left: 0 none transparent;
+      border-top: solid @roundness @color_closed_fg;
+    }
   }
 
   @media (max-width: @md_to) {

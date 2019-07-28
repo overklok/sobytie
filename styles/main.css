@@ -964,9 +964,12 @@ span.text-underlined {
 .btn.btn-inactive {
   background-color: #CCD7D7;
   color: white;
+  border-color: transparent;
+  pointer-events: none;
 }
 .btn.btn-inactive:hover {
   color: white;
+  background-color: #CCD7D7;
 }
 .btn.btn-inactive:active {
   color: white !important;
@@ -2099,6 +2102,11 @@ span.text-underlined {
   padding: 5px;
   white-space: nowrap;
 }
+@media (max-width: 767.98px) {
+  .cal {
+    padding: 5px 0;
+  }
+}
 .eventcard {
   background: #E5EBEB;
   border-radius: 10px;
@@ -2175,11 +2183,12 @@ span.text-underlined {
   background-color: #FFEEED;
   border-left-width: 10px;
   border-left-style: solid;
-  border-left-color: #FF5E4C;
+  border-color: #FF5E4C;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .eventcard.eventcard_cancelled {
-    border-left-width: 5px;
+    border-left: 0 none transparent;
+    border-top: solid 10px #FF5E4C;
   }
 }
 .eventcard.eventcard_closed {
@@ -2188,9 +2197,10 @@ span.text-underlined {
   border-left-style: solid;
   border-left-color: #7F33AB;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .eventcard.eventcard_closed {
-    border-left-width: 5px;
+    border-left: 0 none transparent;
+    border-top: solid 10px #7F33AB;
   }
 }
 @media (max-width: 991.98px) {
