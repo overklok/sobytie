@@ -32,7 +32,26 @@
         </div>
     </header>
 
-    <section id="intro" class="container">
+    <section id="intro-mobile" class="container d-block d-lg-none">
+        <div class="blk blk-cover gradient-overlay gradient-cover"
+             style="background-image: url('http://loremflickr.com/700/300?random=1')">
+            <div class="blk-cover__content">
+                <h1 class="blk-cover__heading light text-center text-lg-left">Мероприятия</h1>
+
+                <div class="row mx-5 mt-5">
+                    <div class="col-12 col-lg-10">
+                        <p class="blk-cover__text-desc light text-center text-lg-left">
+                            Небольшой текст, который расскажет о том, какие мероприятия проходят в центре,
+                            что на них происходит, цели этих мероприятий, а также описание профита,
+                            который получит адресат
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="intro-full" class="container d-none d-lg-block">
         <div class="blk blk-slidertop">
             <div class="slider" data-dur="500" data-delay="3000" data-fn="slide">
                 <div class="blk-slidertop__slide slider__item slider__bg gradient-overlay gradient-slide"
@@ -102,11 +121,11 @@
 
             <div class="cal">
                 <div class="cal__legend row">
-                    <div class="col-9 col-sm-6 p-0">
+                    <div class="col-8 col-sm-6 p-0">
                         <span class="cal__legend-marker cal__legend-marker_closed">Запись закрыта</span>
                         <span class="cal__legend-marker cal__legend-marker_cancelled">Мероприятие отменено</span>
                     </div>
-                    <div class="col-3 col-sm-6 p-0">
+                    <div class="col-4 col-sm-6 p-0">
                         <div class="cal__legend-next">
                             <div class="cal__legend-next-icon">
                                 <i class="icon icon-sob-triangle-fwd"></i>
@@ -166,9 +185,9 @@
                         </div>
                     </div>
 
-                    <div class="cal__table_wrap col-12">
-                        <div class="cal__table seven-cols row">
-                            <div class="cal__col cal__col_of col-lg-1">
+                    <div class="cal__table_wrap col-12 p-0">
+                        <div class="cal__table seven-cols row m-0">
+                            <div class="cal__col cal__col_of col-lg-1 p-0">
                                 <div class="cal__day-m d-lg-none">
                                     <p>24 Июня / ПН</p>
                                 </div>

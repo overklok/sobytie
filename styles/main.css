@@ -2022,7 +2022,7 @@ span.text-underlined {
   background-color: #7F33AB;
 }
 .cal .cal__legend {
-  padding: 10px;
+  margin: 10px 0;
 }
 .cal .cal__legend .cal__legend-marker {
   font-size: 20px;
