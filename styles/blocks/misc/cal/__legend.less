@@ -1,6 +1,6 @@
 .cal {
   .cal__legend {
-    padding: 10px 0;
+    padding: 10px;
 
     .cal__legend-marker {
       font-size: 20px;
@@ -29,20 +29,59 @@
       }
     }
 
-    a.cal__legend-next {
+    .cal__legend-next {
+      &:hover {
+        a.cal__legend-next-text {
+          text-decoration: none;
+        }
+
+        .cal__legend-next-icon {
+          color: @color_primary;
+        }
+      }
+    }
+
+    a.cal__legend-next-text {
+      display: block;
+
       font-size: 20px;
       line-height: 23px;
 
       color: @color_default_fg;
 
+      float: unset;
+      text-align: right;
+    }
+
+    .cal__legend-next-icon {
       float: right;
+      color: @color_default_fg;
 
-      &:hover {
-        text-decoration: none;
+      font-size: 18px;
+    }
 
-        .icon {
-          color: @color_primary;
+    @media (max-width: @xs_to) {
+      .cal__legend-marker {
+        font-size: 10px;
+        line-height: 12px;
+
+        font-weight: 700;
+
+        display: block;
+
+        margin: 2px 0;
+
+        &::before {
+          vertical-align: -2px;
+          font-size: 20px;
         }
+      }
+
+      a.cal__legend-next-text {
+        font-size: 10px;
+        line-height: 12px;
+
+        font-weight: 700;
       }
     }
   }

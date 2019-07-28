@@ -1771,6 +1771,9 @@ span.text-underlined {
   white-space: normal;
   /* Ellipsis */
 }
+.cal .cal__event.cal__event_noevents {
+  height: auto !important;
+}
 .cal .cal__event {
   padding: 3px /* compensation of hover border */ 3px 3px 0;
 }
@@ -1787,12 +1790,56 @@ span.text-underlined {
   padding-bottom: 7px;
   padding-right: 7px;
 }
+@media (max-width: 1199.98px) {
+  .cal .cal__event .cal__event__title {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .cal .cal__event .cal__event__details {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
 @media (max-width: 991.98px) {
+  .cal {
+    /* To hover */
+  }
   .cal .cal__event {
-    width: 170px;
-    height: 80px;
-    margin: 0 5px;
-    display: inline-block;
+    width: 97px;
+    height: 85px;
+    float: left;
+    margin: 3.5px;
+    border-radius: 5px;
+  }
+  .cal .cal__event .cal__event__title {
+    padding: 5px;
+    font-size: 10px;
+    line-height: 12px;
+    max-height: 40.4px;
+  }
+  .cal .cal__event .cal__event__details {
+    padding: 5px;
+    font-size: 8px;
+    line-height: 8px;
+  }
+  .cal .cal__event.cal__event_closed {
+    border-left-width: 5px;
+  }
+  .cal .cal__event.cal__event_cancelled {
+    border-left-width: 5px;
+  }
+  .cal .cal__event .cal__event__details {
+    padding: 5px;
+  }
+  .cal .cal__event {
+    padding: 1.5px /* compensation of hover border */ 1.5px 1.5px 0;
+  }
+  .cal .cal__event:hover {
+    border-width: 1.5px;
+  }
+  .cal .cal__event:hover .cal__event__details {
+    padding-bottom: 3.5px;
+    padding-right: 3.5px;
   }
 }
 .cal {
@@ -1849,6 +1896,23 @@ span.text-underlined {
   }
   .cal .cal__dn {
     width: 25%;
+  }
+}
+.cal .cal__day-m {
+  width: 100%;
+  margin: 0 5px;
+}
+.cal .cal__day-m p {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+@media (max-width: 575.98px) {
+  .cal .cal__day-m p {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 .cal .cal__details_wrap {
@@ -1938,7 +2002,7 @@ span.text-underlined {
   background-color: #7F33AB;
 }
 .cal .cal__legend {
-  padding: 10px 0;
+  padding: 10px;
 }
 .cal .cal__legend .cal__legend-marker {
   font-size: 20px;
@@ -1964,17 +2028,42 @@ span.text-underlined {
 .cal .cal__legend .cal__legend-marker.cal__legend-marker_cancelled::before {
   color: #FF5E4C;
 }
-.cal .cal__legend a.cal__legend-next {
+.cal .cal__legend .cal__legend-next:hover a.cal__legend-next-text {
+  text-decoration: none;
+}
+.cal .cal__legend .cal__legend-next:hover .cal__legend-next-icon {
+  color: #F2C75C;
+}
+.cal .cal__legend a.cal__legend-next-text {
+  display: block;
   font-size: 20px;
   line-height: 23px;
   color: #004645;
+  float: unset;
+  text-align: right;
+}
+.cal .cal__legend .cal__legend-next-icon {
   float: right;
+  color: #004645;
+  font-size: 18px;
 }
-.cal .cal__legend a.cal__legend-next:hover {
-  text-decoration: none;
-}
-.cal .cal__legend a.cal__legend-next:hover .icon {
-  color: #F2C75C;
+@media (max-width: 575.98px) {
+  .cal .cal__legend .cal__legend-marker {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 700;
+    display: block;
+    margin: 2px 0;
+  }
+  .cal .cal__legend .cal__legend-marker::before {
+    vertical-align: -2px;
+    font-size: 20px;
+  }
+  .cal .cal__legend a.cal__legend-next-text {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 700;
+  }
 }
 /**
   Блок "Календарь"

@@ -62,21 +62,26 @@
 
       font-size: 12px;
       font-weight: 500;
-      line-height: 14px;;
+      line-height: 14px;
 
       .cal__event_detail {
-        padding: 3px 0;
+        padding: @cal_event_hov_brd_w 0;
 
         text-align: right;
 
         width: 100%;
 
         white-space: normal;
+
         /* Ellipsis */
         //text-overflow: ellipsis;
         //white-space: nowrap;
         //overflow: hidden;
       }
+    }
+
+    &.cal__event_noevents {
+      height: auto !important;
     }
   }
 
@@ -92,7 +97,7 @@
 
       background-color: #FFFFFF;
 
-      border: solid 3px @color_primary;
+      border: solid @cal_event_hov_brd_w @color_primary;
 
       cursor: pointer;
 
@@ -114,15 +119,76 @@
   //  }
   //}
 
-  /* smaller */
-  @media (max-width: 991.98px) {
+  @media (max-width: @lg_to) {
     .cal__event {
-      width: 170px;
-      height: @cal__col_item_height;
+      .cal__event__title {
+        font-size: 14px;
+        line-height: 14px;
+      }
 
-      margin: 0 5px;
+      .cal__event__details {
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+  }
 
-      display: inline-block;
+  /* smaller */
+  @media (max-width: @md_to) {
+    .cal__event {
+      width: 97px;
+      height: 85px;
+
+      float: left;
+      margin: 3.5px;
+
+      border-radius: @roundness / 2;
+
+      .cal__event__title {
+        padding: 5px;
+
+        font-size: 10px;
+        line-height: 12px;
+
+        max-height: 12px * 4.2 - 10px; // line-height * 4 - padding;
+                                     // 4 = max line count - 1
+      }
+
+      .cal__event__details {
+        padding: 5px;
+
+        font-size: 8px;
+        line-height: 8px;
+      }
+
+      &.cal__event_closed {
+        border-left-width: (@roundness / 2);
+      }
+
+      &.cal__event_cancelled {
+        border-left-width: (@roundness / 2);
+      }
+
+      .cal__event__details {
+        padding: @cal_event_details_padding / 2;
+      }
+    }
+
+    /* To hover */
+    .cal__event {
+      padding:  @cal_event_hov_brd_w/2 /* compensation of hover border */
+                @cal_event_hov_brd_w/2
+                @cal_event_hov_brd_w/2
+                0;
+
+      &:hover {
+        border-width: @cal_event_hov_brd_w/2;
+
+        .cal__event__details {
+          padding-bottom: @cal_event_details_padding/2 - @cal_event_hov_brd_w/2;
+          padding-right: @cal_event_details_padding/2 - @cal_event_hov_brd_w/2;
+        }
+      }
     }
   }
 }

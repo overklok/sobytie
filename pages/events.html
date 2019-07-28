@@ -102,20 +102,24 @@
 
             <div class="cal">
                 <div class="cal__legend row">
-                    <div class="col-lg-6 p-0">
+                    <div class="col-9 col-sm-6 p-0">
                         <span class="cal__legend-marker cal__legend-marker_closed">Запись закрыта</span>
                         <span class="cal__legend-marker cal__legend-marker_cancelled">Мероприятие отменено</span>
                     </div>
-                    <div class="col-lg-6 p-0">
-                        <a href="" class="cal__legend-next">
-                            Следующая неделя
-                            <i class="icon icon-sob-triangle-fwd"></i>
-                        </a>
+                    <div class="col-3 col-sm-6 p-0">
+                        <div class="cal__legend-next">
+                            <div class="cal__legend-next-icon">
+                                <i class="icon icon-sob-triangle-fwd"></i>
+                            </div>
+                            <a href="" class="cal__legend-next-text">
+                                Следующая неделя
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-2 col-lg-12">
+                    <div class="col-12 d-none d-lg-block">
                         <div class="cal__table-head seven-cols row">
                             <div class="cal__col cal__col_day col-lg-1">
                                 <div class="cal__day">
@@ -162,9 +166,13 @@
                         </div>
                     </div>
 
-                    <div class="cal__table_wrap col-10 col-lg-12">
+                    <div class="cal__table_wrap col-12">
                         <div class="cal__table seven-cols row">
                             <div class="cal__col cal__col_of col-lg-1">
+                                <div class="cal__day-m d-lg-none">
+                                    <p>24 Июня / ПН</p>
+                                </div>
+
                                 <div class="cal__event cal__event_closed" data-eventcard-id="1">
                                     <div class="cal__event__title">
                                         Арт-терапия
@@ -187,12 +195,17 @@
                                             13:00 <i class="icon icon-sob-time"></i>
                                         </div>
                                         <div class="cal__event_detail">
-                                            Главный офис на ул. Пушкина, д. 7<i class="icon icon-sob-geotag"></i>
+                                            Главный офис на ул. Пушкина, д. 7
+                                            <i class="icon icon-sob-geotag"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="cal__col cal__col_of col-lg-1">
+                                <div class="cal__day-m d-lg-none">
+                                    <p>25 Июня / ВТ</p>
+                                </div>
+
                                 <div class="cal__event cal__event_cancelled" data-eventcard-id="3">
                                     <div class="cal__event__title">
                                         Мастер класс «Стань успешнее»
@@ -208,6 +221,9 @@
                                 </div>
                             </div>
                             <div class="cal__col cal__col_of col-lg-1">
+                                <div class="cal__day-m d-lg-none">
+                                    <p>26 Июня / СР</p>
+                                </div>
                                 <div class="cal__event" data-eventcard-id="4">
                                     <div class="cal__event__title">
                                         Групповой тренинг личности
@@ -223,6 +239,10 @@
                                 </div>
                             </div>
                             <div class="cal__col cal__col_of col-lg-1">
+                                <div class="cal__day-m d-lg-none">
+                                    <p>27 Июня / ЧТ</p>
+                                </div>
+
                                 <div class="cal__event">
                                     <div class="cal__event__title">
                                         Групповой тренинг личности
@@ -238,8 +258,21 @@
                                 </div>
                             </div>
                             <div class="cal__col cal__col_of col-lg-1">
+                                <div class="cal__day-m d-lg-none">
+                                    <p>28 Июня / ПТ</p>
+                                </div>
+
+                                <div class="cal__event cal__event_noevents">
+                                    <div class="cal__event__title">
+                                        Нет мероприятий
+                                    </div>
+                                </div>
                             </div>
                             <div class="cal__col cal__col_of col-lg-1">
+                                <div class="cal__day-m d-lg-none">
+                                    <p>29 Июня / СБ</p>
+                                </div>
+
                                 <div class="cal__event">
                                     <div class="cal__event__title">
                                         Арт-терапия
@@ -281,6 +314,10 @@
                                 </div>
                             </div>
                             <div class="cal__col cal__col_of col-lg-1">
+                                <div class="cal__day-m d-lg-none">
+                                    <p>30 Июня / ВС</p>
+                                </div>
+
                                 <div class="cal__event cal__event_cancelled">
                                     <div class="cal__event__title">
                                         Личностный рост и креативность
@@ -411,28 +448,34 @@
         <div class="blk blk-gallery">
             <h2 class="text-center">Фотоотчеты</h2>
 
-            <div class="loadable-list not-loaded row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard gradient-overlay gradient-mcard" style="background-image: url('http://lorempixel.com/320/180/')">
+            <div class="loadable-list not-loaded blk-gallery__mcard-row row">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
+                        <div class="mcard__bg gradient-overlay gradient-mcard"
+                             style="background-image: url('http://loremflickr.com/320/180/')">
+                        </div>
+
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
-                            <h3 class="mcard__heading light">Индивидуальные</h3>
-                            <p class="mcard__description light">Личный коучинг и психотерапия</p>
+                            <h3 class="mcard__heading light">Настоящий коуч!</h3>
+                            <p class="mcard__description light">Как отличить настоящего коуча  от самозванца</p>
                         </div>
+
                         <div class="mcard__actions">
-                            <span class="mcard__action">Подписаться</span>
+                            <span class="mcard__action symbol"><span class="mcard__action__help-text">Читать</span></span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard gradient-overlay gradient-mcard" style="background-image: url('http://lorempixel.com/180/320/')">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
+                        <div class="mcard__bg gradient-overlay gradient-mcard"></div>
+
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
-                            <h3 class="mcard__heading light">Корпоративные</h3>
+                            <h3 class="mcard__heading light">Когнитивные искажения, они же ловушки сознания</h3>
                             <p class="mcard__description light">
-                                Командообразование и менторинг Командообразование и менторинг Командообразование и
-                                менторинг Командообразование и менторинг
+                                Почему наше поведение часто неэффективно
                             </p>
                         </div>
 
@@ -442,70 +485,105 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard gradient-overlay gradient-mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
+                        <div class="mcard__bg gradient-overlay gradient-mcard"
+                             style="background-image: url('http://loremflickr.com/320/180/')">
+                        </div>
+
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
-                            <h3 class="mcard__heading light">Групповые длинные очень</h3>
-                            <p class="mcard__description light">Взаимоотношения и арт-терапия</p>
+                            <h3 class="mcard__heading light">Наш Instagram</h3>
+                        </div>
+
+                        <div class="mcard__actions">
+                            <span class="mcard__action">Подписаться</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard gradient-overlay gradient-mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
+                        <div class="mcard__bg gradient-overlay gradient-mcard"
+                             style="background-image: url('http://loremflickr.com/320/180/')">
+                        </div>
+
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
-                            <a href="" class="mcard__link"></a>
-                            <h3 class="mcard__heading light">Корпоративные</h3>
-                            <p class="mcard__description light">Командообразование и менторинг</p>
+                            <h3 class="mcard__heading light">Пишем первый пост</h3>
+                            <p class="mcard__description light">Преодолеваем первый этап вхождения в эру социальных сетей</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard gradient-overlay gradient-mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
+                        <div class="mcard__bg gradient-overlay gradient-mcard">
+                        </div>
+
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
-                            <h3 class="mcard__heading light">Групповые длинные очень</h3>
-                            <p class="mcard__description light">Взаимоотношения и арт-терапия</p>
+                            <h3 class="mcard__heading light">Настоящий коуч!</h3>
+                            <p class="mcard__description light">Как отличить настоящего коуча  от самозванца</p>
+                        </div>
+
+                        <div class="mcard__actions">
+                            <span class="mcard__action symbol"><span class="mcard__action__help-text">Читать</span></span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard gradient-overlay gradient-mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
+                        <div class="mcard__bg gradient-overlay gradient-mcard"
+                             style="background-image: url('http://loremflickr.com/320/180/')">
+                        </div>
+
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
-                            <h3 class="mcard__heading light">Корпоративные</h3>
-                            <p class="mcard__description light">Командообразование и менторинг</p>
+                            <h3 class="mcard__heading light">Когнитивные искажения, они же ловушки сознания</h3>
+                            <p class="mcard__description light">
+                                Почему наше поведение часто неэффективно
+                            </p>
+                        </div>
+
+                        <div class="mcard__actions">
+                            <span class="mcard__action symbol"><span class="mcard__action__help-text">Читать</span></span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard gradient-overlay gradient-mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
+                        <div class="mcard__bg gradient-overlay gradient-mcard">
+                        </div>
+
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
-                            <h3 class="mcard__heading light">Групповые длинные очень</h3>
-                            <p class="mcard__description light">Взаимоотношения и арт-терапия</p>
+                            <h3 class="mcard__heading light">Наш Instagram</h3>
+                        </div>
+
+                        <div class="mcard__actions">
+                            <span class="mcard__action">Подписаться</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="mcard gradient-overlay gradient-mcard">
+                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
+                    <div class="mcard mcard_default">
+                        <div class="mcard__bg gradient-overlay gradient-mcard">
+                        </div>
                         <a href="" class="mcard__link"></a>
                         <div class="mcard__content">
-                            <h3 class="mcard__heading light">Корпоративные</h3>
-                            <p class="mcard__description light">Командообразование и менторинг</p>
+                            <h3 class="mcard__heading light">Пишем первый пост</h3>
+                            <p class="mcard__description light">Преодолеваем первый этап вхождения в эру социальных сетей</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="blk-gallery__overlay loadable-list__overlay"></div>
                 <div class="blk-gallery__btn-wrap">
-                    <a href="" class="blk-gallery__btn btn btn-primary">Загрузить еще парочку</a>
+                    <a href="" class="blk-gallery__btn btn btn-primary btn-hov-bg">Загрузить еще парочку</a>
                 </div>
             </div>
         </div>
@@ -513,9 +591,9 @@
 
     <footer class="container blk">
         <nav class="footernav row m-0">
-            <div class="col-md-6 p-0">
+            <div class="col-12 col-lg-6 p-0">
                 <div class="row m-0 p-0">
-                    <div class="col-md-5 p-0">
+                    <div class="col-12 col-lg-5 p-0">
                         <ul class="footernav-menu">
                             <li class="footernav-menu__heading">Меню</li>
 
@@ -527,7 +605,7 @@
                             <li class="footernav-menu__item"><a href="">Контакты</a></li>
                         </ul>
                     </div>
-                    <div class="flex-col col-md-7 p-0">
+                    <div class="flex-col col-12 col-lg-7 p-0">
                         <ul class="footernav-menu">
                             <li class="footernav-menu__heading">Социальные сети</li>
 
@@ -544,27 +622,31 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-col col-md-6 p-0">
+            <div class="flex-col col-12 col-lg-6 p-0">
                 <ul class="footernav-menu">
                     <li class="footernav-menu__heading">Рассылка</li>
 
-                    <li class="footernav-menu__item">
-                        Несколько эксклюзивных статей и специальных предложений раз в месяц с доставкой на вашу почту:
+                    <li class="footernav-menu__itemtext">
+                        <p class="text-light">
+                            Несколько эксклюзивных статей и специальных предложений раз в месяц с доставкой на вашу почту:
+                        </p>
                     </li>
                 </ul>
 
                 <form class="form form_footer form-inline form-fullwidth">
-                    <input type="email" class="form__input form-control mr-3" placeholder="Ваш Email:">
+                    <input type="email" class="form__input form-control mr-2" placeholder="Ваш Email:">
                     <button type="submit" class="btn btn-primary btn-short">Подписаться</button>
                 </form>
             </div>
         </nav>
         <div class="footercopy row m-0">
-            <div class="footercopy__left col-lg-10 col-sm-6">
+            <div class="footercopy__left col-4 p-0">
                 <span class="footercopy__copyright">&copy; ООО &laquo;Событие&raquo;, 2019</span>
+            </div>
+            <div class="footercopy__center col-6 col-sm-5 col-xl-6">
                 <span class="footercopy__address">620075, г. Екатеринбург, ул. Шарташская, 23</span>
             </div>
-            <div class="col-lg-2 col-sm-6 p-0">
+            <div class="footercopy__right col-2 col-sm-3 col-xl-2">
                 <span class="footercopy__tel"><a href="tel:+73432432323">+7 (343) 243 23 23</a></span>
             </div>
         </div>
