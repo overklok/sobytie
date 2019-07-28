@@ -82,6 +82,8 @@
 
     &.cal__event_noevents {
       height: auto !important;
+
+      pointer-events: none;
     }
   }
 
@@ -136,11 +138,33 @@
   /* smaller */
   @media (max-width: @md_to) {
     .cal__event {
-      width: 97px;
-      height: 85px;
+      width: 150px;
+      height: 140px;
 
       float: left;
-      margin: 3.5px;
+      margin: 4px;
+
+      .cal__event__title {
+        padding: 5px;
+
+        font-size: 16px;
+        line-height: 18px;
+
+        max-height: 18px * 4.2 - 10px; // line-height * 4 - padding;
+                                     // 4 = max line count - 1
+      }
+
+      .cal__event__details {
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+
+  @media (max-width: @sm_to) {
+    .cal__event {
+      width: 97px;
+      height: 85px;
 
       border-radius: @roundness / 2;
 

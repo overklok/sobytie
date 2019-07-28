@@ -5,6 +5,8 @@
   background: @color_default_bg;
   border-radius: @roundness;
 
+  @media (max-width: @xs_to) {border-radius: @roundness / 2;}
+
   padding: 50px 40px;
   margin: 0;
 
@@ -50,37 +52,156 @@
 
   /* Mediabox elements */
   .eventcard__pic {
-    width: 460px;
+    width: 100%;
     height: 368px;
 
     border-radius: @roundness;
+    @media (max-width: @xs_to) {border-radius: @roundness / 2;}
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .eventcard__button-bar {
-    width: 460px;
+    width: 100%;
     justify-content: space-between;
 
     padding-top: 40px;
   }
 
+  .eventcard__button-submit {
+    flex: 1;
+    margin-right: 12px;
+    padding: 0;
+  }
+
   .eventcard__button-close {
-    // for JS
+    flex: 1;
+    padding: 0;
   }
 
   /* Modifiers */
   &.eventcard_cancelled {
     background-color: @color_cancelled_bg;
 
-    border-left-width: 10px;
+    border-left-width: @roundness;
     border-left-style: solid;
     border-left-color: @color_cancelled_fg;
+
+    @media (max-width: @xs_to) {border-left-width: @roundness / 2;}
   }
 
   &.eventcard_closed {
     background-color: @color_closed_bg;
 
-    border-left-width: 10px;
+    border-left-width: @roundness;
     border-left-style: solid;
     border-left-color: @color_closed_fg;
+
+    @media (max-width: @xs_to) {border-left-width: @roundness / 2;}
+  }
+
+  @media (max-width: @md_to) {
+    padding: 15px;
+
+    .eventcard__heading {
+      font-size: 28px;
+    }
+
+    .eventcard__text {
+      width: 60%;
+      float: right;
+      text-align: right;
+
+      margin-top: 4px;
+      margin-bottom: 0;
+
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .eventcard__props {
+      position: relative;
+      width: 40%;
+
+      .eventcard__prop {
+        font-size: 15px;
+        line-height: 35px;
+
+        margin-top: 0;
+
+        i.icon {
+          margin: 0;
+
+          &:before {
+            font-size: 26px;
+            line-height: 30px;
+            vertical-align: -3px;
+          }
+        }
+      }
+
+      margin-bottom: 10px;
+    }
+
+    .eventcard__pic {
+      height: 250px;
+    }
+  }
+
+  @media (max-width: @sm_to) {
+    .eventcard__heading {
+      font-size: 24px;
+    }
+
+    .eventcard__text {
+      width: 50%;
+
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    .eventcard__props {
+      width: 50%;
+
+      .eventcard__prop {
+        font-size: 15px;
+        line-height: 35px;
+
+        i.icon:before {
+          font-size: 24px;
+          line-height: 30px;
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+
+  @media (max-width: @xs_to) {
+    .eventcard__heading {
+      font-size: 15px;
+    }
+
+    .eventcard__text {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    .eventcard__props {
+      .eventcard__prop {
+        font-size: 10px;
+        line-height: 30px;
+
+        i.icon:before {
+          font-size: 16px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    .eventcard__button-bar {
+      padding-top: 20px;
+    }
   }
 }
