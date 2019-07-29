@@ -10,7 +10,7 @@ section.container, footer.container {
 section.container {
   background-color: #FFFFFF;
   border-radius: @roundness;
-  @media (max-width: 575.99px) {border-radius:  @roundness / 2;}
+  //@media (max-width: 575.99px) {border-radius:  @roundness / 2;}
 
 
   &.container_ctrl {
@@ -48,6 +48,12 @@ footer.container {
 
   footer.container {
     padding: 0;
+  }
+
+  section.container {
+    &.container_ctrl {
+      margin-bottom: 10px;
+    }
   }
 }
 
