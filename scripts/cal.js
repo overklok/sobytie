@@ -225,7 +225,7 @@ function closeEventcardFull($eventcard) {
     $("." + CLASS_PAGECTRL_BACK).fadeOut(FADE_TIME);
 
     // Remove all backgrounds of table's heading
-    $("." + CAL_CLASSES.BG).fadeOut(FADE_TIME, function() {
+    $("." + CAL_CLASSES.BG).hide(0, function() {
         this.remove();
 
         // Remove possible status classes for ALL elements which has it
