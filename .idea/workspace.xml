@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17e2839b-1d4a-4129-a6d6-602fedfb618a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/scripts/cal.js" afterPath="$PROJECT_DIR$/scripts/cal.js" />
+      <change beforePath="$PROJECT_DIR$/styles/blocks/footer/footernav.less" afterPath="$PROJECT_DIR$/styles/blocks/footer/footernav.less" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css" afterPath="$PROJECT_DIR$/styles/main.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,11 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cal.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cal.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/cal.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
               <caret line="254" column="66" lean-forward="true" selection-start-line="254" selection-start-column="66" selection-end-line="254" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footernav.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/styles/blocks/footer/footernav.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="68" column="27" lean-forward="true" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -67,16 +78,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/blocks/blk/services.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -222,7 +223,6 @@
         <option value="$PROJECT_DIR$/styles/base/typo.less" />
         <option value="$PROJECT_DIR$/styles/blocks/misc/form.less" />
         <option value="$PROJECT_DIR$/styles/blocks/blk/gallery.less" />
-        <option value="$PROJECT_DIR$/styles/blocks/footer/footernav.less" />
         <option value="$PROJECT_DIR$/pages/index.html" />
         <option value="$PROJECT_DIR$/styles/blocks/footer/footercopy.less" />
         <option value="$PROJECT_DIR$/components/footer.html" />
@@ -236,6 +236,7 @@
         <option value="$PROJECT_DIR$/styles/base/layout.less" />
         <option value="$PROJECT_DIR$/pages/events.html" />
         <option value="$PROJECT_DIR$/scripts/cal.js" />
+        <option value="$PROJECT_DIR$/styles/blocks/footer/footernav.less" />
       </list>
     </option>
   </component>
@@ -798,14 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/blocks/footer/footernav.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="59" column="7" lean-forward="true" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/blocks/footer/footercopy.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -984,6 +977,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="254" column="66" lean-forward="true" selection-start-line="254" selection-start-column="66" selection-end-line="254" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/blocks/footer/footernav.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="68" column="27" lean-forward="true" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
           <folding />
         </state>
       </provider>

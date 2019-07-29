@@ -1078,7 +1078,7 @@ span.text-underlined {
 }
 @media (max-width: 575.98px) {
   .footernav ul.footernav-menu .footernav-menu__heading {
-    margin-bottom: 0;
+    margin-bottom: 5px;
     font-size: 10px;
     line-height: 12px;
     letter-spacing: 1px;
