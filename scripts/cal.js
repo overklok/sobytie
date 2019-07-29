@@ -100,7 +100,7 @@ function checkHash() {
 
         var eventcard = getEventcardById(eventcard_id);
 
-        openEventcard(eventcard);
+        openEventcard(eventcard, null, true);
     }
 }
 
@@ -130,7 +130,7 @@ function onEventcardCloseClick(evt) {
     closeEventcard($eventcard);
 }
 
-function openEventcard($eventcard, $event) {
+function openEventcard($eventcard, $event, noscroll) {
     if (!$event) {
         $event = getEventByEventcard($eventcard);
     }
@@ -159,7 +159,7 @@ function openEventcard($eventcard, $event) {
     }
 
     if (G_IS_MOBILE) {
-        openEventcardMobile($eventcard);
+        openEventcardMobile($eventcard, noscroll);
     } else {
         openEventcardFull($eventcard, $col_day);
     }
@@ -168,7 +168,7 @@ function openEventcard($eventcard, $event) {
     window.location.hash = "eventcard-" + $eventcard.data("id");
 }
 
-function closeEventcard($eventcard) {
+function closeEventcard($eventcard, noscroll) {
     if (G_IS_MOBILE) {
         closeEventcardMobile($eventcard);
     } else {
@@ -178,7 +178,9 @@ function closeEventcard($eventcard) {
     G_EVENTCARD_ACTIVE = undefined;
     window.location.hash = " ";
 
-    scrollToElement($("." + CLASS_SCHEDULE));
+    if (!noscroll) {
+        scrollToElement($("." + CLASS_SCHEDULE));
+    }
 }
 
 function openEventcardFull($eventcard, $col_day) {
@@ -193,7 +195,7 @@ function openEventcardFull($eventcard, $col_day) {
         .fadeIn(FADE_TIME).animate({top: "0"});
 }
 
-function openEventcardMobile($eventcard) {
+function openEventcardMobile($eventcard, noscroll) {
     var $pc_back = $("." + CLASS_PAGECTRL_BACK);
 
     $("." + CLASS_SCHEDULE).hide();
@@ -211,7 +213,9 @@ function openEventcardMobile($eventcard) {
     $eventcard_wrap.append($eventcard);
     $eventcard.fadeIn(FADE_TIME);
 
-    scrollToElement($pc_back);
+    if (!noscroll) {
+        scrollToElement($pc_back);
+    }
 }
 
 function closeEventcardFull($eventcard) {
@@ -248,7 +252,7 @@ function rebuildActiveEventcard() {
             closeEventcardMobile(G_EVENTCARD_ACTIVE);
         }
 
-        openEventcard(getEventcardById(eventcard_id));
+        openEventcard(getEventcardById(eventcard_id), null, true);
     }
 }
 
