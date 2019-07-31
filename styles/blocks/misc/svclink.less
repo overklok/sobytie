@@ -1,6 +1,10 @@
+.gutter-sizer {
+  width: 10px;
+}
+
 .svclink {
   display: block;
-  width: 100%;
+  width: calc(50% - 5px);
 
   padding: 15px 30px;
 
@@ -9,6 +13,8 @@
   border-radius: 10px;
 
   span.svclink__title {
+    display: inline-block;
+
     color: @color_text_dark;
 
     font-size: 25px;
@@ -27,6 +33,27 @@
 
     span.svclink__title {
       color: @color_primary;
+    }
+  }
+
+  @media (max-width: @sm_to) {
+    padding: 10px;
+    border-radius: @roundness / 2;
+
+    span.svclink__title {
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: normal;
+    }
+  }
+
+  @media (max-width: @xs_to) {
+    padding: 5px;
+
+    span.svclink__title {
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: normal;
     }
   }
 }

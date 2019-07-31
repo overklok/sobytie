@@ -54,4 +54,26 @@
     line-height: 23px;
     font-weight: bold;
   }
+
+  @media (max-width: @sm_to) {
+    .topbar__nav {
+      text-align: center;
+
+      a.topbar__nav-item {
+        font-size: 16px;
+        line-height: 18px;
+
+        padding: 0 5px;
+      }
+    }
+  }
+
+  @media (max-width: @xs_to) {
+    .topbar__nav {
+      a.topbar__nav-item {
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+  }
 }

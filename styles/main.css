@@ -626,7 +626,24 @@ span.text-underlined {
   }
 }
 .blk.blk-services .blk-services__item {
-  margin: 10px 0;
+  margin: 5px 0;
+}
+@media (max-width: 767.98px) {
+  .blk.blk-services .blk-services__col {
+    padding: 0 5px;
+  }
+  .blk.blk-services .blk-services__item {
+    margin: 3px 0;
+    padding: 5px;
+  }
+}
+@media (max-width: 575.98px) {
+  .blk.blk-services .blk-services__col {
+    padding: 0 3px;
+  }
+  .blk.blk-services .blk-services__item {
+    padding: 0 5px;
+  }
 }
 .blk {
   /* "Service" block */
@@ -752,7 +769,7 @@ span.text-underlined {
   padding: 0 25px;
   font-weight: 500;
 }
-@media (max-width: 575.99px) {
+@media (max-width: 575.98px) {
   .blk.blk-gallery .blk-gallery__mcard-row {
     margin-left: -5px;
     margin-right: -5px;
@@ -1266,6 +1283,22 @@ span.text-underlined {
   line-height: 23px;
   font-weight: bold;
 }
+@media (max-width: 767.98px) {
+  .topbar .topbar__nav {
+    text-align: center;
+  }
+  .topbar .topbar__nav a.topbar__nav-item {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 0 5px;
+  }
+}
+@media (max-width: 575.98px) {
+  .topbar .topbar__nav a.topbar__nav-item {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
 .burger span {
   display: block;
   width: 25px;
@@ -1701,15 +1734,19 @@ span.text-underlined {
     vertical-align: 1px;
   }
 }
+.gutter-sizer {
+  width: 10px;
+}
 .svclink {
   display: block;
-  width: 100%;
+  width: calc(50% - 5px);
   padding: 15px 30px;
   background-color: #F7F7F7;
   border: 3px solid transparent;
   border-radius: 10px;
 }
 .svclink span.svclink__title {
+  display: inline-block;
   color: #232323;
   font-size: 25px;
   line-height: 25px;
@@ -1724,6 +1761,27 @@ span.text-underlined {
 }
 .svclink:hover span.svclink__title {
   color: #F2C75C;
+}
+@media (max-width: 767.98px) {
+  .svclink {
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .svclink span.svclink__title {
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: normal;
+  }
+}
+@media (max-width: 575.98px) {
+  .svclink {
+    padding: 5px;
+  }
+  .svclink span.svclink__title {
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: normal;
+  }
 }
 .cal {
   /* To hover */

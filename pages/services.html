@@ -14,10 +14,11 @@
     <!--Y.Maps scripts-->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=57583197-f71e-4108-9615-b3ff3bb78c04&lang=ru_RU"
             type="text/javascript"></script>
+    <!--Masonry-->
+    <script src="../scripts/_vendor/masonry.pkgd.min.js"></script>
 
     <!--Custom scripts-->
-    <script src="../scripts/slider.js"></script>
-    <script src="../scripts/map.js"></script>
+    <script src="../scripts/services.js"></script>
 
     <title>О нас</title>
 </head>
@@ -41,17 +42,21 @@
     </header>
 
     <section id="category-bar" class="container">
+        <div class="d-block d-md-none pt-3">
+            <h1 class="text-center m-0">Услуги</h1>
+        </div>
+
         <div class="topbar">
             <nav class="topbar__nav">
-                <a href="" class="topbar__nav-item topbar__nav-item_active">Все</a>
-                <a href="" class="topbar__nav-item">Саморазвитие</a>
-                <a href="" class="topbar__nav-item">Развитие карьеры</a>
-                <a href="" class="topbar__nav-item">Для подростков</a>
-                <a href="" class="topbar__nav-item">Для родителей</a>
-                <a href="" class="topbar__nav-item">Для пар</a>
+                <a href="" class="topbar__nav-item topbar__nav-item_active" data-svclink-tag="*" >Все</a>
+                <a href="" class="topbar__nav-item" data-svclink-tag="PARENTS">Для родителей</a>
+                <a href="" class="topbar__nav-item" data-svclink-tag="COUPLES">Для пар</a>
+                <a href="" class="topbar__nav-item" data-svclink-tag="TEENS">Для подростков</a>
+                <a href="" class="topbar__nav-item" data-svclink-tag="DEVELOPMENT">Саморазвитие</a>
+                <a href="" class="topbar__nav-item" data-svclink-tag="CAREER">Развитие карьеры</a>
             </nav>
 
-            <div class="topbar__search">
+            <div class="topbar__search d-none d-md-block">
                 Найти <i class="icon icon-sob-search"></i>
             </div>
         </div>
@@ -59,158 +64,152 @@
 
     <section id="services" class="container">
         <div class="blk blk-services">
-            <h2 class="blk-services__heading">Личные</h2>
-            <div class="row m-0">
-                <div class="blk-services__col col-lg-6">
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">Коучинг-сессии</span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">Разработка сценариев мероприятий</span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">Executive-коучинг</span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">Life-коучинг</span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">Консультации подростков</span>
-                    </a>
-                </div>
-                <div class="blk-services__col col-lg-6">
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">Коучинг в продажах</span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">Профориентация</span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">Сопровождение пар</span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">Помощь в планировании семьи</span>
-                    </a>
-                </div>
+            <h2 class="blk-services__heading text-center text-md-left">Личные</h2>
+            <div id="grid-1" class="grid m-0">
+                <div class="gutter-sizer"></div>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="PARENTS">
+                    <span class="svclink__title">Коучинг-сессии</span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="PARENTS">
+                    <span class="svclink__title">Разработка сценариев мероприятий</span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="COUPLES">
+                    <span class="svclink__title">Executive-коучинг</span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="TEENS">
+                    <span class="svclink__title">Life-коучинг</span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="COUPLES">
+                    <span class="svclink__title">Консультации подростков</span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="DEVELOPMENT">
+                    <span class="svclink__title">Коучинг в продажах</span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="CAREER">
+                    <span class="svclink__title">Профориентация</span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="COUPLES">
+                    <span class="svclink__title">Сопровождение пар</span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="PARENTS">
+                    <span class="svclink__title">Помощь в планировании семьи</span>
+                </a>
             </div>
         </div>
         <div class="blk blk-services">
-            <h2>Групповые</h2>
-            <div class="row m-0">
-                <div class="blk-services__col col-lg-6">
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            Куда ты живешь? Или мастер-класс о целеполагании и разработке собственной Дорожной Карты Жизни.
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            Самодостаточность. Мастер-класс для счастливой жизни
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            Тренинг «Гармоничные отношения в семье и с окружающими»
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            Стресс-менеджмент
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            Мастерская позитивного родительства
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            &laquo;Ориентир Любви&raquo;
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            &laquo;Мой эмоциональный интеллект&raquo;
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            &laquo;Притяжение счастливого будущего&raquo;
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            Мастерская &laquo;Женщина и мужчина&raquo;
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            &laquo;Буду папой&raquo;
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            &laquo;Семейные бюджеты&raquo;
-                        </span>
-                    </a>
-                </div>
-                <div class="blk-services__col col-lg-6">
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            Лучшая версия себя.
-                            Воркшоп: Разработка пошаговой системы изменений себя и окружающего пространства
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            Игра &laquo;Метафория&raquo;
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            Тренинг &laquo;Мастерство публичных выступлений&raquo;
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            &laquo;В каджом есть артист&raquo;
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            Тренинг для подростков &laquo;Вселенная моего Я&raquo;
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            &laquo;Счастливые люди&raquo;
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            &laquo;Женская дорога творчества&raquo;
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            Тренинг &laquo;Вокал как преодоление одного из страхов&raquo;
-                        </span>
-                    </a>
-                    <a href="" class="blk-services__item svclink">
-                        <span class="svclink__title">
-                            &laquo;Как выжить со стервой&raquo;
-                        </span>
-                    </a>
-                </div>
+            <h2 class="blk-services__heading text-center text-md-left">Групповые</h2>
+            <div id="grid-2" class="grid m-0">
+                <div class="gutter-sizer"></div>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="DEVELOPMENT">
+                    <span class="svclink__title">
+                        Куда ты живешь? Или мастер-класс о целеполагании и разработке собственной Дорожной Карты Жизни.
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="DEVELOPMENT">
+                    <span class="svclink__title">
+                        Самодостаточность. Мастер-класс для счастливой жизни
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="PARENTS">
+                    <span class="svclink__title">
+                        Тренинг «Гармоничные отношения в семье и с окружающими»
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="DEVELOPMENT">
+                    <span class="svclink__title">
+                        Стресс-менеджмент
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="PARENTS">
+                    <span class="svclink__title">
+                        Мастерская позитивного родительства
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="COUPLES">
+                    <span class="svclink__title">
+                        &laquo;Ориентир Любви&raquo;
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item">
+                    <span class="svclink__title">
+                        &laquo;Мой эмоциональный интеллект&raquo;
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item">
+                    <span class="svclink__title">
+                        &laquo;Притяжение счастливого будущего&raquo;
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item">
+                    <span class="svclink__title">
+                        Мастерская &laquo;Женщина и мужчина&raquo;
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="PARENTS">
+                    <span class="svclink__title">
+                        &laquo;Буду папой&raquo;
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="PARENTS">
+                    <span class="svclink__title">
+                        &laquo;Семейные бюджеты&raquo;
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="DEVELOPMENT">
+                    <span class="svclink__title">
+                        Лучшая версия себя.
+                        Воркшоп: Разработка пошаговой системы изменений себя и окружающего пространства
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="TEENS">
+                    <span class="svclink__title">
+                        Игра &laquo;Метафория&raquo;
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="DEVELOPMENT">
+                    <span class="svclink__title">
+                        Тренинг &laquo;Мастерство публичных выступлений&raquo;
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="DEVELOPMENT">
+                    <span class="svclink__title">
+                        &laquo;В каджом есть артист&raquo;
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="TEENS">
+                    <span class="svclink__title">
+                        Тренинг для подростков &laquo;Вселенная моего Я&raquo;
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item">
+                    <span class="svclink__title">
+                        &laquo;Счастливые люди&raquo;
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item">
+                    <span class="svclink__title">
+                        &laquo;Женская дорога творчества&raquo;
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="DEVELOPMENT">
+                    <span class="svclink__title">
+                        Тренинг &laquo;Вокал как преодоление одного из страхов&raquo;
+                    </span>
+                </a>
+                <a href="" class="blk-services__item svclink grid-item" data-tag="COUPLES">
+                    <span class="svclink__title">
+                        &laquo;Как выжить со стервой&raquo;
+                    </span>
+                </a>
             </div>
         </div>
     </section>
 
     <footer class="container blk">
         <nav class="footernav row m-0">
-            <div class="col-md-6 p-0">
+            <div class="col-12 col-lg-6 p-0">
                 <div class="row m-0 p-0">
-                    <div class="col-md-5 p-0">
+                    <div class="col-12 col-lg-5 p-0">
                         <ul class="footernav-menu">
                             <li class="footernav-menu__heading">Меню</li>
 
@@ -222,7 +221,7 @@
                             <li class="footernav-menu__item"><a href="">Контакты</a></li>
                         </ul>
                     </div>
-                    <div class="flex-col col-md-7 p-0">
+                    <div class="flex-col col-12 col-lg-7 p-0">
                         <ul class="footernav-menu">
                             <li class="footernav-menu__heading">Социальные сети</li>
 
@@ -239,27 +238,31 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-col col-md-6 p-0">
+            <div class="flex-col col-12 col-lg-6 p-0">
                 <ul class="footernav-menu">
                     <li class="footernav-menu__heading">Рассылка</li>
 
-                    <li class="footernav-menu__item">
-                        Несколько эксклюзивных статей и специальных предложений раз в месяц с доставкой на вашу почту:
+                    <li class="footernav-menu__itemtext">
+                        <p class="text-light">
+                            Несколько эксклюзивных статей и специальных предложений раз в месяц с доставкой на вашу почту:
+                        </p>
                     </li>
                 </ul>
 
                 <form class="form form_footer form-inline form-fullwidth">
-                    <input type="email" class="form__input form-control mr-3" placeholder="Ваш Email:">
+                    <input type="email" class="form__input form-control mr-2" placeholder="Ваш Email:">
                     <button type="submit" class="btn btn-primary btn-short">Подписаться</button>
                 </form>
             </div>
         </nav>
         <div class="footercopy row m-0">
-            <div class="footercopy__left col-lg-10 col-sm-6">
+            <div class="footercopy__left col-4 p-0">
                 <span class="footercopy__copyright">&copy; ООО &laquo;Событие&raquo;, 2019</span>
+            </div>
+            <div class="footercopy__center col-6 col-sm-5 col-xl-6">
                 <span class="footercopy__address">620075, г. Екатеринбург, ул. Шарташская, 23</span>
             </div>
-            <div class="col-lg-2 col-sm-6 p-0">
+            <div class="footercopy__right col-2 col-sm-3 col-xl-2">
                 <span class="footercopy__tel"><a href="tel:+73432432323">+7 (343) 243 23 23</a></span>
             </div>
         </div>
