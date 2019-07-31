@@ -216,6 +216,7 @@ h2 span.aux,
 h3 span.aux,
 h4 span.aux {
   font-weight: 500;
+  margin-left: 0.2em;
 }
 h1,
 h2,
@@ -535,6 +536,14 @@ span.text-underlined {
   background-image: linear-gradient(352.77deg, rgba(0, 0, 0, 0.0001) -0.51%, #000000 83.41%);
   opacity: 0.6;
 }
+.gutter-sizer {
+  width: 10px;
+}
+@media (max-width: 575.98px) {
+  .gutter-sizer {
+    width: 5px;
+  }
+}
 /**
   "Прикладные" блоки, используемые для корректировки
   положения элементов на конечных страницах.
@@ -607,9 +616,6 @@ span.text-underlined {
 }
 .blk {
   /* "Services" block */
-}
-.blk.blk-services:not(:last-child) {
-  padding-bottom: 0;
 }
 .blk.blk-services h2.blk-services__heading {
   margin-bottom: 15px;
@@ -1284,6 +1290,9 @@ span.text-underlined {
   font-weight: bold;
 }
 @media (max-width: 767.98px) {
+  .topbar {
+    padding-top: 0;
+  }
   .topbar .topbar__nav {
     text-align: center;
   }
@@ -1734,9 +1743,6 @@ span.text-underlined {
     vertical-align: 1px;
   }
 }
-.gutter-sizer {
-  width: 10px;
-}
 .svclink {
   display: block;
   width: calc(50% - 5px);
@@ -1766,6 +1772,7 @@ span.text-underlined {
   .svclink {
     padding: 10px;
     border-radius: 5px;
+    border-width: 2px;
   }
   .svclink span.svclink__title {
     font-size: 16px;
