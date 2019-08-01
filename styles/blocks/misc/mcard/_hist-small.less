@@ -35,8 +35,24 @@
 
     /* ==== MEDIA QUERIES ==== */
 
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 768px) {
+    @media (max-width: @xs_to) {
+      h3.mcard__heading {
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: .01em;
+
+        margin-top: 0;
+      }
+
+      p.mcard__description {
+        font-size: 10px;
+        line-height: 12px;
+      }
+
+      span.tag {
+        font-size: 10px;
+        line-height: 11px;
+      }
     }
   }
 }

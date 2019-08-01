@@ -1,10 +1,13 @@
+@lines_max: 3;
+@lines_max_sm: 4;
+@lines_max_xs: 5;
+
 .mcard {
   &.mcard_hist-tall {
     margin: 0;
     padding: 0;
 
-    //padding: 0 12px; // used!
-    height: 400px; // TODO: tmp!
+    min-height: 450px;
 
     //margin: 0;
 
@@ -19,6 +22,9 @@
       font-weight: bold;
 
       margin-bottom: 10px;
+
+      max-height: 29px * @lines_max; // line-height used
+      overflow: hidden;
     }
 
     p.mcard__description {
@@ -27,6 +33,9 @@
       font-weight: 500;
 
       margin-bottom: 18px;
+
+      max-height: 23px * @lines_max; // line-height used
+      overflow: hidden;
     }
 
     &.mcard_splitted {
@@ -48,9 +57,20 @@
 
           border-bottom-right-radius: @roundness;
           border-bottom-left-radius: @roundness;
-          @media (max-width: 575.99px) {border-bottom-right-radius: @roundness / 2;}
-          @media (max-width: 575.99px) {border-bottom-left-radius:  @roundness / 2;}
+          @media (max-width: @xs_to) {border-bottom-right-radius: @roundness / 2;}
+          @media (max-width: @xs_to) {border-bottom-left-radius:  @roundness / 2;}
 
+          margin-bottom: 0;
+
+          overflow: hidden;
+
+          .mcard__content-tobottom {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+            padding: 22px;
+          }
         }
 
         .mcard__img-split {
@@ -69,9 +89,80 @@
 
     /* ==== MEDIA QUERIES ==== */
 
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 768px) {
-      height: 400px;
+    @media (max-width: @lg_to) {
+      min-height: 500px;
+    }
+
+    @media (max-width: @md_to) {
+      min-height: 450px;
+
+      p.mcard__description {
+        margin-bottom: 8px;
+      }
+    }
+
+    @media (max-width: @sm_to) {
+      min-height: 250px;
+
+      h3.mcard__heading {
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: .01em;
+
+        max-height: 20px * 2;
+      }
+
+      p.mcard__description {
+        font-size: 16px;
+        line-height: 18px;
+
+        max-height: 18px * @lines_max_sm;
+      }
+
+      .mcard__content {
+        padding: 15px;
+      }
+
+      &.mcard_splitted {
+        .mcard__content {
+          height: 70%;
+
+          .mcard__content-tobottom {
+            padding: 15px !important;
+          }
+        }
+      }
+    }
+
+    @media (max-width: @xs_to) {
+      min-height: 200px;
+
+      &:not(.mcard_splitted) {
+        min-height: 50px;
+      }
+
+      h3.mcard__heading {
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: .01em;
+
+        margin-bottom: 5px;
+      }
+
+      p.mcard__description {
+        font-size: 10px;
+        line-height: 12px;
+
+        max-height: 10px * @lines_max_xs;
+
+        margin-bottom: 8px;
+      }
+
+      &.mcard_splitted {
+        .mcard__content {
+          height: 60%;
+        }
+      }
     }
   }
 }

@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/components" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/pages" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/scripts/_vendor" />
-      <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file:///Applications/MAMP/htdocs/sobytie/venv" />
       <excludePattern pattern="main.css" />
     </content>
     <orderEntry type="inheritedJdk" />

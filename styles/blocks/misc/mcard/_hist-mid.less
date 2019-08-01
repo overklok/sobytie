@@ -1,6 +1,11 @@
+@lines_max: 3;
+@lines_max_sm: 4;
+@lines_max_xs: 5;
+
 .mcard {
   &.mcard_hist-mid {
     margin: 0;
+    min-height: 290px;
 
     .mcard__content {
       width: 100%;
@@ -23,19 +28,62 @@
       font-weight: 500;
 
       margin-bottom: 5px;
+
+      max-height: 25px * @lines_max; // line-height used
+      overflow: hidden;
     }
 
     &.mcard_bottomed {
       .mcard__content {
+        width: 100%;
         bottom: 0;
       }
     }
 
     /* ==== MEDIA QUERIES ==== */
 
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 768px) {
-      max-height: 290px;
+    @media (max-width: @sm_to) {
+      min-height: 220px;
+
+      .mcard__content {
+        padding: 15px;
+      }
+
+      h3.mcard__heading {
+        padding: 15px;
+        position: absolute;
+        top: 0;
+
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: .01em;
+
+        max-height: 20px * 2;
+      }
+
+      p.mcard__description {
+        font-size: 16px;
+        line-height: 18px;
+
+        max-height: 18px * @lines_max_sm;
+      }
+    }
+
+    @media (max-width: @xs_to) {
+      min-height: 150px;
+
+      h3.mcard__heading {
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: .01em;
+      }
+
+      p.mcard__description {
+        font-size: 10px;
+        line-height: 12px;
+
+        max-height: 10px * @lines_max_xs;
+      }
     }
   }
 }
