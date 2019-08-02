@@ -2,6 +2,8 @@ const TOPBAR_CLASS = "topbar";
 const TOPBAR_PANE_CLASS = "topbar__pane";
 const TOPBAR_BTN_CLASS = "topbar__btn";
 
+const TOPBAR_BTN_HIDDEN_CLASS = "topbar__btn_hidden";
+
 /* MENU */
 const TOPBAR_MENU_CLASS = "topbar__menu";
 const TOPBAR_MENU_COLLAPSED_CLASS = "topbar__menu_collapsed";
@@ -19,6 +21,8 @@ const TOPBAR_SEARCH_SWITCH_CLASS = "topbar__search-switch";
 
 const TOPBAR_SEARCH_ICON_CLASS = "topbar__search-icon";
 const TOPBAR_SEARCH_ICON_OPENED_CLASS = "search_opened";
+
+const TOPBAR_SEARCH_INPUT_ID = "topbar-search-input";
 
 const FADE_TIME = 300;
 
@@ -41,6 +45,16 @@ function initTopbarMenu() {
     $("." + TOPBAR_SEARCH_SWITCH_CLASS).click(function(evt) {
         onSearchSwitchClick($(evt.target));
     });
+
+    $("#" + TOPBAR_SEARCH_INPUT_ID).keyup(function(evt) {
+        var tgt = $(evt.target);
+
+        if (tgt.val()) {
+            $("." + TOPBAR_BTN_CLASS).removeClass(TOPBAR_BTN_HIDDEN_CLASS);
+        } else {
+            $("." + TOPBAR_BTN_CLASS).addClass(TOPBAR_BTN_HIDDEN_CLASS);
+        }
+    })
 }
 
 function onMenuSwitchClick($target) {
@@ -70,25 +84,17 @@ function onSearchSwitchClick($target) {
     if ($relevant.hasClass(TOPBAR_SEARCH_COLLAPSED_CLASS)) {
         $relevant.removeClass(TOPBAR_SEARCH_COLLAPSED_CLASS);
         $icon.addClass(TOPBAR_SEARCH_ICON_OPENED_CLASS);
+
+        if ($("#" + TOPBAR_SEARCH_INPUT_ID).val()) {
+            $btn.removeClass(TOPBAR_BTN_HIDDEN_CLASS);
+        }
     } else {
         $relevant.addClass(TOPBAR_SEARCH_COLLAPSED_CLASS);
         $icon.removeClass(TOPBAR_SEARCH_ICON_OPENED_CLASS);
+        $btn.addClass(TOPBAR_BTN_HIDDEN_CLASS);
     }
 
     clearIrrelevantItems($pane, TOPBAR_SEARCH_CLASS, TOPBAR_SEARCH_COLLAPSED_CLASS, true);
-}
-
-function checkSearchBtn($target) {
-    $relevant = $target.parents("." + TOPBAR_SEARCH_CLASS);
-    $btn = $("." + TOPBAR_BTN_CLASS);
-
-    if ($relevant.hasClass(TOPBAR_SEARCH_COLLAPSED_CLASS)) {
-        // TODO: anim
-        $btn.hide();
-    } else {
-        // TODO: anim
-        $btn.show();
-    }
 }
 
 function clearIrrelevantItems($pane, klass, collapsed_klass, nofade) {

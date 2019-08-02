@@ -26,7 +26,24 @@
     height: 60px;
     margin-left: 10px;
     line-height: 56px;
-    min-width: 250px;
+    width: 250px;
+
+    overflow: hidden;
+
+    transition: width 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                padding 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                margin 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+    &.topbar__btn_hidden {
+      width: 0;
+      padding: 0;
+      margin: 0;
+      border: none;
+
+      span {
+        display: none;
+      }
+    }
   }
 
   .topbar__nav {
@@ -152,17 +169,34 @@
       right: 20px; // used!
     }
 
-    .topbar__search__form {
+    .topbar__search-form {
+      color: @color_default_fg;
+
       display: block;
 
       font-size: 20px;
+
+      input {
+        color: @color_default_fg;
+        
+        font-size: 16px;
+        font-weight: bold;
+
+        border: none;
+
+        width: 90%;
+
+        &:focus {
+          outline: none;
+        }
+      }
     }
 
     &.topbar__search_collapsed {
       width: 100px;
 
       span.topbar__search-text {display: inline;}
-      .topbar__search__form {display: none;}
+      .topbar__search-form {display: none;}
     }
   }
 

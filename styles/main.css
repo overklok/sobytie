@@ -1362,7 +1362,18 @@ span.text-underlined {
   height: 60px;
   margin-left: 10px;
   line-height: 56px;
-  min-width: 250px;
+  width: 250px;
+  overflow: hidden;
+  transition: width 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), padding 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), margin 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+.topbar .topbar__btn.topbar__btn_hidden {
+  width: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.topbar .topbar__btn.topbar__btn_hidden span {
+  display: none;
 }
 .topbar .topbar__nav a.topbar__nav-item {
   padding: 0 14px;
@@ -1453,9 +1464,20 @@ span.text-underlined {
   top: 15px;
   right: 20px;
 }
-.topbar .topbar__search .topbar__search__form {
+.topbar .topbar__search .topbar__search-form {
+  color: #004645;
   display: block;
   font-size: 20px;
+}
+.topbar .topbar__search .topbar__search-form input {
+  color: #004645;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  width: 90%;
+}
+.topbar .topbar__search .topbar__search-form input:focus {
+  outline: none;
 }
 .topbar .topbar__search.topbar__search_collapsed {
   width: 100px;
@@ -1463,7 +1485,7 @@ span.text-underlined {
 .topbar .topbar__search.topbar__search_collapsed span.topbar__search-text {
   display: inline;
 }
-.topbar .topbar__search.topbar__search_collapsed .topbar__search__form {
+.topbar .topbar__search.topbar__search_collapsed .topbar__search-form {
   display: none;
 }
 .topbar span.topbar__menu-title {
