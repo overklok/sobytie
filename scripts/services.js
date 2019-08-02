@@ -8,12 +8,12 @@ const TAG_ITEM_CLASS = "svclink";
 const TAG_ITEM_CONTAINER_CLASS = "blk-services";
 const TAG_ITEM_CONTAINER_HEADING_CLASS = "blk-services__heading";
 
+// TODO: Save filter to window.location.hash
+
 $(document).ready(function() {
     initAllTaglinks();
 
     $('.grid').each(function(index, item) {
-        console.log(item.id);
-
         $("#" + item.id).masonry({
           // options
           itemSelector: '#' + item.id + ' > .grid-item',

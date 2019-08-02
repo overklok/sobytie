@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../styles/main.css">
 
     <script src="../scripts/_vendor/jquery-3.4.1.min.js"></script>
-    <script src="../scripts/slider.js"></script>
+    <script src="../scripts/stories.js"></script>
 
     <title>Истории</title>
 </head>
@@ -54,9 +54,9 @@
     <section id="stories" class="container">
         <div class="blk blk-stories blk-gallery">
             <div class="loadable-list not-loaded">
-                <div class="blk-story-row__big row m-0">
+                <div class="blk-story-row blk-story-row__big row m-0">
                     <div class="blk-stories__col col-12 col-lg-7">
-                        <div class="mcard mcard_hist-big mcard_bottomed">
+                        <div class="mcard mcard_hist-big mcard_bottomed" data-tag="KNOWYRSLF">
                             <div class="mcard__bg gradient-overlay gradient-mcard_hist-big"
                              style="background-image: url('http://loremflickr.com/320/180/')">
                             </div>
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <div class="blk-stories__col col-12 col-lg-5">
-                        <div class="blk-story__small mcard mcard_hist-small">
+                        <div class="blk-story__small mcard mcard_hist-small" data-tag="KNOWYRSLF">
                             <div class="mcard__content">
                                 <span class="tag tag_emph">Познать себя</span>
                                 <h3 class="mcard__heading">Когнитивные искажения, они же ловушки сознания</h3>
@@ -81,7 +81,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="blk-story__small mcard mcard_hist-small">
+                        <div class="blk-story__small mcard mcard_hist-small" data-tag="REALIZATION">
                             <div class="mcard__content">
                                 <span class="tag tag_emph">Самореализация</span>
                                 <h3 class="mcard__heading">Пишем первый пост</h3>
@@ -90,7 +90,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="blk-story__small mcard mcard_hist-small">
+                        <div class="blk-story__small mcard mcard_hist-small" data-tag="EXPERT">
                             <div class="mcard__content">
                                 <span class="tag tag_emph">Вопрос к эксперту</span>
                                 <h3 class="mcard__heading">Настоящий коуч или самозванец?</h3>
@@ -101,10 +101,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="blk-story-row__mid row">
+                <div class="blk-story-row blk-story-row__mid row">
                     <div class="blk-stories__col col-6">
                         <div class="blk-story__mid mcard mcard_hist-mid mcard_bottomed">
-                            <div class="mcard__bg gradient-overlay gradient-mcard"
+                            <div class="mcard__bg gradient-overlay gradient-mcard" data-tag="KNOWYRSLF"
                              style="background-image: url('http://loremflickr.com/320/180/')">
                             </div>
 
@@ -125,7 +125,7 @@
                     </div>
                     <div class="blk-stories__col col-6">
                         <div class="blk-story__mid mcard mcard_hist-mid mcard_bottomed">
-                            <div class="mcard__bg gradient-overlay gradient-mcard"
+                            <div class="mcard__bg gradient-overlay gradient-mcard" data-tag="MANWONAN"
                              style="background-image: url('http://loremflickr.com/320/180/')">
                             </div>
 
@@ -144,11 +144,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="blk-story-row__tall tall-root row">
+                <div class="blk-story-row blk-story-row__tall tall-root row">
                     <div class="blk-stories__col col-12 col-lg-8">
-                        <div class="blk-story-row__tall row m-0">
+                        <div class="blk-story-row blk-story-row__tall row m-0">
                             <div class="blk-stories__col col-6">
-                                <div class="blk-story__tall mcard mcard_hist-tall mcard_bottomed mcard_splitted">
+                                <div class="blk-story__tall mcard mcard_hist-tall mcard_bottomed mcard_splitted" data-tag="GENCONN">
                                     <a href="" class="mcard__link"></a>
 
                                     <div class="mcard__content">
@@ -167,7 +167,7 @@
                                 </div>
                             </div>
                             <div class="blk-stories__col col-6">
-                                <div class="blk-story__tall mcard mcard_hist-tall mcard_bottomed mcard_splitted">
+                                <div class="blk-story__tall mcard mcard_hist-tall mcard_bottomed mcard_splitted" data-tag="GENCONN">
                                     <a href="" class="mcard__link"></a>
                                     <div class="mcard__content">
                                         <div class="mcard__content-tobottom">
@@ -188,7 +188,7 @@
                     </div>
                     <div class="blk-stories__col col-12 col-lg-4">
                         <div class="blk-story__tall mcard mcard_hist-tall">
-                            <div class="mcard__bg gradient-overlay gradient-mcard_hist-big"
+                            <div class="mcard__bg gradient-overlay gradient-mcard_hist-tall"
                              style="background-image: url('http://loremflickr.com/320/180/')">
                             </div>
 
@@ -206,11 +206,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="blk-story-row__mid row m-0">
+                <div class="blk-story-row blk-story-row__mid row m-0">
                     <div class="blk-stories__col col-12 col-lg-7">
-                        <div class="blk-story-row__mid blk-story-row__mid_fullwidth row">
+                        <div class="blk-story-row blk-story-row__mid blk-story-row__mid_fullwidth row">
                             <div class="blk-stories__col col-12">
-                                <div class="blk-story__mid mcard mcard_hist-mid mcard_bottomed">
+                                <div class="blk-story__mid mcard mcard_hist-mid mcard_bottomed" data-tag="KNOWYRSLF">
                                     <div class="mcard__bg gradient-overlay gradient-mcard"
                                      style="background-image: url('http://loremflickr.com/320/180/')">
                                     </div>
@@ -231,7 +231,7 @@
                                 </div>
                             </div>
                             <div class="blk-stories__col col-12">
-                                <div class="blk-story__mid mcard mcard_hist-mid mcard_bottomed">
+                                <div class="blk-story__mid mcard mcard_hist-mid mcard_bottomed" data-tag="MANWOMAN">
                                     <div class="mcard__bg gradient-overlay gradient-mcard"
                                      style="background-image: url('http://loremflickr.com/320/180/')">
                                     </div>
@@ -253,7 +253,7 @@
                         </div>
                     </div>
                     <div class="blk-stories__col col-12 col-lg-5">
-                        <div class="blk-story__small mcard mcard_hist-small">
+                        <div class="blk-story__small mcard mcard_hist-small" data-tag="KNOWYRSLF">
                             <div class="mcard__content">
                                 <span class="tag tag_emph">Познать себя</span>
                                 <h3 class="mcard__heading">Когнитивные искажения, они же ловушки сознания</h3>
@@ -262,7 +262,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="blk-story__small mcard mcard_hist-small">
+                        <div class="blk-story__small mcard mcard_hist-small" data-tag="REALIZATION">
                             <div class="mcard__content">
                                 <span class="tag tag_emph">Самореализация</span>
                                 <h3 class="mcard__heading">Пишем первый пост</h3>
@@ -271,7 +271,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="blk-story__small mcard mcard_hist-small">
+                        <div class="blk-story__small mcard mcard_hist-small" data-tag="EXPERT">
                             <div class="mcard__content">
                                 <span class="tag tag_emph">Вопрос к эксперту</span>
                                 <h3 class="mcard__heading">Настоящий коуч или самозванец?</h3>
