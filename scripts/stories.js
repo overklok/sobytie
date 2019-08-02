@@ -20,6 +20,8 @@ $(document).ready(function() {
     $(window).resize(onWindowResize);
 
     onWindowResize();
+
+    filterStories("*");
 });
 
 
@@ -166,16 +168,8 @@ function spreadTagItemRows() {
                 var val = Number(value) + perks[key];
 
                 $container.addClass("col-" + sz + val);
-
-                // console.log("col-" + sz + val);
-
-                // console.log(key, value);
             });
         });
-
-        // console.log("Row ", row, ", sum: ", sums[BS_SIZE_CURRENT]);
-
-        // console.log("Row " + index_r + ", items: " +  $containers.length);
     });
 }
 
@@ -203,8 +197,6 @@ function removeAllColumnClasses($container) {
 
         $container.removeClass("col-" + c);
     }
-
-    console.log($container);
 }
 
 function getAllContainerSizes($container) {

@@ -1,11 +1,33 @@
 .topbar {
-  padding: 18px 30px;
-
   display: flex;
 
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  .topbar__pane {
+    position: relative;
+
+    background-color: #FFFFFF;
+    border-radius: @roundness;
+
+    padding: 15px 30px;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+    //align-items: center;
+  }
+
+  .topbar__btn {
+    height: 60px;
+    margin-left: 10px;
+    line-height: 56px;
+    min-width: 250px;
+  }
 
   .topbar__nav {
     a.topbar__nav-item {
@@ -28,30 +50,118 @@
     }
   }
 
-  .topbar__search {
-    float: right;
+  .topbar__menu-switch,
+    .topbar__search-switch {
+      &:hover {
+        cursor: pointer;
+      }
+    }
 
-    color: @color_default_fg;
+  .topbar__menu {
+    flex: 1;
 
-    font-size: 20px;
-    line-height: 23px;
-    font-weight: bold;
+    padding-top: 10px;
+    transition: padding-top 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
-    vertical-align: bottom;
+    .topbar__menu-items {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      margin-left: 25px + 20px; // burger width + burger mr
 
-    min-width: 100px;
+      transition: max-height 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  margin 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.55s ease;
+
+      max-height: 400px;
+      overflow: hidden;
+    }
+
+    a.topbar__menu-item {
+      color: @color_default_fg;
+
+      font-size: 20px;
+      line-height: 23px;
+
+      font-weight: bold;
+
+      margin: 8px 0;
+
+      &:hover {
+        color: @color_primary;
+        cursor: pointer;
+      }
+    }
+
+    .topbar__menu-burger {
+      float: left;
+      margin-right: 20px; // used!
+    }
+
+    .topbar__menu-items {
+      display: flex;
+    }
+
+    .topbar__menu-open {
+      display: none;
+    }
+
+    .topbar__menu-close {
+      display: block;
+    }
+
+    &.topbar__menu_collapsed {
+      padding-top: 0;
+
+      .topbar__menu-items {
+        max-height: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        opacity: 0;
+      }
+
+      .topbar__menu-open {display: block;}
+      .topbar__menu-close {display: none;}
+      //.topbar__menu-items {display: none;}
+    }
   }
 
-  .topbar__menu-burger {
-    float: left;
-    margin-right : 20px;
+  .topbar__search {
+    width: 100%;
+
+    float: right;
+
+    transition: width 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+
+    &.topbar__search_collapsed {
+      width: 100px;
+    }
+
+    .topbar__search-text {
+      color: @color_default_fg;
+
+      font-size: 20px;
+      //line-height: 23px;
+      font-weight: bold;
+
+      vertical-align: bottom;
+
+      float: right;
+      margin-right: 20px; // topbar__search-icon:right
+    }
+
+    .topbar__search-icon {
+      position: absolute;
+      top: 15px;
+      right: 20px; // used!
+    }
   }
 
   span.topbar__menu-title {
     color: @color_default_fg;
 
     font-size: 20px;
-    line-height: 23px;
+    line-height: 26px;
     font-weight: bold;
   }
 

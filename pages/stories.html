@@ -9,6 +9,7 @@
 
     <script src="../scripts/_vendor/jquery-3.4.1.min.js"></script>
     <script src="../scripts/stories.js"></script>
+    <script src="../scripts/topbar.js"></script>
 
     <title>Истории</title>
 </head>
@@ -31,22 +32,45 @@
         </div>
     </header>
 
-    <!--TODO: Refactor Row Names!!!-->
-
-    <section id="category-bar" class="container d-none d-md-block">
+    <section id="category-bar" class="container container_nobg d-none d-md-block">
         <div class="topbar">
-            <div class="topbar__menu">
-                <div class="topbar__menu-burger burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            <div class="topbar__pane">
+                <div class="topbar__menu topbar__menu_collapsed">
+                    <div class="topbar__menu-switch topbar__menu-burger burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="topbar__menu-open">
+                        <span class="topbar__menu-switch topbar__menu-title">Выбрать категорию</span>
+                    </div>
+
+                    <div class="topbar__menu-close">
+                        <span class="topbar__menu-switch topbar__menu-title">Закрыть</span>
+                    </div>
+
+                    <div class="topbar__menu-items">
+                        <a class="topbar__menu-item">Все</a>
+                        <a class="topbar__menu-item">Познать себя</a>
+                        <a class="topbar__menu-item">Самореализация</a>
+                        <a class="topbar__menu-item">Вопрос к эксперту</a>
+                        <a class="topbar__menu-item">Мужчина и женщина</a>
+                        <a class="topbar__menu-item">Связь поколений</a>
+                    </div>
                 </div>
 
-                <span class="topbar__menu-title">Выбрать категорию</span>
+                <div class="topbar__search topbar__search_collapsed">
+                    <span class="topbar__search-switch topbar__search-text">Найти</span>
+
+                    <div class="topbar__search-switch topbar__search-icon search">
+                        <span class="search__item"></span>
+                    </div>
+                </div>
             </div>
 
-            <div class="topbar__search">
-                Найти <i class="icon icon-sob-search"></i>
+            <div class="topbar__btn btn btn-primary">
+                Найти
             </div>
         </div>
     </section>
