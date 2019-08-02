@@ -1438,12 +1438,9 @@ span.text-underlined {
 .topbar .topbar__search {
   width: 100%;
   float: right;
-  transition: width 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
-.topbar .topbar__search.topbar__search_collapsed {
-  width: 100px;
-}
-.topbar .topbar__search .topbar__search-text {
+.topbar .topbar__search span.topbar__search-text {
+  display: none;
   color: #004645;
   font-size: 20px;
   font-weight: bold;
@@ -1455,6 +1452,19 @@ span.text-underlined {
   position: absolute;
   top: 15px;
   right: 20px;
+}
+.topbar .topbar__search .topbar__search__form {
+  display: block;
+  font-size: 20px;
+}
+.topbar .topbar__search.topbar__search_collapsed {
+  width: 100px;
+}
+.topbar .topbar__search.topbar__search_collapsed span.topbar__search-text {
+  display: inline;
+}
+.topbar .topbar__search.topbar__search_collapsed .topbar__search__form {
+  display: none;
 }
 .topbar span.topbar__menu-title {
   color: #004645;

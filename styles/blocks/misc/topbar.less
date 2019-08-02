@@ -131,13 +131,9 @@
 
     float: right;
 
-    transition: width 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+    span.topbar__search-text {
+      display: none;
 
-    &.topbar__search_collapsed {
-      width: 100px;
-    }
-
-    .topbar__search-text {
       color: @color_default_fg;
 
       font-size: 20px;
@@ -154,6 +150,19 @@
       position: absolute;
       top: 15px;
       right: 20px; // used!
+    }
+
+    .topbar__search__form {
+      display: block;
+
+      font-size: 20px;
+    }
+
+    &.topbar__search_collapsed {
+      width: 100px;
+
+      span.topbar__search-text {display: inline;}
+      .topbar__search__form {display: none;}
     }
   }
 
