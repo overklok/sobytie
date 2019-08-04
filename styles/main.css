@@ -601,12 +601,18 @@ span.text-underlined {
 }
 .blk.blk-intro .blk-intro__text {
   padding: 50px 40px;
+  padding-top: 0;
   padding-right: 0;
   overflow: hidden;
 }
 .blk.blk-intro .blk-intro__img {
   padding: 50px 40px;
+  padding-top: 0;
   padding-left: 0;
+}
+.blk.blk-intro .blk-intro__person {
+  padding: 50px 40px;
+  padding-bottom: 0;
 }
 .blk.blk-intro p.blk-intro__text-desc {
   margin-top: 22px;
@@ -620,8 +626,7 @@ span.text-underlined {
   position: relative;
   font-size: 30px;
   line-height: 35px;
-  font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   margin: 56px 0;
   width: 531px;
   z-index: 1;
@@ -658,6 +663,48 @@ span.text-underlined {
   bottom: 0;
   right: 0;
   border-radius: 10px;
+  width: 100%;
+}
+@media (max-width: 1199.98px) {
+  .blk.blk-intro .blk-intro__person h1 {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+  .blk.blk-intro p.blk-intro__text-citation {
+    width: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .blk.blk-intro .blk-intro__text {
+    padding-left: 15px;
+    padding-bottom: 15px;
+  }
+  .blk.blk-intro .blk-intro__person {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .blk.blk-intro .blk-intro__person h1 {
+    font-size: 15px;
+    line-height: 105%;
+    letter-spacing: 0.05em;
+  }
+  .blk.blk-intro .blk-intro__person p,
+  .blk.blk-intro .blk-intro__person span.comment {
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+  }
+  .blk.blk-intro p.blk-intro__text-citation {
+    font-size: 15px;
+    line-height: 105%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .blk.blk-intro p.blk-intro__text-citation::before,
+  .blk.blk-intro p.blk-intro__text-citation::after {
+    font-size: 40px;
+  }
 }
 .blk {
   /* "Services" block */
@@ -866,6 +913,25 @@ span.text-underlined {
   font-size: 22px;
   line-height: 27px;
   max-width: 531px;
+}
+.blk.blk-profile .blk-profile__slider {
+  height: 120px;
+  border-radius: 5px;
+}
+@media (max-width: 767.98px) {
+  .blk.blk-profile .blk-profile__slider {
+    height: 220px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .blk.blk-profile .blk-profile__slider {
+    margin-bottom: 10px;
+  }
+  .blk.blk-profile p.blk-profile__text {
+    font-size: 10px;
+    line-height: 12px;
+  }
 }
 .blk.blk-cover {
   position: relative;
@@ -1107,6 +1173,24 @@ span.text-underlined {
   }
   .blk.blk-stories .blk-story-row__tall .blk-stories__col {
     padding: 0 2.5px;
+  }
+}
+.blk.blk-upcoming {
+  padding: 10px 15px;
+}
+.blk.blk-upcoming p.blk-upcoming__description {
+  font-size: 10px;
+  line-height: 12px;
+  margin: 10px 0;
+}
+@media (max-width: 767.98px) {
+  .blk.blk-upcoming p.blk-upcoming__description {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 20px 0;
+  }
+  .blk.blk-upcoming .blk-upcoming__btn {
+    font-size: 16px;
   }
 }
 .blk {
@@ -2145,7 +2229,7 @@ span.text-underlined {
   /* ==== HOVERS ==== */
   /* ==== MEDIA QUERIES ==== */
 }
-@media (max-width: 575.99px) {
+@media (max-width: 575.98px) {
   .mcard {
     border-radius: 5px;
   }
@@ -2196,7 +2280,7 @@ span.text-underlined {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: 3;
 }
 .mcard h3.mcard__heading {
   position: relative;
@@ -2675,24 +2759,30 @@ span.text-underlined {
 .cal .cal__legend .cal__legend-marker.cal__legend-marker_cancelled::before {
   color: #FF5E4C;
 }
-.cal .cal__legend .cal__legend-next:hover a.cal__legend-next-text {
-  text-decoration: none;
+.cal .cal__legend .cal__legend-nav {
+  float: right;
 }
-.cal .cal__legend .cal__legend-next:hover .cal__legend-next-icon {
-  color: #F2C75C;
-}
-.cal .cal__legend a.cal__legend-next-text {
-  display: block;
+.cal .cal__legend span.cal__legend-navtext {
   font-size: 20px;
   line-height: 23px;
   color: #004645;
   float: unset;
   text-align: right;
 }
+.cal .cal__legend .cal__legend-prev-icon,
 .cal .cal__legend .cal__legend-next-icon {
-  float: right;
+  display: inline;
   color: #004645;
   font-size: 18px;
+}
+.cal .cal__legend .cal__legend-prev-icon:hover,
+.cal .cal__legend .cal__legend-next-icon:hover {
+  color: #F2C75C;
+}
+.cal .cal__legend .cal__legend-prev-icon {
+  margin-right: 5px;
+}
+.cal .cal__legend .cal__legend-next-icon {
   margin-left: 5px;
 }
 @media (max-width: 575.98px) {
@@ -2707,12 +2797,14 @@ span.text-underlined {
     vertical-align: -2px;
     font-size: 20px;
   }
-  .cal .cal__legend a.cal__legend-next-text {
+  .cal .cal__legend span.cal__legend-navtext {
     font-size: 10px;
     line-height: 12px;
     font-weight: 700;
   }
+  .cal .cal__legend .cal__legend-prev-icon,
   .cal .cal__legend .cal__legend-next-icon {
+    font-size: 10px;
     margin-left: 0;
   }
 }

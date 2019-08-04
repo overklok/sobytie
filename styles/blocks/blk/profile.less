@@ -5,5 +5,28 @@
       line-height: 27px;
       max-width: 531px;
     }
+
+    .blk-profile__slider {
+      height: 120px;
+      border-radius: @roundness / 2;
+    }
+
+    @media (max-width: @sm_to) {
+      .blk-profile__slider {
+        height: 220px;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: @xs_to) {
+      .blk-profile__slider {
+        margin-bottom: 10px;
+      }
+
+      p.blk-profile__text {
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
   }
 }

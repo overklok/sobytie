@@ -30,21 +30,11 @@
       }
     }
 
-    .cal__legend-next {
-      &:hover {
-        a.cal__legend-next-text {
-          text-decoration: none;
-        }
-
-        .cal__legend-next-icon {
-          color: @color_primary;
-        }
-      }
+    .cal__legend-nav {
+      float: right;
     }
 
-    a.cal__legend-next-text {
-      display: block;
-
+    span.cal__legend-navtext {
       font-size: 20px;
       line-height: 23px;
 
@@ -54,11 +44,22 @@
       text-align: right;
     }
 
+    .cal__legend-prev-icon,
     .cal__legend-next-icon {
-      float: right;
+      display: inline;
       color: @color_default_fg;
-
       font-size: 18px;
+
+      &:hover {
+        color: @color_primary;
+      }
+    }
+
+    .cal__legend-prev-icon {
+      margin-right: 5px;
+    }
+
+    .cal__legend-next-icon {
       margin-left: 5px;
     }
 
@@ -79,14 +80,16 @@
         }
       }
 
-      a.cal__legend-next-text {
+      span.cal__legend-navtext {
         font-size: 10px;
         line-height: 12px;
 
         font-weight: 700;
       }
 
+      .cal__legend-prev-icon,
       .cal__legend-next-icon {
+        font-size: 10px;
         margin-left: 0;
       }
     }

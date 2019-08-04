@@ -39,11 +39,16 @@
 
     <section id="intro" class="container">
         <div class="blk blk-intro">
-            <div class="row m-0 p-0">
-                <div class="blk-intro__text col-md-8">
-                    <h1>Николай Черкасов</h1>
-                    <span class="comment comment_bold">Директор мастерской</span>
+            <div class="blk-intro__person">
+                <h1 class="text-center text-md-left">Николай Черкасов</h1>
 
+                <p class="text-center text-md-left">
+                    <span class="comment comment_bold">Директор мастерской</span>
+                </p>
+            </div>
+
+            <div class="row m-0 p-0">
+                <div class="blk-intro__text col-7 col-sm-6 col-xl-7">
                     <p class="blk-intro__text-citation">
                         Этот день обмену и возврату не подлежит – действуйте!
                     </p>
@@ -54,7 +59,7 @@
                         <a href="" class="social-item"><i class="icon icon_default icon-sob-ig"></i></a>
                     </div>
                 </div>
-                <div class="blk-intro__img col-md-4">
+                <div class="blk-intro__img col-5 col-sm-6 col-xl-5">
                     <div class="blk-intro__img-avatar">
                         <img src="../../assets/images/people/director.png" alt="Директор мастерской">
                     </div>
@@ -66,6 +71,20 @@
     <section id="profile" class="container">
         <div class="blk blk-profile">
             <div class="row m-0 p-0">
+                <!--Mobile only-->
+                <div class="col-12 d-block d-md-none p-0">
+                    <div class="blk-profile__slider slider" data-dur="500" data-delay="3000" data-fn="slide">
+                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=1')">
+                        </div>
+                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=2')">
+                        </div>
+                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=3')">
+                        </div>
+                        <div class="slider__item slider__bg" style="background-image: url('http://loremflickr.com/700/300?random=4')">
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-6 p-0">
                     <p class="blk-profile__text">
                         Меня зовут Николай и в свои 40 лет я состоялся как муж, отец и профессионал в разных областях.
@@ -94,23 +113,40 @@
                 </div>
             </div>
         </div>
+
+        <div class="blk blk-upcoming d-block d-md-none">
+            <h2 class="text-center">Ближайшие мероприятия</h2>
+
+            <p class="blk-upcoming__description text-center">
+                Узнать о ближайших мероприятия Николая можно узнать здесь:
+            </p>
+
+            <a href="" class="blk-upcoming__btn btn btn-primary btn-wider">Выбрать мероприятие Николая на календаре</a>
+        </div>
     </section>
 
-    <section id="main" class="container">
+    <section id="main" class="container d-none d-md-block">
         <div class="blk blk-schedule">
             <h2 class="text-center">Ближайшие меропиятия</h2>
 
             <div class="cal">
                 <div class="cal__legend row">
-                    <div class="col-lg-6 p-0">
+                    <div class="col-8 col-sm-6 p-0">
                         <span class="cal__legend-marker cal__legend-marker_closed">Запись закрыта</span>
                         <span class="cal__legend-marker cal__legend-marker_cancelled">Мероприятие отменено</span>
                     </div>
-                    <div class="col-lg-6 p-0">
-                        <a href="" class="cal__legend-next">
-                            Следующая неделя
-                            <i class="icon icon-sob-triangle-fwd"></i>
-                        </a>
+                    <div class="col-4 col-sm-6 p-0">
+                        <div class="cal__legend-nav">
+                            <a href="" class="cal__legend-prev-icon">
+                                <i class="icon icon-sob-triangle-bwd"></i>
+                            </a>
+                            <span class="cal__legend-navtext">
+                                <b>24.07 - 30.07</b>
+                            </span>
+                            <a href="" class="cal__legend-next-icon">
+                                <i class="icon icon-sob-triangle-fwd"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -317,9 +353,9 @@
 
     <footer class="container blk">
         <nav class="footernav row m-0">
-            <div class="col-md-6 p-0">
+            <div class="col-12 col-lg-6 p-0">
                 <div class="row m-0 p-0">
-                    <div class="col-md-5 p-0">
+                    <div class="col-12 col-lg-5 p-0">
                         <ul class="footernav-menu">
                             <li class="footernav-menu__heading">Меню</li>
 
@@ -331,7 +367,7 @@
                             <li class="footernav-menu__item"><a href="">Контакты</a></li>
                         </ul>
                     </div>
-                    <div class="flex-col col-md-7 p-0">
+                    <div class="flex-col col-12 col-lg-7 p-0">
                         <ul class="footernav-menu">
                             <li class="footernav-menu__heading">Социальные сети</li>
 
@@ -348,27 +384,31 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-col col-md-6 p-0">
+            <div class="flex-col col-12 col-lg-6 p-0">
                 <ul class="footernav-menu">
                     <li class="footernav-menu__heading">Рассылка</li>
 
-                    <li class="footernav-menu__item">
-                        Несколько эксклюзивных статей и специальных предложений раз в месяц с доставкой на вашу почту:
+                    <li class="footernav-menu__itemtext">
+                        <p class="text-light">
+                            Несколько эксклюзивных статей и специальных предложений раз в месяц с доставкой на вашу почту:
+                        </p>
                     </li>
                 </ul>
 
                 <form class="form form_footer form-inline form-fullwidth">
-                    <input type="email" class="form__input form-control mr-3" placeholder="Ваш Email:">
+                    <input type="email" class="form__input form-control mr-2" placeholder="Ваш Email:">
                     <button type="submit" class="btn btn-primary btn-short">Подписаться</button>
                 </form>
             </div>
         </nav>
         <div class="footercopy row m-0">
-            <div class="footercopy__left col-lg-10 col-sm-6">
+            <div class="footercopy__left col-4 p-0">
                 <span class="footercopy__copyright">&copy; ООО &laquo;Событие&raquo;, 2019</span>
+            </div>
+            <div class="footercopy__center col-6 col-sm-5 col-xl-6">
                 <span class="footercopy__address">620075, г. Екатеринбург, ул. Шарташская, 23</span>
             </div>
-            <div class="col-lg-2 col-sm-6 p-0">
+            <div class="footercopy__right col-2 col-sm-3 col-xl-2">
                 <span class="footercopy__tel"><a href="tel:+73432432323">+7 (343) 243 23 23</a></span>
             </div>
         </div>

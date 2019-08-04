@@ -5,6 +5,7 @@
 
     .blk-intro__text {
       padding: @py @px;
+      padding-top: 0;
       padding-right: 0;
 
       overflow: hidden;
@@ -12,7 +13,13 @@
 
     .blk-intro__img {
       padding: @py @px;
+      padding-top: 0;
       padding-left: 0;
+    }
+
+    .blk-intro__person {
+      padding: @py @px;
+      padding-bottom: 0;
     }
 
     p.blk-intro__text-desc {
@@ -30,8 +37,8 @@
 
       font-size: 30px;
       line-height: 35px;
-      font-style: italic;
-      font-weight: 700;
+      //font-style: italic;
+      font-weight: 600;
 
       margin: 56px 0;
 
@@ -85,11 +92,63 @@
         bottom: 0;
         right: 0;
         border-radius: 10px;
+
+        width: 100%;
       }
     }
 
     .blk-intro__social {
 
+    }
+
+    @media (max-width: @lg_to) {
+      .blk-intro__person {
+        h1 {
+          font-size: 32px;
+          margin-bottom: 0;
+        }
+      }
+
+      p.blk-intro__text-citation {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: @xs_to) {
+      .blk-intro__text {
+        padding-left: 15px;
+        padding-bottom: 15px;
+      }
+
+      .blk-intro__person {
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        h1 {
+          font-size: 15px;
+          line-height: 105%;
+          letter-spacing: 0.05em;
+        }
+
+        p, span.comment {
+          font-size: 10px;
+          line-height: 20px;
+          letter-spacing: 0.01em;
+        }
+      }
+
+      p.blk-intro__text-citation {
+        font-size: 15px;
+        line-height: 105%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+        &::before,
+        &::after {
+          font-size: 40px;
+        }
+      }
     }
   }
 }
