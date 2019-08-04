@@ -1,3 +1,19 @@
+/**
+ * Скрипт, отвечающий за управление состоянием верхнего бара
+ *
+ * Структура бара:
+ *  - панель
+ *      - меню
+ *      - навигация
+ *      - поиск
+ *  - кнопка
+ *
+ *  В панели не предусмотрено одновременное присутствие меню и навигации;
+ *  каждый из них может быть расположен одновременно вместе с поиском.
+ *
+ *  Кнопка опциональна.
+ */
+
 const TOPBAR_CLASSES = {
     MAIN: "topbar",
     PANE: "topbar__pane",
@@ -49,6 +65,9 @@ $(document).ready(function() {
     initTopbarBtn();
 });
 
+/**
+ * Иниициализировать панель бара
+ */
 function initTopbarPane() {
     var $pane = $("." + TOPBAR_CLASSES.PANE);
 
@@ -78,6 +97,9 @@ function initTopbarPane() {
     });
 }
 
+/**
+ * Инициализировать элементы меню бара
+ */
 function initTopbarMenuItems() {
     $("." + TOPBAR_CLASSES.MENU.MAIN).click(function (evt) {
         evt.preventDefault();
@@ -96,6 +118,9 @@ function initTopbarMenuItems() {
     });
 }
 
+/**
+ * Инициализировать кнопку бара
+ */
 function initTopbarBtn() {
     $("." + TOPBAR_CLASSES.BTN).click(function (evt) {
         evt.preventDefault();
@@ -109,6 +134,11 @@ function initTopbarBtn() {
     })
 }
 
+/**
+ * Обработать нажатие на кнопку переключения меню
+ *
+ * @param $target
+ */
 function onMenuSwitchClick($target) {
     var $relevant = $target.parents("." + TOPBAR_CLASSES.MENU.MAIN);
     var $pane = $relevant.parents("." + TOPBAR_CLASSES.PANE);
@@ -130,6 +160,11 @@ function onMenuSwitchClick($target) {
     clearIrrelevantItems($pane, TOPBAR_CLASSES.MENU.MAIN, TOPBAR_CLASSES.MENU.COLLAPSED);
 }
 
+/**
+ * Обработать нажатие на кнопку переключения режима поиска
+ *
+ * @param $target
+ */
 function onSearchSwitchClick($target) {
     $relevant = $target.parents("." + TOPBAR_CLASSES.SEARCH.MAIN);
     $pane = $relevant.parents("." + TOPBAR_CLASSES.PANE);
@@ -156,6 +191,14 @@ function onSearchSwitchClick($target) {
     clearIrrelevantItems($pane, TOPBAR_CLASSES.SEARCH.MAIN, TOPBAR_CLASSES.SEARCH.COLLAPSED, true);
 }
 
+/**
+ * Убрать нерелевантные состоянию панели бара элементы
+ *
+ * @param $pane панель бара
+ * @param klass класс элемента, который должен оставаться отображаемым
+ * @param collapsed_klass, класс элемента, отвечающий за его закрытое состояние
+ * @param nofade без анимации
+ */
 function clearIrrelevantItems($pane, klass, collapsed_klass, nofade) {
     $relevant = $pane.find("." + klass);
 
@@ -170,6 +213,11 @@ function clearIrrelevantItems($pane, klass, collapsed_klass, nofade) {
     }
 }
 
+/**
+ * Проверить состояние иконки меню
+ *
+ * @param $pane
+ */
 function checkMenuIconState($pane) {
     $relevant = $pane.find("." + TOPBAR_CLASSES.MENU.MAIN);
     $icon = $relevant.find("." + TOPBAR_CLASSES.MENU.ICON);
@@ -181,6 +229,11 @@ function checkMenuIconState($pane) {
     }
 }
 
+/**
+ * Переопределить заголовок меню бара
+ *
+ * @param text новый текст заголовка, если пустой - отображать текст по умолчанию
+ */
 function setTopbarMenuTitle(text) {
     // сохранить заголовок меню по умолчанию
     if (TOPBAR_MENU_OPEN_TITLE_DEFAULT == null) {
@@ -194,6 +247,10 @@ function setTopbarMenuTitle(text) {
     }
 }
 
+/**
+ * Определить классы для загружаемых списков
+ * @param on загружено/не загружено
+ */
 function setLoadingClasses(on) {
     var $loadable = $("." + LOADABLE_LIST_CLASS);
 

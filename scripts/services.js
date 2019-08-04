@@ -11,8 +11,6 @@ const TAG_ITEM_CONTAINER_HEADING_CLASS = "blk-services__heading";
 var _TAG_CURRENT = undefined;
 var _QRY_CURRENT = undefined;
 
-// TODO: Save filter to window.location.hash
-
 $(document).ready(function() {
     initAllTaglinks();
 
