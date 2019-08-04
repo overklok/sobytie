@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17e2839b-1d4a-4129-a6d6-602fedfb618a" name="Default" comment="" />
+    <list default="true" id="17e2839b-1d4a-4129-a6d6-602fedfb618a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/scripts/topbar.js" afterPath="$PROJECT_DIR$/scripts/topbar.js" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="topbar.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="topbar.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/topbar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="70" column="26" lean-forward="true" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
+            <state relative-caret-position="474">
+              <caret line="112" column="66" lean-forward="false" selection-start-line="112" selection-start-column="66" selection-end-line="112" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -128,24 +130,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fot</find>
-      <find>first-child</find>
-      <find>[data-vis=&quot;1&quot;]</find>
-      <find>data-vis</find>
-      <find>:first-of-type</find>
-      <find>:last-of-type</find>
-      <find>not-invis</find>
-      <find>switch</find>
-      <find>btn</find>
-      <find>__form</find>
-      <find>form</find>
-      <find>input</find>
-      <find>$in</find>
-      <find>+</find>
-      <find>used</find>
-      <find>invis</find>
-      <find>trans</find>
-      <find>loadable</find>
       <find>loaded</find>
       <find>EXPERT</find>
       <find>KNOWYRSLF</find>
@@ -158,6 +142,24 @@
       <find>CONTAINER_DIMMED_CLASS</find>
       <find>filterFunc</find>
       <find>LOADABLE_LIST_CLASS</find>
+      <find>TOPBAR_PANE_CLASS</find>
+      <find>TOPBAR_BTN_CLASS</find>
+      <find>TOPBAR_BTN_HIDDEN_CLASS</find>
+      <find>TOPBAR_MENU_CLASS</find>
+      <find>TOPBAR_MENU_COLLAPSED_CLASS</find>
+      <find>TOPBAR_MENU_SWITCH_CLASS</find>
+      <find>TOPBAR_MENU_ICON_CLASS</find>
+      <find>TOPBAR_MENU_ICON_OPENED_CLASS</find>
+      <find>TOPBAR_MENU_OPEN_CLASS</find>
+      <find>TOPBAR_MENU_TITLE_CLASS</find>
+      <find>TOPBAR_SEARCH_CLASS</find>
+      <find>TOPBAR_SEARCH_COLLAPSED_CLASS</find>
+      <find>TOPBAR_SEARCH_SWITCH_CLASS</find>
+      <find>TOPBAR_SEARCH_ICON_CLASS</find>
+      <find>TOPBAR_SEARCH_ICON_OPENED_CLASS</find>
+      <find>TOPBAR_CLASSES.SE</find>
+      <find>TOPBAR_CLASSES.SEARCH</find>
+      <find>TOPBAR_CLASSES.MENU</find>
     </findStrings>
     <replaceStrings>
       <replace>cal__col_of</replace>
@@ -218,7 +220,6 @@
         <option value="$PROJECT_DIR$/styles/base/helper.less" />
         <option value="$PROJECT_DIR$/styles/blocks/blk/stories.less" />
         <option value="$PROJECT_DIR$/styles/base/layout.less" />
-        <option value="$PROJECT_DIR$/scripts/topbar.js" />
         <option value="$PROJECT_DIR$/scripts/stories.js" />
         <option value="$PROJECT_DIR$/pages/services.html" />
         <option value="$PROJECT_DIR$/pages/stories.html" />
@@ -226,6 +227,7 @@
         <option value="$PROJECT_DIR$/scripts/bs.js" />
         <option value="$PROJECT_DIR$/styles/blocks/misc/topbar.less" />
         <option value="$PROJECT_DIR$/scripts/services.js" />
+        <option value="$PROJECT_DIR$/scripts/topbar.js" />
       </list>
     </option>
   </component>
@@ -895,14 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/topbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="70" column="26" lean-forward="true" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/blocks/misc/topbar.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -913,8 +907,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="112" column="66" lean-forward="false" selection-start-line="112" selection-start-column="66" selection-end-line="112" selection-end-column="66" />
           <folding />
         </state>
       </provider>

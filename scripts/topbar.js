@@ -1,30 +1,29 @@
-const TOPBAR_CLASS = "topbar";
-const TOPBAR_PANE_CLASS = "topbar__pane";
-const TOPBAR_BTN_CLASS = "topbar__btn";
+const TOPBAR_CLASSES = {
+    MAIN: "topbar",
+    PANE: "topbar__pane",
+    BTN: "topbar__btn",
+    BTN_HIDDEN: "topbar__btn_hidden",
 
-const TOPBAR_BTN_HIDDEN_CLASS = "topbar__btn_hidden";
+    MENU: {
+        MAIN: "topbar__menu",
+        COLLAPSED: "topbar__menu_collapsed",
+        SWITCH: "topbar__menu-switch",
+        ICON: "topbar__menu-burger",
+        ICON_OPENED: "burger_opened",
+        OPEN: "topbar__menu-open",
+        TITLE: "topbar__menu-title"
+    },
 
-/* MENU */
-const TOPBAR_MENU_CLASS = "topbar__menu";
-const TOPBAR_MENU_COLLAPSED_CLASS = "topbar__menu_collapsed";
-
-const TOPBAR_MENU_SWITCH_CLASS = "topbar__menu-switch";
-
-const TOPBAR_MENU_ICON_CLASS = "topbar__menu-burger";
-const TOPBAR_MENU_ICON_OPENED_CLASS = "burger_opened";
-
-const TOPBAR_MENU_OPEN_CLASS = "topbar__menu-open";
-const TOPBAR_MENU_TITLE_CLASS = "topbar__menu-title";
+    SEARCH: {
+        MAIN: "topbar__search",
+        COLLAPSED: "topbar__search_collapsed",
+        SWITCH: "topbar__search-switch",
+        ICON: "topbar__search-icon",
+        ICON_OPENED: "search_opened"
+    }
+};
 
 /* SEARCH */
-const TOPBAR_SEARCH_CLASS = "topbar__search";
-const TOPBAR_SEARCH_COLLAPSED_CLASS = "topbar__search_collapsed";
-
-const TOPBAR_SEARCH_SWITCH_CLASS = "topbar__search-switch";
-
-const TOPBAR_SEARCH_ICON_CLASS = "topbar__search-icon";
-const TOPBAR_SEARCH_ICON_OPENED_CLASS = "search_opened";
-
 const TOPBAR_SEARCH_INPUT_ID = "topbar-search-input";
 
 /* MISC */
@@ -51,20 +50,20 @@ $(document).ready(function() {
 });
 
 function initTopbarPane() {
-    var $pane = $("." + TOPBAR_PANE_CLASS);
+    var $pane = $("." + TOPBAR_CLASSES.PANE);
 
     // Menu
-    if ($("." + TOPBAR_MENU_CLASS).length) {
-        clearIrrelevantItems($pane, TOPBAR_MENU_CLASS, TOPBAR_MENU_COLLAPSED_CLASS);
+    if ($("." + TOPBAR_CLASSES.MENU.MAIN).length) {
+        clearIrrelevantItems($pane, TOPBAR_CLASSES.MENU.MAIN, TOPBAR_CLASSES.MENU.COLLAPSED);
         checkMenuIconState($pane);
 
-        $("." + TOPBAR_MENU_SWITCH_CLASS).click(function (evt) {
+        $("." + TOPBAR_CLASSES.MENU.SWITCH).click(function (evt) {
             onMenuSwitchClick($(evt.target));
         });
     }
 
     // Search
-    $("." + TOPBAR_SEARCH_SWITCH_CLASS).click(function(evt) {
+    $("." + TOPBAR_CLASSES.SEARCH.SWITCH).click(function(evt) {
         onSearchSwitchClick($(evt.target));
     });
 
@@ -72,15 +71,15 @@ function initTopbarPane() {
         var target = $(evt.target);
 
         if (target.val()) {
-            $("." + TOPBAR_BTN_CLASS).removeClass(TOPBAR_BTN_HIDDEN_CLASS);
+            $("." + TOPBAR_CLASSES.BTN).removeClass(TOPBAR_CLASSES.BTN_HIDDEN);
         } else {
-            // $("." + TOPBAR_BTN_CLASS).addClass(TOPBAR_BTN_HIDDEN_CLASS);
+            // $("." + TOPBAR_CLASSES.BTN).addClass(TOPBAR_CLASSES.BTN_HIDDEN);
         }
     });
 }
 
 function initTopbarMenuItems() {
-    $("." + TOPBAR_MENU_CLASS).click(function (evt) {
+    $("." + TOPBAR_CLASSES.MENU.MAIN).click(function (evt) {
         evt.preventDefault();
 
         var $target = $(evt.target);
@@ -98,7 +97,7 @@ function initTopbarMenuItems() {
 }
 
 function initTopbarBtn() {
-    $("." + TOPBAR_BTN_CLASS).click(function (evt) {
+    $("." + TOPBAR_CLASSES.BTN).click(function (evt) {
         evt.preventDefault();
 
         var qry = $("#" +TOPBAR_SEARCH_INPUT_ID).val();
@@ -111,50 +110,50 @@ function initTopbarBtn() {
 }
 
 function onMenuSwitchClick($target) {
-    var $relevant = $target.parents("." + TOPBAR_MENU_CLASS);
-    var $pane = $relevant.parents("." + TOPBAR_PANE_CLASS);
+    var $relevant = $target.parents("." + TOPBAR_CLASSES.MENU.MAIN);
+    var $pane = $relevant.parents("." + TOPBAR_CLASSES.PANE);
 
-    var $icon = $relevant.find("." + TOPBAR_MENU_ICON_CLASS);
+    var $icon = $relevant.find("." + TOPBAR_CLASSES.MENU.ICON);
 
     var $section = $("#" + SECTION_TO_DIM_ID);
 
-    if ($relevant.hasClass(TOPBAR_MENU_COLLAPSED_CLASS)) {
-        $relevant.removeClass(TOPBAR_MENU_COLLAPSED_CLASS);
-        $icon.addClass(TOPBAR_MENU_ICON_OPENED_CLASS);
+    if ($relevant.hasClass(TOPBAR_CLASSES.MENU.COLLAPSED)) {
+        $relevant.removeClass(TOPBAR_CLASSES.MENU.COLLAPSED);
+        $icon.addClass(TOPBAR_CLASSES.MENU.ICON_OPENED);
         $section.addClass(CONTAINER_DIMMED_CLASS);
     } else {
-        $relevant.addClass(TOPBAR_MENU_COLLAPSED_CLASS);
-        $icon.removeClass(TOPBAR_MENU_ICON_OPENED_CLASS);
+        $relevant.addClass(TOPBAR_CLASSES.MENU.COLLAPSED);
+        $icon.removeClass(TOPBAR_CLASSES.MENU.ICON_OPENED);
         $section.removeClass(CONTAINER_DIMMED_CLASS);
     }
 
-    clearIrrelevantItems($pane, TOPBAR_MENU_CLASS, TOPBAR_MENU_COLLAPSED_CLASS);
+    clearIrrelevantItems($pane, TOPBAR_CLASSES.MENU.MAIN, TOPBAR_CLASSES.MENU.COLLAPSED);
 }
 
 function onSearchSwitchClick($target) {
-    $relevant = $target.parents("." + TOPBAR_SEARCH_CLASS);
-    $pane = $relevant.parents("." + TOPBAR_PANE_CLASS);
-    $btn = $("." + TOPBAR_BTN_CLASS);
+    $relevant = $target.parents("." + TOPBAR_CLASSES.SEARCH.MAIN);
+    $pane = $relevant.parents("." + TOPBAR_CLASSES.PANE);
+    $btn = $("." + TOPBAR_CLASSES.BTN);
     $input = $("#" + TOPBAR_SEARCH_INPUT_ID);
 
-    $icon = $relevant.find("." + TOPBAR_SEARCH_ICON_CLASS);
+    $icon = $relevant.find("." + TOPBAR_CLASSES.SEARCH.ICON);
 
-    if ($relevant.hasClass(TOPBAR_SEARCH_COLLAPSED_CLASS)) {
-        $relevant.removeClass(TOPBAR_SEARCH_COLLAPSED_CLASS);
-        $icon.addClass(TOPBAR_SEARCH_ICON_OPENED_CLASS);
+    if ($relevant.hasClass(TOPBAR_CLASSES.SEARCH.COLLAPSED)) {
+        $relevant.removeClass(TOPBAR_CLASSES.SEARCH.COLLAPSED);
+        $icon.addClass(TOPBAR_CLASSES.SEARCH.ICON_OPENED);
 
         $input.focus();
 
         if ($input.val()) {
-            $btn.removeClass(TOPBAR_BTN_HIDDEN_CLASS);
+            $btn.removeClass(TOPBAR_CLASSES.BTN_HIDDEN);
         }
     } else {
-        $relevant.addClass(TOPBAR_SEARCH_COLLAPSED_CLASS);
-        $icon.removeClass(TOPBAR_SEARCH_ICON_OPENED_CLASS);
-        $btn.addClass(TOPBAR_BTN_HIDDEN_CLASS);
+        $relevant.addClass(TOPBAR_CLASSES.SEARCH.COLLAPSED);
+        $icon.removeClass(TOPBAR_CLASSES.SEARCH.ICON_OPENED);
+        $btn.addClass(TOPBAR_CLASSES.BTN_HIDDEN);
     }
 
-    clearIrrelevantItems($pane, TOPBAR_SEARCH_CLASS, TOPBAR_SEARCH_COLLAPSED_CLASS, true);
+    clearIrrelevantItems($pane, TOPBAR_CLASSES.SEARCH.MAIN, TOPBAR_CLASSES.SEARCH.COLLAPSED, true);
 }
 
 function clearIrrelevantItems($pane, klass, collapsed_klass, nofade) {
@@ -172,26 +171,26 @@ function clearIrrelevantItems($pane, klass, collapsed_klass, nofade) {
 }
 
 function checkMenuIconState($pane) {
-    $relevant = $pane.find("." + TOPBAR_MENU_CLASS);
-    $icon = $relevant.find("." + TOPBAR_MENU_ICON_CLASS);
+    $relevant = $pane.find("." + TOPBAR_CLASSES.MENU.MAIN);
+    $icon = $relevant.find("." + TOPBAR_CLASSES.MENU.ICON);
 
-    if ($relevant.hasClass(TOPBAR_MENU_COLLAPSED_CLASS)) {
-        $icon.removeClass(TOPBAR_MENU_ICON_OPENED_CLASS);
+    if ($relevant.hasClass(TOPBAR_CLASSES.MENU.COLLAPSED)) {
+        $icon.removeClass(TOPBAR_CLASSES.MENU.ICON_OPENED);
     } else {
-        $icon.addClass(TOPBAR_MENU_ICON_OPENED_CLASS);
+        $icon.addClass(TOPBAR_CLASSES.MENU.ICON_OPENED);
     }
 }
 
 function setTopbarMenuTitle(text) {
     // сохранить заголовок меню по умолчанию
     if (TOPBAR_MENU_OPEN_TITLE_DEFAULT == null) {
-        TOPBAR_MENU_OPEN_TITLE_DEFAULT = $("." + TOPBAR_MENU_OPEN_CLASS + " > ." + TOPBAR_MENU_TITLE_CLASS).text();
+        TOPBAR_MENU_OPEN_TITLE_DEFAULT = $("." + TOPBAR_CLASSES.MENU.OPEN + " > ." + TOPBAR_CLASSES.MENU.TITLE).text();
     }
 
     if (text != null) {
-        $("." + TOPBAR_MENU_OPEN_CLASS + " > ." + TOPBAR_MENU_TITLE_CLASS).text(text);
+        $("." + TOPBAR_CLASSES.MENU.OPEN + " > ." + TOPBAR_CLASSES.MENU.TITLE).text(text);
     } else {
-        $("." + TOPBAR_MENU_OPEN_CLASS + " > ." + TOPBAR_MENU_TITLE_CLASS).text(TOPBAR_MENU_OPEN_TITLE_DEFAULT);
+        $("." + TOPBAR_CLASSES.MENU.OPEN + " > ." + TOPBAR_CLASSES.MENU.TITLE).text(TOPBAR_MENU_OPEN_TITLE_DEFAULT);
     }
 }
 
