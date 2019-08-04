@@ -24,13 +24,7 @@ $(document).ready(function() {
           gutter: '#' + item.id + ' > .gutter-sizer'
         });
     });
-
-    $(window).on("bs-change", onBsChange);
 });
-
-function onBsChange(evt, bs_size) {
-
-}
 
 function initAllTaglinks() {
     $("." + TAGLINK_CLASSES.ITEM).click(onTaglinkClick);
