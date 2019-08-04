@@ -340,7 +340,7 @@ span.text-underlined {
 .ws-unset {
   white-space: unset !important;
 }
-@media (max-width: 575.99px) {
+@media (max-width: 575.98px) {
   h1,
   h2 {
     font-size: 15px;
@@ -916,11 +916,20 @@ span.text-underlined {
     margin-bottom: 4px;
   }
 }
+.blk.blk-team {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .blk.blk-team .blk-team__item {
   padding: 20px;
 }
 .blk.blk-team .blk-team__card {
   margin: 0;
+}
+@media (max-width: 767.98px) {
+  .blk.blk-team .blk-team__item {
+    padding: 7px;
+  }
 }
 .blk.blk-contacts .blk-contacts__text {
   font-weight: 500;
@@ -930,6 +939,9 @@ span.text-underlined {
 .blk.blk-contacts .blk-contacts__text-line {
   width: 100%;
   display: block;
+}
+.blk.blk-contacts .blk-contacts__text-line a {
+  color: #232323;
 }
 .blk.blk-contacts .blk-contacts__call {
   margin-bottom: 30px;
@@ -941,10 +953,44 @@ span.text-underlined {
   position: absolute;
   bottom: 0;
   padding-top: 30px;
+  margin-right: 15px;
 }
 .blk.blk-contacts .blk-contacts__map {
   width: 100%;
   height: 225px;
+}
+@media (max-width: 991.98px) {
+  .blk.blk-contacts .blk-contacts__call {
+    margin-top: 30px;
+  }
+  .blk.blk-contacts .blk-contacts__suggestion {
+    position: relative;
+    padding-top: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .blk.blk-contacts .blk-contacts__heading {
+    font-size: 22px;
+    line-height: 105%;
+    letter-spacing: 0.05em;
+  }
+  .blk.blk-contacts .blk-contacts__text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 575.98px) {
+  .blk.blk-contacts .blk-contacts__heading {
+    font-size: 15px;
+  }
+  .blk.blk-contacts .blk-contacts__text {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .blk.blk-contacts .blk-contacts__map {
+    height: 90px;
+  }
 }
 .blk.blk-stories {
   padding-bottom: 50px;
@@ -1150,6 +1196,9 @@ span.text-underlined {
   .btn.btn-primary:hover {
     border-width: 2px;
   }
+  .btn.btn-wider {
+    padding: 0;
+  }
 }
 .btn.btn-hov-bg:hover {
   background-color: #FFFFFF;
@@ -1224,9 +1273,12 @@ span.text-underlined {
     text-align: center;
   }
   .footernav ul.footernav-menu {
-    margin: 0px 50px;
+    margin: 0 50px;
     line-height: 0;
     margin-bottom: 10px;
+  }
+  .footernav ul.footernav-menu:last-of-type {
+    margin-bottom: 0;
   }
   .footernav ul.footernav-menu .footernav-menu__item {
     display: inline;
@@ -1729,6 +1781,14 @@ span.text-underlined {
   margin: 0;
   z-index: 2;
 }
+.mcard.mcard_quad p.mcard__name span.signature {
+  font-size: 30px;
+  line-height: 35px;
+}
+.mcard.mcard_quad.mcard_colored {
+  height: 100%;
+  padding-top: 0;
+}
 .mcard.mcard_quad.mcard_colored .mcard__content:after {
   content: '';
   position: absolute;
@@ -1742,9 +1802,48 @@ span.text-underlined {
   border-radius: 10px;
   z-index: 1;
 }
-@media (max-width: 575.99px) {
+@media (max-width: 575.98px) {
   .mcard.mcard_quad.mcard_colored .mcard__content:after {
     border-radius: 5px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .mcard.mcard_quad p.mcard__name span.signature {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 991.98px) {
+  .mcard.mcard_quad p.mcard__name span.signature {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .mcard.mcard_quad p.mcard__name {
+    bottom: 10px;
+    left: 10px;
+    line-height: 5px;
+  }
+  .mcard.mcard_quad p.mcard__name span.signature {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 575.98px) {
+  .mcard.mcard_quad p.mcard__name span.signature {
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+  }
+  .mcard.mcard_quad.mcard_colored p.mcard__name {
+    width: 100%;
+    top: calc(50% - 5px);
+    text-align: center;
+    left: 0;
+  }
+  .mcard.mcard_quad.mcard_colored p.mcard__name span.signature {
+    font-size: 14px;
   }
 }
 .mcard {
@@ -2830,6 +2929,7 @@ span.text-underlined {
 }
 .form.form-fullwidth .form__input {
   flex: 1;
+  width: 0;
 }
 .form.form_footer .form__input {
   color: #FFFFFF;
@@ -2847,7 +2947,7 @@ span.text-underlined {
   }
 }
 @media (max-width: 575.98px) {
-  .form.form_footer .form__input {
+  .form .form__input {
     font-size: 10px;
     height: 26px;
     border-radius: 5px;

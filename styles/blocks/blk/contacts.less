@@ -13,6 +13,11 @@
     .blk-contacts__text-line {
       width: 100%;
       display: block;
+
+      a {
+        color: @color_text_dark;
+        //text-decoration: none;
+      }
     }
 
     .blk-contacts__call {
@@ -28,11 +33,52 @@
       bottom: 0;
 
       padding-top: 30px;
+      margin-right: 15px;
     }
 
     .blk-contacts__map {
       width: 100%;
       height: 225px;
+    }
+
+    @media (max-width: @md_to) {
+      .blk-contacts__call {
+        margin-top: 30px;
+      }
+
+      .blk-contacts__suggestion {
+        position: relative;
+        padding-top: 0;
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: @sm_to) {
+      .blk-contacts__heading {
+        font-size: 22px;
+        line-height: 105%;
+        letter-spacing: 0.05em;
+      }
+
+      .blk-contacts__text {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+
+    @media (max-width: @xs_to) {
+      .blk-contacts__heading {
+        font-size: 15px;
+      }
+
+      .blk-contacts__text {
+        font-size: 10px;
+        line-height: 12px;
+      }
+
+      .blk-contacts__map {
+        height: 90px;
+      }
     }
   }
 }

@@ -23,9 +23,17 @@
       margin: 0;
 
       z-index: 2;
+
+      span.signature {
+        font-size: 30px;
+        line-height: 35px;
+      }
     }
 
     &.mcard_colored {
+      height: 100%;
+      padding-top: 0;
+
       .mcard__content:after {
         content: '';
         position: absolute;
@@ -39,9 +47,64 @@
         opacity: .8;
 
         border-radius: @roundness;
-        @media (max-width: 575.99px) {border-radius: @roundness / 2;}
+        @media (max-width: @xs_to) {border-radius: @roundness / 2;}
 
         z-index: 1;
+      }
+    }
+
+    @media (max-width: @lg_to) {
+      p.mcard__name {
+        span.signature {
+          font-size: 28px;
+          line-height: 32px;
+        }
+      }
+    }
+
+    @media (max-width: @md_to) {
+      p.mcard__name {
+        span.signature {
+          font-size: 26px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    @media (max-width: @sm_to) {
+      p.mcard__name {
+        bottom: 10px;
+        left: 10px;
+
+        line-height: 5px;
+
+        span.signature {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    @media (max-width: @xs_to) {
+      p.mcard__name {
+        span.signature {
+          font-size: 10px;
+          line-height: 12px;
+          letter-spacing: 0.01em;
+        }
+      }
+
+      &.mcard_colored {
+        p.mcard__name {
+          width: 100%;
+          top: calc(50% - 5px);
+          text-align: center;
+          left: 0;
+
+          span.signature {
+            font-size: 14px;
+          }
+        }
       }
     }
   }
