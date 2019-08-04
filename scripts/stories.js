@@ -3,38 +3,14 @@ const TAG_ITEM_CLASS = "mcard";
 const TAG_ITEM_CONTAINER_CLASS = "blk-stories__col";
 const TAG_ITEM_ROW_CLASS = "blk-story-row";
 
-const BS_COL_NUMBER = 12;
-
-const BS_SIZES_FROM = {
-    xs: 0,
-    sm: 576,
-    md: 768,
-    lg: 992,
-    xl: 1200
-};
-
-var BS_SIZE_CURRENT = undefined;
-
 var _TAG_CURRENT = undefined;
 var _QRY_CURRENT = undefined;
 
 $(document).ready(function() {
     initTagItemContainers();
-    $(window).resize(onWindowResize);
 
-    onWindowResize();
-
-    filterStories("*");
+    filterFunc("*");
 });
-
-
-function onWindowResize() {
-    var width = $(window).width();
-
-    $.each(BS_SIZES_FROM, function(key, value) {
-        if (width > value) BS_SIZE_CURRENT = key;
-    });
-}
 
 function initTagItemContainers() {
     $containers = $("." + TAG_ITEM_CONTAINER_CLASS);
@@ -58,7 +34,7 @@ function initTagItemContainers() {
     });
 }
 
-function filterStories(tag, qry) {
+function filterFunc(tag, qry) {
     if (tag == null) tag = _TAG_CURRENT;
     if (tag == null) tag = "*";
 
@@ -66,11 +42,12 @@ function filterStories(tag, qry) {
     if (qry == null) qry = "*";
     if (qry === "")  qry = "*";
 
-    var $irrelevant, $relevant;
+    var $all = $("." + TAG_ITEM_CLASS);
+    var $irrelevant, $relevant, $irr_on_rel = $();
 
     if (tag === "*") {
-        $irrelevant = $("." + TAG_ITEM_CLASS);
-        $relevant = $("." + TAG_ITEM_CLASS);
+        $irrelevant = $();
+        $relevant = $all;
     } else {
         $irrelevant = $("." + TAG_ITEM_CLASS + ":not([data-tag='" + tag + "'])");
         $relevant = $("." + TAG_ITEM_CLASS + "[data-tag='" + tag + "']");
@@ -78,26 +55,36 @@ function filterStories(tag, qry) {
 
     if (qry && qry !== "*") {
         var ftr = function(obj) {
-            return $(obj).find('.mcard__heading:first').text().toLowerCase().startsWith(qry.toLowerCase());
+            var is_h2 = $(obj).find('h2:first').text().toLowerCase().indexOf(qry.toLowerCase()) >=0;
+            var is_h3 = $(obj).find('h3:first').text().toLowerCase().indexOf(qry.toLowerCase()) >=0;
+
+            return is_h2 || is_h3;
         };
 
+        $irr_on_rel = $relevant.filter(function () {return !ftr(this)});
         $relevant = $relevant.filter(function () {return ftr(this)});
-        $irrelevant = $irrelevant.filter(function () {return !ftr(this)});
     }
 
+    _TAG_CURRENT = tag;
+    _QRY_CURRENT = qry;
+
     $irrelevant.hide();
+    $irr_on_rel.hide();
     $relevant.show();
+
     $irrelevant.attr("data-vis", "0");
+    $irr_on_rel.attr("data-vis", "0");
     $relevant.attr("data-vis", "1");
 
     $irrelevant.removeClass("non-invis");
+    $irr_on_rel.removeClass("non-invis");
     $relevant.addClass("non-invis");
 
     ensureEmptyTagItemContainers();
     spreadTagItemRows();
     ensureEmptyTagItemRows();
 
-    return $relevant.length;
+    return $all.length - $relevant.length;
 }
 
 function ensureEmptyTagItemContainers() {

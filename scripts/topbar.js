@@ -38,24 +38,32 @@ const FADE_TIME = 300;
 
 var TOPBAR_MENU_OPEN_TITLE_DEFAULT = undefined;
 
+if (!filterFunc) {
+    var filterFunc = function () {
+        console.warn("No filtering function has been defined")
+    };
+}
+
 $(document).ready(function() {
-    initTopbarMenu();
+    initTopbarPane();
     initTopbarMenuItems();
     initTopbarBtn();
 });
 
-function initTopbarMenu() {
+function initTopbarPane() {
     var $pane = $("." + TOPBAR_PANE_CLASS);
 
-    clearIrrelevantItems($pane, TOPBAR_MENU_CLASS, TOPBAR_MENU_COLLAPSED_CLASS);
-    checkMenuIconState($pane);
+    // Menu
+    if ($("." + TOPBAR_MENU_CLASS).length) {
+        clearIrrelevantItems($pane, TOPBAR_MENU_CLASS, TOPBAR_MENU_COLLAPSED_CLASS);
+        checkMenuIconState($pane);
 
-    $("." + TOPBAR_MENU_SWITCH_CLASS).click(function(evt) {
-        onMenuSwitchClick($(evt.target));
-    });
+        $("." + TOPBAR_MENU_SWITCH_CLASS).click(function (evt) {
+            onMenuSwitchClick($(evt.target));
+        });
+    }
 
-    // clearIrrelevantItems($pane, TOPBAR_SEARCH_SWITCH_CLASS, TOPBAR_SEARCH_COLLAPSED_CLASS);
-
+    // Search
     $("." + TOPBAR_SEARCH_SWITCH_CLASS).click(function(evt) {
         onSearchSwitchClick($(evt.target));
     });
@@ -80,7 +88,8 @@ function initTopbarMenuItems() {
         var tag = $target.data("story-tag");
 
         if (tag) {
-            var item_num = filterStories(tag);
+            var item_num = filterFunc(tag, "*");
+
             setLoadingClasses(item_num > 0);
             onMenuSwitchClick($target);
             setTopbarMenuTitle(tag !== "*" ? $target.text() : null);
@@ -95,7 +104,7 @@ function initTopbarBtn() {
         var qry = $("#" +TOPBAR_SEARCH_INPUT_ID).val();
 
         if (qry != null) {
-            var item_num = filterStories(null, qry);
+            var item_num = filterFunc(null, qry);
             setLoadingClasses(item_num > 0);
         }
     })
@@ -195,7 +204,7 @@ function setLoadingClasses(on) {
 
     var list_loaded = $loadable.data("loaded") === "1";
 
-    if (!on) {
+    if (on) {
         $loadable.removeClass(NOT_LOADED_CLASS);
     } else {
         if (list_loaded) {

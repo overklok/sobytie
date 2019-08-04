@@ -53,7 +53,7 @@
       color: @color_default_fg;
 
       font-size: 20px;
-      line-height: 23px;
+      line-height: 26px;
       font-weight: 500;
 
       &.topbar__nav-item_active, &:hover {
@@ -211,10 +211,13 @@
   }
 
   @media (max-width: @sm_to) {
-    padding-top: 0;
+    .topbar__pane {
+      padding-top: 0;
+    }
 
     .topbar__nav {
       text-align: center;
+      display: block !important;
 
       a.topbar__nav-item {
         font-size: 16px;
