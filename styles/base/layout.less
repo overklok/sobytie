@@ -5,6 +5,24 @@ body.main-bg {
 section.container, footer.container {
   margin-bottom: 50px;
   padding: 0;
+
+  position: relative;
+
+  /* Dimmer */
+  &::before {
+    content: '';
+
+    background-color: #000000;
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999;
+
+    transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
 }
 
 section.container {
@@ -19,6 +37,24 @@ section.container {
   &.container_ctrl {
     background-color: transparent;
     margin-bottom: 40px;
+  }
+
+  &.container_topbar-abs {
+    height: 60px;
+    position: relative;
+    z-index: 999999999999;
+
+    .topbar {
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  &.container_dimmed {
+    &::before {
+      visibility: visible;
+      opacity: .2;
+    }
   }
 }
 

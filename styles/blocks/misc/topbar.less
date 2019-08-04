@@ -160,13 +160,13 @@
       vertical-align: bottom;
 
       float: right;
-      margin-right: 20px; // topbar__search-icon:right
+      margin-right: 25px + 10px; // topbar__search-icon:right + self
     }
 
     .topbar__search-icon {
       position: absolute;
       top: 15px;
-      right: 20px; // used!
+      right: 25px; // used!
     }
 
     .topbar__search-form {
@@ -179,8 +179,10 @@
       input {
         color: @color_default_fg;
         
-        font-size: 16px;
+        font-size: 20px;
+        line-height: 26px;
         font-weight: bold;
+        vertical-align: top;
 
         border: none;
 

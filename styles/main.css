@@ -11,6 +11,20 @@ section.container,
 footer.container {
   margin-bottom: 50px;
   padding: 0;
+  position: relative;
+  /* Dimmer */
+}
+section.container::before,
+footer.container::before {
+  content: '';
+  background-color: #000000;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999;
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 section.container {
   background-color: #FFFFFF;
@@ -22,6 +36,19 @@ section.container.container_nobg {
 section.container.container_ctrl {
   background-color: transparent;
   margin-bottom: 40px;
+}
+section.container.container_topbar-abs {
+  height: 60px;
+  position: relative;
+  z-index: 999999999999;
+}
+section.container.container_topbar-abs .topbar {
+  position: absolute;
+  width: 100%;
+}
+section.container.container_dimmed::before {
+  visibility: visible;
+  opacity: 0.2;
 }
 header.container {
   margin-top: 40px;
@@ -488,6 +515,12 @@ span.text-underlined {
   height: 100%;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.0001) 0%, #FFFFFF 100%);
   display: none;
+}
+.loadable-list .loadable-list__btn {
+  display: none;
+}
+.loadable-list.not-loaded .loadable-list__btn {
+  display: block;
 }
 .loadable-list.not-loaded .loadable-list__overlay {
   display: block;
@@ -1457,12 +1490,12 @@ span.text-underlined {
   font-weight: bold;
   vertical-align: bottom;
   float: right;
-  margin-right: 20px;
+  margin-right: 35px;
 }
 .topbar .topbar__search .topbar__search-icon {
   position: absolute;
   top: 15px;
-  right: 20px;
+  right: 25px;
 }
 .topbar .topbar__search .topbar__search-form {
   color: #004645;
@@ -1471,8 +1504,10 @@ span.text-underlined {
 }
 .topbar .topbar__search .topbar__search-form input {
   color: #004645;
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 26px;
   font-weight: bold;
+  vertical-align: top;
   border: none;
   width: 90%;
 }

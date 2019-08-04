@@ -32,7 +32,7 @@
         </div>
     </header>
 
-    <section id="category-bar" class="container container_nobg d-none d-md-block">
+    <section id="category-bar" class="container container_nobg container_topbar-abs d-none d-md-block">
         <div class="topbar">
             <div class="topbar__pane">
                 <div class="topbar__menu topbar__menu_collapsed">
@@ -51,12 +51,12 @@
                     </div>
 
                     <div class="topbar__menu-items">
-                        <a class="topbar__menu-item">Все</a>
-                        <a class="topbar__menu-item">Познать себя</a>
-                        <a class="topbar__menu-item">Самореализация</a>
-                        <a class="topbar__menu-item">Вопрос к эксперту</a>
-                        <a class="topbar__menu-item">Мужчина и женщина</a>
-                        <a class="topbar__menu-item">Связь поколений</a>
+                        <a class="topbar__menu-item" data-story-tag="*">Все</a>
+                        <a class="topbar__menu-item" data-story-tag="KNOWYRSELF">Познать себя</a>
+                        <a class="topbar__menu-item" data-story-tag="REALIZATION">Самореализация</a>
+                        <a class="topbar__menu-item" data-story-tag="EXPERT">Вопрос к эксперту</a>
+                        <a class="topbar__menu-item" data-story-tag="MANWOMAN">Мужчина и женщина</a>
+                        <a class="topbar__menu-item" data-story-tag="GENCONN">Связь поколений</a>
                     </div>
                 </div>
 
@@ -75,9 +75,9 @@
                 </div>
             </div>
 
-            <div class="topbar__btn topbar__btn_hidden btn btn-primary">
+            <a href="" class="topbar__btn topbar__btn_hidden btn btn-primary">
                 <span class="light">Найти</span>
-            </div>
+            </a>
         </div>
     </section>
 
@@ -314,7 +314,7 @@
                 </div>
 
                 <div class="blk-gallery__overlay loadable-list__overlay"></div>
-                <div class="blk-gallery__btn-wrap">
+                <div class="blk-gallery__btn-wrap loadable-list__btn">
                     <a href="" class="blk-gallery__btn btn btn-primary btn-hov-bg">Загрузить еще парочку</a>
                 </div>
             </div>

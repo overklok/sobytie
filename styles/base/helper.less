@@ -18,7 +18,15 @@
     display: none;
   }
 
+  .loadable-list__btn {
+    display: none;
+  }
+
   &.not-loaded {
+    .loadable-list__btn {
+      display: block;
+    }
+
     .loadable-list__overlay {
       display: block;
     }

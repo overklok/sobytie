@@ -15,6 +15,9 @@ const BS_SIZES_FROM = {
 
 var BS_SIZE_CURRENT = undefined;
 
+var _TAG_CURRENT = undefined;
+var _QRY_CURRENT = undefined;
+
 $(document).ready(function() {
     initTagItemContainers();
     $(window).resize(onWindowResize);
@@ -55,28 +58,46 @@ function initTagItemContainers() {
     });
 }
 
-function filterStories(tag, name) {
+function filterStories(tag, qry) {
+    if (tag == null) tag = _TAG_CURRENT;
+    if (tag == null) tag = "*";
+
+    if (qry == null) qry = _QRY_CURRENT;
+    if (qry == null) qry = "*";
+    if (qry === "")  qry = "*";
+
+    var $irrelevant, $relevant;
+
     if (tag === "*") {
-        var all = $("." + TAG_ITEM_CLASS);
-
-        all.show();
-        all.attr("data-vis", "1");
+        $irrelevant = $("." + TAG_ITEM_CLASS);
+        $relevant = $("." + TAG_ITEM_CLASS);
     } else {
-        var irrelevant  = $("." + TAG_ITEM_CLASS + ":not([data-tag='" + tag + "'])"),
-            relevant    = $("." + TAG_ITEM_CLASS + "[data-tag='" + tag + "']");
-
-        irrelevant.hide();
-        relevant.show();
-        irrelevant.attr("data-vis", "0");
-        relevant.attr("data-vis", "1");
-
-        irrelevant.removeClass("non-invis");
-        relevant.addClass("non-invis");
+        $irrelevant = $("." + TAG_ITEM_CLASS + ":not([data-tag='" + tag + "'])");
+        $relevant = $("." + TAG_ITEM_CLASS + "[data-tag='" + tag + "']");
     }
+
+    if (qry && qry !== "*") {
+        var ftr = function(obj) {
+            return $(obj).find('.mcard__heading:first').text().toLowerCase().startsWith(qry.toLowerCase());
+        };
+
+        $relevant = $relevant.filter(function () {return ftr(this)});
+        $irrelevant = $irrelevant.filter(function () {return !ftr(this)});
+    }
+
+    $irrelevant.hide();
+    $relevant.show();
+    $irrelevant.attr("data-vis", "0");
+    $relevant.attr("data-vis", "1");
+
+    $irrelevant.removeClass("non-invis");
+    $relevant.addClass("non-invis");
 
     ensureEmptyTagItemContainers();
     spreadTagItemRows();
     ensureEmptyTagItemRows();
+
+    return $relevant.length;
 }
 
 function ensureEmptyTagItemContainers() {
