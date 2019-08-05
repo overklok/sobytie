@@ -1,7 +1,13 @@
 .headersocial {
+  text-align: center;
+
   a.headersocial__item {
     .icon {
       &:hover {color: @color_primary;}
     }
+  }
+
+  @media (max-width: @xs_to) {
+    display: none;
   }
 }
