@@ -80,6 +80,13 @@ footer.container {
   }
 }
 @media (max-width: 575.98px) {
+  body.noscroll-xs {
+    height: 100vh;
+    overflow: hidden;
+  }
+  header.container {
+    margin-top: 20px;
+  }
   section.container,
   header.container,
   footer.container {
@@ -1344,7 +1351,7 @@ span.text-underlined {
     top: 100%;
     background-color: #004645;
     width: 100%;
-    height: calc(100vh - 100% - 40px);
+    height: calc(100vh - 100% - 20px);
     z-index: 999999;
     margin-top: 10px;
     padding-top: 10px;
