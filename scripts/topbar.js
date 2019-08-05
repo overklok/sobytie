@@ -86,7 +86,9 @@ function initTopbarPane() {
         onSearchSwitchClick($(evt.target));
     });
 
-    $("#" + TOPBAR_SEARCH_INPUT_ID).keyup(function(evt) {
+    var $input = $("#" + TOPBAR_SEARCH_INPUT_ID);
+
+    $input.keyup(function(evt) {
         var target = $(evt.target);
 
         if (target.val()) {
@@ -94,6 +96,16 @@ function initTopbarPane() {
         } else {
             // $("." + TOPBAR_CLASSES.BTN).addClass(TOPBAR_CLASSES.BTN_HIDDEN);
         }
+    });
+
+    console.log($input);
+
+    $input.keypress(function (evt) {
+      if (evt.which === 13) {
+        onInputSubmit(evt);
+
+        console.log(evt, evt.which);
+      }
     });
 }
 
@@ -122,16 +134,18 @@ function initTopbarMenuItems() {
  * Инициализировать кнопку бара
  */
 function initTopbarBtn() {
-    $("." + TOPBAR_CLASSES.BTN).click(function (evt) {
-        evt.preventDefault();
+    $("." + TOPBAR_CLASSES.BTN).click(onInputSubmit);
+}
 
-        var qry = $("#" +TOPBAR_SEARCH_INPUT_ID).val();
+function onInputSubmit(evt) {
+    evt.preventDefault();
 
-        if (qry != null) {
-            var item_num = filterFunc(null, qry);
-            setLoadingClasses(item_num > 0);
-        }
-    })
+    var qry = $("#" +TOPBAR_SEARCH_INPUT_ID).val();
+
+    if (qry != null) {
+        var item_num = filterFunc(null, qry);
+        setLoadingClasses(item_num > 0);
+    }
 }
 
 /**
