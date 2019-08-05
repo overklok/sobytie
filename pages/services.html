@@ -18,8 +18,8 @@
     <script src="../scripts/_vendor/masonry.pkgd.min.js"></script>
 
     <!--Custom scripts-->
-    <script src="../scripts/bs.js"></script>        <!-- Necessary for dynamic pages -->
-    <script src="../scripts/topbar.js"></script>    <!-- First this! -->
+    <script src="../scripts/base.js"></script>      <!-- Necessary for dynamic pages -->
+    <script src="../scripts/topbar.js"></script>
     <script src="../scripts/services.js"></script>
 
     <title>О нас</title>
@@ -29,17 +29,78 @@
         <a href="/pages/index.html" class="headerlogo">
             <img class="headerlogo__img" src="../assets/images/logo.svg" alt="СоБытие">
         </a>
-        <nav class="headernav">
-            <a href="/pages/index.html" class="headernav__item">Главная</a>
-            <a href="/pages/services.html" class="headernav__item headernav__item_selected">Услуги</a>
-            <a href="/pages/events.html" class="headernav__item">Мероприятия</a>
-            <a href="/pages/stories.html" class="headernav__item">Истории</a>
-            <a href="/pages/about.html" class="headernav__item">О нас</a>
+        <nav class="headernav headernav_collapsed">
+            <div class="headernav__items">
+                <a href="/pages/index.html" class="headernav__item">Главная</a>
+                <a href="/pages/services.html" class="headernav__item headernav__item_selected">Услуги</a>
+                <a href="/pages/events.html" class="headernav__item">Мероприятия</a>
+                <a href="/pages/stories.html" class="headernav__item">Истории</a>
+                <a href="/pages/about.html" class="headernav__item">О нас</a>
+            </div>
+
+            <div class="headernav__menu footernav row m-0">
+                <div class="col-12 col-lg-6 p-0">
+                    <div class="row m-0 p-0">
+                        <div class="col-12 col-lg-5 p-0">
+                            <ul class="footernav-menu">
+                                <li class="footernav-menu__heading">Соцсети</li>
+
+                                <li class="footernav-menu__item"><a href="">Вконтакте</a></li>
+                                <li class="footernav-menu__item"><a href="">Инстаграм</a></li>
+                                <li class="footernav-menu__item"><a href="">Фейсбук</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex-col col-12 col-lg-7 p-0">
+                            <ul class="footernav-menu">
+                                <li class="footernav-menu__heading">О ваших данных</li>
+
+                                <li class="footernav-menu__item"><a href="">Использование Куки</a></li>
+                                <li class="footernav-menu__item"><a href="">Правила обработки</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-col col-12 col-lg-6 p-0">
+                    <ul class="footernav-menu">
+                        <li class="footernav-menu__heading">Рассылка</li>
+
+                        <li class="footernav-menu__itemtext">
+                            <p class="text-light">
+                                Несколько эксклюзивных статей и специальных предложений раз в месяц с доставкой на вашу почту:
+                            </p>
+                        </li>
+                    </ul>
+
+                    <form class="form form_footer form-inline form-fullwidth">
+                        <input type="email" class="form__input form-control mr-2" placeholder="Ваш Email:">
+                        <button type="submit" class="btn btn-primary btn-short">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="headernav__copy footercopy row m-0">
+                <div class="footercopy__left col-4 p-0">
+                    <span class="footercopy__copyright">&copy; ООО &laquo;Событие&raquo;, 2019</span>
+                </div>
+                <div class="footercopy__center col-6">
+                    <span class="footercopy__address">620075, г. Екатеринбург, ул. Шарташская, 23</span>
+                </div>
+                <div class="footercopy__right col-2">
+                    <span class="footercopy__tel"><a href="tel:+73432432323">+7 (343) 243 23 23</a></span>
+                </div>
+            </div>
         </nav>
         <div class="headersocial">
             <a href="" class="headersocial__item"><i class="icon icon_menu icon-sob-ig"></i></a>
             <a href="" class="headersocial__item"><i class="icon icon_menu icon-sob-fb"></i></a>
             <a href="" class="headersocial__item"><i class="icon icon_menu icon-sob-phone"></i></a>
+        </div>
+        <div class="headerswitch">
+            <div class="headerswitch__burger burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
