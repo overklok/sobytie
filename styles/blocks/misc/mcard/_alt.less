@@ -20,8 +20,19 @@
       }
 
       &:hover {
-        background-image: none !important;
-        background-color: @color_primary;
+        & + .mcard__bg {
+          background-image: none !important;
+          background-color: @color_primary;
+
+          &::after {
+            background-image: none !important;
+          }
+        }
+      }
+
+      &:hover {
+        //background-image: none !important;
+        //background-color: @color_primary;
       }
     }
 

@@ -2140,9 +2140,12 @@ span.text-underlined {
 .mcard.mcard_alt .mcard__link + * {
   pointer-events: none;
 }
-.mcard.mcard_alt .mcard__link:hover {
+.mcard.mcard_alt .mcard__link:hover + .mcard__bg {
   background-image: none !important;
   background-color: #F2C75C;
+}
+.mcard.mcard_alt .mcard__link:hover + .mcard__bg::after {
+  background-image: none !important;
 }
 @media (max-width: 575.98px) {
   .mcard.mcard_alt .mcard__content {
@@ -2595,7 +2598,7 @@ span.text-underlined {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: 500;
 }
 .mcard h3.mcard__heading {
   position: relative;
