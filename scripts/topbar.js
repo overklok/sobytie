@@ -72,8 +72,8 @@ function initTopbarPane() {
     var $pane = $("." + TOPBAR_CLASSES.PANE);
 
     // Menu
-    if ($("." + TOPBAR_CLASSES.MENU.MAIN).length) {
-        clearIrrelevantItems($pane, TOPBAR_CLASSES.MENU.MAIN, TOPBAR_CLASSES.MENU.COLLAPSED);
+    if ($("." + TOPBAR_CLASSES.MENU.BURGER).length) {
+        clearIrrelevantItems($pane, TOPBAR_CLASSES.MENU.BURGER, TOPBAR_CLASSES.MENU.COLLAPSED);
         checkMenuIconState($pane);
 
         $("." + TOPBAR_CLASSES.MENU.SWITCH).click(function (evt) {
@@ -98,8 +98,6 @@ function initTopbarPane() {
         }
     });
 
-    console.log($input);
-
     $input.keypress(function (evt) {
       if (evt.which === 13) {
         onInputSubmit(evt);
@@ -113,7 +111,7 @@ function initTopbarPane() {
  * Инициализировать элементы меню бара
  */
 function initTopbarMenuItems() {
-    $("." + TOPBAR_CLASSES.MENU.MAIN).click(function (evt) {
+    $("." + TOPBAR_CLASSES.MENU.BURGER).click(function (evt) {
         evt.preventDefault();
 
         var $target = $(evt.target);
@@ -154,7 +152,7 @@ function onInputSubmit(evt) {
  * @param $target
  */
 function onMenuSwitchClick($target) {
-    var $relevant = $target.parents("." + TOPBAR_CLASSES.MENU.MAIN);
+    var $relevant = $target.parents("." + TOPBAR_CLASSES.MENU.BURGER);
     var $pane = $relevant.parents("." + TOPBAR_CLASSES.PANE);
 
     var $icon = $relevant.find("." + TOPBAR_CLASSES.MENU.ICON);
@@ -171,7 +169,7 @@ function onMenuSwitchClick($target) {
         $section.removeClass(CONTAINER_DIMMED_CLASS);
     }
 
-    clearIrrelevantItems($pane, TOPBAR_CLASSES.MENU.MAIN, TOPBAR_CLASSES.MENU.COLLAPSED);
+    clearIrrelevantItems($pane, TOPBAR_CLASSES.MENU.BURGER, TOPBAR_CLASSES.MENU.COLLAPSED);
 }
 
 /**
@@ -180,7 +178,7 @@ function onMenuSwitchClick($target) {
  * @param $target
  */
 function onSearchSwitchClick($target) {
-    $relevant = $target.parents("." + TOPBAR_CLASSES.SEARCH.MAIN);
+    $relevant = $target.parents("." + TOPBAR_CLASSES.SEARCH.BURGER);
     $pane = $relevant.parents("." + TOPBAR_CLASSES.PANE);
     $btn = $("." + TOPBAR_CLASSES.BTN);
     $input = $("#" + TOPBAR_SEARCH_INPUT_ID);
@@ -202,7 +200,7 @@ function onSearchSwitchClick($target) {
         $btn.addClass(TOPBAR_CLASSES.BTN_HIDDEN);
     }
 
-    clearIrrelevantItems($pane, TOPBAR_CLASSES.SEARCH.MAIN, TOPBAR_CLASSES.SEARCH.COLLAPSED, true);
+    clearIrrelevantItems($pane, TOPBAR_CLASSES.SEARCH.BURGER, TOPBAR_CLASSES.SEARCH.COLLAPSED, true);
 }
 
 /**
@@ -233,7 +231,7 @@ function clearIrrelevantItems($pane, klass, collapsed_klass, nofade) {
  * @param $pane
  */
 function checkMenuIconState($pane) {
-    $relevant = $pane.find("." + TOPBAR_CLASSES.MENU.MAIN);
+    $relevant = $pane.find("." + TOPBAR_CLASSES.MENU.BURGER);
     $icon = $relevant.find("." + TOPBAR_CLASSES.MENU.ICON);
 
     if ($relevant.hasClass(TOPBAR_CLASSES.MENU.COLLAPSED)) {

@@ -74,8 +74,8 @@
     //left: 0;
     border-bottom-right-radius: @roundness;
     border-bottom-left-radius: @roundness;
-    @media (max-width: 575.99px) {border-bottom-right-radius: @roundness / 2;}
-    @media (max-width: 575.99px) {border-bottom-left-radius:  @roundness / 2;}
+    @media (max-width: @xs_to) {border-bottom-right-radius: @roundness / 2;}
+    @media (max-width: @xs_to) {border-bottom-left-radius:  @roundness / 2;}
 
     width: 100%;
     height: 50%;
@@ -131,9 +131,6 @@
       &:after {
         content: '...';
       }
-
-      // TODO: Use jQuery to add the ellipsis:
-      // $.fn.overflown=function(){var e=this[0];return e.scrollHeight>e.clientHeight||e.scrollWidth>e.clientWidth;}
     }
   }
 
@@ -147,7 +144,7 @@
     /* Действие, изображённое символом "плюс" */
     &.symbol {
       border-radius: @roundness;
-      @media (max-width: 575.99px) {border-radius:  @roundness / 2;}
+      @media (max-width: @xs_to) {border-radius:  @roundness / 2;}
 
       padding: 4px;
       padding-right: 6px;

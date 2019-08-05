@@ -7,6 +7,10 @@
 body.main-bg {
   background-color: #004645;
 }
+body.noscroll {
+  height: 100vh;
+  overflow: hidden;
+}
 section.container,
 footer.container {
   margin-bottom: 50px;
@@ -791,7 +795,7 @@ span.text-underlined {
   background-size: cover;
   background-position: center;
 }
-@media (max-width: 575.99px) {
+@media (max-width: 575.98px) {
   .blk.blk-service .blk-service__img {
     border-radius: 5px;
   }
@@ -945,7 +949,7 @@ span.text-underlined {
   overflow: hidden;
   /* Extra small */
 }
-@media (max-width: 575.99px) {
+@media (max-width: 575.98px) {
   .blk.blk-cover {
     border-radius: 5px;
   }
@@ -1345,6 +1349,10 @@ span.text-underlined {
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px solid #80A2A2;
+    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  .headernav.headernav_collapsed {
+    opacity: 0;
   }
   .headernav .headernav__items {
     display: flex;
@@ -1421,13 +1429,13 @@ span.text-underlined {
     width: 22px;
     height: 3px;
     margin-bottom: 4px;
-    transform-origin: 19px 0;
+    transform-origin: 20px 0;
   }
   .headerswitch .headerswitch__burger span:nth-last-child(2) {
     transform-origin: 10px 0;
   }
   .headerswitch .headerswitch__burger.burger_opened span {
-    transform-origin: 19px 0;
+    transform-origin: 20px 0;
   }
   .headerswitch .headerswitch__burger.burger_opened span:nth-last-child(2) {
     transform-origin: 10px 0;
@@ -1950,7 +1958,7 @@ span.text-underlined {
   background-image: none !important;
   background-color: #F2C75C;
 }
-@media (max-width: 575.99px) {
+@media (max-width: 575.98px) {
   .mcard.mcard_alt .mcard__content {
     padding-left: 15px;
   }
@@ -2385,12 +2393,12 @@ span.text-underlined {
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media (max-width: 575.99px) {
+@media (max-width: 575.98px) {
   .mcard .mcard__img-split {
     border-bottom-right-radius: 5px;
   }
 }
-@media (max-width: 575.99px) {
+@media (max-width: 575.98px) {
   .mcard .mcard__img-split {
     border-bottom-left-radius: 5px;
   }
@@ -2439,7 +2447,7 @@ span.text-underlined {
   margin-left: -4px;
   /* compensation of padding-left */
 }
-@media (max-width: 575.99px) {
+@media (max-width: 575.98px) {
   .mcard .mcard__action.symbol {
     border-radius: 5px;
   }

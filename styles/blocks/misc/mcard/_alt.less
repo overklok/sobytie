@@ -27,7 +27,7 @@
 
     /* ==== MEDIA QUERIES ==== */
 
-    @media (max-width: 575.99px) {
+    @media (max-width: @xs_to) {
       .mcard__content {
         padding-left: 15px;
       }
@@ -37,8 +37,7 @@
       }
     }
 
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 768px) {
+    @media (min-width: @md_from) {
       min-height: initial;
 
       p.mcard__description {

@@ -57,6 +57,12 @@
 
     border-top: 1px solid #80A2A2;
 
+    transition: opacity 0.5s @anim_fn;
+
+    &.headernav_collapsed {
+      opacity: 0;
+    }
+
     .headernav__items {
       display: flex;
       flex-direction: column;
