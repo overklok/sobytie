@@ -8,12 +8,55 @@
     <link rel="stylesheet" href="../styles/main.css">
 
     <script src="../scripts/_vendor/jquery-3.4.1.min.js"></script>
+    <script src="../scripts/_vendor/bootstrap.min.js"></script>
+
     <script src="../scripts/base.js"></script>      <!-- Necessary for dynamic pages -->
     <script src="../scripts/slider.js"></script>
 
     <title>Главная</title>
 </head>
 <body class="main-bg">
+    <div id="subscribeModal" class="modal fade" tabindex="-1" role="dialog" data-timeout="2000">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="row m-0">
+                <div class="col-12 col-xl-6">
+                    <h2 class="modal-heading text-center text-xl-left">Давай будем вместе?</h2>
+
+                    <p class="modal-description text-center text-xl-left">
+                        Ненадоедающая рассылка эксклюзивных статей,
+                        страница с быстрыми новостями или даже вдохновляющий инстаграм — решать вам!
+                    </p>
+
+                    <div class="modal-links">
+                        <button id="subscribeProceed" class="modal-btn btn btn-primary btn-short">
+                            Подписаться на рассылку
+                        </button>
+
+                        <a href="" class="modal-icon"><i class="icon icon-sob-ig"></i></a>
+                        <a href="" class="modal-icon"><i class="icon icon-sob-fb"></i></a>
+                        <a href="" class="modal-icon"><i class="icon icon-sob-phone"></i></a>
+                    </div>
+
+                    <form class="modal-form modal-form_hidden form form-inline form-fullwidth">
+                        <input type="email" class="form__input form-control mr-2" placeholder="Ваш Email:">
+                        <button type="submit" class="modal-btn btn btn-primary btn-short">Подписаться</button>
+                    </form>
+                </div>
+                <div class="col-xl-6 d-none d-xl-block">
+                    <div class="modal-img"
+                         style="background-image: url('http://loremflickr.com/400/200/')">
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center modal-dismiss">
+                <a href="" class="modal-dismiss__link" data-dismiss="modal">Нет, спасибо</a>
+            </p>
+        </div>
+      </div>
+    </div>
+
     <header class="container">
         <a href="/pages/index.html" class="headerlogo">
             <img class="headerlogo__img" src="../assets/images/logo.svg" alt="СоБытие">
@@ -257,7 +300,7 @@
                         </div>
 
                         <div class="mcard__actions">
-                            <span class="mcard__action text-underlined">Перейти на Flamp</span>
+                            <span class="mcard__action underline-hover">Перейти на Flamp</span>
                         </div>
                     </div>
                 </div>
@@ -362,7 +405,7 @@
                         </div>
 
                         <div class="mcard__actions">
-                            <span class="mcard__action">Подписаться</span>
+                            <span class="mcard__action underline-hover">Подписаться</span>
                         </div>
                     </div>
                 </div>

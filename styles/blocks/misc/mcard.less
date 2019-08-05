@@ -94,7 +94,8 @@
     width: 100%;
     height: 100%;
 
-    z-index: 3;
+    z-index: 0;
+    //z-index: 3;
     //z-index: 99999;
   }
 
@@ -182,6 +183,10 @@
 
     .mcard__action {
       text-decoration: none;
+
+      &.underline-hover {
+        text-decoration: underline;
+      }
 
       &.symbol {
         background-color: #DFB05A;

@@ -29,11 +29,19 @@ const HEADERSWITCH_CLASSES = {
 
 const BODY_NOSCROLL_CLASS = "noscroll-xs";
 
+const SUBSCRIBE_PROCEED_BUTTON_ID = "subscribeProceed";
+const MODAL_LINKS_CLASS = "modal-links";
+const MODAL_FORM_CLASS = "modal-form";
+const MODAL_LINKS_HIDDEN_CLASS = "modal-links_hidden";
+const MODAL_FORM_HIDDEN_CLASS = "modal-form_hidden";
+
 $(document).ready(function() {
     $(window).resize(onWindowResize);
     onWindowResize();
 
     initHeadernavMenu();
+
+    initModals();
 });
 
 function onWindowResize() {
@@ -44,6 +52,25 @@ function onWindowResize() {
     });
 
     $(window).trigger("bs-change", [BS_SIZE_CURRENT]);
+}
+
+function initModals() {
+    $('.modal[data-timeout]').each(function(index, item) {
+        var $item = $(item);
+
+        var timeout = $item.data("timeout");
+
+        if (timeout && typeof timeout === "number") {
+            setTimeout(function() {
+                $(item).modal();
+            }, timeout);
+        }
+    });
+
+    $("#" + SUBSCRIBE_PROCEED_BUTTON_ID).click(function() {
+        $("." + MODAL_LINKS_CLASS).addClass(MODAL_LINKS_HIDDEN_CLASS);
+        $("." + MODAL_FORM_CLASS).removeClass(MODAL_FORM_HIDDEN_CLASS);
+    });
 }
 
 function initHeadernavMenu() {
