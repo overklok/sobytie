@@ -1205,6 +1205,12 @@ span.text-underlined {
     font-size: 16px;
   }
 }
+@media (max-width: 767.98px) {
+  .blk.blk-upcoming .blk-upcoming__btn {
+    font-size: 10px;
+    line-height: 22px;
+  }
+}
 .blk {
   padding: 50px 40px;
   /* Global modifiers */
@@ -1526,6 +1532,8 @@ span.text-underlined {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    visibility: visible;
+    opacity: 1;
     position: absolute;
     top: 100%;
     background-color: #004645;
@@ -1535,10 +1543,11 @@ span.text-underlined {
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px solid #80A2A2;
-    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), visibility 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
   .headernav.headernav_collapsed {
     opacity: 0;
+    visibility: hidden;
   }
   .headernav .headernav__items {
     display: flex;

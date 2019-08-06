@@ -196,7 +196,8 @@ function openEventcardFull($eventcard, $col_day) {
 }
 
 function openEventcardMobile($eventcard, noscroll) {
-    var $pc_back = $("." + CLASS_PAGECTRL_BACK);
+    var $pc_back = $("." + CLASS_PAGECTRL_BACK),
+        $eventcard_wrap = $("#" + ID_EVENTCARD_M_WRAP);
 
     $("." + CLASS_SCHEDULE).hide();
     $pc_back.fadeIn(FADE_TIME);
@@ -204,7 +205,7 @@ function openEventcardMobile($eventcard, noscroll) {
     /// Hide Calendar, show Eventcard, add background to the heading of the column
     $("." + CAL_CLASSES.TABLE_WRAP).fadeOut(FADE_TIME);
 
-    $eventcard_wrap = $("#" + ID_EVENTCARD_M_WRAP);
+    // $eventcard_wrap = $("#" + ID_EVENTCARD_M_WRAP);
 
     $eventcard = $eventcard.clone();
 
@@ -214,7 +215,7 @@ function openEventcardMobile($eventcard, noscroll) {
     $eventcard.fadeIn(FADE_TIME);
 
     if (!noscroll) {
-        scrollToElement($pc_back);
+        scrollToElement($eventcard_wrap);
     }
 }
 
@@ -282,6 +283,11 @@ function getEventByEventcard($eventcard) {
     return $("." + CAL_CLASSES.EVENT + "[data-eventcard-id=" + eventcard_id + "]");
 }
 
+/**
+ * Перемотать страницу к элементу
+ *
+ * @param $element
+ */
 function scrollToElement($element) {
     setTimeout(function() {
         $("body,html").animate({

@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../../styles/main.css">
 
     <script src="../../scripts/_vendor/jquery-3.4.1.min.js"></script>
+    <script src="../../scripts/base.js"></script>
     <script src="../../scripts/slider.js"></script>
+    <script src="../../scripts/cal.js"></script>
 
     <title>Персональная страница</title>
 </head>
@@ -17,17 +19,78 @@
         <a href="/pages/index.html" class="headerlogo">
             <img class="headerlogo__img" src="../../assets/images/logo.svg" alt="СоБытие">
         </a>
-        <nav class="headernav">
-            <a href="/pages/index.html" class="headernav__item">Главная</a>
-            <a href="" class="headernav__item">Услуги</a>
-            <a href="/pages/events.html" class="headernav__item">Мероприятия</a>
-            <a href="/pages/stories.html" class="headernav__item">Истории</a>
-            <a href="/pages/about.html" class="headernav__item headernav__item_selected">О нас</a>
+        <nav class="headernav headernav_collapsed">
+            <div class="headernav__items">
+                <a href="/pages/index.html" class="headernav__item">Главная</a>
+                <a href="/pages/services.html" class="headernav__item">Услуги</a>
+                <a href="/pages/events.html" class="headernav__item">Мероприятия</a>
+                <a href="/pages/stories.html" class="headernav__item">Истории</a>
+                <a href="/pages/about.html" class="headernav__item headernav__item_selected">О нас</a>
+            </div>
+
+            <div class="headernav__menu footernav row m-0">
+                <div class="col-12 col-lg-6 p-0">
+                    <div class="row m-0 p-0">
+                        <div class="col-12 col-lg-5 p-0">
+                            <ul class="footernav-menu">
+                                <li class="footernav-menu__heading">Соцсети</li>
+
+                                <li class="footernav-menu__item"><a href="">Вконтакте</a></li>
+                                <li class="footernav-menu__item"><a href="">Инстаграм</a></li>
+                                <li class="footernav-menu__item"><a href="">Фейсбук</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex-col col-12 col-lg-7 p-0">
+                            <ul class="footernav-menu">
+                                <li class="footernav-menu__heading">О ваших данных</li>
+
+                                <li class="footernav-menu__item"><a href="">Использование Куки</a></li>
+                                <li class="footernav-menu__item"><a href="">Правила обработки</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-col col-12 col-lg-6 p-0">
+                    <ul class="footernav-menu">
+                        <li class="footernav-menu__heading">Рассылка</li>
+
+                        <li class="footernav-menu__itemtext">
+                            <p class="text-light">
+                                Несколько эксклюзивных статей и специальных предложений раз в месяц с доставкой на вашу почту:
+                            </p>
+                        </li>
+                    </ul>
+
+                    <form class="form form_footer form-inline form-fullwidth">
+                        <input type="email" class="form__input form-control mr-2" placeholder="Ваш Email:">
+                        <button type="submit" class="btn btn-primary btn-short">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="headernav__copy footercopy row m-0">
+                <div class="footercopy__left col-4 p-0">
+                    <span class="footercopy__copyright">&copy; ООО &laquo;Событие&raquo;, 2019</span>
+                </div>
+                <div class="footercopy__center col-6">
+                    <span class="footercopy__address">620075, г. Екатеринбург, ул. Шарташская, 23</span>
+                </div>
+                <div class="footercopy__right col-2">
+                    <span class="footercopy__tel"><a href="tel:+73432432323">+7 (343) 243 23 23</a></span>
+                </div>
+            </div>
         </nav>
         <div class="headersocial">
             <a href="" class="headersocial__item"><i class="icon icon_menu icon-sob-ig"></i></a>
             <a href="" class="headersocial__item"><i class="icon icon_menu icon-sob-fb"></i></a>
             <a href="" class="headersocial__item"><i class="icon icon_menu icon-sob-phone"></i></a>
+        </div>
+        <div class="headerswitch">
+            <div class="headerswitch__burger burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -125,9 +188,13 @@
         </div>
     </section>
 
+    <section id="eventcard-active" class="container">
+        <!-- Mobile screen extra, do not remove-->
+    </section>
+
     <section id="main" class="container d-none d-md-block">
         <div class="blk blk-schedule">
-            <h2 class="text-center">Ближайшие меропиятия</h2>
+            <h2 class="text-center">24 &mdash; 30 Июня</h2>
 
             <div class="cal">
                 <div class="cal__legend row">
@@ -150,8 +217,8 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-2 col-lg-12">
+                <div class="row m-0">
+                    <div class="col-12 d-none d-lg-block">
                         <div class="cal__table-head seven-cols row">
                             <div class="cal__col cal__col_day col-lg-1">
                                 <div class="cal__day">
@@ -198,10 +265,16 @@
                         </div>
                     </div>
 
-                    <div class="col-10 col-lg-12">
-                        <div class="cal__table seven-cols row">
+                    <div class="cal__table_wrap col-12 p-0">
+                        <div class="cal__table seven-cols row m-0">
                             <div class="cal__col cal__col_of col-lg-1">
-                                <div class="cal__event cal__event_closed">
+                                <div class="cal__day-m d-lg-none">
+                                    <p>24 Июня / ПН</p>
+                                </div>
+
+                                <div class="cal__event cal__event_closed" data-eventcard-id="1">
+                                    <a href="" class="cal__event__link"></a>
+
                                     <div class="cal__event__title">
                                         Арт-терапия
                                     </div>
@@ -214,7 +287,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cal__event">
+                                <div class="cal__event" data-eventcard-id="2">
+                                    <a href="" class="cal__event__link"></a>
+
                                     <div class="cal__event__title">
                                         Личностный рост и креативность
                                     </div>
@@ -223,13 +298,20 @@
                                             13:00 <i class="icon icon-sob-time"></i>
                                         </div>
                                         <div class="cal__event_detail">
-                                            Главный офис на ул. Пушкина, д. 7<i class="icon icon-sob-geotag"></i>
+                                            Главный офис на ул. Пушкина, д. 7
+                                            <i class="icon icon-sob-geotag"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="cal__col cal__col_of col-lg-1">
-                                <div class="cal__event cal__event_cancelled">
+                                <div class="cal__day-m d-lg-none">
+                                    <p>25 Июня / ВТ</p>
+                                </div>
+
+                                <div class="cal__event cal__event_cancelled" data-eventcard-id="3">
+                                    <a href="" class="cal__event__link"></a>
+
                                     <div class="cal__event__title">
                                         Мастер класс «Стань успешнее»
                                     </div>
@@ -244,7 +326,12 @@
                                 </div>
                             </div>
                             <div class="cal__col cal__col_of col-lg-1">
-                                <div class="cal__event">
+                                <div class="cal__day-m d-lg-none">
+                                    <p>26 Июня / СР</p>
+                                </div>
+                                <div class="cal__event" data-eventcard-id="4">
+                                    <a href="" class="cal__event__link"></a>
+
                                     <div class="cal__event__title">
                                         Групповой тренинг личности
                                     </div>
@@ -259,7 +346,13 @@
                                 </div>
                             </div>
                             <div class="cal__col cal__col_of col-lg-1">
+                                <div class="cal__day-m d-lg-none">
+                                    <p>27 Июня / ЧТ</p>
+                                </div>
+
                                 <div class="cal__event">
+                                    <a href="" class="cal__event__link"></a>
+
                                     <div class="cal__event__title">
                                         Групповой тренинг личности
                                     </div>
@@ -274,8 +367,23 @@
                                 </div>
                             </div>
                             <div class="cal__col cal__col_of col-lg-1">
+                                <div class="cal__day-m d-lg-none">
+                                    <p>28 Июня / ПТ</p>
+                                </div>
+
+                                <div class="cal__event cal__event_noevents">
+                                    <div class="cal__event__title">
+                                        Нет мероприятий
+                                    </div>
+                                </div>
                             </div>
                             <div class="cal__col cal__col_of col-lg-1">
+                                <a href="" class="cal__event__link"></a>
+
+                                <div class="cal__day-m d-lg-none">
+                                    <p>29 Июня / СБ</p>
+                                </div>
+
                                 <div class="cal__event">
                                     <div class="cal__event__title">
                                         Арт-терапия
@@ -290,6 +398,8 @@
                                     </div>
                                 </div>
                                 <div class="cal__event">
+                                    <a href="" class="cal__event__link"></a>
+
                                     <div class="cal__event__title">
                                         Мастер-класс «Стань успешнее»
                                     </div>
@@ -303,6 +413,8 @@
                                     </div>
                                 </div>
                                 <div class="cal__event">
+                                    <a href="" class="cal__event__link"></a>
+
                                     <div class="cal__event__title">
                                         Арт-терапия
                                     </div>
@@ -317,7 +429,13 @@
                                 </div>
                             </div>
                             <div class="cal__col cal__col_of col-lg-1">
+                                <div class="cal__day-m d-lg-none">
+                                    <p>30 Июня / ВС</p>
+                                </div>
+
                                 <div class="cal__event cal__event_cancelled">
+                                    <a href="" class="cal__event__link"></a>
+
                                     <div class="cal__event__title">
                                         Личностный рост и креативность
                                     </div>
@@ -330,7 +448,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cal__event">
+                                <div class="cal__event cal__event_cancelled" data-eventcard-id="3">
+                                    <a href="" class="cal__event__link"></a>
+
                                     <div class="cal__event__title">
                                         Арт-терапия
                                     </div>
@@ -342,6 +462,97 @@
                                             Главный офис<i class="icon icon-sob-geotag"></i>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cal__details_wrap col-12">
+                        <div class="cal__details eventcard eventcard_closed row" data-id="1">
+                            <div class="eventcard__textbox col-12 col-lg-6">
+                                <h2 class="eventcard__heading text-center text-lg-left">Групповой тренинг личности</h2>
+
+                                <p class="eventcard__text">
+                                    Небольшой текст, который расскажет о мероприятии, его целях, методах и форме прохождения.
+                                </p>
+
+                                 <div class="eventcard__props">
+                                    <p class="eventcard__prop">
+                                        <i class="icon icon_eventcard icon-sob-man"></i> Ольга Иванова
+                                    </p>
+                                    <p class="eventcard__prop">
+                                        <i class="icon icon_eventcard icon-sob-time"></i> 26 июня 13:00
+                                    </p>
+                                    <p class="eventcard__prop">
+                                        <i class="icon icon_eventcard icon-sob-geotag"></i> Главный офис
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="eventcard__mediabox col-12 col-lg-6">
+                                <div class="eventcard__pic" style="background-image: url('http://loremflickr.com/320/180/')">
+                                </div>
+                                <div class="eventcard__button-bar row m-0">
+                                    <a href="#" class="eventcard__button-submit btn btn-primary btn-wide">Записаться</a>
+                                    <a href="#" class="eventcard__button-close btn btn-secondary">Закрыть</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cal__details eventcard row" data-id="2">
+                            <div class="eventcard__textbox col-12 col-lg-6">
+                                <h2 class="eventcard__heading text-center text-lg-left">Личностный рост и креативность</h2>
+
+                                <p class="eventcard__text">
+                                    Небольшой текст, который расскажет о мероприятии, его целях, методах и форме прохождения.
+                                </p>
+
+                                 <div class="eventcard__props">
+                                    <p class="eventcard__prop">
+                                        <i class="icon icon_eventcard icon-sob-man"></i> Ольга Иванова
+                                    </p>
+                                    <p class="eventcard__prop">
+                                        <i class="icon icon_eventcard icon-sob-time"></i> 26 июня 13:00
+                                    </p>
+                                    <p class="eventcard__prop">
+                                        <i class="icon icon_eventcard icon-sob-geotag"></i> Главный офис
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="eventcard__mediabox col-12 col-lg-6">
+                                <div class="eventcard__pic" style="background-image: url('http://loremflickr.com/320/180/')">
+                                </div>
+                                <div class="eventcard__button-bar row m-0">
+                                    <a href="#" class="eventcard__button-submit btn btn-primary btn-wide">Записаться</a>
+                                    <a href="#" class="eventcard__button-close btn btn-secondary">Закрыть</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cal__details eventcard eventcard_cancelled row" data-id="3">
+                            <div class="eventcard__textbox col-12 col-lg-6">
+                                <h2 class="eventcard__heading text-center text-lg-left">Мастер класс &laquo;Стань успешнее&raquo;</h2>
+
+                                <p class="eventcard__text">
+                                    Небольшой текст, который расскажет о мероприятии, его целях, методах и форме прохождения.
+                                </p>
+
+                                 <div class="eventcard__props">
+                                    <p class="eventcard__prop">
+                                        <i class="icon icon_eventcard icon-sob-man"></i> Ольга Иванова
+                                    </p>
+                                    <p class="eventcard__prop">
+                                        <i class="icon icon_eventcard icon-sob-time"></i> 26 июня 13:00
+                                    </p>
+                                    <p class="eventcard__prop">
+                                        <i class="icon icon_eventcard icon-sob-geotag"></i> Главный офис
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="eventcard__mediabox col-12 col-lg-6">
+                                <div class="eventcard__pic" style="background-image: url('http://loremflickr.com/320/180/')">
+                                </div>
+                                <div class="eventcard__button-bar row m-0">
+                                    <a href="#" class="eventcard__button-submit btn btn-primary btn-wide btn-inactive">Записаться</a>
+                                    <a href="#" class="eventcard__button-close btn btn-secondary">Закрыть</a>
                                 </div>
                             </div>
                         </div>

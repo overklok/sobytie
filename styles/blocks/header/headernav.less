@@ -43,6 +43,9 @@
     flex-direction: column;
     justify-content: space-between;
 
+    visibility: visible;
+    opacity: 1;
+
     position: absolute;
     top: 100%;
     background-color: @color_background;
@@ -57,10 +60,12 @@
 
     border-top: 1px solid #80A2A2;
 
-    transition: opacity 0.5s @anim_fn;
+    transition: opacity 0.5s @anim_fn,
+                visibility 0.5s @anim_fn;
 
     &.headernav_collapsed {
       opacity: 0;
+      visibility: hidden;
     }
 
     .headernav__items {
