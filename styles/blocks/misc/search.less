@@ -1,48 +1,52 @@
+/**
+  Поисковая форма
+ */
+
 .search__item {
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    border-radius: 0;
-    -webkit-transition: .3s;
-    transition: .3s;
-    background: transparent;
-    position: relative;
-    -webkit-transform: rotate(-135deg);
-    transform: rotate(-135deg)
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  background: transparent;
+  position: relative;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg)
 }
 
-.search__item::before,.search__item::after {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    border-radius: 0;
-    -webkit-transition: .3s;
-    transition: .3s;
-    background: transparent;
-    content: '';
-    position: absolute;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    margin: auto
+.search__item::before, .search__item::after {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  background: transparent;
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  margin: auto
 }
 
 .search__item::before {
-    height: 4px;
-    left: 0;
-    background: @color_default_fg;
-    border-radius: 2.85714px
+  height: 4px;
+  left: 0;
+  background: @color_default_fg;
+  border-radius: 2.85714px
 }
 
 .search__item::after {
-    right: 0;
-    background: #fff;
-    border-radius: 50%;
-    width: 12.00012px;
-    height: 12.00012px;
-    border: 2px solid @color_default_fg;
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%
+  right: 0;
+  background: #fff;
+  border-radius: 50%;
+  width: 12.00012px;
+  height: 12.00012px;
+  border: 2px solid @color_default_fg;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%
 }
 
 .search {
@@ -51,21 +55,21 @@
 }
 
 .search.search_opened {
-    -webkit-transform: scale3d(0.8, 0.8, 0.8) translateY(3px) scale(1.2);
-    transform: scale3d(0.8, 0.8, 0.8) translateY(3px) scale(1.2);
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) translateY(3px) scale(1.2);
+  transform: scale3d(0.8, 0.8, 0.8) translateY(3px) scale(1.2);
 }
 
-.search.search_opened .search__item::before,.search.search_opened .search__item::after {
-    border-radius: 2.85714px;
-    background: @color_default_fg;
+.search.search_opened .search__item::before, .search.search_opened .search__item::after {
+  border-radius: 2.85714px;
+  background: @color_default_fg;
 }
 
 .search.search_opened .search__item::after {
-    height: 4px;
-    width: 100%;
-    top: 0;
-    right: 0;
-    border: 0;
-    -webkit-transform: rotate3d(0, 0, 1, 90deg);
-    transform: rotate3d(0, 0, 1, 90deg)
+  height: 4px;
+  width: 100%;
+  top: 0;
+  right: 0;
+  border: 0;
+  -webkit-transform: rotate3d(0, 0, 1, 90deg);
+  transform: rotate3d(0, 0, 1, 90deg)
 }
