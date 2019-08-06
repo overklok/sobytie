@@ -4,6 +4,7 @@ const MOBILE_TO = 991.98; /* md */
 
 const CLASS_SCHEDULE = "blk-schedule";
 const CLASS_PAGECTRL_BACK = "pagectrl__back";
+const CLASS_PAGECTRL_BACK_CAL = "pagectrl__back_cal";
 
 const ID_EVENTCARD_M_WRAP = "eventcard-active";
 
@@ -14,8 +15,12 @@ const EVENTCARD_CLASSES = {
 
 const CAL_CLASSES = {
     BLOCK: "cal",
+
+    _SELECTABLE: "cal_selectable",
+
     EVENT: "cal__event",
     EVENT_LINK: "cal__event__link",
+    EVENT_SELECTED: "cal__event_selected",
 
     TABLE_HEAD: "cal__table-head",
     TABLE_WRAP: "cal__table_wrap",
@@ -35,6 +40,16 @@ const CAL_CLASSES = {
     BG: "cal__bg"
 };
 
+const DATE_SELECTED_CONTENT_CLASS = "date-selected-content";
+const DATE_SELECTED_PREFIX_CLASS = "date-selected-prefix";
+const DATE_SELECTED_DEFAULT_CLASS = "date-selected-default";
+
+const DATE_SELECTED_LOCKABLE_TARGET_ID = "calSelectLockable";
+const DATE_SELECTED_LOCKABLE_TARGET_LOCKED_CLASS = "blk-service__step_inactive";
+
+const BTN_CLASS = "btn";
+const BTN_INACTIVE_CLASS = "btn-inactive";
+
 var G_EVENTCARD_ACTIVE = undefined;
 var G_IS_MOBILE = undefined;
 
@@ -42,6 +57,8 @@ $(document).ready(function() {
     initEvents();
     initAllEventcards();
     initBackClick();
+
+    initSelectable();
 
     G_IS_MOBILE = ($(window).width() < MOBILE_TO);
 
@@ -72,10 +89,54 @@ function initAllEventcards() {
 
 function initBackClick() {
     $("." + CLASS_PAGECTRL_BACK).click(function (evt) {
+        if ($(evt.target).hasClass(CLASS_PAGECTRL_BACK_CAL))
         evt.preventDefault();
 
         closeActiveEventcard();
     })
+}
+
+function initSelectable() {
+    $("." + DATE_SELECTED_PREFIX_CLASS).hide();
+
+    $("." + CAL_CLASSES._SELECTABLE + " ." + CAL_CLASSES.EVENT_LINK).click(function(evt) {
+        evt.preventDefault();
+
+        var title = undefined;
+
+        var $target = $(evt.target);
+        var $event = $target.parent("." + CAL_CLASSES.EVENT);
+
+        if ($event.hasClass(CAL_CLASSES.EVENT_SELECTED)) {
+            $event.removeClass(CAL_CLASSES.EVENT_SELECTED);
+        } else {
+            $("." + CAL_CLASSES.EVENT_SELECTED).removeClass(CAL_CLASSES.EVENT_SELECTED);
+
+            title = $event.data("title");
+
+            if (title) {
+                $event.addClass(CAL_CLASSES.EVENT_SELECTED);
+            }
+        }
+
+        var $lockable = $("#" + DATE_SELECTED_LOCKABLE_TARGET_ID);
+
+        if (title) {
+            $("." + DATE_SELECTED_DEFAULT_CLASS).hide();
+            $("." + DATE_SELECTED_PREFIX_CLASS).show();
+            $("." + DATE_SELECTED_CONTENT_CLASS).show().text(title);
+
+            $lockable.removeClass(DATE_SELECTED_LOCKABLE_TARGET_LOCKED_CLASS);
+            $lockable.find("." + BTN_CLASS).removeClass(BTN_INACTIVE_CLASS);
+        } else {
+            $("." + DATE_SELECTED_CONTENT_CLASS).hide();
+            $("." + DATE_SELECTED_PREFIX_CLASS).hide();
+            $("." + DATE_SELECTED_DEFAULT_CLASS).show();
+
+            $lockable.addClass(DATE_SELECTED_LOCKABLE_TARGET_LOCKED_CLASS);
+            $lockable.find("." + BTN_CLASS).addClass(BTN_INACTIVE_CLASS);
+        }
+    });
 }
 
 function onWindowResize(evt) {

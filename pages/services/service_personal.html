@@ -16,6 +16,7 @@
             type="text/javascript"></script>
 
     <!--Custom scripts-->
+    <script src="../../scripts/base.js"></script>
     <script src="../../scripts/slider.js"></script>
     <script src="../../scripts/map.js"></script>
 
@@ -26,23 +27,84 @@
         <a href="/pages/index.html" class="headerlogo">
             <img class="headerlogo__img" src="../../assets/images/logo.svg" alt="СоБытие">
         </a>
-        <nav class="headernav">
-            <a href="/pages/index.html" class="headernav__item">Главная</a>
-            <a href="/pages/services.html" class="headernav__item headernav__item_selected">Услуги</a>
-            <a href="/pages/events.html" class="headernav__item">Мероприятия</a>
-            <a href="/pages/stories.html" class="headernav__item">Истории</a>
-            <a href="/pages/about.html" class="headernav__item">О нас</a>
+        <nav class="headernav headernav_collapsed">
+            <div class="headernav__items">
+                <a href="/pages/index.html" class="headernav__item">Главная</a>
+                <a href="/pages/services.html" class="headernav__item headernav__item_selected">Услуги</a>
+                <a href="/pages/events.html" class="headernav__item">Мероприятия</a>
+                <a href="/pages/stories.html" class="headernav__item">Истории</a>
+                <a href="/pages/about.html" class="headernav__item">О нас</a>
+            </div>
+
+            <div class="headernav__menu footernav row m-0">
+                <div class="col-12 col-lg-6 p-0">
+                    <div class="row m-0 p-0">
+                        <div class="col-12 col-lg-5 p-0">
+                            <ul class="footernav-menu">
+                                <li class="footernav-menu__heading">Соцсети</li>
+
+                                <li class="footernav-menu__item"><a href="">Вконтакте</a></li>
+                                <li class="footernav-menu__item"><a href="">Инстаграм</a></li>
+                                <li class="footernav-menu__item"><a href="">Фейсбук</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex-col col-12 col-lg-7 p-0">
+                            <ul class="footernav-menu">
+                                <li class="footernav-menu__heading">О ваших данных</li>
+
+                                <li class="footernav-menu__item"><a href="">Использование Куки</a></li>
+                                <li class="footernav-menu__item"><a href="">Правила обработки</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-col col-12 col-lg-6 p-0">
+                    <ul class="footernav-menu">
+                        <li class="footernav-menu__heading">Рассылка</li>
+
+                        <li class="footernav-menu__itemtext">
+                            <p class="text-light">
+                                Несколько эксклюзивных статей и специальных предложений раз в месяц с доставкой на вашу почту:
+                            </p>
+                        </li>
+                    </ul>
+
+                    <form class="form form_footer form-inline form-fullwidth">
+                        <input type="email" class="form__input form-control mr-2" placeholder="Ваш Email:">
+                        <button type="submit" class="btn btn-primary btn-short">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="headernav__copy footercopy row m-0">
+                <div class="footercopy__left col-4 p-0">
+                    <span class="footercopy__copyright">&copy; ООО &laquo;Событие&raquo;, 2019</span>
+                </div>
+                <div class="footercopy__center col-6">
+                    <span class="footercopy__address">620075, г. Екатеринбург, ул. Шарташская, 23</span>
+                </div>
+                <div class="footercopy__right col-2">
+                    <span class="footercopy__tel"><a href="tel:+73432432323">+7 (343) 243 23 23</a></span>
+                </div>
+            </div>
         </nav>
         <div class="headersocial">
             <a href="" class="headersocial__item"><i class="icon icon_menu icon-sob-ig"></i></a>
             <a href="" class="headersocial__item"><i class="icon icon_menu icon-sob-fb"></i></a>
             <a href="" class="headersocial__item"><i class="icon icon_menu icon-sob-phone"></i></a>
         </div>
+        <div class="headerswitch">
+            <div class="headerswitch__burger burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
 
     <section id="controls" class="container container_ctrl">
         <nav class="pagectrl">
-            <a href="/pages/about" class="pagectrl__back"><i class="icon icon_ctrl icon-sob-triangle-bwd"></i>Назад</a>
+            <a href="/pages/services.html" class="pagectrl__back"><i class="icon icon_ctrl icon-sob-triangle-bwd"></i>Назад</a>
         </nav>
     </section>
 
@@ -50,16 +112,22 @@
         <div class="blk blk-service">
             <div class="row m-0">
                 <div class="col-lg-10 p-0">
-                    <h1 class="blk-service__heading">
+                    <h1 class="blk-service__heading text-center text-md-left">
                         Коучинг
                     </h1>
 
-                    <div class="blk-service__tag">Индивидуальные консультации</div>
+                    <div class="blk-service__tag text-center text-md-left">Индивидуальные консультации</div>
                 </div>
             </div>
 
             <div class="blk-service__desc row m-0">
-                <div class="blk-service__desc-col col-lg-7">
+                <div class="blk-service__desc-col col-lg-5 d-block d-md-none">
+                    <div class="blk-service__img"
+                         style="background-image: url('http://loremflickr.com/400/200/?random=2')">
+                    </div>
+                </div>
+
+                <div class="blk-service__desc-col col-lg-7 pl-md-0">
                     <p class="blk-service__text">
                         Текст описывающий суть услуги: кому, зачем, почему.
                         Суммарно до 5-6 предложений, далее текст описывает,
@@ -71,9 +139,9 @@
                         будущий портрет себя и своей жизни в деталях, правила и рекомендации как их достичь.
                     </p>
                 </div>
-                <div class="blk-service__desc-col col-lg-5">
+                <div class="blk-service__desc-col col-lg-5 pr-md-0 d-none d-md-block">
                     <div class="blk-service__img"
-                         style="background-image: url('http://loremflickr.com/400/200/')">
+                         style="background-image: url('http://loremflickr.com/400/200/?random=2')">
                     </div>
                 </div>
             </div>
@@ -82,36 +150,44 @@
                 <h3 class="blk-service__team-heading text-section">Проводят:</h3>
 
                 <div class="blk-service__team blk-team row">
-                    <div class="blk-team__item col-md-3">
-                        <div class="blk-team__card mcard mcard_quad gradient-overlay gradient-mcard_quad"
+                    <div class="blk-service__team-item blk-team__item col-4 col-lg-3">
+                        <div class="blk-team__card mcard mcard_quad">
+                            <div class="mcard__bg gradient-overlay gradient-mcard_quad"
                              style="background-image: url('../../assets/images/team/t1.png')">
+                            </div>
                             <a href="" class="mcard__link"></a>
                             <div class="mcard__content">
                                 <p class="mcard__name oneword"><span class="signature light">Анна Денаева</span></p>
                             </div>
                         </div>
                     </div>
-                    <div class="blk-team__item col-md-3">
-                        <div class="blk-team__card mcard mcard_quad gradient-overlay gradient-mcard_quad"
+                    <div class="blk-service__team-item blk-team__item col-4 col-lg-3">
+                        <div class="blk-team__card mcard mcard_quad">
+                            <div class="mcard__bg gradient-overlay gradient-mcard_quad"
                              style="background-image: url('../../assets/images/team/t3.png')">
+                            </div>
                             <a href="" class="mcard__link"></a>
                             <div class="mcard__content">
                                 <p class="mcard__name oneword"><span class="signature light">Диана Матвеева</span></p>
                             </div>
                         </div>
                     </div>
-                    <div class="blk-team__item col-md-3">
-                        <div class="blk-team__card mcard mcard_quad gradient-overlay gradient-mcard_quad"
+                    <div class="blk-service__team-item blk-team__item col-4 col-lg-3">
+                        <div class="blk-team__card mcard mcard_quad">
+                            <div class="mcard__bg gradient-overlay gradient-mcard_quad"
                              style="background-image: url('../../assets/images/team/t5.png')">
+                            </div>
                             <a href="" class="mcard__link"></a>
                             <div class="mcard__content">
                                 <p class="mcard__name oneword"><span class="signature light">Ольга Орлова</span></p>
                             </div>
                         </div>
                     </div>
-                    <div class="blk-team__item col-md-3">
-                        <div class="blk-team__card mcard mcard_quad gradient-overlay gradient-mcard_quad"
+                    <div class="blk-service__team-item blk-team__item col-4 col-lg-3">
+                        <div class="blk-team__card mcard mcard_quad">
+                            <div class="mcard__bg gradient-overlay gradient-mcard_quad"
                              style="background-image: url('../../assets/images/team/t6.png')">
+                            </div>
                             <a href="" class="mcard__link"></a>
                             <div class="mcard__content">
                                 <p class="mcard__name oneword"><span class="signature light">Юлия Кисличенко</span></p>
@@ -122,17 +198,25 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-6">
-                    <h3 class="text-section">Запишитесь прямо сейчас!</h3>
-                    <p>Выберите удобный для вас день и время в нашем календаре</p>
-                    <a href="" class="btn btn-secondary btn-wider">Выбрать мероприятие на календаре</a>
+                <div class="blk-service__step col-lg-6">
+                    <h3 class="blk-service__heading text-center text-md-left">Запишитесь прямо сейчас!</h3>
+                    <p class="blk-service__text text-center text-md-left">
+                        Выберите удобный для вас день и время в нашем календаре!
+                    </p>
+                    <a href="/pages/services/entry.html" class="blk-service__btn-select btn btn-secondary btn-wider">
+                        Выбрать мероприятие на календаре
+                    </a>
                 </div>
-                <div class="col-lg-6">
-                    <h3 class="text-section">Хотите узнать больше?</h3>
-                    <p>Оставьте свой номер и мы перезвоним через 10 минут (с 10:00 до 19:00)</p>
-                    <form class="blk-contacts__form form form-inline form-fullwidth">
-                        <input type="tel" class="form__input form-control mr-3" placeholder="Телефон:">
-                        <button type="submit" class="form__submit btn btn-primary btn-short">Позвоните мне</button>
+                <div class="blk-service__step col-lg-6">
+                    <h3 class="blk-service__heading text-center text-md-left">Хотите узнать больше?</h3>
+                    <p class="blk-service__text text-center text-md-left">
+                        Оставьте свой номер и мы перезвоним через 10 минут (с 10:00 до 19:00)
+                    </p>
+                    <form class="blk-service__form form form-inline form-fullwidth">
+                        <input type="tel" class="form__input form-control mr-1 mr-md-3" placeholder="Телефон:">
+                        <button type="submit" class="blk-service__btn-submit form__submit btn btn-primary btn-short">
+                            Позвоните мне
+                        </button>
                     </form>
                 </div>
             </div>
@@ -141,9 +225,9 @@
 
     <footer class="container blk">
         <nav class="footernav row m-0">
-            <div class="col-md-6 p-0">
+            <div class="col-12 col-lg-6 p-0">
                 <div class="row m-0 p-0">
-                    <div class="col-md-5 p-0">
+                    <div class="col-12 col-lg-5 p-0">
                         <ul class="footernav-menu">
                             <li class="footernav-menu__heading">Меню</li>
 
@@ -155,7 +239,7 @@
                             <li class="footernav-menu__item"><a href="">Контакты</a></li>
                         </ul>
                     </div>
-                    <div class="flex-col col-md-7 p-0">
+                    <div class="flex-col col-12 col-lg-7 p-0">
                         <ul class="footernav-menu">
                             <li class="footernav-menu__heading">Социальные сети</li>
 
@@ -172,27 +256,31 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-col col-md-6 p-0">
+            <div class="flex-col col-12 col-lg-6 p-0">
                 <ul class="footernav-menu">
                     <li class="footernav-menu__heading">Рассылка</li>
 
-                    <li class="footernav-menu__item">
-                        Несколько эксклюзивных статей и специальных предложений раз в месяц с доставкой на вашу почту:
+                    <li class="footernav-menu__itemtext">
+                        <p class="text-light">
+                            Несколько эксклюзивных статей и специальных предложений раз в месяц с доставкой на вашу почту:
+                        </p>
                     </li>
                 </ul>
 
                 <form class="form form_footer form-inline form-fullwidth">
-                    <input type="email" class="form__input form-control mr-3" placeholder="Ваш Email:">
+                    <input type="email" class="form__input form-control mr-2" placeholder="Ваш Email:">
                     <button type="submit" class="btn btn-primary btn-short">Подписаться</button>
                 </form>
             </div>
         </nav>
         <div class="footercopy row m-0">
-            <div class="footercopy__left col-lg-10 col-sm-6">
+            <div class="footercopy__left col-4 p-0">
                 <span class="footercopy__copyright">&copy; ООО &laquo;Событие&raquo;, 2019</span>
+            </div>
+            <div class="footercopy__center col-6 col-sm-5 col-xl-6">
                 <span class="footercopy__address">620075, г. Екатеринбург, ул. Шарташская, 23</span>
             </div>
-            <div class="col-lg-2 col-sm-6 p-0">
+            <div class="footercopy__right col-2 col-sm-3 col-xl-2">
                 <span class="footercopy__tel"><a href="tel:+73432432323">+7 (343) 243 23 23</a></span>
             </div>
         </div>

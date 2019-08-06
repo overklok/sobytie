@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Y.Maps iOS fix-->
+    <meta name="viewport" content="user-scalable=no, maximum-scale=1" />
 
-    <link rel="stylesheet" href="../styles/_vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../../styles/_vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles/main.css">
 
-    <script src="../scripts/_vendor/jquery-3.4.1.min.js"></script>
-    <script src="../scripts/base.js"></script>      <!-- Necessary for dynamic pages -->
-    <script src="../scripts/slider.js"></script>
-    <script src="../scripts/cal.js"></script>
+    <!--jQuery-->
+    <script src="../../scripts/_vendor/jquery-3.4.1.min.js"></script>
 
-    <title>Мероприятия</title>
+    <!--Custom scripts-->
+    <script src="../../scripts/base.js"></script>
+    <script src="../../scripts/slider.js"></script>
+    <script src="../../scripts/cal.js"></script>
+
+    <title>Услуги (открытая групповая услуга)</title>
 </head>
 <body class="main-bg">
     <header class="container">
         <a href="/pages/index.html" class="headerlogo">
-            <img class="headerlogo__img" src="../assets/images/logo.svg" alt="СоБытие">
+            <img class="headerlogo__img" src="../../assets/images/logo.svg" alt="СоБытие">
         </a>
         <nav class="headernav headernav_collapsed">
             <div class="headernav__items">
                 <a href="/pages/index.html" class="headernav__item">Главная</a>
-                <a href="/pages/services.html" class="headernav__item">Услуги</a>
-                <a href="/pages/events.html" class="headernav__item headernav__item_selected">Мероприятия</a>
+                <a href="/pages/services.html" class="headernav__item headernav__item_selected">Услуги</a>
+                <a href="/pages/events.html" class="headernav__item">Мероприятия</a>
                 <a href="/pages/stories.html" class="headernav__item">Истории</a>
                 <a href="/pages/about.html" class="headernav__item">О нас</a>
             </div>
@@ -94,104 +99,31 @@
         </div>
     </header>
 
-    <section id="intro-mobile" class="container d-block d-lg-none">
-        <div class="blk blk-cover gradient-overlay gradient-cover"
-             style="background-image: url('http://loremflickr.com/700/300?random=1')">
-            <div class="blk-cover__content">
-                <h1 class="blk-cover__heading light text-center text-lg-left">Мероприятия</h1>
-
-                <div class="row mx-5 mt-5">
-                    <div class="col-12 col-lg-10">
-                        <p class="blk-cover__text-desc light text-center text-lg-left">
-                            Небольшой текст, который расскажет о том, какие мероприятия проходят в центре,
-                            что на них происходит, цели этих мероприятий, а также описание профита,
-                            который получит адресат
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="intro-full" class="container d-none d-lg-block">
-        <div class="blk blk-slidertop">
-            <div class="slider" data-dur="500" data-delay="3000" data-fn="slide">
-                <div class="blk-slidertop__slide slider__item slider__bg gradient-overlay gradient-slide"
-                     style="background-image: url('http://loremflickr.com/700/300?random=1')">
-                    <div class="blk-slidertop__content">
-                        <h1 class="blk-slidertop__heading light">Саморазвитие и рост</h1>
-
-                        <p class="blk-slidertop__text light">
-                            Небольшой текст, который расскажет о том, какие мероприятия проходят в центре,
-                            что на них происходит, цели этих мероприятий, а также описание профита,
-                            который получит адресат
-                        </p>
-
-                        <p class="blk-slidertop__sub light">Доп текст, стоит уточнить</p>
-                    </div>
-                </div>
-                <div class="blk-slidertop__slide slider__item slider__bg gradient-overlay gradient-slide"
-                     style="background-image: url('http://loremflickr.com/700/300?random=2')">
-                    <div class="blk-slidertop__content">
-                        <h1 class="blk-slidertop__heading light">Саморазвитие и рост 2</h1>
-
-                        <p class="blk-slidertop__text light">
-                            Небольшой текст, который расскажет о том, какие мероприятия проходят в центре,
-                            что на них происходит, цели этих мероприятий, а также описание профита,
-                            который получит адресат
-                        </p>
-
-                        <p class="blk-slidertop__sub light">Доп текст, стоит уточнить</p>
-                    </div>
-                </div>
-                <div class="blk-slidertop__slide slider__item slider__bg gradient-overlay gradient-slide"
-                     style="background-image: url('http://loremflickr.com/700/300?random=3')">
-                    <div class="blk-slidertop__content">
-                        <h1 class="blk-slidertop__heading light">Саморазвитие и рост 3</h1>
-
-                        <p class="blk-slidertop__text light">
-                            Небольшой текст, который расскажет о том, какие мероприятия проходят в центре,
-                            что на них происходит, цели этих мероприятий, а также описание профита,
-                            который получит адресат
-                        </p>
-
-                        <p class="blk-slidertop__sub light">Доп текст, стоит уточнить</p>
-                    </div>
-                </div>
-                <div class="blk-slidertop__slide slider__item slider__bg gradient-overlay gradient-slide"
-                     style="
-                    background-image: url('http://loremflickr.com/700/300?random=4')">
-                    <div class="blk-slidertop__content">
-                        <h1 class="blk-slidertop__heading light">Саморазвитие и рост 4</h1>
-
-                        <p class="blk-slidertop__text light">
-                            Небольшой текст, который расскажет о том, какие мероприятия проходят в центре,
-                            что на них происходит, цели этих мероприятий, а также описание профита,
-                            который получит адресат
-                        </p>
-
-                        <p class="blk-slidertop__sub light">Доп текст, стоит уточнить</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="controls" class="container container_ctrl">
         <nav class="pagectrl">
-            <a href="#" class="pagectrl__back pagectrl__back_cal pagectrl_hidden"><i class="icon icon_ctrl icon-sob-triangle-bwd"></i>Назад</a>
+            <a href="/pages/services/service_group.html" class="pagectrl__back"><i class="icon icon_ctrl icon-sob-triangle-bwd"></i>Назад</a>
         </nav>
     </section>
 
-    <section id="eventcard-active" class="container">
-        <!-- Mobile screen extra, do not remove-->
-    </section>
+    <section id="intro" class="container">
+        <div class="blk blk-service">
+            <div class="row m-0">
+                <div class="col-lg-10 p-0">
+                    <h1 class="blk-service__heading text-center text-md-left">
+                        Лучшая версия себя. Воркшоп: Разработка пошаговой системы изменений себя и окружающего пространства
+                    </h1>
 
-    <section id="main" class="container">
-        <div class="blk blk-schedule">
-            <h2 class="text-center">24 &mdash; 30 Июня</h2>
+                    <div class="blk-service__tag text-center text-md-left">Воркшоп</div>
+                </div>
+            </div>
 
-            <div class="cal">
+            <h3 class="blk-service__heading text-center text-md-left my-2 my-md-5">
+                <span class="date-selected-default">1. Выберите подходящую дату:</span>
+                <span class="date-selected-prefix">1. Вы выбрали:</span>
+                <span class="date-selected-content"></span>
+            </h3>
+
+            <div class="cal cal_selectable">
                 <div class="cal__legend row">
                     <div class="col-8 col-sm-6 p-0">
                         <span class="cal__legend-marker cal__legend-marker_closed">Запись закрыта</span>
@@ -267,7 +199,7 @@
                                     <p>24 Июня / ПН</p>
                                 </div>
 
-                                <div class="cal__event cal__event_closed" data-eventcard-id="1">
+                                <div class="cal__event cal__event_closed" data-title="26 Июня, 13:00">
                                     <a href="" class="cal__event__link"></a>
 
                                     <div class="cal__event__title">
@@ -282,7 +214,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cal__event" data-eventcard-id="2">
+                                <div class="cal__event">
                                     <a href="" class="cal__event__link"></a>
 
                                     <div class="cal__event__title">
@@ -304,7 +236,7 @@
                                     <p>25 Июня / ВТ</p>
                                 </div>
 
-                                <div class="cal__event cal__event_cancelled" data-eventcard-id="3">
+                                <div class="cal__event cal__event_cancelled" data-title="25 Июня, 13:00">
                                     <a href="" class="cal__event__link"></a>
 
                                     <div class="cal__event__title">
@@ -324,7 +256,7 @@
                                 <div class="cal__day-m d-lg-none">
                                     <p>26 Июня / СР</p>
                                 </div>
-                                <div class="cal__event" data-eventcard-id="4">
+                                <div class="cal__event" data-title="26 Июня, 13:00">
                                     <a href="" class="cal__event__link"></a>
 
                                     <div class="cal__event__title">
@@ -345,7 +277,7 @@
                                     <p>27 Июня / ЧТ</p>
                                 </div>
 
-                                <div class="cal__event">
+                                <div class="cal__event" data-title="26 Июня, 13:00">
                                     <a href="" class="cal__event__link"></a>
 
                                     <div class="cal__event__title">
@@ -366,7 +298,7 @@
                                     <p>28 Июня / ПТ</p>
                                 </div>
 
-                                <div class="cal__event cal__event_noevents">
+                                <div class="cal__event cal__event_noevents" data-title="28 Июня, 13:00">
                                     <div class="cal__event__title">
                                         Нет мероприятий
                                     </div>
@@ -379,7 +311,7 @@
                                     <p>29 Июня / СБ</p>
                                 </div>
 
-                                <div class="cal__event">
+                                <div class="cal__event" data-title="29 Июня, 13:00">
                                     <div class="cal__event__title">
                                         Арт-терапия
                                     </div>
@@ -392,7 +324,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cal__event">
+                                <div class="cal__event" data-title="29 Июня, 13:00">
                                     <a href="" class="cal__event__link"></a>
 
                                     <div class="cal__event__title">
@@ -407,7 +339,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cal__event">
+                                <div class="cal__event" data-title="29 Июня, 13:00">
                                     <a href="" class="cal__event__link"></a>
 
                                     <div class="cal__event__title">
@@ -428,7 +360,7 @@
                                     <p>30 Июня / ВС</p>
                                 </div>
 
-                                <div class="cal__event cal__event_cancelled">
+                                <div class="cal__event cal__event_cancelled" data-title="30 Июня, 13:00">
                                     <a href="" class="cal__event__link"></a>
 
                                     <div class="cal__event__title">
@@ -443,7 +375,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cal__event cal__event_cancelled" data-eventcard-id="3">
+                                <div class="cal__event cal__event_cancelled" data-title="30 Июня, 13:00">
                                     <a href="" class="cal__event__link"></a>
 
                                     <div class="cal__event__title">
@@ -461,240 +393,31 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="cal__details_wrap col-12">
-                        <div class="cal__details eventcard eventcard_closed row" data-id="1">
-                            <div class="eventcard__textbox col-12 col-lg-6">
-                                <h2 class="eventcard__heading text-center text-lg-left">Групповой тренинг личности</h2>
-
-                                <p class="eventcard__text">
-                                    Небольшой текст, который расскажет о мероприятии, его целях, методах и форме прохождения.
-                                </p>
-
-                                 <div class="eventcard__props">
-                                    <p class="eventcard__prop">
-                                        <i class="icon icon_eventcard icon-sob-man"></i> Ольга Иванова
-                                    </p>
-                                    <p class="eventcard__prop">
-                                        <i class="icon icon_eventcard icon-sob-time"></i> 26 июня 13:00
-                                    </p>
-                                    <p class="eventcard__prop">
-                                        <i class="icon icon_eventcard icon-sob-geotag"></i> Главный офис
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="eventcard__mediabox col-12 col-lg-6">
-                                <div class="eventcard__pic" style="background-image: url('http://loremflickr.com/320/180/')">
-                                </div>
-                                <div class="eventcard__button-bar row m-0">
-                                    <a href="#" class="eventcard__button-submit btn btn-primary btn-wide">Записаться</a>
-                                    <a href="#" class="eventcard__button-close btn btn-secondary">Закрыть</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cal__details eventcard row" data-id="2">
-                            <div class="eventcard__textbox col-12 col-lg-6">
-                                <h2 class="eventcard__heading text-center text-lg-left">Личностный рост и креативность</h2>
-
-                                <p class="eventcard__text">
-                                    Небольшой текст, который расскажет о мероприятии, его целях, методах и форме прохождения.
-                                </p>
-
-                                 <div class="eventcard__props">
-                                    <p class="eventcard__prop">
-                                        <i class="icon icon_eventcard icon-sob-man"></i> Ольга Иванова
-                                    </p>
-                                    <p class="eventcard__prop">
-                                        <i class="icon icon_eventcard icon-sob-time"></i> 26 июня 13:00
-                                    </p>
-                                    <p class="eventcard__prop">
-                                        <i class="icon icon_eventcard icon-sob-geotag"></i> Главный офис
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="eventcard__mediabox col-12 col-lg-6">
-                                <div class="eventcard__pic" style="background-image: url('http://loremflickr.com/320/180/')">
-                                </div>
-                                <div class="eventcard__button-bar row m-0">
-                                    <a href="#" class="eventcard__button-submit btn btn-primary btn-wide">Записаться</a>
-                                    <a href="#" class="eventcard__button-close btn btn-secondary">Закрыть</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cal__details eventcard eventcard_cancelled row" data-id="3">
-                            <div class="eventcard__textbox col-12 col-lg-6">
-                                <h2 class="eventcard__heading text-center text-lg-left">Мастер класс &laquo;Стань успешнее&raquo;</h2>
-
-                                <p class="eventcard__text">
-                                    Небольшой текст, который расскажет о мероприятии, его целях, методах и форме прохождения.
-                                </p>
-
-                                 <div class="eventcard__props">
-                                    <p class="eventcard__prop">
-                                        <i class="icon icon_eventcard icon-sob-man"></i> Ольга Иванова
-                                    </p>
-                                    <p class="eventcard__prop">
-                                        <i class="icon icon_eventcard icon-sob-time"></i> 26 июня 13:00
-                                    </p>
-                                    <p class="eventcard__prop">
-                                        <i class="icon icon_eventcard icon-sob-geotag"></i> Главный офис
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="eventcard__mediabox col-12 col-lg-6">
-                                <div class="eventcard__pic" style="background-image: url('http://loremflickr.com/320/180/')">
-                                </div>
-                                <div class="eventcard__button-bar row m-0">
-                                    <a href="#" class="eventcard__button-submit btn btn-primary btn-wide btn-inactive">Записаться</a>
-                                    <a href="#" class="eventcard__button-close btn btn-secondary">Закрыть</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="blk blk-gallery">
-            <h2 class="text-center">Фотоотчеты</h2>
-
-            <div class="loadable-list not-loaded blk-gallery__mcard-row row">
-                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
-                    <div class="mcard mcard_default">
-                        <div class="mcard__bg gradient-overlay gradient-mcard"
-                             style="background-image: url('http://loremflickr.com/320/180/')">
-                        </div>
-
-                        <a href="" class="mcard__link"></a>
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Настоящий коуч!</h3>
-                            <p class="mcard__description light">Как отличить настоящего коуча  от самозванца</p>
-                        </div>
-
-                        <div class="mcard__actions">
-                            <span class="mcard__action symbol"><span class="mcard__action__help-text">Читать</span></span>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="blk-service__step col-lg-6">
+                    <h3 class="blk-service__heading text-center text-md-left">2. Хотите узнать больше?</h3>
+                    <p class="blk-service__text text-center text-md-left">
+                        Оставьте свой номер и мы перезвоним через 10 минут (с 10:00 до 19:00)
+                    </p>
+                    <form class="blk-service__form form form-inline form-fullwidth">
+                        <input type="tel" class="form__input form-control mr-1 mr-md-3" placeholder="Телефон:">
+                        <button type="submit" class="blk-service__btn-submit form__submit btn btn-secondary btn-short">
+                            Позвоните мне
+                        </button>
+                    </form>
                 </div>
+                <div id="calSelectLockable" class="blk-service__step blk-service__step_inactive col-lg-6">
+                    <h3 class="blk-service__heading text-center text-md-left">3. Оплата</h3>
+                    <p class="blk-service__text text-center text-md-left">
+                        Для удобства оплатить участие можно прямо на сайте, за безопасность отвечает Яндекс.Касса
+                    </p>
+                    <a href="/pages/services/entry_step_1.html" class="blk-service__btn-select btn btn-primary btn-inactive btn-wider">
+                        Выбрать мероприятие на календаре
+                    </a>
 
-                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
-                    <div class="mcard mcard_default">
-                        <div class="mcard__bg gradient-overlay gradient-mcard"></div>
-
-                        <a href="" class="mcard__link"></a>
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Когнитивные искажения, они же ловушки сознания</h3>
-                            <p class="mcard__description light">
-                                Почему наше поведение часто неэффективно
-                            </p>
-                        </div>
-
-                        <div class="mcard__actions">
-                            <span class="mcard__action symbol"><span class="mcard__action__help-text">Читать</span></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
-                    <div class="mcard mcard_default">
-                        <div class="mcard__bg gradient-overlay gradient-mcard"
-                             style="background-image: url('http://loremflickr.com/320/180/')">
-                        </div>
-
-                        <a href="" class="mcard__link"></a>
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Наш Instagram</h3>
-                        </div>
-
-                        <div class="mcard__actions">
-                            <span class="mcard__action">Подписаться</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
-                    <div class="mcard mcard_default">
-                        <div class="mcard__bg gradient-overlay gradient-mcard"
-                             style="background-image: url('http://loremflickr.com/320/180/')">
-                        </div>
-
-                        <a href="" class="mcard__link"></a>
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Пишем первый пост</h3>
-                            <p class="mcard__description light">Преодолеваем первый этап вхождения в эру социальных сетей</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
-                    <div class="mcard mcard_default">
-                        <div class="mcard__bg gradient-overlay gradient-mcard">
-                        </div>
-
-                        <a href="" class="mcard__link"></a>
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Настоящий коуч!</h3>
-                            <p class="mcard__description light">Как отличить настоящего коуча  от самозванца</p>
-                        </div>
-
-                        <div class="mcard__actions">
-                            <span class="mcard__action symbol"><span class="mcard__action__help-text">Читать</span></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
-                    <div class="mcard mcard_default">
-                        <div class="mcard__bg gradient-overlay gradient-mcard"
-                             style="background-image: url('http://loremflickr.com/320/180/')">
-                        </div>
-
-                        <a href="" class="mcard__link"></a>
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Когнитивные искажения, они же ловушки сознания</h3>
-                            <p class="mcard__description light">
-                                Почему наше поведение часто неэффективно
-                            </p>
-                        </div>
-
-                        <div class="mcard__actions">
-                            <span class="mcard__action symbol"><span class="mcard__action__help-text">Читать</span></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
-                    <div class="mcard mcard_default">
-                        <div class="mcard__bg gradient-overlay gradient-mcard">
-                        </div>
-
-                        <a href="" class="mcard__link"></a>
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Наш Instagram</h3>
-                        </div>
-
-                        <div class="mcard__actions">
-                            <span class="mcard__action">Подписаться</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blk-gallery__mcard-wrap col-6 col-lg-3">
-                    <div class="mcard mcard_default">
-                        <div class="mcard__bg gradient-overlay gradient-mcard">
-                        </div>
-                        <a href="" class="mcard__link"></a>
-                        <div class="mcard__content">
-                            <h3 class="mcard__heading light">Пишем первый пост</h3>
-                            <p class="mcard__description light">Преодолеваем первый этап вхождения в эру социальных сетей</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blk-gallery__overlay loadable-list__overlay"></div>
-                <div class="blk-gallery__btn-wrap">
-                    <a href="" class="blk-gallery__btn btn btn-primary btn-hov-bg">Загрузить еще парочку</a>
                 </div>
             </div>
         </div>

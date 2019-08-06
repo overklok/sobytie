@@ -16,8 +16,7 @@
     <title>Главная</title>
 </head>
 <body class="main-bg">
-    <!--<div id="subscribeModal" class="modal fade" tabindex="-1" role="dialog" data-timeout="2000">-->
-    <div id="subscribeModal" class="modal fade" tabindex="-1" role="dialog">
+    <div id="subscribeModal" class="modal fade" tabindex="-1" role="dialog" data-timeout="2000">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="row m-0">
@@ -265,19 +264,27 @@
     </section>
 
     <section id="contact" class="container">
-        <div class="blk">
+        <div class="blk blk-service">
             <div class="row">
-                <div class="col-lg-6">
-                    <h3 class="text-section">Запишитесь прямо сейчас!</h3>
-                    <p>Выберите удобный для вас день и время в нашем календаре</p>
-                    <a href="" class="btn btn-secondary btn-wider">Выбрать мероприятие на календаре</a>
+                <div class="blk-service__step col-lg-6">
+                    <h3 class="blk-service__heading text-center text-md-left">Запишитесь прямо сейчас!</h3>
+                    <p class="blk-service__text text-center text-md-left">
+                        Выберите удобный для вас день и время в нашем календаре!
+                    </p>
+                    <a href="/pages/services/entry.html" class="blk-service__btn-select btn btn-secondary btn-wider">
+                        Выбрать мероприятие на календаре
+                    </a>
                 </div>
-                <div class="col-lg-6">
-                    <h3 class="text-section">Хотите узнать больше?</h3>
-                    <p>Оставьте свой номер и мы перезвоним через 10 минут (с 10:00 до 19:00)</p>
-                    <form class="blk-contacts__form form form-inline form-fullwidth">
-                        <input type="tel" class="form__input form-control mr-3" placeholder="Телефон:">
-                        <button type="submit" class="form__submit btn btn-primary btn-short">Позвоните мне</button>
+                <div class="blk-service__step col-lg-6">
+                    <h3 class="blk-service__heading text-center text-md-left">Хотите узнать больше?</h3>
+                    <p class="blk-service__text text-center text-md-left">
+                        Оставьте свой номер и мы перезвоним через 10 минут (с 10:00 до 19:00)
+                    </p>
+                    <form class="blk-service__form form form-inline form-fullwidth">
+                        <input type="tel" class="form__input form-control mr-1 mr-md-3" placeholder="Телефон:">
+                        <button type="submit" class="blk-service__btn-submit form__submit btn btn-primary btn-short">
+                            Позвоните мне
+                        </button>
                     </form>
                 </div>
             </div>
