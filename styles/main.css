@@ -1224,14 +1224,6 @@ span.text-underlined {
   .blk.blk-stories .blk-story-row__tall.tall-root > .blk-stories__col {
     margin: 2.5px 0;
   }
-  .blk.blk-stories .blk-story-row__tall.tall-root > .blk-stories__col .non-invis:first-of-type {
-    padding-right: 0;
-    margin-top: 0;
-  }
-  .blk.blk-stories .blk-story-row__tall.tall-root > .blk-stories__col .non-invis:last-of-type {
-    padding-left: 0;
-    margin-bottom: 0;
-  }
   .blk.blk-stories .blk-story-row__tall:not(.tall-root) > .blk-stories__col .non-invis:first-of-type {
     padding-left: 0;
   }
@@ -1627,7 +1619,7 @@ span.text-underlined {
     background-color: #004645;
     width: 100%;
     height: calc(100vh - 100% - 20px);
-    z-index: 400;
+    z-index: 800;
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px solid #80A2A2;
