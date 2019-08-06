@@ -35,6 +35,9 @@ const MODAL_FORM_CLASS = "modal-form";
 const MODAL_LINKS_HIDDEN_CLASS = "modal-links_hidden";
 const MODAL_FORM_HIDDEN_CLASS = "modal-form_hidden";
 
+const MODAL_COOKIE_NAME = "sobytie-modal-shown";
+const MODAL_COOKIE_DAYS = 1;
+
 $(document).ready(function() {
     $(window).resize(onWindowResize);
     onWindowResize();
@@ -55,21 +58,27 @@ function onWindowResize() {
 }
 
 function initModals() {
-    if (getCookie("sobytie-modal-shown") !== "true") {
-        $('.modal[data-timeout]').each(function (index, item) {
-            var $item = $(item);
+    $modals = $('.modal[data-timeout]');
 
-            var timeout = $item.data("timeout");
+    $modals.each(function (index, item) {
+        var $item = $(item);
 
+        var timeout = $item.data("timeout");
+
+        if (getCookie(MODAL_COOKIE_NAME + ":" + $item.attr("id")) !== "true") {
             if (timeout && typeof timeout === "number") {
                 setTimeout(function () {
                     $(item).modal();
                 }, timeout);
             }
-        });
+        }
+    });
 
-        setCookie("sobytie-modal-shown", "true", 1);
-    }
+    $modals.on('hidden.bs.modal', function(evt) {
+        var $item = $(evt.target);
+
+        setCookie(MODAL_COOKIE_NAME + ":" + $item.attr("id"), "true", MODAL_COOKIE_DAYS);
+    });
 
     $("#" + SUBSCRIBE_PROCEED_BUTTON_ID).click(function() {
         $("." + MODAL_LINKS_CLASS).addClass(MODAL_LINKS_HIDDEN_CLASS);
